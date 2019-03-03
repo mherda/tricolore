@@ -1,0 +1,406 @@
+/* CUSTOM STUFF */
+
+body {
+    font-family: 'Merriweather', serif;
+}
+
+.b-dark {
+    background-color: #3C4645;
+}
+
+.t-dark {
+    color: #3C4645;
+}
+
+.b-blue {
+    background-color: #4A90E2;
+}
+
+.t-blue {
+    color: #4A90E2;
+}
+
+.b-green {
+    background-color: #1EA02D;
+}
+
+.t-green {
+    color: #1EA02D;
+}
+
+.b-red {
+    background-color: #C1001F;
+}
+
+.t-red {
+    color: #C1001F;
+}
+
+.b-black {
+    background-color: black;
+}
+
+.t-black {
+    color: black;
+}
+
+.tag {
+    color: #eeeeee;
+    background-color: #3C4645;
+}
+
+.tile-text {
+    color: #eeeeee;
+}
+
+.tile-text:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.p-link {
+    color: green;
+}
+
+.p-link-dark {
+    color: #3C4645;
+}
+
+.p-link-dark:hover {
+    color: black;
+}
+
+.p-link:hover {
+    color: blue;
+}
+
+.w-link {
+    color: white;
+    text-decoration: underline;
+}
+
+.w-link:hover {
+    color: green;
+}
+
+.card {
+    background-color: rgba(245, 245, 245, 0.7);
+    color: #3C4645;
+}
+
+.carousel-caption {
+    left: 7%;
+}
+
+.carousel-item {
+    max-height: 700px;
+}
+
+.bg-swash {
+    color: #eeeeee;
+    background-image: url("http://ssdserver1.layerip.com/~pengecyc/wordpress/wp-content/uploads/2018/09/Brush-background.png");
+    background-repeat: no-repeat;
+    background-size: 222px 50px;
+    height: 60px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.event-listing {
+    background-color: #f0f0f0;
+}
+
+.event-date {
+    background-color: blue;
+}
+
+#navmenu.events-categories ul,
+#navmenu.events ul,
+.nav-breadcrumbs ul {
+    list-style-type: none;
+    list-style-image: none;
+}
+
+#navmenu.events-categories ul li,
+#navmenu.events ul li,
+.nav-breadcrumbs ul li {
+    display: inline;
+}
+
+#navmenu.events ul li a {
+    background: gray;
+    margin: 3px;
+    padding: 5px 5px 5px 5px;
+    color: white;
+}
+
+#navmenu.events ul li.ccc a {
+    background: green;
+}
+
+#navmenu.events-categories ul li a {
+    padding: 2px 3px 2px 3px;
+}
+
+.nav-breadcrumbs ul li a:hover {
+    text-decoration: none;
+}
+
+.tile {
+    position: relative;
+}
+
+.tile-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    max-width: 500px;
+}
+
+.ti {
+    height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.outer-tile {
+    overflow: hidden;
+    position: relative;
+    height: 500px;
+}
+
+.inner-tile {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.outer-tile:hover .inner-tile {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.parent-tile:hover .grid-tile,
+.parent-tile:focus .grid-tile {
+    -webkit-transform: scale(1.02);
+    transform: scale(1.02);
+}
+
+.grid-tile {
+    background-color: #1EA02D;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(300px, 400px);
+    grid-gap: 10px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+@media (min-width: 576px) {
+    .grid-2 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.nav-horizontal .current-menu-item a {
+    color: green;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(300px, 400px);
+    grid-gap: 10px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+
+@media (min-width: 576px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* end of Full width and full width zoom */
+
+.row.display-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.row.display-flex>[class*='col-'] {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.bg-pattern {
+    background: #f9f742;
+    background-image: url("http://ssdserver1.layerip.com/~pengecyc/wordpress/wp-content/uploads/2018/09/nav_text.png");
+    background-size: cover;
+}
+
+.notFull {
+    max-width: 1600px;
+}
+
+.mw50 {
+    min-width: 80px;
+}
+
+#searchform {
+    width: 70%;
+}
+
+.dropdown-menu {
+    min-width: 200px;
+    margin-top: 7px;
+}
+
+@media (min-width: 768px) {
+    .dropdown-menu {
+        left: 50%;
+        right: auto;
+        text-align: center;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0);
+    }
+    .dropdown-menu:before {
+        position: absolute;
+        top: -7px;
+        left: 45%;
+        right: auto;
+        display: inline-block;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid #aaa;
+        border-left: 7px solid transparent;
+        border-bottom-color: rgba(0, 0, 0, 0.2);
+        content: '';
+    }
+}
+
+#heading1,
+#heading2,
+#heading3,
+#heading4,
+#heading5,
+#heading6,
+#heading7,
+#heading8,
+#heading9,
+#heading10 {
+    cursor: pointer;
+    color: var(--primary);
+}
+
+[data-toggle="collapse"] .fa:after {
+    content: '\f077';
+    /* chevron-up */
+}
+
+[data-toggle="collapse"].collapsed .fa:after {
+    content: '\f078';
+    /* chevron-down */
+}
+
+.modal-full {
+    min-width: 100%;
+    margin: 0;
+}
+
+.modal-full .modal-content {
+    min-height: 100vh;
+}
+
+
+/* footer logos */
+
+.abs-par {
+    position: relative;
+    height: 80px;
+}
+
+.abs-chi {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+/* end of footer logos */
+
+
+/*
+* Use existing Bootstrap 4 classes and
+* variables to extend - override CF7 style
+*
+* Useful CF7 classes:
+* .wpcf7 the wrapper element
+* .wpcf7-form
+* .wpcf7-form-control
+* .wpcf7-text
+* .wpcf7-email
+* .wpcf7-textarea
+* .wpcf7-submit
+*/
+
+.wpcf7 {
+    max-width: 600px;
+    margin: 0 auto !important;
+}
+
+.wpcf7 .wpcf7-form label {
+    width: 100%;
+}
+
+.wpcf7 .wpcf7-not-valid-tip {
+    color: #dc3545;
+}
+
+.wpcf7 .wpcf7-validation-errors {
+    color: #dc3545;
+    border: 1px solid #e9ecef;
+}
