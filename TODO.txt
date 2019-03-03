@@ -1,0 +1,31 @@
+Hello all, sorry just seen my auto- correcting ;(,
+
+Apologies for quick note. I’m at work.
+
+1.  - Main Youth page to consist of 2 columns of 8 tiles. Events diary ( Youth specific dates)  takes up 3rd column
+Andy’s and Louisa both happy with this - Marcin said it’s easier that inserting a block into the grid?
+
+2. On pages with content.
+Allow for bespoke image at top
+Allow for bespoke Flickr Tagging collection of images ( exactly the same as Events - I can easier do mini tag collections for all pages).
+I have spoken to Pedro about helping with this.
+
+2. Tiles on Saturday 500x500
+Ben's idea to change the image section to 500x400 ( or whatever)
+But Tile to remain at 500x500
+
+3. It appears tiles have changed to landscape in Youth? but are still square on home page?
+Whatever design you decide on - I just need to know the image only dimensions for optimum image section.
+
+4. Match the grey on home page tiles to page tiles
+
+5. Match the title, soft-return and base-padding on Home page and content tiles.
+
+6. Content for Youth section is going pretty well.
+
+7. Below - quick schematics of what we imagined.
+
+8. Can I have a lesson in Tiles on pages?
+On home page the tile order are listed - can’t see how it’s done on  pages
+
+We’ll done folks - All the hard work is paying off ;)
