@@ -37,7 +37,7 @@ get_header('front');
             ?>
           </div>
 
-          <div class="mt-3 grid">
+          <div id="nine" class="grid">
             <?php
               $tile_selection = new WP_Query(array(
 								'posts_per_page' => -1,

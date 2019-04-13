@@ -6,7 +6,7 @@
   </div>
 </div>
 
-<div class="modal t-black" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-full" role="document">
     <div class="modal-content">
       <div class="modal-header mt-3">

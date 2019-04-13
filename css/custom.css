@@ -164,24 +164,12 @@ body {
     background-color: #1EA02D;
 }
 
-.t-green {
-    color: #1EA02D;
-}
-
 .b-red {
     background-color: #C1001F;
 }
 
-.t-red {
-    color: #C1001F;
-}
-
 .b-black {
     background-color: black;
-}
-
-.t-black {
-    color: black;
 }
 
 .tile-text {
@@ -293,6 +281,9 @@ body {
     text-decoration: none;
 }
 
+
+/* Full width 3x3 grid */
+
 .tile {
     position: relative;
 }
@@ -350,27 +341,6 @@ body {
     transition: all .5s;
 }
 
-.grid-2 {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-rows: minmax(300px, 400px);
-    grid-gap: 10px;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-}
-
-@media (min-width: 576px) {
-    .grid-2 {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-@media (min-width: 768px) {
-    .grid-2 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 .nav-horizontal .current-menu-item a {
     color: green;
 }
@@ -397,7 +367,7 @@ body {
 }
 
 
-/* end of Full width and full width zoom */
+/* end of full width zoom */
 
 .row.display-flex {
     display: -webkit-box;
