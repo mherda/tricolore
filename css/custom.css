@@ -281,6 +281,10 @@ body {
     text-decoration: none;
 }
 
+.nav-horizontal .current-menu-item a {
+    color: green;
+}
+
 
 /* Full width 3x3 grid */
 
@@ -304,7 +308,10 @@ body {
 .outer-tile {
     overflow: hidden;
     position: relative;
-    height: 500px;
+    height: 100%;
+    width: 100%;
+    max-width: 350px;
+    max-height: 350px;
 }
 
 .inner-tile {
@@ -339,10 +346,6 @@ body {
     width: 100%;
     -webkit-transition: all .5s;
     transition: all .5s;
-}
-
-.nav-horizontal .current-menu-item a {
-    color: green;
 }
 
 .grid {
