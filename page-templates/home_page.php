@@ -1,17 +1,18 @@
 <?php
 /**
- * Template Name: Front Full
+ * Template Name: Home Page
  *
- * Template for displaying a page without sidebar even if a sidebar widget is published.
+ * Template for displaying the home page
  *
- * @package understrap
+ * 
  */
 
 get_header('front');
-// $container = get_theme_mod( 'understrap_container_type' );
-?><!-- carousel -->
+?>
+
+<!-- carousel -->
 <div id="carousel" class="full_dark">
-<?php get_template_part( 'element-templates/carousel' ); ?>
+  <?php get_template_part( 'element-templates/carousel' ); ?>
 </div>
 <!-- End of Carousel -->
 
@@ -32,8 +33,8 @@ get_header('front');
               <?php echo get_post_meta($post->ID, 'disclaimer', true); ?>
             </h5>
           </div>
-          <div class="mt-3">
-            <?php get_template_part( 'element-templates/front', 'tiles-acf' ); ?>
+          <div class="mt-3 mx-a">
+            <?php get_template_part( 'element-templates/front', 'tiles-function' ); ?>
           </div>
 
 

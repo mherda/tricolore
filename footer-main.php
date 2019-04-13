@@ -91,6 +91,7 @@ $the_theme = wp_get_theme();
 
 <?php wp_footer(); ?>
 
+
 </body>
 
 </html>

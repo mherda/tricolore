@@ -36,6 +36,7 @@
               <?php echo $post->post_content; ?>
             </p>
             <a href="#" class="btn btn-danger">Join our Club</a>
+            <a href="#" class="btn btn-success">Try a ride</a>
           </div>
         </div>
       </div>

@@ -29,3 +29,14 @@ Whatever design you decide on - I just need to know the image only dimensions fo
 On home page the tile order are listed - can’t see how it’s done on  pages
 
 We’ll done folks - All the hard work is paying off ;)
+
+
+/*
+
+Body
+#main_wrapper
+  #wrapper_navbar
+    - area above navbar 
+    .container - site navigation
+  #carouselcontrols (elementtemplates/carousel.php)
+  

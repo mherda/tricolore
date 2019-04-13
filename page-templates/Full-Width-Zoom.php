@@ -21,13 +21,13 @@ get_header('front');
       <div class="col-md-12 content-area" id="primary">
 
         <main class="site-main mr-5 ml-5" id="main" role="main">
-          <div>
-            <?php
-              if( ! is_home() ) {
-                wpse_get_breadcrumbs();
-            } 
-             ?>
-          </div>
+        <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+          <?php
+          if(function_exists('bcn_display'))
+          {
+                  bcn_display();
+          }?>
+        </div>
           <div>
             <?php while ( have_posts() ) : the_post(); ?>
               <?php get_template_part( 'loop-templates/content', 'page' ); ?>

@@ -31,9 +31,14 @@ get_header('front');
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/page_headers/chair.jpg" />
                 <?php } ?>
                 <div class="b-green w-100 text-white p-1 pt-2">
-                  <h5 class="pl-3">
-                    <?php echo esc_html( get_the_title() ); ?>
-                  </h5>
+                  <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+                    <?php
+                    if(function_exists('bcn_display'))
+                    {
+                            bcn_display();
+                    }?>
+                  </div>
+                  
                 </div>
               </div>
 
