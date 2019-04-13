@@ -344,6 +344,8 @@ body {
     background-size: cover;
     height: 100%;
     width: 100%;
+    max-width: 350px;
+    max-height: 350px;
     -webkit-transition: all .5s;
     transition: all .5s;
 }
@@ -372,7 +374,13 @@ body {
 
 /*  NEW GRID */
 
-.grid {
+#front-tiles.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    column-gap: 5px;
+}
+
+#rect-tiles.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     column-gap: 5px;

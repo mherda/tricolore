@@ -42,7 +42,7 @@
 
 
 <!-- Middle Row -->
-<div class="grid">
+<div id="rect-tiles" class="grid">
 
 <?php
     $posts = [
