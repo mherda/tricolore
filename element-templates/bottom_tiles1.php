@@ -56,7 +56,7 @@
                           <img src="<?php echo get_template_directory_uri(); ?>/assets/tiles/tile.jpg" />
                         <?php } ?>
                       </div> 
-                      <div class="d-flex align-items-start flex-column tile-overlay">
+                      <div class="d-flex align-items-start flex-column">
                         <div class="mb-auto p-2">
                           <h5><span class="tag pr-2 pl-2">
                               <?php the_field('tile_category'); ?> </span></h5>

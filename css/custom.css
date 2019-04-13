@@ -370,23 +370,6 @@ body {
 }
 
 
-/* end of full width zoom */
-
-.row.display-flex {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-}
-
-.row.display-flex>[class*='col-'] {
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-}
-
-
 /*  NEW GRID */
 
 .grid {

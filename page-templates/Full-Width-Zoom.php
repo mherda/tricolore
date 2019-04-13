@@ -49,12 +49,12 @@ get_header('front');
               if ( $tile_selection->have_posts() ) {
                 while ( $tile_selection->have_posts() ) {
                 $tile_selection->the_post(); 
-                $img = get_the_post_thumbnail_url($post_id, 'frontTile');
+                $img = get_the_post_thumbnail_url($post_id, 'tyle');
                 $tile_background = ( $img ? "background: url({$img});" : "background-color: green;" );
 
                 if ( $img ) { ?>
-                <a class=" tile-text" href="<?php the_field('tile_link'); ?>">
-                    <div class="d-flex flex-column justify-content-between h-100 outer-tile">
+                <a class="tile-text" href="<?php the_field('tile_link'); ?>">
+                    <div class="d-flex flex-column justify-content-between outer-tile">
                       <div class="mb-auto p-2">
                       <div class="inner-tile text-white" style="<?php echo $tile_background; ?>"></div>
 
