@@ -281,18 +281,18 @@ body {
     text-decoration: none;
 }
 
-.nav-horizontal .current-menu-item a {
-    color: green;
-}
-
-
-/* GRID */
-
 
 /* Full width 3x3 grid */
 
 .tile {
     position: relative;
+}
+
+.tile-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    max-width: 500px;
 }
 
 .ti {
@@ -304,10 +304,7 @@ body {
 .outer-tile {
     overflow: hidden;
     position: relative;
-    height: 100%;
-    width: 100%;
-    max-width: 350px;
-    max-height: 350px;
+    height: 500px;
 }
 
 .inner-tile {
@@ -344,14 +341,17 @@ body {
     transition: all .5s;
 }
 
-#nine.grid {
+.nav-horizontal .current-menu-item a {
+    color: green;
+}
+
+.grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(300px, 400px);
     grid-gap: 10px;
     -ms-flex-pack: distribute;
     justify-content: space-around;
-    background-color: blue;
 }
 
 @media (min-width: 576px) {
@@ -366,6 +366,9 @@ body {
     }
 }
 
+
+/* end of full width zoom */
+
 .row.display-flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -379,70 +382,6 @@ body {
     -ms-flex-positive: 1;
     flex-grow: 1;
 }
-
-
-/*  NEW GRID */
-
-#front-tiles.grid {
-    background-color: red;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    column-gap: 5px;
-}
-
-
-/* 350x350 tiles */
-
-.tyle {
-    color: var(--font-grey-color);
-    justify-self: center;
-    align-self: center;
-    width: 100%;
-    height: 100%;
-    max-height: 350px;
-    max-width: 350px;
-    background-repeat: no-repeat;
-    background-position: cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.tyle-rectangle {
-    justify-self: center;
-    align-self: center;
-    width: 100%;
-    height: 100%;
-    max-width: 550px;
-    max-height: 350px;
-    background-color: var(--dark-grey-color);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.tyle-rectangle>img {
-    max-width: 100%;
-    height: auto;
-}
-
-.caption {
-    width: 100%;
-    padding: 8px;
-    background-color: var(--dark-grey-color);
-}
-
-.tyle-tag {
-    padding: 10px;
-}
-
-.tag {
-    padding: 5px;
-    background-color: var(--dark-grey-color);
-}
-
-
-/* Miscellaneous */
 
 .notFull {
     max-width: 1200px;
@@ -548,4 +487,64 @@ body {
 .wpcf7 .wpcf7-validation-errors {
     color: #dc3545;
     border: 1px solid #e9ecef;
+}
+
+
+/*  NEW GRID */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    column-gap: 5px;
+}
+
+
+/* 350x350 tiles */
+
+.tyle {
+    color: var(--font-grey-color);
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    max-height: 350px;
+    max-width: 350px;
+    background-repeat: no-repeat;
+    background-position: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tyle-rectangle {
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    height: 100%;
+    max-width: 550px;
+    max-height: 350px;
+    background-color: var(--dark-grey-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tyle-rectangle>img {
+    max-width: 100%;
+    height: auto;
+}
+
+.caption {
+    width: 100%;
+    padding: 8px;
+    background-color: var(--dark-grey-color);
+}
+
+.tyle-tag {
+    padding: 10px;
+}
+
+.tag {
+    padding: 5px;
+    background-color: var(--dark-grey-color);
 }
