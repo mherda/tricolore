@@ -1,4 +1,11 @@
-/* Colour variables */
+/* :TODO: Font tested using CSS embed until linked in header-front.php HTML  */
+/* Source: https://fonts.google.com/specimen/Karla?selection.family=Karla:700|Montserrat:400,600 */
+/*
+@import url('https://fonts.googleapis.com/css?family=Karla:700|Montserrat:400,600');
+*/
+
+
+/* Old Colour variables */
 
 :root {
     --dark-grey-color: #3C4645;
@@ -7,9 +14,169 @@
     --colour-green: #289F35;
 }
 
-body {
-    font-family: 'Merriweather', serif;
+
+/* New colour variables */
+
+:root {
+    --tri-green: #1ea02d;
+    --tri-red: #c1001f;
+    --tri-black: #1f1e21;
+    --tri-dark: #3c4645;
+    --tri-grey: #7d7d7d;
+    --tri-white: #ecf1f4;
+    --tri-blue: #f0f; /* :TODO: */
 }
+
+
+/* Font variables */
+
+:root {
+    --font-heading: 'Karla', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
+    --font-h1: bold 40px/40px var(--font-heading);
+    --font-h2: bold 34px/34px var(--font-heading);
+    --font-h3: bold 26px/36px var(--font-heading);
+    --font-h4: bold 24px/28px var(--font-heading);
+    --font-h5: bold 20px/28px var(--font-heading);
+    --font-h6: bold 18px/24px var(--font-heading);
+    --font-p-highlight: normal 18x/24px var(--font-body);
+    --font-p: 400 14px/24px var(--font-body);
+    --font-link: 600 14px/24px var(--font-body);
+}
+
+
+/*
+Apply fonts:
+
+Base
+Header
+Carousel
+Tile
+Sidebar
+Footer
+*/
+
+/* Base font */
+html,
+body {
+    font: var(--font-p);
+    color: var(--tri-black);
+    background: var(--tri-white);
+}
+
+/* Header search box */
+/* Header search button (icon) */
+/* Header nav */
+.nav-link {
+    font: var(--font-h6);
+}
+/* Header nav menu */
+
+/* Carousel tag */
+.carousel-item h5 {
+    font: var(--font-h6);
+}
+/* Carousel title */
+.slide-text {
+    font: var(--font-h1);
+}
+/* Carousel description */
+.card-text {
+    font: var(--font-p-highlight);
+}
+/* Home mission statement */
+/* :TODO: id should be class */
+.disclaimer h5 {
+    font: var(--font-h3);
+}
+/* Home tile tag */
+.tile-text h5 {
+    font: var(--font-h6);
+}
+/* Home tile title */
+.tile-text h4,
+.tile-text h5+h5 {
+    font: var(--font-h4);
+}
+/* Home tile description */
+.tile-text p {
+    font: var(--font-p-highlight);
+}
+/* Home tile event item */
+/* :TODO: match HTML with sidebar event item */
+.tile-text .border-bottom h5 {
+    font: var(--font-h6);
+}
+
+
+/* Youth tile */
+/* :TODO: Tile content HTML should match home tiles */
+.tile-text span {
+    font: var(--font-h6);
+}
+/* Youth tile title */
+/* :TODO: Tile content HTML should match home tiles */
+.tile-text div+div h5 {
+    font: var(--font-h4);
+}
+/* Youth tile description */
+/* :TODO: Tile content HTML should match home tiles */
+.tile-text span {
+    font: var(--font-h6);
+}
+
+/* Breadcrumb */
+.breadcrumbs {
+    font: var(--font-p);
+}
+.breadcrumbs a {
+    font: var(--font-link);
+}
+
+/* Section content link */
+.entry-content a {
+    font: var(--font-link);
+}
+
+/* Sidebar headings */
+/* :TODO: use a class for selecting the sidebar */
+main .col-md-4 h3 {
+    font: var(--font-h4);
+}
+main .col-md-4 h5 {
+    font: var(--font-h6);
+}
+
+/* Article title */
+h1 {
+    font: var(--font-h2);
+}
+/* Article content link */
+/* :TODO: Article tiles should have a separate wrapper, after the content */
+main h2 > a,
+main h3 > a,
+main h4 > a,
+main p > a,
+main li > a {
+    font: var(--font-link);
+}
+/* Article tiles after content */
+/* :TODO: Tile content HTML should match home tiles */
+
+/* Footer heading */
+/* :TODO: use heading element for Flickr and Strava and Sponsor */
+footer h3,
+footer .col-md-5 > p:first-child span,
+footer .mt-5 p {
+    font: var(--font-h5);
+}
+/* Footer link */
+
+
+/* End: Apply font */
+
+
+/* Wrapper */
 
 .full_dark {
     width: 100%;

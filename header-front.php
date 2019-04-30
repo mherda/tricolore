@@ -21,7 +21,8 @@
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon32.png">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	<!--  Fonts: https://fonts.google.com/specimen/Karla?selection.family=Karla:700|Montserrat:400,600 -->
+	<link href="https://fonts.googleapis.com/css?family=Karla:700|Montserrat:400,600" rel="stylesheet">
 	<?php wp_head(); ?>
 </head>
 
