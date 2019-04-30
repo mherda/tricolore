@@ -162,6 +162,9 @@ main li > a {
 }
 /* Article tiles after content */
 /* :TODO: Tile content HTML should match home tiles */
+main .tile-text h3 {
+    font: var(--font-h4);
+}
 
 /* Footer heading */
 /* :TODO: use heading element for Flickr and Strava and Sponsor */
