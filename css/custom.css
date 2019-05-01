@@ -1,21 +1,9 @@
 /* :TODO: Font tested using CSS embed until linked in header-front.php HTML  */
 /* Source: https://fonts.google.com/specimen/Karla?selection.family=Karla:700|Montserrat:400,600 */
-/*
 @import url('https://fonts.googleapis.com/css?family=Karla:700|Montserrat:400,600');
-*/
 
 
-/* Old Colour variables */
-
-:root {
-    --dark-grey-color: #3C4645;
-    --font-grey-color: #eee;
-    --background-colour: #1A1919;
-    --colour-green: #289F35;
-}
-
-
-/* New colour variables */
+/* April 2019 colour variables */
 
 :root {
     --tri-green: #1ea02d;
@@ -24,11 +12,11 @@
     --tri-dark: #3c4645;
     --tri-grey: #7d7d7d;
     --tri-white: #ecf1f4;
-    --tri-blue: #f0f; /* :TODO: */
+    --tri-blue: #f0f; /* :TODO: #4A90E2 */
 }
 
 
-/* Font variables */
+/* April 2019 font variables */
 
 :root {
     --font-heading: 'Karla', sans-serif;
@@ -52,7 +40,9 @@ Base
 Header
 Carousel
 Tile
+Youth Tile
 Sidebar
+Article
 Footer
 */
 
@@ -183,7 +173,7 @@ footer .mt-5 p {
 
 .full_dark {
     width: 100%;
-    background-color: var(--background-colour);
+    background-color: var(--tri-black);
 }
 
 #carousel.full_dark {
@@ -277,11 +267,11 @@ footer .mt-5 p {
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:focus .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
-    color: var(--colour-green);
+    color: var(--tri-green);
 }
 
 .navbar-custom .navbar-nav>li>.dropdown-menu {
-    background-color: var(--colour-green);
+    background-color: var(--tri-green);
 }
 
 
@@ -307,7 +297,7 @@ footer .mt-5 p {
         right: auto;
         display: inline-block;
         border-right: 7px solid transparent;
-        border-bottom: 7px solid #aaa;
+        border-bottom: 7px solid var(--tri-white);
         border-left: 7px solid transparent;
         border-bottom-color: rgba(0, 0, 0, 0.2);
         content: '';
@@ -315,70 +305,76 @@ footer .mt-5 p {
 }
 
 .b-dark {
-    background-color: #3C4645;
+    background-color: var(--tri-dark);
 }
 
 .t-dark {
-    color: #3C4645;
+    color: var(--tri-dark);
 }
 
 .b-blue {
-    background-color: #4A90E2;
+    background-color: var(--tri-blue);
 }
 
 .t-blue {
-    color: #4A90E2;
+    color: var(--tri-blue);
 }
 
 .b-green {
-    background-color: #1EA02D;
+    background-color: var(--tri-green);
 }
 
 .b-red {
-    background-color: #C1001F;
+    background-color: var(--tri-red);
 }
 
 .b-black {
-    background-color: black;
+    background-color: var(--tri-black);
+}
+
+/* :TODO: only use .b-* colour classes as .bg- classes use !important */
+.bg-dark,
+.bg-secondary {
+    background-color: var(--tri-dark) !important;
 }
 
 .tile-text {
-    color: #eeeeee;
+    color: var(--tri-white);
 }
 
 .tile-text:hover {
-    color: white;
+    color: var(--tri-white);
     text-decoration: none;
 }
 
 .p-link {
-    color: green;
+    color: var(--tri-green);
 }
 
 .p-link-dark {
-    color: #3C4645;
+    color: var(--tri-dark);
 }
 
 .p-link-dark:hover {
-    color: black;
+    color: var(--tri-black);
 }
 
 .p-link:hover {
-    color: blue;
+    color: var(--tri-blue);
 }
 
 .w-link {
-    color: white;
+    color: var(--tri-white);
     text-decoration: underline;
 }
 
 .w-link:hover {
-    color: green;
+    color: var(--tri-green);
 }
 
 .card {
     background-color: rgba(245, 245, 245, 0.7);
-    color: #3C4645;
+    color: var(--tri-dark);
 }
 
 
@@ -393,7 +389,7 @@ footer .mt-5 p {
 }
 
 .bg-swash {
-    color: #eeeeee;
+    color: var(--tri-white);
     background-image: url("http://ssdserver1.layerip.com/~pengecyc/wordpress/wp-content/uploads/2018/09/Brush-background.png");
     background-repeat: no-repeat;
     background-size: 222px 50px;
@@ -412,11 +408,11 @@ footer .mt-5 p {
 }
 
 .event-listing {
-    background-color: #f0f0f0;
+    background-color: var(--tri-white);
 }
 
 .event-date {
-    background-color: blue;
+    background-color: var(--tri-blue);
 }
 
 #navmenu.events-categories ul,
@@ -433,14 +429,14 @@ footer .mt-5 p {
 }
 
 #navmenu.events ul li a {
-    background: gray;
+    background: var(--tri-dark);
     margin: 3px;
     padding: 5px 5px 5px 5px;
     color: white;
 }
 
 #navmenu.events ul li.ccc a {
-    background: green;
+    background: var(--tri-green);
 }
 
 #navmenu.events-categories ul li a {
@@ -452,7 +448,7 @@ footer .mt-5 p {
 }
 
 .nav-horizontal .current-menu-item a {
-    color: green;
+    color: var(--tri-green);
 }
 
 
@@ -509,7 +505,7 @@ footer .mt-5 p {
 }
 
 .grid-tile {
-    background-color: #1EA02D;
+    background-color: var(--tri-green);
     background-position: center;
     background-size: cover;
     height: 100%;
@@ -560,7 +556,7 @@ footer .mt-5 p {
 /* 350x350 tiles */
 
 .tyle {
-    color: var(--font-grey-color);
+    color: var(--tri-white);
     justify-self: center;
     align-self: center;
     width: 100%;
@@ -581,7 +577,7 @@ footer .mt-5 p {
     height: 100%;
     max-width: 550px;
     max-height: 350px;
-    background-color: var(--dark-grey-color);
+    background-color: var(--tri-dark);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -595,7 +591,7 @@ footer .mt-5 p {
 .caption {
     width: 100%;
     padding: 8px;
-    background-color: var(--dark-grey-color);
+    background-color: var(--tri-dark);
 }
 
 .tyle-tag {
@@ -604,7 +600,7 @@ footer .mt-5 p {
 
 .tag {
     padding: 5px;
-    background-color: var(--dark-grey-color);
+    background-color: var(--tri-dark);
 }
 
 
@@ -708,10 +704,10 @@ footer .mt-5 p {
 }
 
 .wpcf7 .wpcf7-not-valid-tip {
-    color: #dc3545;
+    color: var(--tri-red);
 }
 
 .wpcf7 .wpcf7-validation-errors {
-    color: #dc3545;
-    border: 1px solid #e9ecef;
+    color: var(--tri-red);
+    border: 1px solid var(--tri-white);
 }
