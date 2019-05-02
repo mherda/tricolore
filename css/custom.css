@@ -1,8 +1,3 @@
-/* :TODO: Font tested using CSS embed until linked in header-front.php HTML  */
-/* Source: https://fonts.google.com/specimen/Karla?selection.family=Karla:700|Montserrat:400,600 */
-@import url('https://fonts.googleapis.com/css?family=Karla:700|Montserrat:400,600');
-
-
 /* April 2019 colour variables */
 
 :root {
@@ -17,19 +12,20 @@
 
 
 /* April 2019 font variables */
+/* https://fonts.google.com/specimen/Karla?selection.family=Karla:700|Montserrat:400,600 */
 
 :root {
     --font-heading: 'Karla', sans-serif;
     --font-body: 'Montserrat', sans-serif;
-    --font-h1: bold 40px/40px var(--font-heading);
-    --font-h2: bold 34px/34px var(--font-heading);
-    --font-h3: bold 26px/36px var(--font-heading);
-    --font-h4: bold 24px/28px var(--font-heading);
-    --font-h5: bold 20px/28px var(--font-heading);
-    --font-h6: bold 18px/24px var(--font-heading);
-    --font-p-highlight: normal 18x/24px var(--font-body);
+    --font-h1: 700 40px/40px var(--font-heading); /* bold */
+    --font-h2: 700 34px/34px var(--font-heading);
+    --font-h3: 700 26px/36px var(--font-heading);
+    --font-h4: 700 24px/28px var(--font-heading);
+    --font-h5: 700 20px/28px var(--font-heading);
+    --font-h6: 700 18px/24px var(--font-heading);
+    --font-p-highlight: 400 18x/24px var(--font-body); /* normal */
     --font-p: 400 14px/24px var(--font-body);
-    --font-link: 600 14px/24px var(--font-body);
+    --font-link: 600 14px/24px var(--font-body); /* semi-bold */
 }
 
 
@@ -99,7 +95,7 @@ body {
 }
 
 
-/* Youth tile */
+/* Youth tile tag */
 /* :TODO: Tile content HTML should match home tiles */
 .tile-text span {
     font: var(--font-h6);
@@ -133,6 +129,7 @@ body {
 main .col-md-4 h3 {
     font: var(--font-h4);
 }
+/* Sidebar event item */
 main .col-md-4 h5 {
     font: var(--font-h6);
 }
