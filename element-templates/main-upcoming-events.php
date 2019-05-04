@@ -1,4 +1,4 @@
-<?php 
+<?php
   $request = wp_remote_get( 'https://api.riderhq.com/api/v1/3446/getevents?pretty=true' );
   
   if( is_wp_error( $request ) ) {
@@ -6,19 +6,19 @@
     return false; // Bail early
   }
   
-  function utf8ize($mixed) { 
-    if (is_array($mixed)) { 
-    foreach ($mixed as $key => $value) { 
-    $mixed[$key] = utf8ize($value); 
-    } 
-    } else if (is_string ($mixed)) { 
-    return utf8_encode($mixed); 
-    } 
-    return $mixed; 
+  function utf8ize($mixed) {
+    if (is_array($mixed)) {
+    foreach ($mixed as $key => $value) {
+    $mixed[$key] = utf8ize($value);
+    }
+    } else if (is_string ($mixed)) {
+    return utf8_encode($mixed);
+    }
+    return $mixed;
     }
   
-  $body = wp_remote_retrieve_body( $request ); 
-  $data = json_decode(utf8ize($body), true); 
+  $body = wp_remote_retrieve_body( $request );
+  $data = json_decode(utf8ize($body), true);
   $data_events = $data['events'];
 
   if( ! empty( $data_events ) ) {
@@ -40,7 +40,7 @@
       $get_meta_time = get_post_meta($pid, 'event_date');
       $newformat = date('Ymd', strtotime($get_meta_time[0]));
       update_post_meta($pid, 'event_date', $newformat);
-      update_post_meta($pid, 'event_uri', $uri);  
+      update_post_meta($pid, 'event_uri', $uri);
     }
         
 	  foreach( $data_events as $event ) {
@@ -55,11 +55,11 @@
       $existing_posts = get_posts( $existing_posts_arguments );
 
       if ( count($existing_posts) < 1 ) {
-        add_event($event['name'], $event['id'], $event['uri'], $event['start_date'] ); 
+        add_event($event['name'], $event['id'], $event['uri'], $event['start_date'] );
       }
 
         
-    } // end of foreach event 
+    } // end of foreach event
   }
 
 ?>
@@ -67,9 +67,8 @@
 <nav id="nav_events">
     <div id="navmenu" class="events">
         <ul class="text-center">
-        <li class="ccc"><a href="<?php echo get_post_type_archive_link( 'event' ); ?>">All</a></li>
-
-            <?php
+            <li class="ccc"><a href="<?php echo get_post_type_archive_link( 'event' ); ?>">All</a>
+            </li><?php
                 $terms = get_terms(array(
                     'taxonomy' => 'event_category'
                 ));
@@ -83,7 +82,7 @@
 <?php
     if ( have_posts() ) {
     while ( have_posts() ) {
-        the_post();     
+        the_post();
         $event_d = new DateTime(get_field('event_date'));
         $event_month = $event_d->format('M');
         $event_day = $event_d->format('d');
@@ -107,7 +106,7 @@
                                 if($term->name == 'RiderHQ') {
                                     $event_uri = get_post_meta($post->ID, 'event_uri');
                                 }
-                            } 
+                            }
                             if ( $event_uri ) {
                                 echo '<a class="btn btn-primary" target="_blank" href="'.$event_uri[0].'" role="button btn-dark">Book Now</a>';
                             } else { ?>

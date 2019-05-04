@@ -301,6 +301,9 @@ footer .mt-5 p {
     }
 }
 
+
+/* Colour classes */
+
 .b-dark {
     background-color: var(--tri-dark);
 }
@@ -334,6 +337,9 @@ footer .mt-5 p {
 .bg-secondary {
     background-color: var(--tri-dark) !important;
 }
+
+
+/* Tile text colour */
 
 .tile-text {
     color: var(--tri-white);
@@ -404,6 +410,9 @@ footer .mt-5 p {
     height: 40px;
 }
 
+
+/* Event listing */
+
 .event-listing {
     background-color: var(--tri-white);
 }
@@ -411,6 +420,9 @@ footer .mt-5 p {
 .event-date {
     background-color: var(--tri-blue);
 }
+
+
+/* Event tag navigation menu */
 
 #navmenu.events-categories ul,
 #navmenu.events ul,
@@ -433,7 +445,7 @@ footer .mt-5 p {
 }
 
 #navmenu.events ul li.ccc a {
-    background: var(--tri-green);
+    color: var(--tri-green);
 }
 
 #navmenu.events-categories ul li a {
@@ -612,7 +624,7 @@ footer .mt-5 p {
 }
 
 #searchform {
-    width: 70%;
+    width: 100%;
 }
 
 #heading1,

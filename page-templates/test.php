@@ -38,23 +38,21 @@ get_header('test');
               </div>
 
               <?php
-								global $post;
-								$content = apply_filters('the_content', $post->post_content);
-						?>
-              <p>
-                <?php echo $content; ?>
-              </p>
+				global $post;
+				$content = apply_filters('the_content', $post->post_content);
+				echo $content;
+              ?>
 
               <div id="kara"></div>
             </div> <!-- end of main column -->
 
 
-            <div class="col-md-4 p-2">
+            <div class="sidebar col-md-4 p-2">
                   <?php
                     $side = get_field('sidebar');
                     foreach( $side as $s ) {
-                      get_template_part( 'sidebar-templates/sidebar', $s ); 
-                    } 
+                      get_template_part( 'sidebar-templates/sidebar', $s );
+                    }
                   ?>
             
              <?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>

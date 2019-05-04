@@ -4,8 +4,8 @@
 <nav>
     <div id="navmenu" class="events">
         <ul class="text-center">
-            <li><a href="<?php echo get_post_type_archive_link( 'event' ); ?>">All</a></li>
-            <?php
+            <li><a href="<?php echo get_post_type_archive_link( 'event' ); ?>">All</a>
+            </li><?php
                 $terms = get_terms(array(
                     'taxonomy' => 'event_category'
                 ));
@@ -24,12 +24,12 @@
 <?php
     if ( have_posts() ) {
     while ( have_posts() ) {
-        the_post();     
+        the_post();
         $event_d = new DateTime(get_field('event_date'));
         $event_month = $event_d->format('M');
         $event_day = $event_d->format('d');
         $event_year = $event_d->format('Y');
-        $term_list = wp_get_post_terms($post->ID, 'event_category');          
+        $term_list = wp_get_post_terms($post->ID, 'event_category');
 ?>
         <div class="row border-bottom border-top m-1">
             <div class="col-md-2 bg-light d-flex align-items-center justify-content-center">
@@ -48,7 +48,7 @@
                                 if($term->name == 'RiderHQ') {
                                     $event_uri = get_post_meta($post->ID, 'event_uri');
                                 }
-                            } 
+                            }
                             if ( $event_uri ) {
                                 echo '<a class="btn btn-primary" target="_blank" href="'.$event_uri[0].'" role="button btn-dark">Book Now</a>';
                             } else { ?>

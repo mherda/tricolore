@@ -17,7 +17,7 @@ get_header('front');
 			<div class="col-md-12 content-area" id="primary">
 				<main class="site-main mr-5 ml-5" id="main" role="main">
 					
-					<div class="row mb-2"> <!-- Beginning of Content -->					
+					<div class="row mb-2"> <!-- Beginning of Content -->
 						<div class="col-md-8 p-2"> <!-- beginning of main column -->
 						<?php get_template_part( 'element-templates/page-header' ); ?>
 
@@ -25,7 +25,7 @@ get_header('front');
 							<?php
 								if ( have_posts() ) {
 									while ( have_posts() ) {
-										the_post(); 
+										the_post();
 										
 									$event_d = new DateTime(get_field('event_date'));
 									$event_month = $event_d->format('M');
@@ -41,17 +41,17 @@ get_header('front');
 													<p><?php the_content(); ?></p>
 
 												<?php } // end while
-												} // end if ?> 
+												} // end if ?>
 												<?php get_template_part( 'element-templates/bottom_tiles1' ); ?>
 
 						</div> <!-- end of main column -->
 												
-						<div class="col-md-4 p-2"> <!-- Beginning of Side -->
+						<div class="sidebar col-md-4 p-2"> <!-- Beginning of Side -->
 							<div class="p-2 w-100 b-green mb-3">
-								<?php get_template_part( 'element-templates/sidebar-upcoming-events' ); ?>				
+								<?php get_template_part( 'element-templates/sidebar-upcoming-events' ); ?>
 							</div>
 							<div>
-								<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>				
+								<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>
 							</div>
 
 							<?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>

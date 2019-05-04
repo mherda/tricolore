@@ -43,12 +43,10 @@ get_header('front');
               </div>
 
               <?php
-								global $post;
-								$content = apply_filters('the_content', $post->post_content);
-						?>
-              <p>
-                <?php echo $content; ?>
-              </p>
+				global $post;
+				$content = apply_filters('the_content', $post->post_content);
+                echo $content;
+              ?>
 
 
 
@@ -59,14 +57,14 @@ get_header('front');
             </div> <!-- end of main column -->
 
 
-            <div class="col-md-4 p-2">
+            <div class="sidebar col-md-4 p-2">
 
               <div>
-								<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>				
+								<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>
               </div>
               
               <div>
-								<?php get_template_part( 'element-templates/sidebar-events' ); ?>				
+								<?php get_template_part( 'element-templates/sidebar-events' ); ?>
 							</div>
 
              <?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
