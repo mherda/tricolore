@@ -33,7 +33,7 @@ get_header('front');
                 
                 <?php
 					$img = get_the_post_thumbnail($post->ID, 'pageHeader');
-					if ( $img ) { ?>
+					if ( $img ) {
                         echo get_the_post_thumbnail($post->ID, 'pageHeader');
                     } else {
                 ?>
