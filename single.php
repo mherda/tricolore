@@ -12,7 +12,7 @@ get_header();
 	<div class="<?php echo esc_attr( $container ); ?> notFull mx-auto" id="content">
 		<div class="row">
 			<div class="col-md-12 content-area" id="primary">
-				<main class="site-main mr-5 ml-5" id="main" role="main">
+				<main class="site-main" id="main" role="main">
 					
 					<div class="row mb-2"> <!-- Beginning of Content -->
 						<div class="col-md-8 p-2"> <!-- beginning of main column -->

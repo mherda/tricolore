@@ -26,7 +26,7 @@ get_header('front');
 
       <div class="col-md-12 content-area" id="primary">
 
-        <main class="site-main mr-5 ml-5" id="main" role="main">
+        <main class="site-main" id="main" role="main">
 
           <div id="disclaimer text-center mb-3">
             <h5 class="pb-3 text-center">
