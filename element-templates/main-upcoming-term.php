@@ -39,6 +39,7 @@
             </div>
             <div class="col-md-10">
                 <div class="d-flex flex-column pt-2">
+                    <!-- :TODO: Link event title -->
                     <h3><?php the_title(); ?></h3>
                     <p>
                         <?php echo wp_trim_words(get_the_content(), 18); ?>
@@ -50,7 +51,7 @@
                                 }
                             }
                             if ( $event_uri ) {
-                                echo '<a class="btn btn-primary" href="'.$event_uri[0].'" role="button btn-dark">Book Now</a>';
+                                echo '<a class="btn btn-primary" href="'.$event_uri[0].'" role="button btn-dark">Join on RiderHQ</a>';
                             } else { ?>
                                 <a href="<?php the_permalink(); ?>">read more</a>
                             <?php } ?>

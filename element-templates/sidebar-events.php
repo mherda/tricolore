@@ -43,6 +43,7 @@
                       <h4 class="p-2 mt-3"><?php echo $eventDate->format('d'); ?></h4>
                     </div>
                   <div class="p-2 border-bottom w-100 mr-2">
+                    <!-- :TODO: Link event title -->
                     <h5><?php the_title(); ?></h5>
                     <p><?php echo wp_trim_words(get_the_content(), 18);
                         $event_uri = '';
@@ -52,7 +53,7 @@
                             }
                         }
                         if ( $event_uri ) {
-                            echo '<a class="btn btn-primary" href="'.$event_uri[0].'" role="button btn-dark">Book Now</a>';
+                            echo '<a class="btn btn-primary" href="'.$event_uri[0].'" role="button btn-dark">Join on RiderHQ</a>';
                         } else { ?>
                             <a href="<?php the_permalink(); ?>">read more</a>
                         <?php } ?>

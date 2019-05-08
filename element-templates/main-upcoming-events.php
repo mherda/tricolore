@@ -81,13 +81,13 @@
 </nav>
 <?php
     if ( have_posts() ) {
-    while ( have_posts() ) {
-        the_post();
-        $event_d = new DateTime(get_field('event_date'));
-        $event_month = $event_d->format('M');
-        $event_day = $event_d->format('d');
-        $event_year = $event_d->format('Y');
-        $term_list = wp_get_post_terms($post->ID, 'event_category');
+        while ( have_posts() ) {
+            the_post();
+            $event_d = new DateTime(get_field('event_date'));
+            $event_month = $event_d->format('M');
+            $event_day = $event_d->format('d');
+            $event_year = $event_d->format('Y');
+            $term_list = wp_get_post_terms($post->ID, 'event_category');
 ?>
         <div class="row border-bottom border-top m-1">
             <div class="col-md-2 bg-light d-flex align-items-center justify-content-center">
@@ -97,6 +97,7 @@
             </div>
             <div class="col-md-10">
                 <div class="d-flex flex-column pt-2">
+                    <!-- :TODO: Link event title -->
                     <h3><?php the_title(); ?></h3>
                     <p>
                         <?php echo wp_trim_words(get_the_content(), 18); ?>
@@ -108,10 +109,11 @@
                                 }
                             }
                             if ( $event_uri ) {
-                                echo '<a class="btn btn-primary" href="'.$event_uri[0].'" role="button btn-dark">Book Now</a>';
-                            } else { ?>
-                                <a href="<?php the_permalink(); ?>">read more</a>
-                            <?php } ?>
+                                echo '<a class="btn btn-primary" href="'.$event_uri[0].'" role="button btn-dark">Join on RiderHQ</a>';
+                            } else {
+                        ?>
+                            <a href="<?php the_permalink(); ?>">read more</a>
+                        <?php } ?>
                     </p>
                     <nav>
                         <div id="navmenu" class="events-categories">
@@ -128,7 +130,7 @@
                 </div>
             </div>
         </div>
-            <?php } // end while
+    <?php } // end while
     } // end if
 
 ?>

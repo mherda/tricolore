@@ -229,11 +229,21 @@ main .col-md-8 li > a {
     font: var(--font-link);
 }
 
+/* Section content link */
+.entry-content a {
+    font: var(--font-link);
+}
+
 
 /* Article tiles after content */
 /* :TODO: Tile content HTML should match home tiles */
 main .tile-text h3 {
     font: var(--font-h4);
+}
+
+/* Pagination after content in Events */
+.pagination {
+    justify-content: center;
 }
 
 
@@ -245,11 +255,6 @@ main .col-md-4 h3 {
 /* Sidebar event item */
 main .col-md-4 h5 {
     font: var(--font-h6);
-}
-
-/* Section content link */
-.entry-content a {
-    font: var(--font-link);
 }
 
 

@@ -18,13 +18,13 @@
 
 							if ( $pastEvents->have_posts() ) {
 						    	while ( $pastEvents->have_posts() ) {
-									$pastEvents->the_post(); 
+									$pastEvents->the_post();
 									
 									$event_d = new DateTime(get_field('event_date'));
 									$event_month = $event_d->format('M');
 									$event_day = $event_d->format('d');
 									$event_year = $event_d->format('Y');
-									$term_list = wp_get_post_terms($post->ID, 'event_category');    
+									$term_list = wp_get_post_terms($post->ID, 'event_category');
 						?>
 						        <div class="row border-top border-bottom m-1">
 											<div class="col-md-2 bg-light d-flex align-items-center justify-content-center">
@@ -55,10 +55,12 @@
 
 						        </div>
 						            <?php } // end while
-							} 
+							}
 							echo paginate_links(array(
 								'total' => $pastEvents->max_num_pages
 							));
 
 						?>
 
+				<!-- :TODO: The pagination component -->
+				<?php // :TODO: understrap_pagination(); ?>

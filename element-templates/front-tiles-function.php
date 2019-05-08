@@ -192,23 +192,22 @@
             </h4>
           </div>
           <div class="p-2 border-bottom w-100 mr-2">
-            <h5>
-              <?php the_title(); ?>
-            </h5>
+            <!-- :TODO: Link event title -->
+            <h5><?php the_title(); ?></h5>
             <p>
               <?php echo wp_trim_words(get_the_content(), 18); ?>
               <?php
-                            $event_uri = '';
-                            foreach( $term_list as $term ) {
-                                if($term->name == 'RiderHQ') {
-                                    $event_uri = get_post_meta($post->ID, 'event_uri');
-                                }
-                            }
-                            if ( $event_uri ) {
-                                echo '<a class="btn btn-primary" href="'.$event_uri[0].'" role="button btn-dark">Book Now</a>';
-                            } else { ?>
-                                <a href="<?php the_permalink(); ?>">read more</a>
-                            <?php } ?>
+                $event_uri = '';
+                foreach( $term_list as $term ) {
+                    if($term->name == 'RiderHQ') {
+                        $event_uri = get_post_meta($post->ID, 'event_uri');
+                    }
+                }
+                if ( $event_uri ) {
+                    echo '<a class="btn btn-primary" href="'.$event_uri[0].'" role="button btn-dark">Join on RiderHQ</a>';
+                } else { ?>
+                    <a href="<?php the_permalink(); ?>">read more</a>
+                <?php } ?>
             </p>
 
           </div>
