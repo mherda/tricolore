@@ -196,10 +196,46 @@ body {
     font: var(--font-link);
 }
 
-/* Section content link */
-.entry-content a {
+
+/* Article title */
+main h1 {
+    font: var(--font-h2);
+}
+
+/* Article headings */
+main h2 {
+    font: var(--font-h4);
+}
+main h3,
+main th,
+main h4 {
+    font: var(--font-p);
+}
+main h3,
+main th {
+    font-weight: 600;
+}
+main h4 {
+    font-style: italic;
+}
+
+/* Article content link */
+/* :TODO: Article tiles should have a separate wrapper, after the content */
+main h2 > a,
+main h3 > a,
+main h4 > a,
+main p > a,
+main li > a {
     font: var(--font-link);
 }
+
+
+/* Article tiles after content */
+/* :TODO: Tile content HTML should match home tiles */
+main .tile-text h3 {
+    font: var(--font-h4);
+}
+
 
 /* Sidebar headings */
 /* :TODO: use a class for selecting the sidebar */
@@ -211,24 +247,11 @@ main .col-md-4 h5 {
     font: var(--font-h6);
 }
 
-/* Article title */
-h1 {
-    font: var(--font-h2);
-}
-/* Article content link */
-/* :TODO: Article tiles should have a separate wrapper, after the content */
-main h2 > a,
-main h3 > a,
-main h4 > a,
-main p > a,
-main li > a {
+/* Section content link */
+.entry-content a {
     font: var(--font-link);
 }
-/* Article tiles after content */
-/* :TODO: Tile content HTML should match home tiles */
-main .tile-text h3 {
-    font: var(--font-h4);
-}
+
 
 /* Footer heading */
 /* :TODO: use heading element for Flickr and Strava and Sponsor */
@@ -558,6 +581,11 @@ footer .mt-5 p {
     .grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    /* Youth uses 2 tiles in main content with sidebar */
+    body.page-template-default .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
@@ -679,6 +707,10 @@ footer .mt-5 p {
 .modal-full .modal-content {
     min-height: 100vh;
 }
+
+
+/* Main content */
+
 
 
 /* footer logos */
