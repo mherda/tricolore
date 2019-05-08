@@ -197,35 +197,35 @@ body {
 }
 
 
-/* Article title */
-main h1 {
+/* Article content title */
+main .col-md-8 h1 {
     font: var(--font-h2);
 }
 
-/* Article headings */
-main h2 {
+/* Article content headings */
+main .col-md-8 h2 {
     font: var(--font-h4);
 }
-main h3,
-main th,
-main h4 {
+main .col-md-8 h3,
+main .col-md-8 th,
+main .col-md-8 h4 {
     font: var(--font-p);
 }
-main h3,
-main th {
+main .col-md-8 h3,
+main .col-md-8 th {
     font-weight: 600;
 }
-main h4 {
+main .col-md-8 h4 {
     font-style: italic;
 }
 
 /* Article content link */
 /* :TODO: Article tiles should have a separate wrapper, after the content */
-main h2 > a,
-main h3 > a,
-main h4 > a,
-main p > a,
-main li > a {
+main .col-md-8 h2 > a,
+main .col-md-8 h3 > a,
+main .col-md-8 h4 > a,
+main .col-md-8 p > a,
+main .col-md-8 li > a {
     font: var(--font-link);
 }
 
