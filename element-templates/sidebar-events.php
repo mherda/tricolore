@@ -62,7 +62,7 @@
                   </div>
                   <?php } wp_reset_postdata(); ?>
                         <?php } else {
-                          ?> <h4>No upcoming events</h4>
+                          ?> <p>No upcoming events</p>
                         <?php } ?>
       </div>
                         <?php } else { ?>
@@ -70,9 +70,7 @@
                        <?php } ?>
                         
       <div class="text-right m-2">
-        <a href="<?php echo site_url('/events'); ?>">
-          <button type="button" class="btn btn-danger">All events</button>
-        </a>
+        <a class="btn btn-danger" href="<?php echo site_url('/events'); ?>">View events</a>
       </div>
 
     </div>

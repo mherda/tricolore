@@ -14,7 +14,7 @@
 /* Colour classes */
 
 .b-dark {
-    background-color: var(--tri-dark);
+    background-color: var(--tri-black);
 }
 
 .t-dark {
@@ -41,10 +41,13 @@
     background-color: var(--tri-black);
 }
 
-/* :TODO: only use .b-* colour classes as .bg- classes use !important */
+/* :TODO: only use .b-* colour classes as .bg-* classes use !important */
 .bg-dark,
 .bg-secondary {
     background-color: var(--tri-dark) !important;
+}
+.bg-light {
+    background-color: var(--tri-white) !important;
 }
 
 /* Tile colours */
@@ -125,7 +128,7 @@ html,
 body {
     font: var(--font-p);
     color: var(--tri-black);
-    background: var(--tri-white);
+    background: white;
 }
 
 /* Header search box */
@@ -464,7 +467,7 @@ footer .mt-5 p {
 }
 
 
-/* Event tag navigation menu */
+/* Minor navigation lists and breadcrumb */
 
 #navmenu.events-categories ul,
 #navmenu.events ul,
@@ -479,11 +482,26 @@ footer .mt-5 p {
     display: inline;
 }
 
+
+/* Event tag navigation menu */
+
+#navmenu.events-categories ul,
+#navmenu.events ul {
+    margin: 20px auto;
+    padding: 0;
+}
+
 #navmenu.events ul li a {
-    background: var(--tri-dark);
-    margin: 3px;
-    padding: 5px 5px 5px 5px;
-    color: white;
+    padding: 10px;
+    color: var(--tri-white);
+    background: var(--tri-black);
+}
+
+#navmenu.events ul li a:hover,
+#navmenu.events ul li a:focus,
+#navmenu.events ul li a:active {
+    color: var(--tri-green);
+    text-decoration: none;
 }
 
 #navmenu.events ul li.ccc a {
