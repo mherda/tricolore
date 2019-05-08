@@ -191,7 +191,7 @@ body {
 
 /* Breadcrumb */
 .breadcrumbs {
-    font: var(--font-p);
+    /* base style */
 }
 .breadcrumbs a {
     font: var(--font-link);

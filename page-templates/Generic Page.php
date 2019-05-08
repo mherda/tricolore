@@ -22,31 +22,36 @@ get_header('front');
           <div class="row mb-2">
             <div class="col-md-8 p-2">
               <!-- beginning of the main column -->
-              <div class="w-100 text-white">
-              <?php
-								$img = get_the_post_thumbnail($post->ID, 'pageHeader');
-								if ( $img ) { ?>
-                <?php echo get_the_post_thumbnail($post->ID, 'pageHeader');  ?>
-                <?php } else { ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/page_headers/chair.jpg" />
-                <?php } ?>
-                <div class="b-green w-100 text-white p-1 pt-2">
-                  <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+              <div class="w-100">
+                <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
                     <?php
                     if(function_exists('bcn_display'))
                     {
                             bcn_display();
                     }?>
-                  </div>
-                  
                 </div>
-              </div>
+                
+                <?php
+					$img = get_the_post_thumbnail($post->ID, 'pageHeader');
+					if ( $img ) { ?>
+                        echo get_the_post_thumbnail($post->ID, 'pageHeader');
+                    } else {
+                ?>
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/page_headers/chair.jpg" />
+                <?php } ?>
+                  
+            	<header class="entry-header">
 
-              <?php
-				global $post;
-				$content = apply_filters('the_content', $post->post_content);
+            		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+            	</header><!-- .entry-header -->
+
+                <?php
+                global $post;
+                $content = apply_filters('the_content', $post->post_content);
                 echo $content;
-              ?>
+                ?>
+              </div>
 
 
 

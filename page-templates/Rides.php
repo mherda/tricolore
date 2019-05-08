@@ -33,17 +33,14 @@ get_header('front');
                 </p>
               </div>
               <div class="b-red w-100 text-white p-1 pt-2">
-                <h5 class="text-center">Sign up now using <a class="w-link" href="<?php echo the_field('ridehq_link'); ?>"
-                    target="_blank">Rider HQ</a></h5>
+                <h5 class="text-center">Sign up now using <a class="w-link" href="<?php echo the_field('ridehq_link'); ?>" target="_blank">Rider HQ</a></h5>
               </div>
               <div>
                 <?php
-								global $post;
-								$content = apply_filters('the_content', $post->post_content);
-							?>
-                <p>
-                  <?php echo $content; ?>
-                </p>
+					global $post;
+					$content = apply_filters('the_content', $post->post_content);
+				?>
+                <?php echo $content; ?>
               </div>
 
 
@@ -59,8 +56,6 @@ get_header('front');
               <?php get_template_part( 'element-templates/rides-objects' ); ?>
               <?php get_template_part( 'element-templates/sidebar-routes' ); ?>
               <?php get_template_part( 'element-templates/sidebar-rideleaders' ); ?>
-
-
             </div>
 
           </div>
