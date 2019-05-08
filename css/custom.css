@@ -11,6 +11,84 @@
 }
 
 
+/* Colour classes */
+
+.b-dark {
+    background-color: var(--tri-dark);
+}
+
+.t-dark {
+    color: var(--tri-dark);
+}
+
+.b-blue {
+    background-color: var(--tri-blue);
+}
+
+.t-blue {
+    color: var(--tri-blue);
+}
+
+.b-green {
+    background-color: var(--tri-green);
+}
+
+.b-red {
+    background-color: var(--tri-red);
+}
+
+.b-black {
+    background-color: var(--tri-black);
+}
+
+/* :TODO: only use .b-* colour classes as .bg- classes use !important */
+.bg-dark,
+.bg-secondary {
+    background-color: var(--tri-dark) !important;
+}
+
+/* Tile colours */
+
+.tile-text {
+    color: var(--tri-white);
+}
+
+.tile-text:hover {
+    color: var(--tri-white);
+    text-decoration: none;
+}
+
+.p-link {
+    color: var(--tri-green);
+}
+
+.p-link-dark {
+    color: var(--tri-dark);
+}
+
+.p-link-dark:hover {
+    color: var(--tri-black);
+}
+
+.p-link:hover {
+    color: var(--tri-blue);
+}
+
+.w-link {
+    color: var(--tri-white);
+    text-decoration: underline;
+}
+
+.w-link:hover {
+    color: var(--tri-green);
+}
+
+.card {
+    background-color: rgba(245, 245, 245, 0.7);
+    color: var(--tri-dark);
+}
+
+
 /* April 2019 font variables */
 /* https://fonts.google.com/specimen/Karla?selection.family=Karla:700|Montserrat:400,600 */
 
@@ -258,9 +336,16 @@ footer .mt-5 p {
 
 /* MAIN NAVIGATION */
 
+.navbar {
+    padding: 0;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    padding: 10px;
+    color: var(--tri-white);
+}
 
 /* change the color of active or hovered links */
-
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:focus .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
@@ -301,84 +386,6 @@ footer .mt-5 p {
     }
 }
 
-
-/* Colour classes */
-
-.b-dark {
-    background-color: var(--tri-dark);
-}
-
-.t-dark {
-    color: var(--tri-dark);
-}
-
-.b-blue {
-    background-color: var(--tri-blue);
-}
-
-.t-blue {
-    color: var(--tri-blue);
-}
-
-.b-green {
-    background-color: var(--tri-green);
-}
-
-.b-red {
-    background-color: var(--tri-red);
-}
-
-.b-black {
-    background-color: var(--tri-black);
-}
-
-/* :TODO: only use .b-* colour classes as .bg- classes use !important */
-.bg-dark,
-.bg-secondary {
-    background-color: var(--tri-dark) !important;
-}
-
-
-/* Tile text colour */
-
-.tile-text {
-    color: var(--tri-white);
-}
-
-.tile-text:hover {
-    color: var(--tri-white);
-    text-decoration: none;
-}
-
-.p-link {
-    color: var(--tri-green);
-}
-
-.p-link-dark {
-    color: var(--tri-dark);
-}
-
-.p-link-dark:hover {
-    color: var(--tri-black);
-}
-
-.p-link:hover {
-    color: var(--tri-blue);
-}
-
-.w-link {
-    color: var(--tri-white);
-    text-decoration: underline;
-}
-
-.w-link:hover {
-    color: var(--tri-green);
-}
-
-.card {
-    background-color: rgba(245, 245, 245, 0.7);
-    color: var(--tri-dark);
-}
 
 
 /* Carousel */
