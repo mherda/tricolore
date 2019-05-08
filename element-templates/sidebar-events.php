@@ -1,7 +1,7 @@
 <div class="b-dark p-2 mb-2 text-white">
   <div class="m-2">
     <div class="d-flex p-2 flex-column">
-        <?php  
+        <?php
         $categories = get_the_category();
  
           if ( ! empty( $categories ) ) { ?>
@@ -33,7 +33,7 @@
                 ));
                 if ( have_posts() ) {
                 while($homepageEvents->have_posts()) {
-                  $homepageEvents->the_post(); 
+                  $homepageEvents->the_post();
                   $term_list = wp_get_post_terms($post->ID, 'event_category');
                   ?>
                   <div class="d-flex">
@@ -50,9 +50,9 @@
                             if($term->name == 'RiderHQ') {
                                 $event_uri = get_post_meta($post->ID, 'event_uri');
                             }
-                        } 
+                        }
                         if ( $event_uri ) {
-                            echo '<a class="btn btn-primary" target="_blank" href="'.$event_uri[0].'" role="button btn-dark">Book Now</a>';
+                            echo '<a class="btn btn-primary" href="'.$event_uri[0].'" role="button btn-dark">Book Now</a>';
                         } else { ?>
                             <a href="<?php the_permalink(); ?>">read more</a>
                         <?php } ?>

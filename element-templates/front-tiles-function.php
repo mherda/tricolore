@@ -17,7 +17,7 @@
       ?>
       <a class="tile-text tyle" href="<?php the_field('tile_link'); ?>" >
         <div class="tyle" style="<?php echo $tile_background; ?>">
-            <?php           
+            <?php
             if ($post) { ?>
               <div class="tyle-tag">
                 <h5><span class="tag">
@@ -29,7 +29,7 @@
                 <p><?php echo $post->post_content; ?></p>
 
               </div>
-            <?php 
+            <?php
             } else { ?>
                 <p>Error! Please specify a tile to be displayed!</p>
             <?php }
@@ -59,7 +59,7 @@
       ?>
       <a class="tile-text tyle-rectangle" href="<?php the_field('tile_link'); ?>" >
 
-            <?php           
+            <?php
             if ($post) { ?>
               <img class="" src="<?php echo $img; ?>" />
               <div>
@@ -74,7 +74,7 @@
 
                   </div>
               </div>
-            <?php 
+            <?php
             } else { ?>
                 <p>Error. Please specify a tile to be displayed!</p>
             <?php }
@@ -98,10 +98,10 @@
     <!-- beginning of bottom left -->
     <?php
         $post_object = get_field('bottom_left_tile');
-        if( $post_object ): 
+        if( $post_object ):
           // override $post
           $post = $post_object;
-          setup_postdata( $post ); 
+          setup_postdata( $post );
           $img = get_the_post_thumbnail_url($post_id, 'frontTilePort');
         ?>
     <a class="tile-text" href="<?php the_field('tile_link'); ?>">
@@ -127,10 +127,10 @@
     <!-- beginning of bottom centre -->
     <?php
         $post_object = get_field('bottom_centre_tile');
-        if( $post_object ): 
+        if( $post_object ):
           // override $post
           $post = $post_object;
-          setup_postdata( $post ); 
+          setup_postdata( $post );
           $img = get_the_post_thumbnail_url($post_id, 'frontTilePort');
         ?>
     <a class="tile-text" href="<?php the_field('tile_link'); ?>">
@@ -157,7 +157,7 @@
     <div class="b-dark tile-text p-2">
       <h4>Upcoming events</h4>
       <div class="d-flex p-2 flex-column">
-        <?php 
+        <?php
                 $today = date('Ymd');
                 $homepageEvents = new WP_Query(array(
                     'posts_per_page' => 2,
@@ -176,13 +176,13 @@
                 ));
 
                 while($homepageEvents->have_posts()) {
-                  $homepageEvents->the_post(); 
+                  $homepageEvents->the_post();
                   $term_list = wp_get_post_terms($post->ID, 'event_category');
                   ?>
         <div class="d-flex">
           <div class="d-flex flex-column border text-center">
-            <?php 
-                          $eventDate = new DateTime(get_field('event_date'));     
+            <?php
+                          $eventDate = new DateTime(get_field('event_date'));
                            ?>
             <div class="b-green mw50">
               <?php echo $eventDate->format('M'); ?>
@@ -203,9 +203,9 @@
                                 if($term->name == 'RiderHQ') {
                                     $event_uri = get_post_meta($post->ID, 'event_uri');
                                 }
-                            } 
+                            }
                             if ( $event_uri ) {
-                                echo '<a class="btn btn-primary" target="_blank" href="'.$event_uri[0].'" role="button btn-dark">Book Now</a>';
+                                echo '<a class="btn btn-primary" href="'.$event_uri[0].'" role="button btn-dark">Book Now</a>';
                             } else { ?>
                                 <a href="<?php the_permalink(); ?>">read more</a>
                             <?php } ?>

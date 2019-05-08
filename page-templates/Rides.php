@@ -29,11 +29,11 @@ get_header('front');
                   <?php echo get_field('top_info'); ?>
                 </h5>
                 <p>For the latest updates on our Sunday rides visit our
-                  <a class="p-link" href="<?php echo the_field('facebook_link'); ?>" target="_blank">Facebook page</a>
+                  <a class="p-link" href="<?php echo the_field('facebook_link'); ?>">Facebook page</a>
                 </p>
               </div>
               <div class="b-red w-100 text-white p-1 pt-2">
-                <h5 class="text-center">Sign up now using <a class="w-link" href="<?php echo the_field('ridehq_link'); ?>" target="_blank">Rider HQ</a></h5>
+                <h5 class="text-center">Sign up now using <a class="w-link" href="<?php echo the_field('ridehq_link'); ?>">Rider HQ</a></h5>
               </div>
               <div>
                 <?php

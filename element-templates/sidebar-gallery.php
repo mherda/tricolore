@@ -3,7 +3,7 @@
 
     <?php
       $tag =  get_field('gallery_tag');
-      $glink = get_field('gallery_link');      
+      $glink = get_field('gallery_link');
       if ( $tag ) { ?>
         <h3>Event Gallery</h3>
         <p>Click below for more photos from the event:</p>
@@ -18,14 +18,14 @@
             <p>Click below to see the event gallery</p>
             <p class="mt-3">
    
-              <a href="<?php the_field('gallery_link'); ?>" role="button" target='_blank' class="btn btn-danger">Event Gallery</a>
+              <a href="<?php the_field('gallery_link'); ?>" role="button" class="btn btn-danger">Event Gallery</a>
             </p>
           <?php } else { ?>
             <h3>Club Photo Gallery</h3>
             <p>Click below to visit the club gallery</p>
             <p class="mt-3">
-              <a href="https://www.flickr.com/photos/pengecc/" role="button" target='_blank' class="btn btn-danger">Club Gallery</a>
-            </p>   
+              <a href="https://www.flickr.com/photos/pengecc/" role="button" class="btn btn-danger">Club Gallery</a>
+            </p>
           <?php }
         }
     

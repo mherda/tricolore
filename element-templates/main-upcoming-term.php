@@ -50,7 +50,7 @@
                                 }
                             }
                             if ( $event_uri ) {
-                                echo '<a class="btn btn-primary" target="_blank" href="'.$event_uri[0].'" role="button btn-dark">Book Now</a>';
+                                echo '<a class="btn btn-primary" href="'.$event_uri[0].'" role="button btn-dark">Book Now</a>';
                             } else { ?>
                                 <a href="<?php the_permalink(); ?>">read more</a>
                             <?php } ?>

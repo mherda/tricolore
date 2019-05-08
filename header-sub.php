@@ -34,8 +34,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<!--
 		<div class="d-flex justify-content-between mt-2 ml-1 mr-1 mb-1">
       <div class="p-2">
-        <a href="https://www.facebook.com/groups/206843416040902/" target="_blank"><i class="fa fa-lg fa-facebook"></i></a>
-        <a href="https://www.youtube.com/channel/UCldNfBQKDUfxZzQcYkKVSmw" target="_blank"><i class="fa fa-lg fa-flickr"></i></a>                                                                                <a href="https://www.youtube.com/channel/UCldNfBQKDUfxZzQcYkKVSmw" target="_blanl"><i class="fa fa-lg fa-youtube"></i></a>
+        <a href="https://www.facebook.com/groups/206843416040902/"><i class="fa fa-lg fa-facebook"></i></a>
+        <a href="https://www.youtube.com/channel/UCldNfBQKDUfxZzQcYkKVSmw"><i class="fa fa-lg fa-flickr"></i></a>                                                                                <a href="https://www.youtube.com/channel/UCldNfBQKDUfxZzQcYkKVSmw"><i class="fa fa-lg fa-youtube"></i></a>
       </div>
 
 			<img src="<?php echo get_template_directory_uri(); ?>/assets/whiteLogo.svg" width="200" />

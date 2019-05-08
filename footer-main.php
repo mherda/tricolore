@@ -23,19 +23,19 @@ $the_theme = wp_get_theme();
 						<div class="row m-3 notFull mx-auto">
 							<div class="col-md-2">
 								<h3 class="mb-2">Find us at</h3>
-								<p><a href="https://www.facebook.com/groups/206843416040902/" target="_blank"><i class="text-light fa fa-lg fa-facebook"></i><span class="text-light"> Facebook</span></a></p>
-								<p><a href="https://twitter.com/pengecycleclub?lang=en" target="_blank"><i class="text-light fa fa-lg fa-twitter"></i><span class="text-light"> Twitter</span></a></p>
-								<p><a href="https://www.youtube.com/channel/UCldNfBQKDUfxZzQcYkKVSmw" target="_blanl"><i class="text-light fa fa-lg fa-youtube"></i><span class="text-light"> Youtube</span></a></p>
+								<p><a href="https://www.facebook.com/groups/206843416040902/"><i class="text-light fa fa-lg fa-facebook"></i><span class="text-light"> Facebook</span></a></p>
+								<p><a href="https://twitter.com/pengecycleclub?lang=en"><i class="text-light fa fa-lg fa-twitter"></i><span class="text-light"> Twitter</span></a></p>
+								<p><a href="https://www.youtube.com/channel/UCldNfBQKDUfxZzQcYkKVSmw"><i class="text-light fa fa-lg fa-youtube"></i><span class="text-light"> Youtube</span></a></p>
 							</div>
 							<div class="col-md-5">
-								<p><a href="https://www.flickr.com/photos/pengecc/" target="_blank"><i class="text-light fa fa-lg fa-flickr"></i><span class="text-light"> Flickr</span></a></p>
+								<p><a href="https://www.flickr.com/photos/pengecc/"><i class="text-light fa fa-lg fa-flickr"></i><span class="text-light"> Flickr</span></a></p>
 								<?php echo do_shortcode("[flickr_tags user_id='69040456@N07' tags='PengeCycleClub' max_num_photos='6']"); ?>
 
 
 							</div>
 
 							<div class="col-md-5">
-								<p><a href="https://www.strava.com/clubs/penge-cc" target="_blank"><i class="text-light fa fa-lg fa-strava"></i><span class="text-light"> Strava</span></a></p>
+								<p><a href="https://www.strava.com/clubs/penge-cc"><i class="text-light fa fa-lg fa-strava"></i><span class="text-light"> Strava</span></a></p>
 								<iframe allowtransparency frameborder='0' height='160' scrolling='no' src='https://www.strava.com/clubs/3542/latest-rides/ad3894ba26fc7b110e5bd78b3ada38124360b6d5?show_rides=false' width='100%'></iframe>
 
 							</div>
