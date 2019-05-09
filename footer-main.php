@@ -12,7 +12,7 @@ $the_theme = wp_get_theme();
 
 <div class="wrapper" id="wrapper-footer">
 
-		<div class="row bg-dark text-white">
+		<div class="row bg-dark">
 
 			<div class="col-md-12">
 
@@ -57,15 +57,15 @@ $the_theme = wp_get_theme();
 
 						<div class="row b-black">
 
-							<div class="d-flex flex-column m-3 p-3 w-75 mx-auto">
+							<div class="m-3 p-3 w-75 mx-auto">
 								<div class="text-center mb-1 mt-5">
 									<p>A big thank you to all our sponsors!</p>
 								</div>
 								<div class="text-center mb-3">
 									<img class="mx-auto d-block" src="<?php echo get_template_directory_uri(); ?>/assets/sponsors/sponsor_logos.png" />
 								</div>
-								<div class="text-center mt-2 t-dark">
-									<p>&copy; Penge Cycle Club 2018. All rights reserved</p>
+								<div class="text-center mt-2">
+									<p>&copy; Penge Cycle Club 2019. All rights reserved</p>
 								</div>
 
 							</div>

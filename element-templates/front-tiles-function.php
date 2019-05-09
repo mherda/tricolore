@@ -13,7 +13,7 @@
             $post = $post_object;
             setup_postdata($post);
             $img = get_the_post_thumbnail_url($post_id, 'tyle');
-            $tile_background = ( $img ? "background: url({$img});" : "background-color: green;" );
+            $tile_background = ( $img ? "background: url({$img});" : "" ); // tri-green fallback
       ?>
       <a class="tile-text tyle" href="<?php the_field('tile_link'); ?>" >
         <div class="tyle" style="<?php echo $tile_background; ?>">

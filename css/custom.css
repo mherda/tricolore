@@ -57,7 +57,9 @@ a:hover,
 a:active {
     color: var(--tri-green);
 }
-
+#wrapper-footer {
+    color: var(--tri-white);
+}
 
 /* Tile colours */
 
@@ -424,6 +426,7 @@ footer .mt-5 p {
 
 /* Navbar active or hovered links */
 .navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item.current-page-ancestor .nav-link,
 .navbar-custom .nav-item .nav-link:focus,
 .navbar-custom .nav-item .nav-link:hover {
     color: var(--tri-green);
@@ -626,7 +629,7 @@ footer .mt-5 p {
 .grid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-auto-rows: minmax(300px, 400px);
+    grid-auto-rows: minmax(300px, 350px);
     grid-gap: 10px;
     -ms-flex-pack: distribute;
     justify-content: space-around;

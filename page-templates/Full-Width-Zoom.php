@@ -33,7 +33,7 @@ get_header('front');
               <?php get_template_part( 'loop-templates/content', 'page' ); ?>
             <?php endwhile; // end of the loop. ?>
             <?php
-              $tile_cat = get_cat_name(get_field('tile_category_container')); 
+              $tile_cat = get_cat_name(get_field('tile_category_container'));
             ?>
           </div>
 
@@ -48,9 +48,9 @@ get_header('front');
               
               if ( $tile_selection->have_posts() ) {
                 while ( $tile_selection->have_posts() ) {
-                $tile_selection->the_post(); 
+                $tile_selection->the_post();
                 $img = get_the_post_thumbnail_url($post_id, 'tyle');
-                $tile_background = ( $img ? "background: url({$img});" : "background-color: green;" );
+                $tile_background = ( $img ? "background: url({$img});" : "" ); // tri-green fallback
 
                 if ( $img ) { ?>
                 <a class="tile-text" href="<?php the_field('tile_link'); ?>">
@@ -83,7 +83,7 @@ get_header('front');
 
 
             <?php } // end while
-            wp_reset_postdata(); 
+            wp_reset_postdata();
             } // end if ?>
             
           </div>

@@ -52,7 +52,7 @@ get_header('front');
                 while ( $tile_selection->have_posts() ) {
                 $tile_selection->the_post();
                 $img = get_the_post_thumbnail_url($post_id, 'frontTile');
-                $tile_background = ( $img ? "background: url({$img});" : "background-color: green;" );
+                $tile_background = ( $img ? "background: url({$img});" : "" ); // tri-green fallback
 
                 if ( $img ) { ?>
                 <a class=" tile-text" href="<?php the_field('tile_link'); ?>">
