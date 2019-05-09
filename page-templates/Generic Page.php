@@ -20,7 +20,7 @@ get_header('front');
           <!-- Top Row  -->
 
           <div class="row mb-2">
-            <div class="col-md-8 p-2">
+            <div class="col-md-8">
               <!-- beginning of the main column -->
               <div class="w-100">
                 <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
@@ -62,7 +62,7 @@ get_header('front');
             </div> <!-- end of main column -->
 
 
-            <div class="sidebar col-md-4 p-2">
+            <div class="sidebar col-md-4"> <!-- beginning of Sidebar -->
 
               <div>
 								<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>

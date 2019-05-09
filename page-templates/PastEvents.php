@@ -20,7 +20,7 @@ get_header('front');
 					<!-- Top Row  -->
 					
 					<div class="row mb-2">
-						<div class="col-md-8 p-2">
+						<div class="col-md-8">
 							<!-- Load the page body header -->
 							<?php get_template_part( 'element-templates/page-header' ); ?>
 							<?php
@@ -28,9 +28,9 @@ get_header('front');
 								$content = apply_filters('the_content', $post->post_content);
 						?>
 							<p><?php echo $content; ?></p>
-							<?php get_template_part( 'element-templates/main-past-events' ); ?>								
+							<?php get_template_part( 'element-templates/main-past-events' ); ?>
 						</div>
-						<div class="col-md-4 p-2">
+						<div class="col-md-4"> <!-- beginning of Sidebar -->
 							<div class="p-2 w-100 b-green mb-3">
 								<?php get_template_part( 'element-templates/sidebar-upcoming-events' ); ?>
 							</div>

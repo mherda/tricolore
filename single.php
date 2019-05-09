@@ -15,7 +15,7 @@ get_header();
 				<main class="site-main" id="main" role="main">
 					
 					<div class="row mb-2"> <!-- Beginning of Content -->
-						<div class="col-md-8 p-2"> <!-- beginning of main column -->
+						<div class="col-md-8"> <!-- beginning of main column -->
 							<?php
 								if ( have_posts() ) {
 									while ( have_posts() ) {
@@ -31,7 +31,7 @@ get_header();
 							?>
 						</div> <!-- end of main column -->
 						
-						<div class="sidebar col-md-4 p-2"> <!-- Beginning of Side -->
+						<div class="sidebar col-md-4"> <!-- beginning of Sidebar -->
 							<p>this is aside</p>
 						</div> <!-- End of Side -->
 					</div><!-- end of content-row -->

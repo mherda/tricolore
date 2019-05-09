@@ -7,7 +7,7 @@
     --tri-dark: #3c4645;
     --tri-grey: #7d7d7d;
     --tri-white: #ecf1f4;
-    --tri-blue: #f0f; /* :TODO: #4A90E2 */
+    --tri-blue: #4a90e2; /* Sunday Rides :TODO: add swatch to design guide */
 }
 
 
@@ -49,6 +49,15 @@
 .bg-light {
     background-color: var(--tri-white) !important;
 }
+
+
+/* Base colours */
+a,
+a:hover,
+a:active {
+    color: var(--tri-green);
+}
+
 
 /* Tile colours */
 
@@ -383,17 +392,6 @@ footer .mt-5 p {
     color: var(--tri-white);
 }
 
-/* change the color of active or hovered links */
-.navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item:focus .nav-link,
-.navbar-custom .nav-item:hover .nav-link {
-    color: var(--tri-green);
-}
-
-.navbar-custom .navbar-nav>li>.dropdown-menu {
-    background-color: var(--tri-green);
-}
-
 
 /* Navbar dropdown menu */
 
@@ -423,6 +421,98 @@ footer .mt-5 p {
         content: '';
     }
 }
+
+/* Navbar active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item .nav-link:focus,
+.navbar-custom .nav-item .nav-link:hover {
+    color: var(--tri-green);
+}
+
+.navbar-custom .navbar-nav>li>.dropdown-menu {
+    background-color: var(--tri-green);
+}
+.navbar-custom .navbar-nav .dropdown-menu .nav-link {
+    color: var(--tri-white) !important; /* :TODO: theme.css too much !important */
+}
+.navbar-dark .navbar-nav .dropdown-menu .nav-link:hover,
+.navbar-dark .navbar-nav .dropdown-menu .nav-link:focus {
+    color: var(--tri-black) !important; /* :TODO: theme.css too much !important */
+    background: transparent;
+}
+.navbar-custom .navbar-nav .dropdown-menu .nav-link.active,
+.navbar-custom .navbar-nav .dropdown-menu .nav-link:active {
+    color: var(--tri-black) !important; /* :TODO: theme.css too much !important */
+}
+
+
+/* MINOR NAVIGATION */
+
+#navmenu.events-categories ul,
+#navmenu.events ul,
+.nav-breadcrumbs ul {
+    list-style-type: none;
+    list-style-image: none;
+}
+
+#navmenu.events-categories ul li,
+#navmenu.events ul li,
+.nav-breadcrumbs ul li {
+    display: inline;
+}
+
+
+/* Event tag navigation menu */
+
+#navmenu.events-categories ul,
+#navmenu.events ul {
+    margin: 20px auto;
+    padding: 0;
+}
+
+#navmenu.events ul li a,
+.pagination li a,
+.page-item.active .page-link {
+    padding: 10px;
+    color: var(--tri-white);
+    background: var(--tri-black);
+}
+.page-item.active .page-link {
+    border: 0;
+}
+.page-link:hover,
+.page-link:focus,
+.page-link:active {
+    color: var(--tri-green);
+    background: var(--tri-black);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#navmenu.events ul li a:hover,
+#navmenu.events ul li a:focus,
+#navmenu.events ul li a:active {
+    color: var(--tri-green);
+    text-decoration: none;
+}
+
+#navmenu.events ul li.ccc a,
+.page-item.active .page-link {
+    color: var(--tri-green);
+}
+
+#navmenu.events-categories ul li a {
+    padding: 2px 3px 2px 3px;
+}
+
+.nav-breadcrumbs ul li a:hover {
+    text-decoration: none;
+}
+
+.nav-horizontal .current-menu-item a {
+    color: var(--tri-green);
+}
+
 
 
 
@@ -467,58 +557,6 @@ footer .mt-5 p {
 }
 
 
-/* Minor navigation lists and breadcrumb */
-
-#navmenu.events-categories ul,
-#navmenu.events ul,
-.nav-breadcrumbs ul {
-    list-style-type: none;
-    list-style-image: none;
-}
-
-#navmenu.events-categories ul li,
-#navmenu.events ul li,
-.nav-breadcrumbs ul li {
-    display: inline;
-}
-
-
-/* Event tag navigation menu */
-
-#navmenu.events-categories ul,
-#navmenu.events ul {
-    margin: 20px auto;
-    padding: 0;
-}
-
-#navmenu.events ul li a {
-    padding: 10px;
-    color: var(--tri-white);
-    background: var(--tri-black);
-}
-
-#navmenu.events ul li a:hover,
-#navmenu.events ul li a:focus,
-#navmenu.events ul li a:active {
-    color: var(--tri-green);
-    text-decoration: none;
-}
-
-#navmenu.events ul li.ccc a {
-    color: var(--tri-green);
-}
-
-#navmenu.events-categories ul li a {
-    padding: 2px 3px 2px 3px;
-}
-
-.nav-breadcrumbs ul li a:hover {
-    text-decoration: none;
-}
-
-.nav-horizontal .current-menu-item a {
-    color: var(--tri-green);
-}
 
 
 /* Full width 3x3 grid */

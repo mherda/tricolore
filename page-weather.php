@@ -22,7 +22,7 @@ get_header('front');
 
         <main class="site-main" id="main" role="main">
           <div class="row mb-2">
-            <div class="col-md-8 p-2">
+            <div class="col-md-8">
           
           <div>
             <?php while ( have_posts() ) : the_post(); ?>
@@ -83,7 +83,7 @@ get_header('front');
             } // end if ?>
           </div>
         </div> <!-- end of left column -->
-        <div class="col-md-4 p-2">
+        <div class="col-md-4"> <!-- beginning of Sidebar -->
 
           
 

@@ -19,7 +19,7 @@ get_header('front');
 
           <!-- Top Row including RiderHQ on the Left and the Weather on the right -->
           <div class="row mb-2">
-            <div class="col-md-8 p-2">
+            <div class="col-md-8">
               
             <?php get_template_part( 'element-templates/page-header' ); ?>
             

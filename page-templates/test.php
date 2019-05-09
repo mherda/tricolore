@@ -20,7 +20,7 @@ get_header('test');
           <!-- Top Row  -->
 
           <div class="row mb-2">
-            <div class="col-md-8 p-2">
+            <div class="col-md-8">
               <!-- beginning of the main column -->
               <div class="w-100 text-white">
                 <?php
@@ -30,12 +30,10 @@ get_header('test');
                 <?php } else { ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/page_headers/chair.jpg" />
                 <?php } ?>
-                <div class="b-green w-100 text-white p-1 pt-2">
-                  <h5 class="pl-3">
-                    <?php echo esc_html( get_the_title() ); ?>
-                  </h5>
-                </div>
               </div>
+              <h1>
+                <?php echo esc_html( get_the_title() ); ?>
+              </h1>
 
               <?php
 				global $post;
@@ -47,7 +45,7 @@ get_header('test');
             </div> <!-- end of main column -->
 
 
-            <div class="sidebar col-md-4 p-2">
+            <div class="sidebar col-md-4"> <!-- beginning of Sidebar -->
                   <?php
                     $side = get_field('sidebar');
                     foreach( $side as $s ) {
