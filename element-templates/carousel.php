@@ -9,13 +9,13 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <?php
-                    $post_object = get_field('slide_1');
-                    if( $post_object ): 
-                     // override $post
-                      $post = $post_object;
-                      setup_postdata( $post ); 
-                      $img = wp_get_attachment_url( get_post_thumbnail_id($post), 'thumbnail' );
-                    ?>
+        $post_object = get_field('slide_1');
+        if( $post_object ):
+         // override $post
+          $post = $post_object;
+          setup_postdata( $post );
+          $img = wp_get_attachment_url( get_post_thumbnail_id($post), 'thumbnail' );
+        ?>
       <?php if($img) { ?>
       <img class="d-block w-100" src="<?php echo $img ?>" alt="first slide">
       <?php } else { ?>
@@ -24,18 +24,16 @@
       <div class="carousel-caption d-none d-md-block">
         <div class="card" style="width: 35rem;">
           <div class="card-body text-left">
-            <div class="bg-swash">
-              <h5 class="ml-3 mt-2 pl-1">
-                <?php the_field('slide_tag'); ?>
-              </h5>
-            </div>
+            <h5 class="ml-3 mt-2 pl-1">
+              <?php the_field('slide_tag'); ?>
+            </h5>
             <h3 class="slide-text mb-2">
               <?php the_title(); ?>
             </h3>
             <p class="card-text">
               <?php echo $post->post_content; ?>
             </p>
-            <a href="#" class="btn btn-danger">Join our Club</a>
+            <a href="/join/" class="btn btn-danger">Join our Club</a>
             <a href="#" class="btn btn-success">Try a ride</a>
           </div>
         </div>
@@ -47,10 +45,10 @@
     <div class="carousel-item">
       <?php
                     $post_object = get_field('slide_2');
-                    if( $post_object ): 
+                    if( $post_object ):
                      // override $post
                       $post = $post_object;
-                      setup_postdata( $post ); 
+                      setup_postdata( $post );
                       $img = wp_get_attachment_url( get_post_thumbnail_id($post), 'thumbnail' );
                     ?>
       <?php if($img) { ?>
@@ -86,10 +84,10 @@
     <div class="carousel-item">
       <?php
                     $post_object = get_field('slide_3');
-                    if( $post_object ): 
+                    if( $post_object ):
                      // override $post
                       $post = $post_object;
-                      setup_postdata( $post ); 
+                      setup_postdata( $post );
                       $img = wp_get_attachment_url( get_post_thumbnail_id($post), 'thumbnail' );
                     ?>
       <?php if($img) { ?>

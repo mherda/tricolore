@@ -20,49 +20,41 @@ get_header('front');
           <!-- Top Row  -->
 
           <div class="row mb-2">
-            <div class="col-md-8">
+            <div class="col-md-8 p-2">
               <!-- beginning of the main column -->
-              <div class="w-100">
-                <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-                    <?php
-                    if(function_exists('bcn_display'))
-                    {
-                            bcn_display();
-                    }?>
-                </div>
-                
-                <?php
-					$img = get_the_post_thumbnail($post->ID, 'pageHeader');
-					if ( $img ) {
-                        echo get_the_post_thumbnail($post->ID, 'pageHeader');
-                    } else {
-                ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/page_headers/chair.jpg" />
-                <?php } ?>
-                  
-            	<header class="entry-header">
-
-            		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-            	</header><!-- .entry-header -->
-
-                <?php
-                global $post;
-                $content = apply_filters('the_content', $post->post_content);
-                echo $content;
-                ?>
+              <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+                  <?php
+                  if(function_exists('bcn_display'))
+                  {
+                          bcn_display();
+                  }?>
               </div>
-
-
-
+              
+              <?php
+    		  	$img = get_the_post_thumbnail($post->ID, 'pageHeader');
+    		  	if ( $img ) {
+                      echo get_the_post_thumbnail($post->ID, 'pageHeader');
+                  } else {
+              ?>
+              <img src="<?php echo get_template_directory_uri(); ?>/assets/page_headers/chair.jpg" />
+              <?php } ?>
+              
+              <header class="entry-header">
+                <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+              </header><!-- .entry-header -->
+      		  <?php
+    		  global $post;
+    		  $content = apply_filters('the_content', $post->post_content);
+    		  echo $content;
+    		  ?>
+              
               <?php get_template_part( 'element-templates/bottom_tiles1' ); ?>
-
 
 
             </div> <!-- end of main column -->
 
 
-            <div class="sidebar col-md-4"> <!-- beginning of Sidebar -->
+            <div class="sidebar col-md-4 p-2">
 
               <div>
 								<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>

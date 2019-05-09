@@ -67,8 +67,7 @@
 <nav id="nav_events">
     <div id="navmenu" class="events">
         <ul class="text-center">
-            <li class="ccc"><a href="<?php echo get_post_type_archive_link( 'event' ); ?>">All</a>
-            </li><?php
+            <li class="ccc"><a href="<?php echo get_post_type_archive_link( 'event' ); ?>">All</a></li><?php
                 $terms = get_terms(array(
                     'taxonomy' => 'event_category'
                 ));

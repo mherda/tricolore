@@ -4,8 +4,7 @@
 <nav>
     <div id="navmenu" class="events">
         <ul class="text-center">
-            <li><a href="<?php echo get_post_type_archive_link( 'event' ); ?>">All</a>
-            </li><?php
+            <li><a href="<?php echo get_post_type_archive_link( 'event' ); ?>">All</a></li><?php
                 $terms = get_terms(array(
                     'taxonomy' => 'event_category'
                 ));
@@ -73,6 +72,6 @@
         </div>
             <?php } // end while
     } else { // end if ?>
-    <h3>There are currently no upcoming events in this category.</h3>
+    <p>There are currently no upcoming events in this category.</p>
     <?php }
 ?>

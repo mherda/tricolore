@@ -35,17 +35,15 @@
 
 		<div id="page-header">
 			<div class="logo">
-			<?php the_custom_logo();
-					 if (!has_custom_logo()) {
-						 ?>
-						 	<img src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" width="200" />
-					 <?php }
-					 ?>
+				<?php
+				the_custom_logo();
+				if (!has_custom_logo()) {
+				?>
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" width="200" />
+				<?php } ?>
 			</div>
 			<div class="search-area">
-			<div>
 				<?php get_search_form(); ?>
-			</div>
 			</div>
 			<nav class="navbar navbar-expand-md navbar-dark navbar-custom">
 				<div class="container">
@@ -59,7 +57,7 @@
 							'theme_location'  => 'primary',
 							'container_class' => 'collapse navbar-collapse',
 							'container_id'    => 'navbarNavDropdown',
-							'menu_class'      => 'navbar-nav mx-auto',
+							'menu_class'      => 'navbar-nav',
 							'fallback_cb'     => '',
 							'menu_id'         => 'main-menu',
 							'depth'           => 3,

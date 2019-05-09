@@ -15,28 +15,24 @@
             $img = get_the_post_thumbnail_url($post_id, 'tyle');
             $tile_background = ( $img ? "background: url({$img});" : "" ); // tri-green fallback
       ?>
-      <a class="tile-text tyle" href="<?php the_field('tile_link'); ?>" >
-        <div class="tyle" style="<?php echo $tile_background; ?>">
-            <?php
-            if ($post) { ?>
-              <div class="tyle-tag">
-                <h5><span class="tag">
-                  <?php the_field('tile_category'); ?>
-                </span></h5>
-              </div>
-              <div class="caption">
-                <h4><?php the_title(); ?></h4>
-                <p><?php echo $post->post_content; ?></p>
-
-              </div>
-            <?php
-            } else { ?>
-                <p>Error! Please specify a tile to be displayed!</p>
-            <?php }
-            wp_reset_postdata();
-            ?>
+      <a class="tile-text tyle"
+        href="<?php the_field('tile_link'); ?>"
+        style="<?php echo $tile_background; ?>"
+        >
+        <?php
+        if ($post) { ?>
+        <div class="caption">
+            <p class="tag"><?php the_field('tile_category'); ?></p>
+            <h2><?php the_title(); ?></h2>
+            <p><?php echo $post->post_content; ?></p>
         </div>
-            </a>
+        <?php
+        } else { ?>
+            <!-- Error: Please specify a tile to be displayed. -->
+        <?php }
+        wp_reset_postdata();
+        ?>
+      </a>
     <?php endforeach; ?>
 </div>
 
@@ -91,8 +87,7 @@
 
 
 
-<div class="row mb-3">
-  <!-- beginning of the bottom row -->
+<div class="row"> <!-- Homepage tiles bottom row: 1 1 2 -->
 
   <div class="col-xs-12 col-sm-6 col-md-3 mb-3">
     <!-- beginning of bottom left -->
@@ -103,15 +98,16 @@
           $post = $post_object;
           setup_postdata( $post );
           $img = get_the_post_thumbnail_url($post_id, 'frontTilePort');
-        ?>
+    ?>
     <a class="tile-text" href="<?php the_field('tile_link'); ?>">
       <div class="col bg-secondary h-100">
         <div class="p-2">
-          <h5><span class="tag px-2 my-2">
-              <?php the_field('tile_category'); ?></span></h5>
-          <h5>
-            <?php the_title(); ?>
+          <h5 class="tag">
+              <?php the_field('tile_category'); ?>
           </h5>
+          <h4>
+            <?php the_title(); ?>
+          </h4>
           <p>
             <?php echo $post->post_content; ?>
           </p>
@@ -136,8 +132,9 @@
     <a class="tile-text" href="<?php the_field('tile_link'); ?>">
       <div class="col bg-success h-100">
         <div class="p-2">
-          <h5><span class="tag px-2 my-2">
-              <?php the_field('tile_category'); ?></span></h5>
+          <h5 class="tag">
+            <?php the_field('tile_category'); ?>
+          </h5>
           <h5>
             <?php the_title(); ?>
           </h5>

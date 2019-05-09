@@ -4,7 +4,7 @@
  *
  * Template for displaying the home page
  *
- * 
+ *
  */
 
 get_header('front');
@@ -28,16 +28,15 @@ get_header('front');
 
         <main class="site-main" id="main" role="main">
 
-          <div id="disclaimer text-center mb-3">
-            <h5 class="pb-3 text-center">
+          <div class="disclaimer">
+            <p>
               <?php echo get_post_meta($post->ID, 'disclaimer', true); ?>
-            </h5>
+            </p>
           </div>
-          <div class="mt-3 mx-a">
-            <?php get_template_part( 'element-templates/front', 'tiles-function' ); ?>
-          </div>
-
-
+          
+          <!-- Homepage tiles -->
+          <?php get_template_part( 'element-templates/front', 'tiles-function' ); ?>
+          <!-- End: Homepage tiles -->
 
         </main><!-- #main -->
 
