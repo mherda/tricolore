@@ -20,7 +20,7 @@ get_header('front');
 
 <div class="wrapper" id="page-wrapper">
 
-  <div class="<?php echo esc_attr( $container ); ?> notFull mx-auto" id="content">
+  <div class="<?php echo esc_attr( $container ); ?> mx-auto" id="content">
 
     <div class="row">
 
