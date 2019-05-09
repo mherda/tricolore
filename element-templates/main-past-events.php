@@ -34,6 +34,7 @@
             					</div>
 						          <div class="col-md-10">
 						            <div class="d-flex flex-column pt-2">
+            						  <!-- :TODO: Link event title -->
 						              <h3><?php the_title(); ?></h3>
 						              <p>
 						                <?php echo wp_trim_words(get_the_content(), 18); ?>

@@ -61,6 +61,23 @@ a:active {
     color: var(--tri-white);
 }
 
+/* Button colours :TODO: */
+.btn-primary,
+.btn-danger {
+    font-weight: 600;
+    color: var(--tri-white);
+    background-color: var(--tri-red);
+    border: 0;
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-danger:hover,
+.btn-danger:active {
+    color: var(--tri-white);
+    background-color: var(--tri-red);
+}
+
+
 /* Tile colours */
 
 .tile-text {
