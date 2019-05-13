@@ -8,11 +8,11 @@
 </div>
 
 <!-- Page hero image -->
-<div class="w-100 text-white mb-3">
-	<img src="<?php echo get_template_directory_uri(); ?>/assets/page_headers/chair.jpg" />
-	
-	<!--	<img src="<?php echo get_the_post_thumbnail($post->ID); ?>" /> -->
-</div>
+<!-- <img class="hero" src="<?php echo get_template_directory_uri(); ?>/assets/page_headers/chair.jpg" alt="" /> -->
+
+<!-- :TODO: Use the dynamic post thumbnail code from other page templates. -->
+<!-- :TODO: Refactor all Penge page templates to call this element template. -->
+<!--	<img src="<?php echo get_the_post_thumbnail($post->ID); ?>" /> -->
 
 <!-- :TODO: Page title -->
 <!-- <h1></h1> -->

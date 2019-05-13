@@ -1,3 +1,4 @@
+<!-- :TODO: Is this file used? -->
 <hr />
 <div class="row my-3 mr-2 row-eq-height">
   <!-- beginning of the bottom tile row -->
@@ -5,10 +6,10 @@
     <!-- start of tile left column -->
     <?php
                     $post_object = get_field('tile_placeholder_left');
-                    if( $post_object ): 
+                    if( $post_object ):
                      // override $post
                       $post = $post_object;
-                      setup_postdata( $post ); 
+                      setup_postdata( $post );
                       $img = get_the_post_thumbnail_url($post_id, 'frontTile');
                     ?>
     <a class="tile-text" href="<?php the_field('tile_link'); ?>">
@@ -45,9 +46,9 @@
                     if( $post_object ) {
                      // override $post
                       $post = $post_object;
-                      setup_postdata( $post ); 
+                      setup_postdata( $post );
                       $img = get_the_post_thumbnail_url($post_id, 'frontTile');
-                    ?> 
+                    ?>
                     <a class="tile-text" href="<?php the_field('tile_link'); ?>">
                       <div class="img-overlay h-100">
                         <?php if ( $img ) { ?>
@@ -55,7 +56,7 @@
                         <?php } else { ?>
                           <img src="<?php echo get_template_directory_uri(); ?>/assets/tiles/tile.jpg" />
                         <?php } ?>
-                      </div> 
+                      </div>
                       <div class="d-flex align-items-start flex-column tile-overlay">
                         <div class="mb-auto p-2">
                           <h5><span class="tag pr-2 pl-2">

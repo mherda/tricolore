@@ -13,8 +13,8 @@ get_header('front');
 <div
   class="wrapper" id="page-wrapper">
   <div class="<?php echo esc_attr( $container ); ?> notFull mx-auto" id="content">
-    <div class="row">
-      <div class="col-md-12 content-area" id="primary">
+    <div class="">
+      <div class="content-area" id="primary">
         <main class="site-main" id="main" role="main">
 
           <!-- Top Row  -->
@@ -36,7 +36,7 @@ get_header('front');
                       echo get_the_post_thumbnail($post->ID, 'pageHeader');
                   } else {
               ?>
-              <img src="<?php echo get_template_directory_uri(); ?>/assets/page_headers/chair.jpg" />
+              <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/page_headers/chair.jpg" /> -->
               <?php } ?>
               
               <header class="entry-header">

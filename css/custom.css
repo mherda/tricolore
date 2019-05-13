@@ -230,6 +230,7 @@ body {
     font: var(--font-h6);
 }
 
+
 /* Breadcrumb */
 .breadcrumbs {
     /* base style */
@@ -342,7 +343,10 @@ footer .mt-5 p {
 /* Header area */
 
 #wrapper-navbar {
-    box-shadow: 0px 20px 10px -10px rgba(0,0,0, 0.5);
+    margin: 0 0 20px 0;
+    position: relative;
+    z-index: 1; /* cast shadow onto later elements */
+    box-shadow: 0 0 10px 0 var(--tri-black);
 }
 
 #page-header {
@@ -379,7 +383,7 @@ footer .mt-5 p {
         grid-template-columns: 1fr 4fr;
     }
     #page-header>.logo {
-        padding: 20px;
+        padding: 20px 0;
         grid-area: logo;
         align-self: end;
     }
@@ -402,7 +406,7 @@ footer .mt-5 p {
         grid-template-rows: 3fr 2fr;
     }
     #page-header>.logo {
-        padding: 20px;
+        padding: 20px 0;
         grid-area: logo;
         align-self: end;
     }
@@ -498,6 +502,12 @@ footer .mt-5 p {
 #navmenu.events ul li,
 .nav-breadcrumbs ul li {
     display: inline;
+}
+
+
+/* Breadcrumb nav */
+.breadcrumbs {
+    margin-bottom: 20px;
 }
 
 
@@ -644,6 +654,8 @@ footer .mt-5 p {
     transform: scale(1.2);
 }
 
+
+/* :TODO: Remove all obsolete tile code */
 .parent-tile:hover .grid-tile,
 .parent-tile:focus .grid-tile {
     -webkit-transform: scale(1.02);
@@ -661,6 +673,8 @@ footer .mt-5 p {
     -webkit-transition: all .5s;
     transition: all .5s;
 }
+/* :TODO: Remove all obsolete tile code */
+
 
 .grid {
     display: grid;
@@ -669,6 +683,8 @@ footer .mt-5 p {
     grid-gap: 20px;
     -ms-flex-pack: distribute;
     justify-content: space-around;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 @media (min-width: 576px) {
@@ -685,6 +701,13 @@ footer .mt-5 p {
     /* Youth uses 2 tiles in main content with sidebar */
     body.page-template-default .grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+    
+    /* Generic Page uses 2 tiles after main content */
+    body.page-template-GenericPage .grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 20px;
+        border-top: 4px solid var(--tri-green);
     }
 }
 
@@ -812,9 +835,52 @@ footer .mt-5 p {
 }
 
 
-/* Main content */
+/* MAIN CONTENT */
+
+/* Article content title */
+main .col-md-8 h1 {
+    margin: 20px 0 0 0;
+    padding-top: 20px;
+    border-top: 4px solid var(--tri-green);
+}
+main .col-md-8 img + h1,
+main .col-md-8 img + header h1 {
+    margin-top: 0; /* border along bottom of hero image */
+}
 
 
+
+/* SIDEBAR */
+
+.sidebar > div {
+    margin: 0 0 20px 0;
+    padding: 0 20px;
+    color: var(--tri-white);
+    background: var(--tri-black);
+}
+
+/* Sidebar upcoming events */
+
+.sidebar .events {
+    color: var(--tri-white);
+    background: var(--tri-green);
+}
+
+.sidebar h3 {
+    margin: 0;
+    padding-top: 16px; /* account for line-height */
+}
+
+.sidebar p {
+    margin: 0;
+    padding-bottom: 12px; /* half measure of line-height */
+}
+.sidebar p:last-child {
+    padding-bottom: 18px; /* account for line-height */
+}
+
+
+/* FOOTER */
 
 /* footer logos */
 

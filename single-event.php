@@ -46,8 +46,8 @@ get_header('front');
 
 						</div> <!-- end of main column -->
 												
-						<div class="sidebar col-md-4"> <!-- beginning of Sidebar -->
-							<div class="p-2 w-100 b-green mb-3">
+						<div class="col-md-4 sidebar"> <!-- beginning of Sidebar -->
+							<div class="events">
 								<?php get_template_part( 'element-templates/sidebar-upcoming-events' ); ?>
 							</div>
 							<div>

@@ -212,11 +212,9 @@
         <?php } wp_reset_postdata(); ?>
 
       </div>
-      <div class="text-right m-2">
-        <a href="<?php echo site_url('/events'); ?>">
-          <button type="button" class="btn btn-danger">All events</button>
-        </a>
-      </div>
+      <p>
+        <a class="btn btn-primary" href="<?php echo site_url('/events'); ?>">All events</a>
+      </p>
 
     </div>
 

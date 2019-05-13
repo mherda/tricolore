@@ -28,7 +28,7 @@ get_header('test');
 								if ( $img ) { ?>
                 <?php echo get_the_post_thumbnail($post->ID, 'pageHeader');  ?>
                 <?php } else { ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/page_headers/chair.jpg" />
+                <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/page_headers/chair.jpg" /> -->
                 <?php } ?>
               </div>
               <h1>
