@@ -13,7 +13,7 @@
             $post = $post_object;
             setup_postdata($post);
             $img = get_the_post_thumbnail_url($post_id, 'tyle');
-            $tile_background = ( $img ? "background: url({$img});" : "" ); // tri-green fallback
+            $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
       ?>
       <a class="tile-text tyle"
         href="<?php the_field('tile_link'); ?>"
@@ -87,9 +87,8 @@
 
 
 
-<div class="row"> <!-- Homepage tiles bottom row: 1 1 2 -->
+<div id="front-tiles" class="grid"> <!-- :TODO: Homepage tiles bottom row: 1 1 2 -->
 
-  <div class="col-xs-12 col-sm-6 col-md-3 mb-3">
     <!-- beginning of bottom left -->
     <?php
         $post_object = get_field('bottom_left_tile');
@@ -99,27 +98,18 @@
           setup_postdata( $post );
           $img = get_the_post_thumbnail_url($post_id, 'frontTilePort');
     ?>
-    <a class="tile-text" href="<?php the_field('tile_link'); ?>">
-      <div class="col bg-secondary h-100">
-        <div class="p-2">
-          <h5 class="tag">
-              <?php the_field('tile_category'); ?>
-          </h5>
-          <h4>
-            <?php the_title(); ?>
-          </h4>
-          <p>
-            <?php echo $post->post_content; ?>
-          </p>
+    <a class="tile-text tyle" href="<?php the_field('tile_link'); ?>">
+        <div class="caption">
+          <p class="tag"><?php the_field('tile_category'); ?></p>
+          <h2><?php the_title(); ?></h2>
+          <p><?php echo $post->post_content; ?></p>
         </div>
-      </div>
     </a>
     <?php wp_reset_postdata(); // IMPORTANT - reset the $post™™£ object so the rest of the page works correctly ?>
     <?php endif; ?>
-  </div> <!-- end of bottom left -->
+    <!-- end of bottom left -->
 
 
-  <div class="col-xs-12 col-sm-6 col-md-3 mb-3">
     <!-- beginning of bottom centre -->
     <?php
         $post_object = get_field('bottom_centre_tile');
@@ -129,31 +119,21 @@
           setup_postdata( $post );
           $img = get_the_post_thumbnail_url($post_id, 'frontTilePort');
         ?>
-    <a class="tile-text" href="<?php the_field('tile_link'); ?>">
-      <div class="col bg-success h-100">
-        <div class="p-2">
-          <h5 class="tag">
-            <?php the_field('tile_category'); ?>
-          </h5>
-          <h5>
-            <?php the_title(); ?>
-          </h5>
-          <p>
-            <?php echo $post->post_content; ?>
-          </p>
+    <a class="tile-text tyle" href="<?php the_field('tile_link'); ?>">
+        <div class="caption">
+          <p class="tag"><?php the_field('tile_category'); ?></p>
+          <h2><?php the_title(); ?></h2>
+          <p><?php echo $post->post_content; ?></p>
         </div>
-      </div>
     </a>
     <?php wp_reset_postdata(); // IMPORTANT - reset the $post™™£ object so the rest of the page works correctly ?>
     <?php endif; ?>
-  </div> <!-- end of bottom centre -->
+    <!-- end of bottom centre -->
 
 
-
-  <div class="col-xs-12 col-sm-6 col-md-6 pr-0 mb-3">
-    <div class="b-dark tile-text p-2">
-      <h4>Upcoming events</h4>
-      <div class="d-flex p-2 flex-column">
+    <!-- Start events in a tile -->
+    <div class="tile-text tyle">
+        <h2>Events</h2>
         <?php
                 $today = date('Ymd');
                 $homepageEvents = new WP_Query(array(
@@ -211,15 +191,13 @@
         </div>
         <?php } wp_reset_postdata(); ?>
 
-      </div>
-      <p>
-        <a class="btn btn-primary" href="<?php echo site_url('/events'); ?>">All events</a>
-      </p>
+        <p>
+            <a class="btn btn-primary" href="<?php echo site_url('/events/'); ?>">All events</a>
+        </p>
 
-    </div>
+    </div> <!-- End events in a tile -->
 
 
-  </div>
 
 </div> <!-- end of the bottom row -->
 

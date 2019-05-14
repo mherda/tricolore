@@ -20,7 +20,7 @@ get_header('front');
           <!-- Top Row  -->
 
           <div class="row mb-2">
-            <div class="col-md-8 p-2">
+            <div class="col-md-8">
               <!-- beginning of the main column -->
               <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
                   <?php
@@ -54,17 +54,13 @@ get_header('front');
             </div> <!-- end of main column -->
 
 
-            <div class="sidebar col-md-4 p-2">
-
-              <div>
-								<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>
-              </div>
-              
-              <div>
-								<?php get_template_part( 'element-templates/sidebar-events' ); ?>
-							</div>
-
-             <?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
+            <div class="sidebar col-md-4">
+                
+				<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>
+                
+				<?php get_template_part( 'element-templates/sidebar-events' ); ?>
+                
+                <?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
             </div> <!-- end of right column -->
 
 

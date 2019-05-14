@@ -194,12 +194,14 @@ body {
     margin: 20px auto;
     max-width: 30em;
     font: var(--font-h3);
+    text-align: center;
 }
 /* Home tile tag */
 .tile-text .tag {
     font: var(--font-h6);
 }
 /* Home tile title */
+.tile-text h2,
 .tile-text h4,
 .tile-text h5+h5 {
     font: var(--font-h4);
@@ -697,7 +699,12 @@ footer .mt-5 p {
     .grid {
         grid-template-columns: repeat(3, 1fr);
     }
-
+    
+    /* :TODO: Homepage events row */
+    .grid:last-child {
+        grid-template-columns: 1fr 1fr 2fr;
+    }
+    
     /* Youth uses 2 tiles in main content with sidebar */
     body.page-template-default .grid {
         grid-template-columns: repeat(2, 1fr);
@@ -733,6 +740,14 @@ footer .mt-5 p {
     color: var(--tri-white);
     background-repeat: no-repeat;
     background-position: cover;
+    background-color: var(--tri-green);
+}
+/* :TODO: Homepage events row */
+.grid:last-child .tyle:last-child {
+    justify-content: start;
+    padding: 13px 20px 0 20px; /* account for line-height */
+    max-width: 580px;
+    background: var(--tri-black);
 }
 
 .tyle .caption {
@@ -748,6 +763,7 @@ footer .mt-5 p {
     background-color: var(--tri-dark);
 }
 
+.tyle h2,
 .tyle h4,
 .tyle p {
     margin: 0;
@@ -759,7 +775,7 @@ footer .mt-5 p {
 #rect-tiles.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    column-gap: 5px;
+    column-gap: 20px;
 }
 
 .tyle-rectangle {
@@ -774,6 +790,7 @@ footer .mt-5 p {
     flex-direction: row;
     justify-content: space-between;
 }
+
 
 .tyle-rectangle>img {
     max-width: 100%;

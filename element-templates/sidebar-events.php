@@ -1,5 +1,5 @@
 <div class="events">
-    <div class="d-flex p-2 flex-column">
+    <div class="d-flex flex-column">
         <?php
         $categories = get_the_category();
  
@@ -40,7 +40,7 @@
             <div class="d-flex flex-column border text-center">
                 <?php $eventDate = new DateTime(get_field('event_date')); ?>
                 <div class="b-green mw50"><?php echo $eventDate->format('M'); ?></div>
-                <h4 class="p-2 mt-3"><?php echo $eventDate->format('d'); ?></h4>
+                <h4><?php echo $eventDate->format('d'); ?></h4>
             </div>
             <div class="p-2 border-bottom w-100 mr-2">
             <!-- :TODO: Link event title -->
@@ -69,9 +69,9 @@
                           <h3>Upcoming events</h3>
                        <?php } ?>
                         
-    <div class="text-right m-2">
+    <p>
         <a class="btn btn-danger" href="<?php echo site_url('/events/'); ?>">View events</a>
-    </div>
+    </p>
 
 </div> <!-- end of module -->
     
