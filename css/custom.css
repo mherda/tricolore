@@ -192,7 +192,7 @@ body {
 /* Home mission statement */
 .disclaimer p {
     margin: 20px auto;
-    max-width: 30em;
+    max-width: 32em;
     font: var(--font-h3);
     text-align: center;
 }
@@ -345,7 +345,6 @@ footer .mt-5 p {
 /* Header area */
 
 #wrapper-navbar {
-    margin: 0 0 20px 0;
     position: relative;
     z-index: 1; /* cast shadow onto later elements */
     box-shadow: 0 0 10px 0 var(--tri-black);
@@ -509,7 +508,7 @@ footer .mt-5 p {
 
 /* Breadcrumb nav */
 .breadcrumbs {
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 
@@ -678,31 +677,45 @@ footer .mt-5 p {
 /* :TODO: Remove all obsolete tile code */
 
 
+/* Mobile tiles */
 .grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: minmax(300px, 350px);
     grid-gap: 20px;
     -ms-flex-pack: distribute;
-    justify-content: space-around;
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
+/* Landscape mobile tiles */
 @media (min-width: 576px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    /* Homepage first row of 3 */
+    .disclaimer + .grid .tyle:last-child {
+        grid-column: span 2; /* grow to fills 2 columns */
+    }
+    /* Homepage events row */
+    .grid:last-child .tyle:last-child {
+        grid-column: span 2; /* grow to fills 2 columns */
+    }
 }
 
+/* Portrait tablet tiles and wider */
 @media (min-width: 768px) {
     .grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    }
+    /* Homepage first row of 3 */
+    .disclaimer + .grid .tyle:last-child {
+        grid-column: 3; /* single column, third position */
     }
     
-    /* :TODO: Homepage events row */
+    /* Homepage events row */
     .grid:last-child {
-        grid-template-columns: 1fr 1fr 2fr;
+        grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
     }
     
     /* Youth uses 2 tiles in main content with sidebar */
@@ -736,17 +749,15 @@ footer .mt-5 p {
     width: 100%;
     height: 100%;
     max-height: 350px;
-    max-width: 387px; /* 387+20+386+20=1200 */
     color: var(--tri-white);
     background-repeat: no-repeat;
-    background-position: cover;
+    background-size: cover;
     background-color: var(--tri-green);
 }
 /* :TODO: Homepage events row */
 .grid:last-child .tyle:last-child {
     justify-content: start;
     padding: 13px 20px 0 20px; /* account for line-height */
-    max-width: 580px;
     background: var(--tri-black);
 }
 
@@ -769,6 +780,24 @@ footer .mt-5 p {
     margin: 0;
 }
 
+/* Home grid hover colours */
+.tyle,
+.tyle .tag,
+.tyle .caption {
+    transition: background 0.2s ease-in;
+}
+.tyle:hover,
+.tyle:focus,
+.tyle:active,
+.tyle:hover .tag,
+.tyle:focus .tag,
+.tyle:active .tag,
+.tyle:hover .caption,
+.tyle:focus .caption,
+.tyle:active .caption {
+    background-color: var(--tri-green);
+}
+
 
 /* Home middle tiles with portrait image */
 
@@ -776,27 +805,23 @@ footer .mt-5 p {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     column-gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
 }
 
 .tyle-rectangle {
-    justify-self: center;
-    align-self: center;
+    /* :TODO: remove most of this */
     width: 100%;
     height: 100%;
-    max-width: 550px;
     max-height: 350px;
     background-color: var(--tri-dark);
-    display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    background-size: auto 350px; /* cover the max-height */
 }
 
-
-.tyle-rectangle>img {
-    max-width: 100%;
-    height: auto;
+.tyle-rectangle .caption {
+    width: calc(50% + 10px); /* half the panel and remaining half gutter */
 }
-
 
 /* MISCELLANEOUS */
 

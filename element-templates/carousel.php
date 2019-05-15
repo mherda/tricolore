@@ -24,12 +24,12 @@
       <div class="carousel-caption d-none d-md-block">
         <div class="card" style="width: 35rem;">
           <div class="card-body text-left">
-            <h5 class="ml-3 mt-2 pl-1">
+            <p class="tag">
               <?php the_field('slide_tag'); ?>
-            </h5>
-            <h3 class="slide-text mb-2">
+            </p>
+            <h2 class="slide-text">
               <?php the_title(); ?>
-            </h3>
+            </h2>
             <p class="card-text">
               <?php echo $post->post_content; ?>
             </p>
@@ -59,14 +59,12 @@
       <div class="carousel-caption d-none d-md-block">
         <div class="card" style="width: 35rem;">
           <div class="card-body text-left">
-            <div class="bg-swash">
-              <h5 class="ml-3 mt-2 pl-1">
+            <p class="tag">
                 <?php the_field('slide_tag'); ?>
-              </h5>
-            </div>
-            <h3 class="slide-text mb-2">
+            </p>
+            <h2 class="slide-text">
               <?php the_title(); ?>
-            </h3>
+            </h2>
             <p class="card-text">
               <?php echo $post->post_content; ?>
             </p>
@@ -98,14 +96,12 @@
       <div class="carousel-caption d-none d-md-block">
         <div class="card" style="width: 35rem;">
           <div class="card-body text-left">
-            <div class="bg-swash">
-              <h5 class="ml-3 mt-2 pl-1">
+            <p class="tag">
                 <?php the_field('slide_tag'); ?>
-              </h5>
-            </div>
-            <h3 class="slide-text mb-2">
+            </p>
+            <h2 class="slide-text">
               <?php the_title(); ?>
-            </h3>
+            </h2>
             <p class="card-text">
               <?php echo $post->post_content; ?>
             </p>

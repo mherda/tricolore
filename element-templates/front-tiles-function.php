@@ -52,27 +52,22 @@
             $post = $post_object;
             setup_postdata($post);
             $img = get_the_post_thumbnail_url($post_id, 'frontTilePort');
+            $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
       ?>
-      <a class="tile-text tyle-rectangle" href="<?php the_field('tile_link'); ?>" >
-
+      <a class="tile-text tyle tyle-rectangle"
+        href="<?php the_field('tile_link'); ?>"
+        style="<?php echo $tile_background; ?>"
+        >
             <?php
             if ($post) { ?>
-              <img class="" src="<?php echo $img; ?>" />
-              <div>
-                  <div class="tyle-tag">
-                    <h5><span class="tag">
-                      <?php the_field('tile_category'); ?>
-                    </span></h5>
-                  </div>
-                  <div class="caption">
-                    <h4><?php the_title(); ?></h4>
-                    <p><?php echo $post->post_content; ?></p>
-
-                  </div>
+              <div class="caption">
+                <p class="tag"><?php the_field('tile_category'); ?></p>
+                <h2><?php the_title(); ?></h2>
+                <p><?php echo $post->post_content; ?></p>
               </div>
             <?php
             } else { ?>
-                <p>Error. Please specify a tile to be displayed!</p>
+                <!-- Error. Please specify a tile to be displayed! -->
             <?php }
             wp_reset_postdata();
             ?>
@@ -93,12 +88,15 @@
     <?php
         $post_object = get_field('bottom_left_tile');
         if( $post_object ):
-          // override $post
-          $post = $post_object;
-          setup_postdata( $post );
-          $img = get_the_post_thumbnail_url($post_id, 'frontTilePort');
+            // override $post
+            $post = $post_object;
+            setup_postdata( $post );
+            $img = get_the_post_thumbnail_url($post_id, 'frontTilePort');
+            $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
     ?>
-    <a class="tile-text tyle" href="<?php the_field('tile_link'); ?>">
+    <a class="tile-text tyle"
+        href="<?php the_field('tile_link'); ?>"
+        >
         <div class="caption">
           <p class="tag"><?php the_field('tile_category'); ?></p>
           <h2><?php the_title(); ?></h2>
