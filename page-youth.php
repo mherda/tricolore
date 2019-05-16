@@ -21,7 +21,7 @@ get_header('front');
       <div class="col-md-12 content-area" id="primary">
 
         <main class="site-main" id="main" role="main">
-          <div class="row mb-2">
+          <div class="row">
             <div class="col-md-8">
             <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
           <?php
@@ -55,29 +55,26 @@ get_header('front');
                 $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
 
                 if ( $img ) { ?>
-                <a class=" tile-text" href="<?php the_field('tile_link'); ?>">
-                    <div class="d-flex flex-column justify-content-between h-100 outer-tile">
-                      <div class="mb-auto p-2">
-                      <div class="inner-tile text-white" style="<?php echo $tile_background; ?>"></div>
-
-                        <span class="b-dark p-1"><?php echo $tile_cat; ?></span>
-                      </div>
-                      <div class="b-dark w-100 p-2 ti">
-                        <h5><?php the_title(); ?></h5>
+                <a class="tile-text tyle"
+                    href="<?php the_field('tile_link'); ?>"
+                    style="<?php echo $tile_background; ?>"
+                    >
+                    <div class="caption">
+                        <p class="tag"><?php echo $tile_cat; ?></p>
+                        <h2><?php the_title(); ?></h2>
                         <?php the_content(); ?>
-                      </div>
-                  </div> <!-- end of d-flex -->
+                    </div>
                 </a>
 
                 <?php } else { ?>
-                  <a class="parent-tile tile-text" href="<?php the_field('tile_link'); ?>">
-                  <div class="grid-tile text-white" style="<?php echo $tile_background; ?>">
-                    <div class="p-2"><span class="b-dark p-1"><?php echo $tile_cat; ?></span></div>
-                    <div class="w-100 p-3">
-                      <h3><?php the_title(); ?></h3>
+                  <a class="tile-text tyle"
+                    href="<?php the_field('tile_link'); ?>"
+                    >
+                    <div class="caption">
+                        <p class="tag"><?php echo $tile_cat; ?></p>
+                      <h2><?php the_title(); ?></h2>
                       <?php the_content(); ?>
                     </div>
-                  </div>
                   </a>
                 <?php }
             ?>
@@ -89,15 +86,13 @@ get_header('front');
             } // end if ?>
           </div>
         </div> <!-- end of left column -->
-        <div class="col-md-4"> <!-- beginning of Sidebar -->
+        <div class="sidebar col-md-4"> <!-- beginning of Sidebar -->
 
           
 
-          <div>
             <?php get_template_part( 'element-templates/sidebar-events' ); ?>
-          </div>
 
-         <?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
+            <?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
         </div> <!-- end of right column -->
 
 

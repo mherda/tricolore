@@ -90,11 +90,11 @@ a:active {
 
 /* Tile colours */
 
-.tile-text {
+.tyle {
     color: var(--tri-white);
 }
 
-.tile-text:hover {
+.tyle:hover {
     color: var(--tri-white);
     text-decoration: none;
 }
@@ -197,39 +197,33 @@ body {
     text-align: center;
 }
 /* Home tile tag */
-.tile-text .tag {
+.tyle .tag {
     font: var(--font-h6);
 }
 /* Home tile title */
-.tile-text h2,
-.tile-text h4,
-.tile-text h5+h5 {
+.tyle h2,
+.tyle h5+h5 {
     font: var(--font-h4);
 }
 /* Home tile description */
-.tile-text p {
+.tyle p {
     font: var(--font-p);
 }
 /* Home tile event item */
 /* :TODO: match HTML with sidebar event item */
-.tile-text .border-bottom h5 {
+.tyle .border-bottom h5 {
     font: var(--font-h6);
 }
 
 /* Youth tile tag */
 /* :TODO: Tile content HTML should match home tiles */
-.tile-text span {
+.tyle span {
     font: var(--font-h6);
 }
 /* Youth tile title */
 /* :TODO: Tile content HTML should match home tiles */
-.tile-text div+div h5 {
+.tyle div+div h5 {
     font: var(--font-h4);
-}
-/* Youth tile description */
-/* :TODO: Tile content HTML should match home tiles */
-.tile-text span {
-    font: var(--font-h6);
 }
 
 
@@ -243,7 +237,7 @@ body {
 
 
 /* Article content title */
-main .col-md-8 h1 {
+main h1 {
     font: var(--font-h2);
 }
 
@@ -610,24 +604,21 @@ footer .mt-5 p {
 
 
 /* Full width 3x3 grid */
-
+/* :TODO: delete obsolete tile code */
 .tile {
     position: relative;
 }
-
 .tile-overlay {
     position: absolute;
     top: 0;
     bottom: 0;
     max-width: 500px;
 }
-
 .ti {
     height: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
 .outer-tile {
     overflow: hidden;
     position: relative;
@@ -636,7 +627,6 @@ footer .mt-5 p {
     max-width: 350px;
     max-height: 350px;
 }
-
 .inner-tile {
     position: absolute;
     top: 0;
@@ -649,20 +639,15 @@ footer .mt-5 p {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
 }
-
 .outer-tile:hover .inner-tile {
     -webkit-transform: scale(1.2);
     transform: scale(1.2);
 }
-
-
-/* :TODO: Remove all obsolete tile code */
 .parent-tile:hover .grid-tile,
 .parent-tile:focus .grid-tile {
     -webkit-transform: scale(1.02);
     transform: scale(1.02);
 }
-
 .grid-tile {
     background-color: var(--tri-green);
     background-position: center;
@@ -674,7 +659,8 @@ footer .mt-5 p {
     -webkit-transition: all .5s;
     transition: all .5s;
 }
-/* :TODO: Remove all obsolete tile code */
+/* End of :TODO: Remove all obsolete tile code */
+
 
 
 /* Mobile tiles */
@@ -698,7 +684,7 @@ footer .mt-5 p {
         grid-column: span 2; /* grow to fills 2 columns */
     }
     /* Homepage events row */
-    .grid:last-child .tyle:last-child {
+    .grid + .grid + .grid .tyle:last-child {
         grid-column: span 2; /* grow to fills 2 columns */
     }
 }
@@ -714,7 +700,7 @@ footer .mt-5 p {
     }
     
     /* Homepage events row */
-    .grid:last-child {
+    .grid + .grid + .grid {
         grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
     }
     
@@ -755,7 +741,7 @@ footer .mt-5 p {
     background-color: var(--tri-green);
 }
 /* :TODO: Homepage events row */
-.grid:last-child .tyle:last-child {
+.grid + .grid + .grid .tyle:last-child {
     justify-content: start;
     padding: 13px 20px 0 20px; /* account for line-height */
     background: var(--tri-black);
@@ -880,19 +866,24 @@ footer .mt-5 p {
 /* MAIN CONTENT */
 
 /* Article content title */
-main .col-md-8 h1 {
-    margin: 20px 0 0 0;
+main h1 {
+    margin: 20px 0 10px 0;
     padding-top: 20px;
     border-top: 4px solid var(--tri-green);
 }
-main .col-md-8 img + h1,
-main .col-md-8 img + header h1 {
+main img + h1,
+main img + header h1 {
     margin-top: 0; /* border along bottom of hero image */
 }
 
 
 
 /* SIDEBAR */
+
+.sidebar {
+    margin-top: 40px; /* above and below breadcrumb */
+    padding-top: 24px; /* breacrumb line-height */
+}
 
 .sidebar > div {
     margin: 0 0 20px 0;

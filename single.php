@@ -14,7 +14,7 @@ get_header();
 			<div class="col-md-12 content-area" id="primary">
 				<main class="site-main" id="main" role="main">
 					
-					<div class="row mb-2"> <!-- Beginning of Content -->
+					<div class="row"> <!-- Beginning of Content -->
 						<div class="col-md-8"> <!-- beginning of main column -->
 							<?php
 								if ( have_posts() ) {

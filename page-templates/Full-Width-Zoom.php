@@ -28,7 +28,7 @@ get_header('front');
                   bcn_display();
           }?>
         </div>
-          <div>
+        <div>
             <?php while ( have_posts() ) : the_post(); ?>
               <?php get_template_part( 'loop-templates/content', 'page' ); ?>
             <?php endwhile; // end of the loop. ?>
@@ -37,10 +37,10 @@ get_header('front');
             ?>
           </div>
 
-          <div id="nine" class="grid">
+          <div id="front-tiles" class="grid">
             <?php
               $tile_selection = new WP_Query(array(
-								'posts_per_page' => -1,
+				'posts_per_page' => -1,
                 'post_type' => 'tile',
                 'category_name' => $tile_cat
 								)
@@ -53,34 +53,28 @@ get_header('front');
                 $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
 
                 if ( $img ) { ?>
-                <a class="tile-text" href="<?php the_field('tile_link'); ?>">
-                    <div class="d-flex flex-column justify-content-between outer-tile">
-                      <div class="mb-auto p-2">
-                      <div class="inner-tile text-white" style="<?php echo $tile_background; ?>"></div>
-
-                        <span class="b-dark p-1"><?php echo $tile_cat; ?></span>
-                      </div>
-                      <div class="b-dark w-100 p-2 ti">
-                        <h5><?php the_title(); ?></h5>
+                  <a class="tile-text tyle"
+                    href="<?php the_field('tile_link'); ?>"
+                    style="<?php echo $tile_background; ?>"
+                    >
+                    <div class="caption">
+                        <p class="tag"><?php echo $tile_cat; ?></p>
+                        <h2><?php the_title(); ?></h2>
                         <?php the_content(); ?>
-                      </div>
-                  </div> <!-- end of d-flex -->
-                </a>
-
-                <?php } else { ?>
-                  <a class="parent-tile tile-text" href="<?php the_field('tile_link'); ?>">
-                  <div class="grid-tile text-white" style="<?php echo $tile_background; ?>">
-                    <div class="p-2"><span class="b-dark p-1"><?php echo $tile_cat; ?></span></div>
-                    <div class="w-100 p-3">
-                      <h3><?php the_title(); ?></h3>
-                      <?php the_content(); ?>
                     </div>
-                  </div>
+                  </a>
+                <?php } else { ?>
+                  <a class="parent-tile tile-text tyle"
+                    href="<?php the_field('tile_link'); ?>"
+                    >
+                    <div class="caption">
+                        <p class="tag"><?php echo $tile_cat; ?></p>
+                        <h2><?php the_title(); ?></h2>
+                        <?php the_content(); ?>
+                    </div>
                   </a>
                 <?php }
             ?>
-                
-
 
             <?php } // end while
             wp_reset_postdata();

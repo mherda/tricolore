@@ -19,7 +19,7 @@ get_header('test');
 
           <!-- Top Row  -->
 
-          <div class="row mb-2">
+          <div class="row">
             <div class="col-md-8">
               <!-- beginning of the main column -->
               <div class="w-100 text-white">

@@ -12,7 +12,7 @@ get_header('front');
 
 					<!-- Top Row  -->
 					
-					<div class="row mb-2">
+					<div class="row">
 						<div class="col-md-8">
 							<!-- Load the page body header -->
 							<?php
