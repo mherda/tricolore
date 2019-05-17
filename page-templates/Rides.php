@@ -54,9 +54,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
             <!-- sidebar -->
             <div class="col-md-4 sidebar"> <!-- beginning of Sidebar -->
-              <div id="weather" class="b-green p-2 mb-2"></div>
+              <div id="weather"></div>
+              
               <?php get_template_part( 'element-templates/rides-objects' ); ?>
+              
               <?php get_template_part( 'element-templates/sidebar-routes' ); ?>
+              
               <?php get_template_part( 'element-templates/sidebar-rideleaders' ); ?>
             </div>
 

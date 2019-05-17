@@ -1,4 +1,5 @@
-<div class="b-dark p-2 mb-2">
+<!-- :TODO: Is this file used? -->
+<div>
     <h3>What to bring</h3>
     <p>Wear appropriate cycle clothing. You may warm up quickly but you feel cold when you stop</p>
     <h4>Mandatory</h4>

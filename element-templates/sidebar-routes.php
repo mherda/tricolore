@@ -1,11 +1,12 @@
-<div class="b-green p-2">
-  <div class="m-2">
+<div class="">
     <h3>Routes</h3>
     <p>Some brief description of something.</p>
-    <a href="#myModal" role="button" class="btn btn-danger" data-toggle="modal">Launch modal</a>
-  </div>
+    <p><a href="/adults/sunday-morning-rides/routes/" class="btn btn-danger" data-toggle="modal">View our routes</a></p>
+    <!-- <a href="#myModal" role="button" class="btn btn-danger" data-toggle="modal">View our routes</a> -->
 </div>
 
+<!-- :TODO: remove obsolete code even if it was really good -->
+<!--
 <div class="modal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-full" role="document">
         <div class="modal-content">
@@ -56,3 +57,4 @@
         </div>
     </div>
 </div>
+-->

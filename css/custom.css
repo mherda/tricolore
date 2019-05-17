@@ -98,6 +98,13 @@ a:active {
     background-color: var(--tri-green);
 }
 
+/* Carousel colours */
+
+.card {
+    background-color: rgba(245, 245, 245, 0.7);
+    color: var(--tri-dark);
+}
+
 
 /* Tile colours */
 
@@ -109,6 +116,21 @@ a:active {
     color: var(--tri-white);
     text-decoration: none;
 }
+
+
+/* Sidebar colours */
+
+.sidebar > div {
+    color: var(--tri-white);
+    background: var(--tri-green);
+}
+.sidebar .gallery,
+.sidebar .events {
+    background: var(--tri-black);
+}
+
+
+/* Colour classes */
 
 .p-link {
     color: var(--tri-green);
@@ -135,11 +157,6 @@ a:active {
     color: var(--tri-green);
 }
 
-.card {
-    background-color: rgba(245, 245, 245, 0.7);
-    color: var(--tri-dark);
-}
-
 
 /* April 2019 font variables */
 /* https://fonts.google.com/specimen/Karla?selection.family=Karla:700|Montserrat:400,600 */
@@ -154,6 +171,7 @@ a:active {
     --font-h5: 700 20px/28px var(--font-heading);
     --font-h6: 700 18px/24px var(--font-heading);
     --font-p: 400 14px/24px var(--font-body);
+    --font-p-bold: 600 14px/24px var(--font-body);
     --font-p-highlight: 400 18px/24px var(--font-body); /* normal */
     --font-link: 600 14px/24px var(--font-body); /* semi-bold */
 }
@@ -178,6 +196,11 @@ body {
     font: var(--font-p);
     color: var(--tri-black);
     background: white;
+}
+b,
+strong,
+th {
+    font: var(--font-p-bold);
 }
 
 /* Header search box */
@@ -633,68 +656,8 @@ footer .mt-5 p {
 
 
 
+/* New tiles on mobile */
 
-/* Full width 3x3 grid */
-/* :TODO: delete obsolete tile code */
-.tile {
-    position: relative;
-}
-.tile-overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    max-width: 500px;
-}
-.ti {
-    height: 100px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-.outer-tile {
-    overflow: hidden;
-    position: relative;
-    height: 100%;
-    width: 100%;
-    max-width: 350px;
-    max-height: 350px;
-}
-.inner-tile {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    background-size: cover;
-    background-position: center;
-    -webkit-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-.outer-tile:hover .inner-tile {
-    -webkit-transform: scale(1.2);
-    transform: scale(1.2);
-}
-.parent-tile:hover .grid-tile,
-.parent-tile:focus .grid-tile {
-    -webkit-transform: scale(1.02);
-    transform: scale(1.02);
-}
-.grid-tile {
-    background-color: var(--tri-green);
-    background-position: center;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-    max-width: 350px;
-    max-height: 350px;
-    -webkit-transition: all .5s;
-    transition: all .5s;
-}
-/* End of :TODO: Remove all obsolete tile code */
-
-
-
-/* Mobile tiles */
 .grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -859,6 +822,8 @@ a .fa {
     width: 100%;
 }
 
+
+/* Accordion widget */
 #heading1,
 #heading2,
 #heading3,
@@ -870,7 +835,6 @@ a .fa {
 #heading9,
 #heading10 {
     cursor: pointer;
-    color: var(--primary);
 }
 
 
@@ -886,7 +850,22 @@ a .fa {
     /* chevron-down */
 }
 
+#accordion table {
+    width: 100%;
+}
+#accordion tr {
+    border-bottom: 1px solid white;
+}
+#accordion tbody {
+    color: var(--tri-white);
+    background: var(--tri-black);
+}
+#accordion tbody + tbody {
+    border-top: 10px solid white;
+}
 
+
+/* :TODO: remove obsolete code even if it was great */
 /* Regular routes modal */
 
 .modal-full {
@@ -897,6 +876,8 @@ a .fa {
 .modal-full .modal-content {
     min-height: 100vh;
 }
+/* End :TODO: remove obsolete code even if it was great */
+
 
 
 /* MAIN CONTENT */
@@ -912,6 +893,13 @@ main img + header h1 {
     margin-top: 0; /* border along bottom of hero image */
 }
 
+/* Table */
+main table th,
+main table td {
+    padding: 5px 10px;
+}
+
+
 
 
 /* SIDEBAR */
@@ -924,14 +912,6 @@ main img + header h1 {
 .sidebar > div {
     margin: 0 0 20px 0;
     padding: 0 20px;
-    color: var(--tri-white);
-    background: var(--tri-black);
-}
-
-/* Sidebar upcoming events */
-
-.sidebar .events {
-    background: var(--tri-black);
 }
 
 .sidebar h3 {
@@ -947,12 +927,15 @@ main img + header h1 {
     padding-bottom: 18px; /* account for line-height */
 }
 
+/* :TODO: Sidebar upcoming events */
+
+
 
 /* FOOTER */
 
 /* Social */
 
-.site-info > div > div {
+.site-info .row:first-child > div {
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -965,15 +948,18 @@ main img + header h1 {
     
     .abs-par {
         position: relative;
+        margin: 20px auto -40px auto;
         height: 80px;
+        color: var(--tri-black);
+    }
+    
+    .abs-par img {
+        max-height: 80px;
     }
 
     .abs-chi {
-        position: absolute;
-        bottom: -40px;
-        left: 0;
-        right: 0;
-        margin: auto;
+        padding-top: 80px;
+        background: var(--tri-black);
     }
     
 }
