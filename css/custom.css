@@ -302,6 +302,21 @@ main .col-md-8 li > a,
 .entry-content a {
     font: var(--font-link);
 }
+.entry-content a[href^="mailto:"]:hover,
+.entry-content a[href^="mailto:"]:focus,
+.entry-content a[href^="mailto:"]:active,
+.entry-content a[href^="https://ssdserver1.layerip.com/"]:hover,
+.entry-content a[href^="https://ssdserver1.layerip.com/"]:hover,
+.entry-content a[href^="https://ssdserver1.layerip.com/"]:active,
+.entry-content a[href^="http://ssdserver1.layerip.com/"]:hover,
+.entry-content a[href^="http://ssdserver1.layerip.com/"]:focus,
+.entry-content a[href^="http://ssdserver1.layerip.com/"]:active {
+    padding-bottom: 3px; /* account for 3px of line-height */
+    text-decoration: none;
+    background: linear-gradient(to bottom, var(--tri-green) 0%,var(--tri-green) 33%,white 33%,white 67%,var(--tri-red) 67%,var(--tri-red) 100%) no-repeat;
+    background-size: 100% 6px;
+    background-position: left bottom;
+}
 
 
 /* Article tiles after content */
