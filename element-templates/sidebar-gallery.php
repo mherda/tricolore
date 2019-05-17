@@ -3,8 +3,8 @@
     $tag =  get_field('gallery_tag');
     $glink = get_field('gallery_link');
     if ( $tag ) { ?>
-        <h3><?php the_title(); ?></h3>
-        <p>More photos from the event are on Flickr:</p>
+        <h3>Club photos on <a href="https://www.flickr.com/photos/pengecc/"><i class="fa fa-lg fa-flickr"></i>Flickr</a></h3>
+        <!-- <?php the_title(); ?> -->
         <?php
         echo do_shortcode("[flickr_tags user_id='69040456@N07' tags=$tag max_num_photos='6']");
     } else {

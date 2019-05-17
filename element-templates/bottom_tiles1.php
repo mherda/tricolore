@@ -1,5 +1,11 @@
-<!-- Bottom tiles after content -->
-<div class="grid"> <!-- :TODO: Home tile code to start with -->
+<?php
+// Only add HTML if there is at least one tile:
+if ( get_field('tile_placeholder_left')
+    OR get_field('tile_placeholder_right') ) {
+    $hasTiles == true;
+    echo '<!-- Bottom tiles after content -->';
+    echo '<div class="grid"> <!-- :TODO: Home tile code to start with -->';
+?>
     <!-- start of tile left column -->
     <?php
     $post_object = get_field('tile_placeholder_left');
@@ -49,4 +55,11 @@
     <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 <?php } ?>
 <!-- end of tile right column -->
-</div> <!-- end of bottom tile row -->
+
+<?php
+
+    // End the HTML if there was at least one tile:
+    echo '</div> <!-- end of bottom tile row -->';
+} // endif
+
+?>

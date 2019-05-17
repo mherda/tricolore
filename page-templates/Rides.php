@@ -8,10 +8,12 @@
  */
 
 get_header('front');
+$container = get_theme_mod( 'understrap_container_type' );
+
 ?>
 <div
   class="wrapper" id="page-wrapper">
-  <div class="<?php echo esc_attr( $container ); ?> notFull mx-auto" id="content">
+  <div class="<?php echo esc_attr( $container ); ?> notFull" id="content">
     <div class="row">
       <div class="col-md-12 content-area" id="primary">
         <main class="site-main" id="main" role="main">
@@ -21,7 +23,7 @@ get_header('front');
           <div class="row">
             <div class="col-md-8">
               
-            <?php get_template_part( 'element-templates/page-header' ); ?>
+              <?php get_template_part( 'element-templates/page-header' ); ?>
             
             
               <div class="b-dark w-100 text-white p-2">
@@ -51,7 +53,7 @@ get_header('front');
 
 
             <!-- sidebar -->
-            <div class="col-md-4 text-white p-2">
+            <div class="col-md-4 sidebar"> <!-- beginning of Sidebar -->
               <div id="weather" class="b-green p-2 mb-2"></div>
               <?php get_template_part( 'element-templates/rides-objects' ); ?>
               <?php get_template_part( 'element-templates/sidebar-routes' ); ?>

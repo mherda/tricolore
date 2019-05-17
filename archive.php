@@ -8,10 +8,8 @@
  */
 
 get_header();
-?>
+$container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $container );
 
-<?php
-$container   = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <div class="wrapper" id="archive-wrapper">

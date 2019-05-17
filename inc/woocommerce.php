@@ -38,7 +38,7 @@ add_action('woocommerce_before_main_content', 'understrap_woocommerce_wrapper_st
 add_action('woocommerce_after_main_content', 'understrap_woocommerce_wrapper_end', 10);
 if ( ! function_exists( 'understrap_woocommerce_wrapper_start' ) ) {
 	function understrap_woocommerce_wrapper_start() {
-		$container   = get_theme_mod( 'understrap_container_type' );
+		$container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $container );
 		echo '<div class="wrapper" id="woocommerce-wrapper">';
 	  echo '<div class="' . esc_attr( $container ) . '" id="content" tabindex="-1">';
 		echo '<div class="row">';

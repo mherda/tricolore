@@ -8,6 +8,8 @@
  */
 
 get_header('front');
+
+$container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $container );
 ?>
 
 <!-- carousel -->

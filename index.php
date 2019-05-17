@@ -13,7 +13,7 @@
 
 get_header();
 
-$container   = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $container );
 ?>
 
 <?php if ( is_front_page() && is_home() ) : ?>

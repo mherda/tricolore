@@ -8,11 +8,10 @@
  */
 
 get_header('front');
-// $container = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $container );
 ?>
-<div
-  class="wrapper" id="page-wrapper">
-  <div class="<?php echo esc_attr( $container ); ?> notFull mx-auto" id="content">
+<div class="wrapper" id="page-wrapper">
+  <div class="<?php echo esc_attr( $container ); ?> notFull" id="content">
     <div class="">
       <div class="content-area" id="primary">
         <main class="site-main" id="main" role="main">
@@ -26,7 +25,7 @@ get_header('front');
                   <?php
                   if(function_exists('bcn_display'))
                   {
-                          bcn_display();
+                      bcn_display();
                   }?>
               </div>
               
@@ -42,11 +41,17 @@ get_header('front');
               <header class="entry-header">
                 <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
               </header><!-- .entry-header -->
-      		  <?php
-    		  global $post;
-    		  $content = apply_filters('the_content', $post->post_content);
-    		  echo $content;
-    		  ?>
+              
+              
+              <div class="entry-content">
+                  
+          		  <?php
+        		  global $post;
+        		  $content = apply_filters('the_content', $post->post_content);
+        		  echo $content;
+        		  ?>
+                  
+              </div><!-- .entry-content -->
               
               <?php get_template_part( 'element-templates/bottom_tiles1' ); ?>
 

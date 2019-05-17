@@ -8,13 +8,13 @@
  */
 
 get_header();
-$container   = get_theme_mod( 'understrap_container_type' );
+$container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $container );
 ?>
 
 
 <div class="wrapper" id="author-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container-fluid" id="content" tabindex="-1">
 
 		<div class="row">
 

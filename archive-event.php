@@ -1,11 +1,12 @@
 <?php
 
 get_header('front');
+$container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $container );
 
 ?>
 
 <div class="wrapper" id="page-wrapper">
-	<div class="<?php echo esc_attr( $container ); ?> notFull mx-auto" id="content">
+	<div class="<?php echo esc_attr( $container ); ?> notFull" id="content">
 		<div class="row">
 			<div class="col-md-12 content-area" id="primary">
 				<main class="site-main" id="main" role="main">
