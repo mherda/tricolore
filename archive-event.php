@@ -11,9 +11,7 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 			<div class="col-md-12 content-area" id="primary">
 				<main class="site-main" id="main" role="main">
 
-					<!-- Top Row  -->
-					
-					<div class="row">
+					<div class="row"><!-- Top Row  -->
 						<div class="col-md-8">
 							<!-- Load the page body header -->
 							<?php
@@ -25,13 +23,14 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 						</div>
 						<div class="col-md-4 sidebar"> <!-- beginning of Sidebar -->
 							<div class="events">
-							<?php get_template_part( 'element-templates/sidebar-past-events' ); ?>
-							</div>
-							<div class="text-white">
-							<?php get_template_part( 'element-templates/sidebar-regular-events' ); ?>
+								<?php get_template_part( 'element-templates/sidebar-past-events' ); ?>
 							</div>
 							
-						</div>
+							<div>
+								<?php get_template_part( 'element-templates/sidebar-regular-events' ); ?>
+							</div>
+							
+						</div> <!-- end of Sidebar -->
 
 					</div> <!-- end of Top Row-->
 

@@ -29,16 +29,15 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
       <div class="col-md-12 content-area" id="primary">
 
         <main class="site-main" id="main" role="main">
-
-          <div class="disclaimer">
-            <p>
+            
+            <!-- Mission statement -->
+            <p class="disclaimer">
               <?php echo get_post_meta($post->ID, 'disclaimer', true); ?>
             </p>
-          </div>
-          
-          <!-- Homepage tiles -->
-          <?php get_template_part( 'element-templates/front', 'tiles-function' ); ?>
-          <!-- End: Homepage tiles -->
+
+            <!-- Homepage tiles -->
+            <?php get_template_part( 'element-templates/front', 'tiles-function' ); ?>
+            <!-- End: Homepage tiles -->
 
         </main><!-- #main -->
 

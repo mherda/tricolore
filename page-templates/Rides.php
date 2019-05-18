@@ -22,32 +22,23 @@ $container = get_theme_mod( 'understrap_container_type' );
           <!-- Top Row including RiderHQ on the Left and the Weather on the right -->
           <div class="row">
             <div class="col-md-8">
-              
-              <?php get_template_part( 'element-templates/page-header' ); ?>
+                
+                <?php get_template_part( 'element-templates/page-header' ); ?>
             
-            
-              <div class="b-dark w-100 text-white p-2">
-                <h5>
-                  <?php echo get_field('top_info'); ?>
-                </h5>
-                <p>For the latest updates on our Sunday rides visit our
-                  <a class="p-link" href="<?php echo the_field('facebook_link'); ?>">Facebook page</a>
-                </p>
-              </div>
-              <div class="b-red w-100 text-white p-1 pt-2">
-                <h5 class="text-center">Sign up now using <a class="w-link" href="<?php echo the_field('ridehq_link'); ?>">Rider HQ</a></h5>
-              </div>
-              <div>
-                <?php
-					global $post;
-					$content = apply_filters('the_content', $post->post_content);
-				?>
-                <?php echo $content; ?>
-              </div>
-
-
-              <?php get_template_part( 'element-templates/bottom_tiles1' ); ?>
-
+                <div class="entry-content">
+                    <p><?php echo get_field('top_info'); ?></p>
+                    <p>Visit our <a href="<?php echo the_field('facebook_link'); ?>">Facebook page</a> for updates and any route changes for our rides this week.</p>
+                    <p><a class="btn btn-danger" href="<?php echo the_field('ridehq_link'); ?>">Sign up on Rider HQ</a></p>
+                    
+                    <?php
+    					global $post;
+    					$content = apply_filters('the_content', $post->post_content);
+    				?>
+                    <?php echo $content; ?>
+                </div>
+                
+                <!-- Tiles after main content */
+                <?php get_template_part( 'element-templates/bottom_tiles1' ); ?>
 
             </div>
 
