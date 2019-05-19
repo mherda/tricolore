@@ -68,6 +68,7 @@ background-size: 100% 9px;
 /* Base colours */
 a,
 a:hover,
+a:focus,
 a:active {
     color: var(--tri-green);
 }
@@ -76,19 +77,17 @@ a:active {
     background: var(--tri-dark);
 }
 
-/* Button colours :TODO: */
+/* :TODO: Button colours */
 .btn-primary,
 .btn-danger,
 .btn-success {
     font-weight: 600;
-    border: 0;
+    border: 0 !important;
 }
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-danger,
-.btn-danger:hover,
-.btn-danger:active {
+.btn,
+.btn:hover,
+.btn:focus,
+.btn:active {
     color: var(--tri-white);
     background-color: var(--tri-red);
 }
@@ -97,6 +96,7 @@ a:active {
     background-color: var(--tri-green);
 }
 .btn-success:hover,
+.btn-success:focus,
 .btn-success:active {
     color: var(--tri-white);
     background-color: var(--tri-green);
@@ -267,9 +267,6 @@ th {
 
 /* Breadcrumb */
 .breadcrumbs {
-    /* base style */
-}
-.breadcrumbs a {
     font: var(--font-link);
 }
 
@@ -280,32 +277,32 @@ main h1 {
 }
 
 /* Article content headings */
-main .entry-content h2 {
+.entry-content h2 {
     font: var(--font-h5);
 }
-main .entry-content h3,
-main .entry-content th,
-main .entry-content h4 {
+.entry-content h3,
+.entry-content th,
+.entry-content h4 {
     font: var(--font-p);
 }
-main .entry-content h3,
-main .entry-content th {
+.entry-content h3,
+.entry-content th {
     font-weight: 600;
 }
-main .entry-content h4 {
+.entry-content h4 {
     font-style: italic;
 }
 
 /* Main content link */
 /* :TODO: Article tiles should have a separate wrapper, after the content */
-main .entry-content a {
+.entry-content a {
     padding-top: 5px; /* adjusted for line-height */
     font: var(--font-link);
     border-bottom: 1px solid #a7d161; /* #85bc4a; */
 }
-main .entry-content a:hover,
-main .entry-content a:focus,
-main .entry-content a:active {
+.entry-content a:hover,
+.entry-content a:focus,
+.entry-content a:active {
     text-decoration: none;
     border-bottom: 2px solid;
 }
@@ -497,8 +494,10 @@ footer .mt-5 p {
 /* Navbar dropdown menu */
 
 .dropdown-menu {
+    margin-top: 0;
     min-width: 200px;
-    margin-top: 7px;
+    padding: 13px 0 16px 0; /* adjust for line-height */
+    background-color: var(--tri-green);
 }
 
 @media (min-width: 768px) {
@@ -510,30 +509,29 @@ footer .mt-5 p {
         transform: translate(-50%, 0);
     }
     .dropdown-menu:before {
+        content: '';
         position: absolute;
         top: -7px;
         left: 45%;
-        right: auto;
-        display: inline-block;
         border-right: 7px solid transparent;
-        border-bottom: 7px solid var(--tri-white);
+        border-bottom: 7px solid var(--tri-green);
         border-left: 7px solid transparent;
-        border-bottom-color: rgba(0, 0, 0, 0.2);
-        content: '';
     }
 }
 
 /* Navbar active or hovered links */
+.navbar-custom .nav-item.active .nav-link {
+    padding: 0 20px;
+}
+
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item.current-page-ancestor .nav-link,
 .navbar-custom .nav-item .nav-link:focus,
-.navbar-custom .nav-item .nav-link:hover {
+.navbar-custom .nav-item .nav-link:hover,
+.navbar-custom .nav-item .nav-link:active {
     color: var(--tri-green);
 }
 
-.navbar-custom .navbar-nav>li>.dropdown-menu {
-    background-color: var(--tri-green);
-}
 .navbar-custom .navbar-nav .dropdown-menu .nav-link {
     color: var(--tri-white) !important; /* :TODO: theme.css too much !important */
 }

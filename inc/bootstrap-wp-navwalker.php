@@ -101,7 +101,9 @@ class understrap_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 			$id          = $id ? ' id="' . esc_attr( $id ) . '"' : '';
 			$output .= $indent . '<li' . $id . $value . $class_names . '>';
 			$atts           = array();
-			if ( empty( $item->attr_title ) ) { $atts['title'] = ! empty( $item->title ) ? strip_tags( $item->title ) : ''; } else { $atts['title'] = $item->attr_title; }
+			// :TODO: Please code review this:
+			// If there is no title tooltip text, don't repeat the link text.
+			// if ( empty( $item->attr_title ) ) { $atts['title'] = ! empty( $item->title ) ? strip_tags( $item->title ) : ''; } else { $atts['title'] = $item->attr_title; }
 			$atts['target'] = ! empty( $item->target ) ? $item->target : '';
 			$atts['rel']    = ! empty( $item->xfn ) ? $item->xfn : '';
 			// If item has_children add atts to a.
