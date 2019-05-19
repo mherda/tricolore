@@ -228,7 +228,7 @@ th {
     font: var(--font-p-highlight);
 }
 /* Home mission statement */
-.disclaimer p {
+.disclaimer {
     margin: 20px auto;
     max-width: 32em;
     font: var(--font-h3);
