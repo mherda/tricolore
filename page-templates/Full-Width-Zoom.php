@@ -14,11 +14,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="page-wrapper">
 
-  <div class="<?php echo esc_attr( $container ); ?> notFull" id="content">
+  <div class="<?php echo esc_attr( $container ); ?>" id="content">
 
-    <div class="row">
+    <div class="">
 
-      <div class="col-md-12 content-area" id="primary">
+      <div class="content-area notFull" id="primary">
 
         <main class="site-main" id="main" role="main">
         <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
@@ -53,7 +53,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                 $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
 
                 if ( $img ) { ?>
-                  <a class="tile-text tyle"
+                  <a class="tyle"
                     href="<?php the_field('tile_link'); ?>"
                     style="<?php echo $tile_background; ?>"
                     >
@@ -64,7 +64,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                     </div>
                   </a>
                 <?php } else { ?>
-                  <a class="parent-tile tile-text tyle"
+                  <a class="parent-tile tyle"
                     href="<?php the_field('tile_link'); ?>"
                     >
                     <div class="caption">

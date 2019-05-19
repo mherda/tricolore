@@ -96,16 +96,10 @@
       <div class="carousel-caption d-none d-md-block">
         <div class="card" style="width: 35rem;">
           <div class="card-body text-left">
-            <p class="tag">
-                <?php the_field('slide_tag'); ?>
-            </p>
-            <h2 class="slide-text">
-              <?php the_title(); ?>
-            </h2>
-            <p class="card-text">
-              <?php echo $post->post_content; ?>
-            </p>
-            <a href="#" class="btn btn-danger">Join our Club</a>
+            <p class="tag"><?php the_field('slide_tag'); ?></p>
+            <h2 class="slide-text"><?php the_title(); ?></h2>
+            <p class="card-text"><?php echo $post->post_content; ?></p>
+            <p><a href="#" class="btn btn-danger">Join our Club</a></p>
           </div>
         </div>
       </div>

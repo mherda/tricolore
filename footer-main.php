@@ -15,11 +15,11 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 
 	<footer class="<?php echo esc_attr( $container ); ?> site-footer" id="colophon">
 
-		<div class="row notFull mx-auto">
+		<div class="row">
 
 			<div class="col-md-12">
 
-				<div class="site-info">
+				<div class="site-info notFull">
 
 					<div class="row">
 						<div class="col-md-2">
@@ -39,13 +39,15 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 					</div><!-- row end -->
 
 
-					<div class="row abs-par">
-						<div class="col-auto mx-auto bg-white">
+					<div class="row organisations">
+						<div class="col-md-12 col-lg-8 mx-auto">
+							<div>
 							<?php
 								for ($i = 1; $i <= 5; $i++) { ?>
 									<img src="<?php echo get_template_directory_uri(); ?>/assets/affiliations/<?php echo $i; ?>.png" />
 								<?php }
 							?>
+							</div>
 						</div><!--col end -->
 					</div><!-- row end -->
 
@@ -55,10 +57,10 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 
 		</div><!-- row end -->
 
-		<div class="row abs-chi">
-			<div class="col text-center">
+		<div class="row copyright">
+			<div class="col-md-auto">
 				<h3>A big thank you to all our sponsors!</h3>
-				<p><img class="mx-auto d-block" src="<?php echo get_template_directory_uri(); ?>/assets/sponsors/sponsor_logos.png" /></p>
+				<p><img src="<?php echo get_template_directory_uri(); ?>/assets/sponsors/sponsor_logos.png" /></p>
 				<p>&copy; Penge Cycle Club 2019. All rights reserved</p>
 			</div><!--col end -->
 			

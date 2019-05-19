@@ -14,11 +14,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="page-wrapper">
 
-  <div class="<?php echo esc_attr( $container ); ?> notFull" id="content">
+  <div class="<?php echo esc_attr( $container ); ?>" id="content">
 
-    <div class="row">
+    <div class="">
 
-      <div class="col-md-12 content-area" id="primary">
+      <div class="content-area notFull" id="primary">
 
         <main class="site-main" id="main" role="main">
           <div class="row">
@@ -27,7 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' );
               <?php
               if(function_exists('bcn_display'))
               {
-                      bcn_display();
+                  bcn_display();
               }?>
               </div>
               <div>
@@ -55,7 +55,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                     $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
 
                     if ( $img ) { ?>
-                    <a class="tile-text tyle"
+                    <a class="tyle"
                         href="<?php the_field('tile_link'); ?>"
                         style="<?php echo $tile_background; ?>"
                         >
@@ -67,7 +67,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                     </a>
 
                     <?php } else { ?>
-                      <a class="tile-text tyle"
+                      <a class="tyle"
                         href="<?php the_field('tile_link'); ?>"
                         >
                         <div class="caption">

@@ -55,15 +55,6 @@ background-size: 100% 9px;
     background-color: var(--tri-white);
 }
 
-/* :TODO: only use .b-* colour classes as .bg-* classes use !important */
-.bg-dark,
-.bg-secondary {
-    background-color: var(--tri-dark) !important;
-}
-.bg-light {
-    background-color: var(--tri-white) !important;
-}
-
 
 /* Base colours */
 a,
@@ -77,12 +68,23 @@ a:active {
     background: var(--tri-dark);
 }
 
-/* :TODO: Button colours */
+/* Footer */
+#wrapper-footer .organisations > div > div {
+    color: var(--tri-black);
+    background: white;
+}
+
+#wrapper-footer .copyright {
+    background: var(--tri-black);
+}
+
+
+/* Button colours */
 .btn-primary,
 .btn-danger,
 .btn-success {
     font-weight: 600;
-    border: 0 !important;
+    border: 0 !important; /* avoid link underline */
 }
 .btn,
 .btn:hover,
@@ -253,17 +255,6 @@ th {
     font: var(--font-h6);
 }
 
-/* Youth tile tag */
-/* :TODO: Tile content HTML should match home tiles */
-.tyle span {
-    font: var(--font-h6);
-}
-/* Youth tile title */
-/* :TODO: Tile content HTML should match home tiles */
-.tyle div+div h5 {
-    font: var(--font-h4);
-}
-
 
 /* Breadcrumb */
 .breadcrumbs {
@@ -294,7 +285,6 @@ main h1 {
 }
 
 /* Main content link */
-/* :TODO: Article tiles should have a separate wrapper, after the content */
 .entry-content a {
     padding-top: 5px; /* adjusted for line-height */
     font: var(--font-link);
@@ -307,12 +297,6 @@ main h1 {
     border-bottom: 2px solid;
 }
 
-
-/* Article tiles after content */
-/* :TODO: Tile content HTML should match home tiles */
-main .tile-text h3 {
-    font: var(--font-h4);
-}
 
 /* Pagination after content in Events */
 .pagination {
@@ -354,6 +338,8 @@ footer .mt-5 p {
 }
 
 .notFull {
+    margin-left: auto;
+    margin-right: auto;
     max-width: 1200px;
 }
 
@@ -385,7 +371,7 @@ footer .mt-5 p {
         padding-right: 10px;
     }
     
-    /* Landing pages with text above tiles such as Competitive */
+    /* Landing pages with main content above tiles (such as Competitive) */
     body.page-template-Full-Width-Zoom .entry-content {
         width: 65%; /* limit content to two thirds */
         width: calc(67% - 10px); /* accurately stop short of gutter */
@@ -726,17 +712,13 @@ footer .mt-5 p {
     display: flex;
     flex-direction: column;
     justify-content: end; /* push .caption to bottom */
-    align-self: center;
-    justify-self: center;
-    width: 100%;
-    height: 100%;
     max-height: 350px;
     color: var(--tri-white);
+    background-color: var(--tri-green);
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: var(--tri-green);
 }
-/* :TODO: Homepage events row */
+/* :TODO: Homepage bottom row, events tile */
 .grid + .grid + .grid .tyle:last-child {
     justify-content: start;
     padding: 13px 20px 0 20px; /* adjusted for line-height */
@@ -967,38 +949,43 @@ main table td:last-child {
 
 .site-info .row:first-child > div {
     padding-top: 20px;
-    padding-bottom: 20px;
 }
 
 /* Flickr widget */
-/* :TODO: need gutter between each photo */
-/* :TODO: current widget spams JS calculations, cannot control with CSS */
+/*
+:TODO: need gutter between photos
+:TODO: current widget spams JS calculations, cannot control with CSS
+*/
 
 
-/* Footer logos on big tablets and wider */
-/* :TODO: Split the logos and link to: /about/sponsors/ */
-@media (min-width: 768px) {
-    
-    .abs-par {
-        position: relative;
-        margin: 20px auto -40px auto;
-        height: 80px;
-        color: var(--tri-black);
-    }
-    
-    .abs-par img {
-        max-height: 80px;
-    }
-
-    .abs-chi {
-        padding-top: 80px;
-        background: var(--tri-black);
-    }
-    
+/* Footer organisations */
+.organisations > div {
+    padding-top: 20px;
+}
+.organisations > div > div img {
+    max-height: 60px;
 }
 
+.organisations > div > div {
+    position: relative;
+    margin-bottom: -50px; /* bring next row halfway up this one */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
 
-/* end of footer logos */
+/* Footer copyright */
+.copyright > div {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 70px; /* 20px + 50px .organisations */
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+/* Footer sponsor logos */
+/* :TODO: Split the logos and link to: /about/sponsors/ */
+
 
 
 /* DO NOT EDIT BELOW */

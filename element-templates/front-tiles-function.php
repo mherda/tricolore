@@ -1,5 +1,7 @@
+<!-- Middle Row -->
 <div id="front-tiles" class="grid">
 
+<!-- Top Row -->
 <?php
     $posts = [
         'top_left_tile',
@@ -15,7 +17,7 @@
             $img = get_the_post_thumbnail_url($post_id, 'tyle');
             $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
       ?>
-      <a class="tile-text tyle"
+      <a class="tyle"
         href="<?php the_field('tile_link'); ?>"
         style="<?php echo $tile_background; ?>"
         >
@@ -54,7 +56,7 @@
             $img = get_the_post_thumbnail_url($post_id, 'frontTilePort');
             $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
       ?>
-      <a class="tile-text tyle tyle-rectangle"
+      <a class="tyle tyle-rectangle"
         href="<?php the_field('tile_link'); ?>"
         style="<?php echo $tile_background; ?>"
         >
@@ -81,6 +83,7 @@
 
 
 
+<!-- Bottom Row -->
 
 <div id="front-tiles" class="grid"> <!-- :TODO: Homepage tiles bottom row: 1 1 2 -->
 
@@ -94,7 +97,7 @@
             $img = get_the_post_thumbnail_url($post_id, 'frontTilePort');
             $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
     ?>
-    <a class="tile-text tyle"
+    <a class="tyle"
         href="<?php the_field('tile_link'); ?>"
         >
         <div class="caption">
@@ -117,7 +120,7 @@
           setup_postdata( $post );
           $img = get_the_post_thumbnail_url($post_id, 'frontTilePort');
         ?>
-    <a class="tile-text tyle" href="<?php the_field('tile_link'); ?>">
+    <a class="tyle" href="<?php the_field('tile_link'); ?>">
         <div class="caption">
           <p class="tag"><?php the_field('tile_category'); ?></p>
           <h2><?php the_title(); ?></h2>
@@ -130,7 +133,7 @@
 
 
     <!-- Start events in a tile -->
-    <div class="tile-text tyle">
+    <div class="tyle">
         <h2>Events</h2>
         <?php
                 $today = date('Ymd');

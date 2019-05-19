@@ -1,3 +1,4 @@
+<!-- :TODO: is this file used? -->
 <?php
 
 // Enable shortcodes in text areas
@@ -46,7 +47,7 @@ function top_left() {
 
 
 <?php
-    return ob_get_clean(); 
+    return ob_get_clean();
 }
 
 add_shortcode('my_shortcode', 'top_left');
@@ -93,7 +94,7 @@ function tile_shortcode_function() {
 
 
 <?php
-    return ob_get_clean(); 
+    return ob_get_clean();
 }
 
 add_shortcode('tile_shortcode', 'tile_shortcode_function');
@@ -102,7 +103,7 @@ add_shortcode('tile_shortcode', 'tile_shortcode_function');
 function acc_ride() {
   ob_start();
   get_template_part( 'element-templates/accordion-rides' );
-  return ob_get_clean(); 
+  return ob_get_clean();
 }
 
 

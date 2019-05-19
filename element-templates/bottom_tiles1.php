@@ -17,7 +17,7 @@ if ( get_field('tile_placeholder_left')
         // $img = get_the_post_thumbnail_url($post_id, 'tyle'); // home tile
         $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
     ?>
-    <a class="tile-text tyle"
+    <a class="tyle"
         href="<?php the_field('tile_link'); ?>"
         style="<?php echo $tile_background; ?>"
         >
@@ -42,7 +42,7 @@ if ( get_field('tile_placeholder_left')
         // $img = get_the_post_thumbnail_url($post_id, 'tyle'); // home tile
         $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
     ?>
-    <a class="tile-text tyle"
+    <a class="tyle"
         href="<?php the_field('tile_link'); ?>"
         style="<?php echo $tile_background; ?>"
         >
