@@ -68,6 +68,12 @@ a:active {
     background: var(--tri-dark);
 }
 
+/* Main content info panel (Sunday Rides) */
+.page-template-Rides h1,
+.entry-content .panel {
+    background: var(--tri-white);
+}
+
 /* Footer */
 #wrapper-footer .organisations > div > div {
     color: var(--tri-black);
@@ -86,12 +92,15 @@ a:active {
     font-weight: 600;
     border: 0 !important; /* avoid link underline */
 }
-.btn,
+.btn {
+    color: var(--tri-white);
+    background-color: var(--tri-red);
+}
 .btn:hover,
 .btn:focus,
 .btn:active {
     color: var(--tri-white);
-    background-color: var(--tri-red);
+    background-color: var(--tri-green);
 }
 .btn-success {
     color: var(--tri-white);
@@ -103,12 +112,26 @@ a:active {
     color: var(--tri-white);
     background-color: var(--tri-green);
 }
+/* Clicked button: */
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+    color: var(--tri-white);
+    background-color: var(--tri-green);
+}
 
 /* Carousel colours */
-
+/* Carousel caption */
 .card {
-    background-color: rgba(245, 245, 245, 0.7);
-    color: var(--tri-dark);
+    color: var(--tri-black);
+    background-color: var(--tri-white);
+    background-color: #ecf1f4c0; /* --tri-white with alpha channel */
+}
+
+/* Carousel tag */
+.card-tag {
+    color: var(--tri-white);
+    background-color: var(--tri-black);
 }
 
 
@@ -211,14 +234,14 @@ th {
 
 /* Header search box */
 /* Header search button (icon) */
+
 /* Header nav */
 .nav-link {
     font: var(--font-h6);
 }
-/* Header nav menu */
 
 /* Carousel tag */
-.carousel-item h5 {
+.card-tag {
     font: var(--font-h6);
 }
 /* Carousel title */
@@ -229,6 +252,15 @@ th {
 .card-text {
     font: var(--font-p-highlight);
 }
+
+/* Carousel button */
+.card .btn {
+    margin-right: 10px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+
 /* Home mission statement */
 .disclaimer {
     margin: 20px auto;
@@ -251,7 +283,7 @@ th {
 }
 /* Home tile event item */
 /* :TODO: match HTML with sidebar event item */
-.tyle .border-bottom h5 {
+.tyle.events h3 {
     font: var(--font-h6);
 }
 
@@ -297,9 +329,8 @@ main h1 {
     border-bottom: 2px solid;
 }
 
-
 /* Pagination after content in Events */
-.pagination {
+.entry-content .pagination {
     justify-content: center;
 }
 
@@ -477,6 +508,31 @@ footer .mt-5 p {
 }
 
 
+/* Navbar active or hovered links */
+.navbar-custom .nav-item.active .nav-link {
+}
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item.current-page-ancestor .nav-link,
+.navbar-custom .nav-item .nav-link:focus,
+.navbar-custom .nav-item .nav-link:hover,
+.navbar-custom .nav-item .nav-link:active {
+    color: var(--tri-green);
+}
+
+.navbar-custom .navbar-nav .dropdown-menu .nav-link {
+    color: var(--tri-white) !important; /* :TODO: theme.css too much !important */
+}
+.navbar-dark .navbar-nav .dropdown-menu .nav-link:hover,
+.navbar-dark .navbar-nav .dropdown-menu .nav-link:focus {
+    color: var(--tri-black) !important; /* :TODO: theme.css too much !important */
+    background: transparent;
+}
+.navbar-custom .navbar-nav .dropdown-menu .nav-link.active,
+.navbar-custom .navbar-nav .dropdown-menu .nav-link:active {
+    color: var(--tri-black) !important; /* :TODO: theme.css too much !important */
+}
+
 /* Navbar dropdown menu */
 
 .dropdown-menu {
@@ -503,32 +559,6 @@ footer .mt-5 p {
         border-bottom: 7px solid var(--tri-green);
         border-left: 7px solid transparent;
     }
-}
-
-/* Navbar active or hovered links */
-.navbar-custom .nav-item.active .nav-link {
-    padding: 0 20px;
-}
-
-.navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item.current-page-ancestor .nav-link,
-.navbar-custom .nav-item .nav-link:focus,
-.navbar-custom .nav-item .nav-link:hover,
-.navbar-custom .nav-item .nav-link:active {
-    color: var(--tri-green);
-}
-
-.navbar-custom .navbar-nav .dropdown-menu .nav-link {
-    color: var(--tri-white) !important; /* :TODO: theme.css too much !important */
-}
-.navbar-dark .navbar-nav .dropdown-menu .nav-link:hover,
-.navbar-dark .navbar-nav .dropdown-menu .nav-link:focus {
-    color: var(--tri-black) !important; /* :TODO: theme.css too much !important */
-    background: transparent;
-}
-.navbar-custom .navbar-nav .dropdown-menu .nav-link.active,
-.navbar-custom .navbar-nav .dropdown-menu .nav-link:active {
-    color: var(--tri-black) !important; /* :TODO: theme.css too much !important */
 }
 
 
@@ -611,22 +641,78 @@ footer .mt-5 p {
 /* Carousel */
 
 .carousel-caption {
-    left: 7%;
+    left: 8.333%; /* 1/12th */
 }
 
 .carousel-item {
     max-height: 700px;
 }
 
-.carousel-control-next,
-.carousel-control-prev {
-    width: 5%;
+/* Carousel caption */
+
+.card {
+    border: 0;
+    border-radius: 0;
 }
 
+.card-body {
+    padding: 30px 40px 30px 40px; /* double gutters */
+}
+
+.card-tag {
+    display: inline-block;
+    margin: 0;
+    padding: 3px 10px 3px 10px; /* adjusted for line-height */
+    background-color: var(--tri-black);
+}
+
+.slide-text {
+    margin-top: 19px; /* adjust for line-height */
+    margin-bottom: 0;
+}
+
+.card-text {
+    margin: 16px 0 18px 0; /* adjust for line-height */
+}
+
+/* Carousel previous and next links */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 4.167%; /* half of a 12-column grid slot */
+}
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 2em;
+    font: var(--font-h1);
+    font-size: 72px;
+    line-height: 2;
+    color: var(--tri-white);
+    background: var(--tri-black);
+}
+.carousel-control-prev:hover span,
+.carousel-control-prev:focus span,
+.carousel-control-next:hover span,
+.carousel-control-next:focus span {
+    color: var(--tri-green);
+}
+.carousel-control-prev,
+.carousel-control-prev:hover,
+.carousel-control-prev:focus,
+.carousel-control-next,
+.carousel-control-next:hover,
+.carousel-control-next:focus {
+    opacity: 1;
+}
+.carousel-control-prev-icon:after {
+    content: "⟨"; /* MY CHARACTER CODEPOINTS ARE OVER 9000 */
+}
+.carousel-control-next-icon:after {
+    content: "⟩"; /* MY CHARACTER CODEPOINTS ARE OVER 9000 */
+}
+
+/* Carousel slide indicator pagination thing */
+carousel-indicators {
 }
 
 
@@ -664,7 +750,7 @@ footer .mt-5 p {
         grid-column: span 2; /* grow to fills 2 columns */
     }
     /* Homepage events row */
-    .grid + .grid + .grid .tyle:last-child {
+    #front-tiles .tyle.events {
         grid-column: span 2; /* grow to fills 2 columns */
     }
 }
@@ -718,14 +804,15 @@ footer .mt-5 p {
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* :TODO: Homepage bottom row, events tile */
-.grid + .grid + .grid .tyle:last-child {
+/* Homepage bottom row, events tile */
+#front-tiles.tyle.events {
     justify-content: start;
     padding: 13px 20px 0 20px; /* adjusted for line-height */
     background: var(--tri-black);
 }
 
-.tyle .caption {
+.tyle .caption,
+#front-tiles .tyle.events {
     padding: 13px 20px 16px 20px; /* adjusted for line-height */
     background-color: var(--tri-black);
 }
@@ -766,7 +853,6 @@ footer .mt-5 p {
 /* Home middle tiles with portrait image */
 
 #rect-tiles.grid {
-    display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     column-gap: 20px;
     margin: 20px auto;
@@ -775,7 +861,7 @@ footer .mt-5 p {
 
 .tyle-rectangle {
     /* :TODO: remove most of this */
-    flex-direction: row;
+    flex-direction: row; /* horizontal internal layout */
     max-height: 350px;
     background-color: var(--tri-black);
     background-size: auto 100%; /* cover the max-height */
@@ -786,6 +872,12 @@ footer .mt-5 p {
     width: calc(50% + 10px); /* half the panel and remaining half gutter */
     width: calc(100% - 250px);
 }
+
+/* :TODO: Homepage bottom row, events tile */
+#front-tiles .tyle.events {
+    justify-content: start;
+}
+
 
 /* MISCELLANEOUS */
 
@@ -892,7 +984,7 @@ main h1 {
 }
 
 
-/* Table */
+/* Main content table */
 
 main table {
     width: 100%;
@@ -910,6 +1002,27 @@ main table th:last-child,
 main table td:last-child {
     padding-right: 20px;
 }
+
+
+/* Main content info panel (Sunday Rides) */
+.page-template-Rides h1 {
+    margin-bottom: 0; /* connect background with .panel */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0.5rem; /* :TODO: main content spacing */
+}
+.entry-content .panel {
+    margin-bottom: 18px; /* anticipate line-height of next sibling */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+.entry-content .panel p:last-child,
+.entry-content .panel ul:last-child,
+.entry-content .panel ol:last-child {
+    margin-bottom: 0;
+}
+
 
 
 
@@ -983,8 +1096,16 @@ main table td:last-child {
     text-align: center;
 }
 
+.copyright h3 {
+    margin-bottom: 20px;
+}
+
 /* Footer sponsor logos */
 /* :TODO: Split the logos and link to: /about/sponsors/ */
+
+.copyright p:last-child {
+    margin-bottom: 0; /* use padding of column */
+}
 
 
 

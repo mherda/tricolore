@@ -14,15 +14,21 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 <div class="wrapper" id="error-404-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="<?php echo esc_attr( $container ); ?>" id="content">
 
-		<div class="row">
+		<div class="">
 
-			<div class="col-md-12 content-area" id="primary">
+			<div class="content-area notFull" id="primary">
 
 				<main class="site-main" id="main">
 
-					<section class="error-404 not-found">
+          		  <!-- Top Row  -->
+
+		          <div class="row">
+		            <div class="col-md-8">
+						
+		              <!-- beginning of the main column -->
+					  <section class="error-404 not-found">
 
 						<header class="page-header">
 
@@ -33,12 +39,11 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 						<div class="page-content">
 
-							<p><?php esc_html_e( 'Uh Oh! It looks like that page got dropped from the peloton.
-Based on GPS data, this is the best way home'); ?></p>
+							<p><?php esc_html_e( 'Uh Oh! It looks like that page got dropped from the peloton. Based on GPS data, this is the best way home:'); ?></p>
 
 							<?php get_search_form(); ?>
 
-							<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
+							<?php // the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
 							<?php if ( understrap_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
 
@@ -65,17 +70,28 @@ Based on GPS data, this is the best way home'); ?></p>
 							<?php
 
 							/* translators: %1$s: smiley */
-							$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'understrap' ), convert_smilies( ':)' ) ) . '</p>';
-							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
+							// $archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'understrap' ), convert_smilies( ':)' ) ) . '</p>';
+							// the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 
-							the_widget( 'WP_Widget_Tag_Cloud' );
+							// the_widget( 'WP_Widget_Tag_Cloud' );
 							?>
 
 						</div><!-- .page-content -->
-
 					</section><!-- .error-404 -->
+            	</div> <!-- end of main column -->
 
-				</main><!-- #main -->
+
+	            <div class="sidebar col-md-4">
+					<p>Sidebar<p>
+	            </div> <!-- end of right column -->
+			
+			
+          	</div> <!-- end of Top Row-->
+			
+			
+			</main><!-- #main -->
+
+
 
 			</div><!-- #primary -->
 

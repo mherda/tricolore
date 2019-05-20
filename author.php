@@ -14,7 +14,7 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 
 <div class="wrapper" id="author-wrapper">
 
-	<div class="container-fluid" id="content" tabindex="-1">
+	<div class="container-fluid" id="content">
 
 		<div class="row">
 

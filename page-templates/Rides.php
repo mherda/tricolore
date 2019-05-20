@@ -23,18 +23,24 @@ $container = get_theme_mod( 'understrap_container_type' );
           <div class="row">
             <div class="col-md-8">
                 
+                <!-- Breadcrumb, hero image then title -->
                 <?php get_template_part( 'element-templates/page-header' ); ?>
-            
+                
                 <div class="entry-content">
-                    <p><?php echo get_field('top_info'); ?></p>
-                    <p>Visit our <a href="<?php echo the_field('facebook_link'); ?>">Facebook page</a> for updates and any route changes for our rides this week.</p>
-                    <p><a class="btn btn-danger" href="<?php echo the_field('ridehq_link'); ?>">Sign up on Rider HQ</a></p>
+                    
+                    <!-- Panel content -->
+                    <div class="panel">
+                        <p><?php echo get_field('top_info'); ?></p>
+                        <p>Visit our <a href="<?php echo the_field('facebook_link'); ?>">Facebook page</a> for updates and any route changes for our rides this week.</p>
+                        <p><a class="btn btn-danger" href="<?php echo the_field('ridehq_link'); ?>">Sign up on Rider HQ</a></p>
+                    </div>
                     
                     <?php
     					global $post;
     					$content = apply_filters('the_content', $post->post_content);
     				?>
                     <?php echo $content; ?>
+                    
                 </div>
                 
                 <!-- Tiles after main content */

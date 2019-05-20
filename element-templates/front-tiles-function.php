@@ -133,7 +133,7 @@
 
 
     <!-- Start events in a tile -->
-    <div class="tyle">
+    <div class="tyle events">
         <h2>Events</h2>
         <?php
                 $today = date('Ymd');
@@ -162,31 +162,45 @@
             <?php
                           $eventDate = new DateTime(get_field('event_date'));
                            ?>
-            <div class="b-green mw50">
+            <p class="">
               <?php echo $eventDate->format('M'); ?>
-            </div>
-            <h4 class="p-2 mt-3">
+          </p>
+            <p class="">
               <?php echo $eventDate->format('d'); ?>
-            </h4>
+          </p>
           </div>
-          <div class="p-2 border-bottom w-100 mr-2">
-            <!-- :TODO: Link event title -->
-            <h5><?php the_title(); ?></h5>
-            <p>
-              <?php echo wp_trim_words(get_the_content(), 18); ?>
-              <?php
-                $event_uri = '';
-                foreach( $term_list as $term ) {
-                    if($term->name == 'RiderHQ') {
-                        $event_uri = get_post_meta($post->ID, 'event_uri');
-                    }
+          <div class="w-100">
+            <!-- Event in a title -->
+            <?php
+            $event_uri = '';
+            foreach( $term_list as $term ) {
+                if($term->name == 'RiderHQ') {
+                    $event_uri = get_post_meta($post->ID, 'event_uri');
                 }
-                if ( $event_uri ) {
-                    echo '<a class="btn btn-primary" href="'.$event_uri[0].'" role="button btn-dark">Join on RiderHQ</a>';
-                } else { ?>
-                    <a href="<?php the_permalink(); ?>">read more</a>
-                <?php } ?>
-            </p>
+            } ?>
+            
+            <?php
+            // Title:
+            if ( $event_uri ) {
+                echo '<h3><a href="'.$event_uri[0].'">';
+                    the_title();
+                echo '</a></h3>';
+            } else { ?>
+                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>';
+            <?php } ?>
+            
+            <?php
+            // Description:
+            echo wp_trim_words(get_the_content(), 18);
+            ?>
+            
+            <?php
+            // Sign-up button: :TODO: remove obsolete code
+            if ( $event_uri ) {
+                echo '<p><a class="btn btn-primary" href="'.$event_uri[0].'">Join on RiderHQ</a></p>';
+            } else { ?>
+                <!-- <p><a href="<?php the_permalink(); ?>">Read more</a></p> -->
+            <?php } ?>
 
           </div>
         </div>

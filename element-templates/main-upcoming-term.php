@@ -50,7 +50,7 @@
                                 }
                             }
                             if ( $event_uri ) {
-                                echo '<a class="btn btn-primary" href="'.$event_uri[0].'" role="button btn-dark">Join on RiderHQ</a>';
+                                echo '<a class="btn btn-primary" href="'.$event_uri[0].'">Join on RiderHQ</a>';
                             } else { ?>
                                 <a href="<?php the_permalink(); ?>">read more</a>
                             <?php } ?>
