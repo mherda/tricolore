@@ -134,7 +134,7 @@
 
     <!-- Start events in a tile -->
     <div class="tyle events">
-        <h2><a href="<?php echo site_url('/events/'); ?>">Events</a></h2>
+        <h2><a class="btn btn-primary" href="<?php echo site_url('/events/'); ?>">All events</a></h2>
         <?php
                 $today = date('Ymd');
                 $homepageEvents = new WP_Query(array(

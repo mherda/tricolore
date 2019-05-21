@@ -40,7 +40,7 @@
             <div>
                 <?php $eventDate = new DateTime(get_field('event_date')); ?>
                 <p class="month"><?php echo $eventDate->format('M'); ?></p>
-                <p class="month"><?php echo $eventDate->format('d'); ?></p>
+                <p class="day"><?php echo $eventDate->format('d'); ?></p>
             </div>
             <div>
                 
