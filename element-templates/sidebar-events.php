@@ -4,7 +4,7 @@
         $categories = get_the_category();
  
         if ( ! empty( $categories ) ) { ?>
-            <h3><?php echo esc_html( $categories[0]->name ); ?> Events</h3>
+            <h2><a href="<?php echo site_url('/events/'); ?>"><?php echo esc_html( $categories[0]->name ); ?> Events</a></h2>
         <?php
   
         $today = date('Ymd');
@@ -37,38 +37,56 @@
             $term_list = wp_get_post_terms($post->ID, 'event_category');
         ?>
         <div class="d-flex">
-            <div class="d-flex flex-column border text-center">
+            <div>
                 <?php $eventDate = new DateTime(get_field('event_date')); ?>
-                <div class="b-green mw50"><?php echo $eventDate->format('M'); ?></div>
-                <h4><?php echo $eventDate->format('d'); ?></h4>
+                <p class="month"><?php echo $eventDate->format('M'); ?></p>
+                <p class="month"><?php echo $eventDate->format('d'); ?></p>
             </div>
-            <div class="p-2 border-bottom w-100 mr-2">
-            <!-- :TODO: Link event title -->
-            <h5><?php the_title(); ?></h5>
-            <p><?php echo wp_trim_words(get_the_content(), 18);
+            <div>
+                
+                <!-- Event in a title -->
+                <?php
                 $event_uri = '';
                 foreach( $term_list as $term ) {
                     if($term->name == 'RiderHQ') {
                         $event_uri = get_post_meta($post->ID, 'event_uri');
                     }
-                }
+                } ?>
+                
+                <?php
+                // Title:
                 if ( $event_uri ) {
-                    echo '<a class="btn btn-primary" href="'.$event_uri[0].'">Join on RiderHQ</a>';
+                    echo '<h3><a href="'.$event_uri[0].'">';
+                        the_title();
+                    echo '</a></h3>';
                 } else { ?>
-                    <a href="<?php the_permalink(); ?>">read more</a>
+                    <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                 <?php } ?>
-            </p>
-            </div>
+                
+                <?php
+                // Description:
+                echo wp_trim_words(get_the_content(), 18);
+                ?>
+                
+                <?php
+                // Sign-up button: :TODO: remove obsolete code
+                if ( $event_uri ) {
+                    echo '<p><a class="btn btn-primary" href="'.$event_uri[0].'">Join on RiderHQ</a></p>';
+                }
+                ?>
+
+          </div>
         </div>
         <?php } wp_reset_postdata(); ?>
         <?php } else {
           ?> <p>No upcoming events</p>
         <?php } ?>
     </div>
-                        <?php } else { ?>
-                          <h3>Upcoming events</h3>
-                       <?php } ?>
-                        
+    
+    <?php } else { ?>
+        
+      <h3>Upcoming events</h3>
+    <?php } ?>
     <p>
         <a class="btn btn-danger" href="<?php echo site_url('/events/'); ?>">View events</a>
     </p>

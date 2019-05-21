@@ -337,11 +337,12 @@ main h1 {
 
 /* Sidebar headings */
 /* :TODO: use a class for selecting the sidebar */
+main .sidebar h2,
 main .sidebar h3 {
     font: var(--font-h4);
 }
 /* Sidebar event item */
-main .sidebar h5 {
+main .sidebar h4 {
     font: var(--font-h6);
 }
 
@@ -877,6 +878,24 @@ carousel-indicators {
 #front-tiles .tyle.events {
     justify-content: start;
 }
+.events .d-flex + .d-flex {
+    border-top: 1px solid;
+}
+.events .d-flex .month,
+.events .d-flex .day {
+    padding: 5px 10px; /* .tyle .tag */
+}
+#front-tiles .tyle.events .d-flex > div + div {
+    padding: 5px 0 5px 10px; /* .tyle .tag */
+}
+#front-tiles .tyle.events .d-flex > div + div h3,
+#front-tiles .tyle.events .d-flex > div + div p {
+    margin: 0;
+    padding-bottom: 10px;
+}
+.tyle.events .month {
+    background: var(--tri-green);
+}
 
 
 /* MISCELLANEOUS */
@@ -1039,6 +1058,7 @@ main table td:last-child {
     padding: 0 20px;
 }
 
+.sidebar h2,
 .sidebar h3 {
     margin: 0;
     padding-top: 16px; /* adjusted for line-height */

@@ -134,7 +134,7 @@
 
     <!-- Start events in a tile -->
     <div class="tyle events">
-        <h2>Events</h2>
+        <h2><a href="<?php echo site_url('/events/'); ?>">Events</a></h2>
         <?php
                 $today = date('Ymd');
                 $homepageEvents = new WP_Query(array(
@@ -158,18 +158,14 @@
                   $term_list = wp_get_post_terms($post->ID, 'event_category');
                   ?>
         <div class="d-flex">
-          <div class="d-flex flex-column border text-center">
+          <div>
             <?php
-                          $eventDate = new DateTime(get_field('event_date'));
-                           ?>
-            <p class="">
-              <?php echo $eventDate->format('M'); ?>
-          </p>
-            <p class="">
-              <?php echo $eventDate->format('d'); ?>
-          </p>
+            $eventDate = new DateTime(get_field('event_date'));
+            ?>
+            <p class="month"><?php echo $eventDate->format('M'); ?></p>
+            <p class="day"><?php echo $eventDate->format('d'); ?></p>
           </div>
-          <div class="w-100">
+          <div>
             <!-- Event in a title -->
             <?php
             $event_uri = '';
@@ -186,7 +182,7 @@
                     the_title();
                 echo '</a></h3>';
             } else { ?>
-                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>';
+                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <?php } ?>
             
             <?php
@@ -198,9 +194,8 @@
             // Sign-up button: :TODO: remove obsolete code
             if ( $event_uri ) {
                 echo '<p><a class="btn btn-primary" href="'.$event_uri[0].'">Join on RiderHQ</a></p>';
-            } else { ?>
-                <!-- <p><a href="<?php the_permalink(); ?>">Read more</a></p> -->
-            <?php } ?>
+            }
+            ?>
 
           </div>
         </div>
