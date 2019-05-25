@@ -333,7 +333,7 @@ main h1 {
     font-style: italic;
 }
 
-/* Main content link */
+/* Main content link and sidebar link */
 .entry-content a {
     padding-top: 5px; /* adjusted for line-height */
     font: var(--font-link);
@@ -354,7 +354,7 @@ main h1 {
     border-bottom: 2px solid;
 }
 .sidebar .justified-gallery a {
-    border-bottom: 0;
+    border-bottom: 0; /* don't underline photos */
 }
 
 /* Pagination after content in Events */
@@ -609,59 +609,6 @@ main .sidebar h4 {
 }
 
 
-/* Event tag navigation menu */
-
-#navmenu.events-categories ul,
-#navmenu.events ul {
-    margin: 20px auto;
-    padding: 0;
-}
-
-#navmenu.events ul li a,
-.pagination li a,
-.page-item.active .page-link {
-    padding: 10px;
-    color: var(--tri-white);
-    background: var(--tri-black);
-}
-.page-item.active .page-link {
-    border: 0;
-}
-.page-link:hover,
-.page-link:focus,
-.page-link:active {
-    color: var(--tri-green);
-    background: var(--tri-black);
-    -webkit-box-shadow: none;
-    box-shadow: none;
-}
-
-#navmenu.events ul li a:hover,
-#navmenu.events ul li a:focus,
-#navmenu.events ul li a:active {
-    color: var(--tri-green);
-    text-decoration: none;
-}
-
-#navmenu.events ul li.ccc a,
-.page-item.active .page-link {
-    color: var(--tri-green);
-}
-
-#navmenu.events-categories ul li a {
-    padding: 2px 3px 2px 3px;
-}
-
-.nav-breadcrumbs ul li a:hover {
-    text-decoration: none;
-}
-
-.nav-horizontal .current-menu-item a {
-    color: var(--tri-green);
-}
-
-
-
 
 /* Carousel */
 
@@ -756,6 +703,61 @@ carousel-indicators {
 }
 
 
+/* Event tag navigation menu */
+
+#navmenu.events-categories ul,
+#navmenu.events ul {
+    margin: 20px auto;
+    padding: 0;
+}
+
+#navmenu.events ul li a,
+.pagination li a,
+.page-item.active .page-link {
+    padding: 10px;
+    color: var(--tri-white);
+    background: var(--tri-black);
+}
+.page-item.active .page-link {
+    border: 0;
+}
+.page-link:hover,
+.page-link:focus,
+.page-link:active {
+    color: var(--tri-green);
+    background: var(--tri-black);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+#navmenu.events ul li a:hover,
+#navmenu.events ul li a:focus,
+#navmenu.events ul li a:active {
+    color: var(--tri-green);
+    text-decoration: none;
+}
+
+#navmenu.events ul li.ccc a,
+.page-item.active .page-link {
+    color: var(--tri-green);
+}
+
+#navmenu.events-categories ul li a {
+    padding: 2px 3px 2px 3px;
+}
+
+.nav-breadcrumbs ul li a:hover {
+    text-decoration: none;
+}
+
+.nav-horizontal .current-menu-item a {
+    color: var(--tri-green);
+}
+
+
+
+/*  NEW GRID */
+
 
 /* New tiles on mobile */
 
@@ -770,6 +772,7 @@ carousel-indicators {
 }
 
 /* Landscape mobile tiles */
+
 @media (min-width: 576px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
@@ -813,8 +816,6 @@ carousel-indicators {
     }
 }
 
-
-/*  NEW GRID */
 
 #front-tiles {
     margin-left: auto;
@@ -939,6 +940,19 @@ carousel-indicators {
 
 
 /* MISCELLANEOUS */
+
+/* Justified gallery */
+/*
+Sizes are positioned in real-time using JS and style attributes. :TODO:
+Setting it to have 20px gutters creates unwanted outer gutters.
+I expand the container so the photos expand to fill these outer gutters.
+I offset the container so the outer gutters sit on the Bootstrap gutters.
+*/
+.justified-gallery {
+    width: calc(100% + 40px); /* create space for unwanted outer gutters */
+    position: relative; /* layout context for reliable negative margins */
+    margin: -20px; /* subtract the outer gutters */
+}
 
 /* Font Awesome in links */
 a .fa {
