@@ -62,10 +62,7 @@ a:hover,
 a:focus,
 a:active {
     color: var(--tri-green);
-}
-#wrapper-footer {
-    color: var(--tri-white);
-    background: var(--tri-dark);
+    text-decoration: none;
 }
 
 /* Main content info panel (Sunday Rides) */
@@ -74,7 +71,13 @@ a:active {
     background: var(--tri-white);
 }
 
-/* Footer */
+/* Footer colours */
+
+#wrapper-footer {
+    color: var(--tri-white);
+    background: var(--tri-dark);
+}
+
 #wrapper-footer .organisations > div > div {
     color: var(--tri-black);
     background: white;
@@ -82,6 +85,19 @@ a:active {
 
 #wrapper-footer .copyright {
     background: var(--tri-black);
+}
+
+.site-info a {
+    color: var(--tri-white);
+}
+.site-info li > a:hover,
+.site-info li > a:focus,
+.site-info li > a:active,
+.site-info h3 > a:hover,
+.site-info h3 > a:focus,
+.site-info h3 > a:active {
+    color: var(--tri-white);
+    border-bottom: 2px solid;
 }
 
 
@@ -237,7 +253,8 @@ th {
 
 /* Header nav */
 .nav-link {
-    font: var(--font-h6);
+    font: var(--font-p-highlight);
+    font-weight: 600;
 }
 
 /* Carousel tag */
@@ -324,8 +341,10 @@ main h1 {
 }
 .entry-content a:hover,
 .entry-content a:focus,
-.entry-content a:active {
-    text-decoration: none;
+.entry-content a:active,
+.sidebar a:hover,
+.sidebar a:focus,
+.sidebar a:active {
     border-bottom: 2px solid;
 }
 
@@ -349,14 +368,15 @@ main .sidebar h4 {
 
 /* Footer heading */
 /* :TODO: use heading element for Flickr and Strava and Sponsor */
-footer h3,
-footer .col-md-5 > p:first-child span,
-footer .mt-5 p {
+#wrapper-footer h3,
+#wrapper-footer .col-md-5 > p:first-child span,
+#wrapper-footer .mt-5 p {
     font: var(--font-h5);
 }
 /* Footer link */
 .site-info a {
-    font: var(--font-link);
+    font: var(--font-p-highlight);
+    font-weight: 600;
 }
 
 /* End: Apply font */
@@ -510,8 +530,6 @@ footer .mt-5 p {
 
 
 /* Navbar active or hovered links */
-.navbar-custom .nav-item.active .nav-link {
-}
 
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item.current-page-ancestor .nav-link,
@@ -642,11 +660,15 @@ footer .mt-5 p {
 /* Carousel */
 
 .carousel-caption {
-    left: 8.333%; /* 1/12th */
+    padding: 30px 40px 30px 40px; /* double gutters */
+    left: 8.333%; /* 1/12 columns */
+    width: 58.337%; /* 8/12 columns */
+    width: calc(58.334% - 7px ); /* accurately 8/12 columns */
+    text-align: left;
 }
 
 .carousel-item {
-    max-height: 700px;
+    max-height: 650px;
 }
 
 /* Carousel caption */
@@ -657,7 +679,7 @@ footer .mt-5 p {
 }
 
 .card-body {
-    padding: 30px 40px 30px 40px; /* double gutters */
+    padding: 0;
 }
 
 .card-tag {
@@ -879,7 +901,7 @@ carousel-indicators {
     justify-content: start;
 }
 #front-tiles .tyle.events h2,
-.sidebar .tyle.events h3 {
+.sidebar .events h2 {
     padding-bottom: 10px;
 }
 .events .d-flex {
@@ -888,9 +910,13 @@ carousel-indicators {
 .events .d-flex .month,
 .events .d-flex .day {
     padding: 5px 10px; /* .tyle .tag */
+    text-align: center;
 }
-#front-tiles .tyle.events .d-flex > div + div {
-    padding: 5px 0 5px 10px; /* .tyle .tag */
+.events .d-flex .day {
+    font: var(--font-p-bold);
+}
+.events .d-flex > div + div {
+    padding: 0 0 10px 10px; /* .tyle .tag */
 }
 .events .d-flex > div + div h3,
 .events .d-flex > div + div h4,
@@ -1092,6 +1118,36 @@ main table td:last-child {
 .site-info .row:first-child > div {
     padding-top: 20px;
 }
+
+.site-info ul,
+.site-info li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+.site-info li {
+    padding-bottom: 10px;
+}
+
+/* Social links with icons */
+.site-info h3 > a,
+.site-info li > a {
+    margin-left: 30px;
+    position: relative;
+    border-bottom: 2px solid transparent; /* placeholder for hover effect */
+}
+.site-info a > i {
+    display: inline-block;
+    left: -30px;
+    width: 25px;
+    position: absolute;
+    margin-right: 0;
+}
+
+.fa-strava {
+    display: none;
+}
+
 
 /* Flickr widget */
 /*
