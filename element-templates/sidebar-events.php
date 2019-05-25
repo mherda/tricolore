@@ -86,7 +86,7 @@
       <h3>Upcoming events</h3>
     <?php } ?>
     <p>
-        <a class="btn btn-danger" href="<?php echo site_url('/events/'); ?>">View events</a>
+        <a class="btn btn-danger" href="<?php echo site_url('/events/'); ?>">All events</a>
     </p>
 
 </div> <!-- end of module -->

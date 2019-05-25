@@ -23,21 +23,20 @@ $container = get_theme_mod( 'understrap_container_type' );
         <main class="site-main" id="main" role="main">
           <div class="row">
             <div class="col-md-8">
-            <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-              <?php
-              if(function_exists('bcn_display'))
-              {
-                  bcn_display();
-              }?>
-              </div>
-              <div>
-                <?php while ( have_posts() ) : the_post(); ?>
-                  <?php get_template_part( 'loop-templates/content', 'page' ); ?>
-                <?php endwhile; // end of the loop. ?>
+              <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
                 <?php
-                  $tile_cat = get_cat_name(get_field('tile_category_container'));
-                ?>
+                if(function_exists('bcn_display')) {
+                    bcn_display();
+                }?>
               </div>
+              
+              <?php while ( have_posts() ) : the_post(); ?>
+                  <?php get_template_part( 'loop-templates/content', 'page' ); ?>
+              <?php endwhile; // end of the loop. ?>
+              
+              <?php
+              $tile_cat = get_cat_name(get_field('tile_category_container'));
+              ?>
 
               <div class="grid">
                 <?php
