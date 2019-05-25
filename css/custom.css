@@ -339,13 +339,22 @@ main h1 {
     font: var(--font-link);
     border-bottom: 1px solid #a7d161; /* #85bc4a; */
 }
+.breadcrumbs a:hover,
+.breadcrumbs a:focus,
+.breadcrumbs a:active,
 .entry-content a:hover,
 .entry-content a:focus,
 .entry-content a:active,
+.tyle.events a:hover,
+.tyle.events a:focus,
+.tyle.events a:active,
 .sidebar a:hover,
 .sidebar a:focus,
 .sidebar a:active {
     border-bottom: 2px solid;
+}
+.sidebar .justified-gallery a {
+    border-bottom: 0;
 }
 
 /* Pagination after content in Events */
@@ -367,11 +376,8 @@ main .sidebar h4 {
 
 
 /* Footer heading */
-/* :TODO: use heading element for Flickr and Strava and Sponsor */
-#wrapper-footer h3,
-#wrapper-footer .col-md-5 > p:first-child span,
-#wrapper-footer .mt-5 p {
-    font: var(--font-h5);
+#wrapper-footer h3 {
+    font: var(--font-h4);
 }
 /* Footer link */
 .site-info a {
@@ -802,7 +808,7 @@ carousel-indicators {
     body.page-template-GenericPage .grid,
     body.page-template-Rides .grid {
         grid-template-columns: repeat(2, 1fr);
-        padding-top: 20px;
+        padding-top: 40px;
         border-top: 4px solid var(--tri-green);
     }
 }
@@ -900,8 +906,7 @@ carousel-indicators {
 #front-tiles .tyle.events {
     justify-content: start;
 }
-#front-tiles .tyle.events h2,
-.sidebar .events h2 {
+#front-tiles .tyle.events h2 {
     padding-bottom: 10px;
 }
 .events .d-flex {
@@ -1029,6 +1034,10 @@ The grades are set in the HTML so the accordion could be editable.
 
 
 /* MAIN CONTENT */
+main,
+.entry-content {
+    padding-bottom: 20px;
+}
 
 /* Article content title */
 main h1 {
@@ -1092,11 +1101,14 @@ main table td:last-child {
     margin: 0 0 20px 0;
     padding: 0 20px;
 }
+.sidebar > .gallery {
+    padding-bottom: 20px; /* after final photo */
+}
 
 .sidebar h2,
 .sidebar h3 {
     margin: 0;
-    padding-top: 16px; /* adjusted for line-height */
+    padding: 16px 0 10px 0; /* adjusted for line-height */
 }
 
 .sidebar p {
@@ -1115,8 +1127,9 @@ main table td:last-child {
 
 /* Social */
 
-.site-info .row:first-child > div {
-    padding-top: 20px;
+.site-info .row:first-child h3 {
+    margin: 0;
+    padding: 36px 0 16px 0; /* double gutter, adjusted for line-height */
 }
 
 .site-info ul,
@@ -1126,7 +1139,7 @@ main table td:last-child {
     padding: 0;
 }
 .site-info li {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
 /* Social links with icons */
@@ -1139,7 +1152,7 @@ main table td:last-child {
 .site-info a > i {
     display: inline-block;
     left: -30px;
-    width: 25px;
+    width: 30px;
     position: absolute;
     margin-right: 0;
 }
@@ -1158,7 +1171,7 @@ main table td:last-child {
 
 /* Footer organisations */
 .organisations > div {
-    padding-top: 20px;
+    padding-top: 40px; /* double gutter */
 }
 .organisations > div > div img {
     max-height: 60px;
@@ -1176,7 +1189,7 @@ main table td:last-child {
 .copyright > div {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 70px; /* 20px + 50px .organisations */
+    padding-top: 90px; /* 40px (double gutter) + 50px (.organisations) */
     padding-bottom: 20px;
     text-align: center;
 }

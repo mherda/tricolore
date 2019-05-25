@@ -30,11 +30,11 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 								<li><a href="https://www.youtube.com/channel/UCldNfBQKDUfxZzQcYkKVSmw"><i class="fa fa-lg fa-youtube"></i>YouTube</a></li>
 							</ul>
 						</div>
-						<div class="col-md-5">
+						<div class="col-md-6">
 							<h3><a href="https://www.flickr.com/photos/pengecc/"><i class="fa fa-lg fa-flickr"></i>Flickr</a></h3>
 							<?php echo do_shortcode("[flickr_tags user_id='69040456@N07' tags='PengeCycleClub' max_num_photos='6']"); ?>
 						</div>
-						<div class="col-md-5">
+						<div class="col-md-4">
 							<h3><a href="https://www.strava.com/clubs/penge-cc"><i class="fa fa-lg fa-strava"></i>Strava</a></h3>
 							<iframe allowtransparency frameborder='0' height='160' scrolling='no' src='https://www.strava.com/clubs/3542/latest-rides/ad3894ba26fc7b110e5bd78b3ada38124360b6d5?show_rides=false' width='100%'></iframe>
 						</div><!--col end -->
