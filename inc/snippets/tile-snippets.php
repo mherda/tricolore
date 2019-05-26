@@ -1,4 +1,3 @@
-<!-- :TODO: is this file used? -->
 <?php
 
 // Enable shortcodes in text areas

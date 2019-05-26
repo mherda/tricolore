@@ -1,13 +1,13 @@
 /* April 2019 colour variables */
 
 :root {
-    --tri-green: #5ea03b; /* #1ea02d; */
-    --tri-red: #c1001f;
     --tri-black: #1f1e21;
-    --tri-dark: #3c4645;
-    --tri-grey: #7d7d7d;
+    --tri-green: #5ea03b; /* #1ea02d; */
     --tri-white: #ecf1f4;
+    --tri-red: #c1001f;
     --tri-blue: #4a90e2; /* :TODO: Sunday Rides add swatch to design guide */
+    --tri-dark: #3c4645;
+    --tri-grey: #7d7d7d; /* :TODO: not used? */
 }
 
 /*
@@ -23,36 +23,29 @@ background-size: 100% 9px;
 
 /* Colour classes */
 
-.b-dark {
-    background-color: var(--tri-dark);
-}
-
-.t-dark {
-    color: var(--tri-dark);
-}
-
-.b-blue {
-    background-color: var(--tri-blue);
-}
-
-.t-blue {
-    color: var(--tri-blue);
+.b-black {
+    background-color: var(--tri-black);
 }
 
 .b-green {
     background-color: var(--tri-green);
 }
 
+.b-light {
+    background-color: var(--tri-white);
+}
+
 .b-red {
     background-color: var(--tri-red);
 }
 
-.b-black {
-    background-color: var(--tri-black);
+.b-blue {
+    background-color: var(--tri-blue);
 }
 
-.b-light {
-    background-color: var(--tri-white);
+/* :TODO: remove unused code (double check this one) */
+.b-dark {
+    background-color: var(--tri-dark);
 }
 
 
@@ -78,7 +71,7 @@ a:active {
     background: var(--tri-dark);
 }
 
-#wrapper-footer .organisations > div > div {
+#wrapper-footer .organisations ul {
     color: var(--tri-black);
     background: white;
 }
@@ -1133,6 +1126,13 @@ main table td:last-child {
     padding-bottom: 18px; /* adjusted for line-height */
 }
 
+.sidebar #weather hr {
+    display: none;
+}
+.sidebar #weather h3 {
+    padding-bottom: 20px; /* adjust for line-height */
+}
+
 /* :TODO: Sidebar upcoming events */
 
 
@@ -1187,16 +1187,26 @@ main table td:last-child {
 .organisations > div {
     padding-top: 40px; /* double gutter */
 }
-.organisations > div > div img {
-    max-height: 60px;
+
+.organisations ul {
+    position: relative;
+    z-index: 1; /* clickable logos .copyright */
+    margin: 0 0 -50px 0; /* bring next row halfway up this one */
+    padding: 20px;
+    text-align: center;
 }
 
-.organisations > div > div {
-    position: relative;
-    margin-bottom: -50px; /* bring next row halfway up this one */
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
+.organisations li {
+    display: inline;
+    margin: 0;
+    padding: 0 20px 0 0; /* gutter */
+}
+.organisations li:last-child {
+    padding-right: 0;
+}
+
+.organisations img {
+    max-height: 60px;
 }
 
 /* Footer copyright */
