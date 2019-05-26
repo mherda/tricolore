@@ -1130,7 +1130,8 @@ main table td:last-child {
     display: none;
 }
 .sidebar #weather h3 {
-    padding-bottom: 20px; /* adjust for line-height */
+    padding: 0 0 18px 0; /* adjust for line-height */
+    font: var(--font-p-highlight);
 }
 
 /* :TODO: Sidebar upcoming events */
