@@ -14,7 +14,7 @@
             $post_object = get_field($title);
             $post = $post_object;
             setup_postdata($post);
-            $img = get_the_post_thumbnail_url($post_id, 'tyle');
+            $img = get_the_post_thumbnail_url($post, 'tyle');
             $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
       ?>
       <a class="tyle"
@@ -53,7 +53,7 @@
             $post_object = get_field($title);
             $post = $post_object;
             setup_postdata($post);
-            $img = get_the_post_thumbnail_url($post_id, 'frontTilePort');
+            $img = get_the_post_thumbnail_url($post, 'frontTilePort');
             $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
       ?>
       <a class="tyle tyle-rectangle"
@@ -94,7 +94,7 @@
             // override $post
             $post = $post_object;
             setup_postdata( $post );
-            $img = get_the_post_thumbnail_url($post_id, 'frontTilePort');
+            $img = get_the_post_thumbnail_url($post, 'frontTilePort');
             $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
     ?>
     <a class="tyle"
@@ -118,7 +118,7 @@
           // override $post
           $post = $post_object;
           setup_postdata( $post );
-          $img = get_the_post_thumbnail_url($post_id, 'frontTilePort');
+          $img = get_the_post_thumbnail_url($post, 'frontTilePort');
         ?>
     <a class="tyle" href="<?php the_field('tile_link'); ?>">
         <div class="caption">
