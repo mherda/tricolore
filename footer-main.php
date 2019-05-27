@@ -43,13 +43,13 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 
 					<div class="row organisations">
 						<div class="col-md-12 col-lg-8 mx-auto">
-							<div>
-							<?php
-								for ($i = 1; $i <= 5; $i++) { ?>
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/affiliations/<?php echo $i; ?>.png" />
-								<?php }
-							?>
-							</div>
+							<ul>
+								<?php
+								for ($i = 1; $i <= 5; $i++) {
+									echo '<li><img height="60" alt="" src="' . get_template_directory_uri() . '/assets/affiliations/' . $i . '.png" /></li>';
+								}
+								?>
+						</ul>
 						</div><!--col end -->
 					</div><!-- row end -->
 
