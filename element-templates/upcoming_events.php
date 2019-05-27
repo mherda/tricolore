@@ -1,7 +1,7 @@
 <div class="events">
     <h3>Upcoming Events</h3>
-    <p>Check our upcoming events</p>
+    <p>Plan your next adventure.</p>
     <p>
-        <a href="<?php echo site_url('/events/'); ?>" role="button" class="btn btn-danger">Events</a>
+        <a href="<?php echo site_url('/events/'); ?>" class="btn">Events</a>
     </p>
 </div>

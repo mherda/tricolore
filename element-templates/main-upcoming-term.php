@@ -30,14 +30,14 @@
         $event_year = $event_d->format('Y');
         $term_list = wp_get_post_terms($post->ID, 'event_category');
 ?>
-        <div class="row border-bottom border-top m-1">
-            <div class="col-md-2 bg-light d-flex align-items-center justify-content-center">
-                <div class="text-center pt-1">
+        <div class="row">
+            <div class="col-md-2 d-flex align-items-center justify-content-center">
+                <div class="">
                     <h5><?php echo $event_day; ?> <?php echo $event_month; ?> <?php echo $event_year; ?></h5>
 				</div>
             </div>
             <div class="col-md-10">
-                <div class="d-flex flex-column pt-2">
+                <div class="d-flex flex-column">
                     <!-- :TODO: Link event title -->
                     <h3><?php the_title(); ?></h3>
                     <p>
@@ -50,7 +50,7 @@
                                 }
                             }
                             if ( $event_uri ) {
-                                echo '<a class="btn btn-primary" href="'.$event_uri[0].'">Join on RiderHQ</a>';
+                                echo '<a class="btn" href="'.$event_uri[0].'">Join on RiderHQ</a>';
                             } else { ?>
                                 <a href="<?php the_permalink(); ?>">read more</a>
                             <?php } ?>

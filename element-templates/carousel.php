@@ -33,8 +33,8 @@
               <?php echo $post->post_content; ?>
             </p>
             <p>
-                <a href="/join/" class="btn btn-danger">Join our Club</a>
-                <a href="#" class="btn btn-success">Try a ride</a>
+                <a href="<?php echo the_field('slide_page_link'); ?>" class="btn btn-lg">Join our Club</a>
+                <a href="<?php echo site_url('#'); ?>" class="btn btn-lg btn-success">Try a ride</a>
             </p>
           </div>
       </div>
@@ -67,7 +67,7 @@
             <p class="card-text">
               <?php echo $post->post_content; ?>
             </p>
-            <p><a href="/join/" class="btn btn-danger">Join our Club</a></p>
+            <p><a class="btn btn-lg" href="<?php echo the_field('slide_page_link'); ?>">Join our Club</a></p>
           </div>
       </div>
       <?php wp_reset_postdata(); // IMPORTANT - reset the $post™™£ object so the rest of the page works correctly ?>
@@ -96,7 +96,7 @@
             <p class="card-tag"><?php the_field('slide_tag'); ?></p>
             <h2 class="slide-text"><?php the_title(); ?></h2>
             <p class="card-text"><?php echo $post->post_content; ?></p>
-            <p><a href="/join/" class="btn btn-danger">Join our Club</a></p>
+            <p><a class="btn btn-lg" href="<?php echo the_field('slide_page_link'); ?>">Join our Club</a></p>
           </div>
       </div>
       <?php wp_reset_postdata(); // IMPORTANT - reset the $post™™£ object so the rest of the page works correctly ?>

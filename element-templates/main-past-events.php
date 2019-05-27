@@ -26,14 +26,14 @@
 									$event_year = $event_d->format('Y');
 									$term_list = wp_get_post_terms($post->ID, 'event_category');
 						?>
-						        <div class="row border-top border-bottom m-1">
-											<div class="col-md-2 bg-light d-flex align-items-center justify-content-center">
-                				<div class="text-center pt-1">
+						        <div class="row">
+											<div class="col-md-2 d-flex align-items-center justify-content-center">
+                				<div class="">
                     			<h5><?php echo $event_day; ?> <?php echo $event_month; ?> <?php echo $event_year; ?></h5>
 												</div>
             					</div>
 						          <div class="col-md-10">
-						            <div class="d-flex flex-column pt-2">
+						            <div class="d-flex flex-column">
             						  <!-- :TODO: Link event title -->
 						              <h3><?php the_title(); ?></h3>
 						              <p>
@@ -42,7 +42,7 @@
 													</p>
 													<nav>
                         		<div id="navmenu" class="events-categories">
-                            	<ul class="text-right">
+                            	<ul class="tag">
                             		<?php
                                 	foreach($term_list as $term) {
                                     	echo '<li><a href="'.get_term_link($term).'">'.$term->name.'</a></li>';

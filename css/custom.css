@@ -53,7 +53,8 @@ background-size: 100% 9px;
 a,
 a:hover,
 a:focus,
-a:active {
+a:active,
+.wp-block-file__button {
     color: var(--tri-green);
     text-decoration: none;
 }
@@ -95,22 +96,29 @@ a:active {
 
 
 /* Button colours */
-.btn-primary,
+.btn,
 .btn-danger,
-.btn-success {
-    font-weight: 600;
+.btn-success,
+.wp-block-file .wp-block-file__button {
+    padding: 3px 10px 3px 10px; /* .tyle .tag */
+    font: var(--font-p-bold);
     border: 0 !important; /* avoid link underline */
 }
-.btn {
+.btn,
+.wp-block-file .wp-block-file__button {
     color: var(--tri-white);
     background-color: var(--tri-red);
 }
 .btn:hover,
 .btn:focus,
-.btn:active {
+.btn:active,
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-file .wp-block-file__button:focus,
+.wp-block-file .wp-block-file__button:active {
     color: var(--tri-white);
     background-color: var(--tri-green);
 }
+
 .btn-success {
     color: var(--tri-white);
     background-color: var(--tri-green);
@@ -121,13 +129,22 @@ a:active {
     color: var(--tri-white);
     background-color: var(--tri-green);
 }
+
 /* Clicked button: */
-.btn-primary:not(:disabled):not(.disabled):active,
-.btn-primary:not(:disabled):not(.disabled).active,
-.show > .btn-primary.dropdown-toggle {
+.btn:not(:disabled):not(.disabled):active,
+.btn:not(:disabled):not(.disabled).active,
+.show > .btn.dropdown-toggle {
     color: var(--tri-white);
     background-color: var(--tri-green);
 }
+
+/* Large buttons (Homepage Carousel) */
+.btn-lg {
+    padding: 8px 20px 8px 20px; /* half gutter adjusted for line-height */
+    font-size: 18px;
+    line-height: 24px;
+}
+
 
 /* Carousel colours */
 /* Carousel caption */
@@ -148,6 +165,7 @@ a:active {
 
 .tyle {
     color: var(--tri-white);
+    background-color: var(--tri-black);
 }
 
 .tyle:hover {
@@ -264,10 +282,9 @@ th {
 }
 
 /* Carousel button */
+/* These use .btn-lg */
 .card .btn {
-    margin-right: 10px;
-    font-size: 18px;
-    line-height: 24px;
+    margin-right: 20px;
 }
 
 
@@ -821,12 +838,11 @@ carousel-indicators {
     display: flex;
     flex-direction: column;
     justify-content: end; /* push .caption to bottom */
-    max-height: 350px;
-    color: var(--tri-white);
-    background-color: var(--tri-green);
     background-repeat: no-repeat;
     background-size: cover;
 }
+/* :TODO: Homepage bottom row, text tile */
+
 /* Homepage bottom row, events tile */
 #front-tiles.tyle.events {
     justify-content: start;
@@ -896,9 +912,9 @@ carousel-indicators {
     width: calc(100% - 250px);
 }
 
-/* :TODO: Homepage bottom row, events tile */
+/* Homepage bottom row, events tile */
 #front-tiles .tyle.events {
-    justify-content: start;
+    justify-content: normal;
 }
 #front-tiles .tyle.events h2 {
     padding-bottom: 10px;
@@ -911,24 +927,23 @@ carousel-indicators {
     padding: 5px 10px; /* .tyle .tag */
     text-align: center;
 }
-.events .d-flex .day {
+.events .month {
+    background: var(--tri-green);
+}
+.events .day {
+    margin-bottom: 10px; /* complete gutter after entry if title is short */
     font: var(--font-p-bold);
+    color: var(--tri-black);
+    background: var(--tri-white);
 }
 .events .d-flex > div + div {
-    padding: 0 0 10px 10px; /* .tyle .tag */
+    padding-left: 20px; /* gutter */
 }
 .events .d-flex > div + div h3,
 .events .d-flex > div + div h4,
 .events .d-flex > div + div p {
     margin: 0;
     padding-bottom: 10px;
-}
-.events .month {
-    background: var(--tri-green);
-}
-.events .day {
-    color: var(--tri-black);
-    background: var(--tri-white);
 }
 
 
@@ -944,7 +959,7 @@ I offset the container so the outer gutters sit on the Bootstrap gutters.
 .justified-gallery {
     width: calc(100% + 40px); /* create space for unwanted outer gutters */
     position: relative; /* layout context for reliable negative margins */
-    margin: -20px; /* subtract the outer gutters */
+    margin: -20px 0 0 -20px; /* move up and left to cover those gutters */
 }
 
 /* Font Awesome in links */
@@ -982,14 +997,14 @@ a .fa {
 
 #accordion th,
 #accordion td {
-    width: 18%; /* 5 columns and a toggle */
+    width: 20%; /* 5 columns */
     font-weight: 700;
     font-size: 16px;
     font-family: 'Karla', sans-serif;
     border-top: 1px solid white;
 }
-#accordion td:last-child {
-    width: 10%; /* remainder */
+#accordion td:first-child {
+    width: 5%; /* remainder */
 }
 #accordion td[colspan] {
     padding-top: 0;
@@ -1108,9 +1123,6 @@ main table td:last-child {
     margin: 0 0 20px 0;
     padding: 0 20px;
 }
-.sidebar > .gallery {
-    padding-bottom: 20px; /* after final photo */
-}
 
 .sidebar h2,
 .sidebar h3 {
@@ -1122,7 +1134,7 @@ main table td:last-child {
     margin: 0;
     padding-bottom: 12px; /* half measure of line-height */
 }
-.sidebar p:last-child {
+.sidebar p:last-child{
     padding-bottom: 18px; /* adjusted for line-height */
 }
 
@@ -1139,6 +1151,10 @@ main table td:last-child {
 
 
 /* FOOTER */
+
+#wrapper-footer {
+    overflow: hidden; /* Social Flickr gallery makes 20px gutters in JS */
+}
 
 /* Social */
 
@@ -1186,7 +1202,7 @@ main table td:last-child {
 
 /* Footer organisations */
 .organisations > div {
-    padding-top: 40px; /* double gutter */
+    padding-top: 20px; /* gutter */
 }
 
 .organisations ul {

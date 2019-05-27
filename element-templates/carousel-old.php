@@ -32,7 +32,7 @@
             <p class="card-text">
               <?php echo $queried_post->post_content; ?>
             </p>
-            <a href="#" class="btn btn-danger">Join our Club</a>
+            <a href="#" class="btn">Join our Club</a>
           </div>
         </div>
       </div>
@@ -63,7 +63,7 @@
             <p class="card-text">
               <?php echo $queried_post->post_content; ?>
             </p>
-            <a href="#" class="btn btn-danger">Join our Club</a>
+            <a href="#" class="btn">Join our Club</a>
           </div>
         </div>
       </div>
@@ -94,7 +94,7 @@
             <p class="card-text">
               <?php echo $queried_post->post_content; ?>
             </p>
-            <a href="#" class="btn btn-danger">Join our Club</a>
+            <a href="#" class="btn">Join our Club</a>
           </div>
         </div>
       </div>
@@ -119,7 +119,7 @@
             <p class="card-text">
               <?php echo $queried_post->post_content; ?>
             </p>
-            <a href="#" class="btn btn-danger">Join our Club</a>
+            <a href="#" class="btn">Join our Club</a>
           </div>
         </div>
       </div>

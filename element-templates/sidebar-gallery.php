@@ -12,15 +12,15 @@
             <h3>Event Gallery</h3>
             <?php $queried_object = get_queried_object(); ?>
             <p><?php echo $queried_object->post_title; ?></p>
-            <p>More photos from the event are on Flickr:</p>
+            <p>More photos from the event are on Flickr.</p>
             <p>
-                <a href="<?php the_field('gallery_link'); ?>" class="btn btn-danger">Event Gallery</a>
+                <a href="<?php the_field('gallery_link'); ?>" class="btn">Event Gallery</a>
             </p>
         <?php } else { ?>
             <h3>Club Photo Gallery</h3>
-            <p>More photos from our events are on Flickr:</p>
+            <p>More photos from our events are on Flickr.</p>
             <p>
-                <a href="https://www.flickr.com/photos/pengecc/" class="btn btn-danger">Club Gallery</a>
+                <a href="https://www.flickr.com/photos/pengecc/" class="btn">Flickr gallery</a>
             </p>
         <?php }
     }

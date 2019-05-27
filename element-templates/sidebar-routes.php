@@ -1,8 +1,14 @@
-<div class="">
-    <h3>Routes</h3>
-    <p>Some brief description of something.</p>
-    <p><a href="/adults/sunday-morning-rides/routes/" class="btn btn-danger" data-toggle="modal">View our routes</a></p>
-    <!-- <a href="#myModal" role="button" class="btn btn-danger" data-toggle="modal">View our routes</a> -->
+<div>
+    <h3>Standard routes</h3>
+    <p>It’s worth adding the standard routes to your cycle computer so you can follow the group more easily.</p>
+    
+    <p>A different one for each week of the month. They are split by distance into Steady, Short or Long.</p>
+    
+    <p>Our most popular custom routes include longer options, too.</p>
+    
+    <p><a href="<?php echo site_url('/adults/sunday-morning-rides/routes/'); ?>" class="btn">Our best routes</a></p>
+    
+    <!-- <a href="#myModal" class="btn" data-toggle="modal">View our routes</a> -->
 </div>
 
 <!-- :TODO: remove obsolete code even if it was really good -->

@@ -35,28 +35,26 @@ $container = get_theme_mod( 'understrap_container_type' );
 									$event_display = $event_day . " " . $event_month . " " . $event_year;
 
 									?>
-											<h1><?php the_title(); ?></h1>
-											<hr />
-													<h4><?php echo $event_display; ?></h4>
-													<img src="<?php the_post_thumbnail('eventFeatured'); ?>" />
-													<p><?php the_content(); ?></p>
+									<p><?php echo $event_display; ?></p>
+									<!-- <img src="<?php the_post_thumbnail('eventFeatured'); ?>" /> -->
+									<?php the_content(); ?>
 
-												<?php } // end while
-												} // end if ?>
-												<?php get_template_part( 'element-templates/bottom_tiles1' ); ?>
+									<?php } // end while
+									} // end if ?>
+									<?php get_template_part( 'element-templates/bottom_tiles1' ); ?>
 
 						</div> <!-- end of main column -->
-												
+						
+						
 						<div class="col-md-4 sidebar"> <!-- beginning of Sidebar -->
-							<div class="events">
-								<?php get_template_part( 'element-templates/sidebar-upcoming-events' ); ?>
-							</div>
-							<div>
-								<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>
-							</div>
+							
+							<?php get_template_part( 'element-templates/sidebar-upcoming-events' ); ?>
+							
+							<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>
 
 							<?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
 						</div> <!-- End of Side -->
+						
 					</div><!-- end of content-row -->
 
 				</main><!-- #main -->

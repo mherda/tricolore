@@ -64,7 +64,7 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
                 
 				<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>
                 
-				<?php get_template_part( 'element-templates/sidebar-events' ); ?>
+				<?php get_template_part( 'element-templates/sidebar-upcoming-events' ); ?>
                 
                 <?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
             </div> <!-- end of right column -->

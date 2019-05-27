@@ -15,11 +15,11 @@
             $post = $post_object;
             setup_postdata($post);
             $img = get_the_post_thumbnail_url($post, 'tyle');
-            $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
+            $tile_background = ( $img ? 'style="' . "background-image: url('{$img}')" . '"' . "\n" : "" ); // tri-black fallback
       ?>
       <a class="tyle"
         href="<?php the_field('tile_link'); ?>"
-        style="<?php echo $tile_background; ?>"
+        <?php echo $tile_background; ?>
         >
         <?php
         if ($post) { ?>
@@ -54,11 +54,11 @@
             $post = $post_object;
             setup_postdata($post);
             $img = get_the_post_thumbnail_url($post, 'frontTilePort');
-            $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
+            $tile_background = ( $img ? 'style="' . "background-image: url('{$img}')" . '"' . "\n" : "" ); // tri-black fallback
       ?>
       <a class="tyle tyle-rectangle"
         href="<?php the_field('tile_link'); ?>"
-        style="<?php echo $tile_background; ?>"
+        <?php echo $tile_background; ?>
         >
             <?php
             if ($post) { ?>
@@ -95,10 +95,11 @@
             $post = $post_object;
             setup_postdata( $post );
             $img = get_the_post_thumbnail_url($post, 'frontTilePort');
-            $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
+            $tile_background = ( $img ? 'style="' . "background-image: url('{$img}')" . '"' . "\n" : "" ); // tri-black fallback
     ?>
     <a class="tyle"
         href="<?php the_field('tile_link'); ?>"
+        <?php echo $tile_background; ?>
         >
         <div class="caption">
           <p class="tag"><?php the_field('tile_category'); ?></p>
@@ -119,8 +120,12 @@
           $post = $post_object;
           setup_postdata( $post );
           $img = get_the_post_thumbnail_url($post, 'frontTilePort');
+          $tile_background = ( $img ? 'style="' . "background-image: url('{$img}')" . '"' . "\n" : "" ); // tri-black fallback
         ?>
-    <a class="tyle" href="<?php the_field('tile_link'); ?>">
+    <a class="tyle"
+        href="<?php the_field('tile_link'); ?>"
+        <?php echo $tile_background; ?>
+        >
         <div class="caption">
           <p class="tag"><?php the_field('tile_category'); ?></p>
           <h2><?php the_title(); ?></h2>
@@ -134,7 +139,7 @@
 
     <!-- Start events in a tile -->
     <div class="tyle events">
-        <h2><a href="<?php echo site_url('/events/'); ?>">Events</a></h2>
+        <h2>Events</h2>
         <?php
                 $today = date('Ymd');
                 $homepageEvents = new WP_Query(array(
@@ -193,7 +198,7 @@
             <?php
             // Sign-up button: :TODO: remove obsolete code
             if ( $event_uri ) {
-                echo '<p><a class="btn btn-primary" href="'.$event_uri[0].'">Join on RiderHQ</a></p>';
+                echo '<p><a class="btn" href="'.$event_uri[0].'">Join on RiderHQ</a></p>';
             }
             ?>
 
@@ -202,7 +207,7 @@
         <?php } wp_reset_postdata(); ?>
 
         <p>
-            <a class="btn btn-primary" href="<?php echo site_url('/events/'); ?>">All events</a>
+            <a class="btn" href="<?php echo site_url('/events/'); ?>">All events</a>
         </p>
 
     </div> <!-- End events in a tile -->

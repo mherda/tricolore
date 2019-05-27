@@ -32,7 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                     <div class="panel">
                         <p><?php echo get_field('top_info'); ?></p>
                         <p>Visit our <a href="<?php echo the_field('facebook_link'); ?>">Facebook page</a> for updates and any route changes for our rides this week.</p>
-                        <p><a class="btn btn-danger" href="<?php echo the_field('ridehq_link'); ?>">Sign up on Rider HQ</a></p>
+                        <p><a class="btn" href="<?php echo the_field('ridehq_link'); ?>">Sign up on Rider HQ</a></p>
                     </div>
                     
                     <?php

@@ -1,8 +1,9 @@
+<!-- :TODO: Is this file used? -->
 <div class="b-green p-2 text-white mb-3">
   <div class="m-2">
     <h3>Routes</h3>
     <p>Some brief description of something.</p>
-    <a href="#myModal" role="button" class="btn btn-danger" data-toggle="modal">Launch modal</a>
+    <a href="#myModal" class="btn" data-toggle="modal">Launch modal</a>
   </div>
 </div>
 
