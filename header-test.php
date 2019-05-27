@@ -1,3 +1,4 @@
+<!-- testing header - to be removed before the site goes to production -->
 <?php
 /**
  * The header for our theme.

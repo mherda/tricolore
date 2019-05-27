@@ -74,7 +74,7 @@ require get_template_directory() . '/inc/editor.php';
  * Load Snippets
  */
 
- require get_template_directory() . '/inc/snippets/tile-snippets.php';
+require get_template_directory() . '/inc/snippets/shortcodes.php';
 
 
 function penge_adjust_queries($query) {

@@ -1,9 +1,8 @@
-<!-- :TODO: is this file used? -->
 <?php
 /**
- * Template Name: Youth - Landing Page
+ * Testing
  *
- * Template for displaying a page without sidebar even if a sidebar widget is published.
+ * Testing JS. To be removed before going into production.
  *
  * @package understrap
  */
