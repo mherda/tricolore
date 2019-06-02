@@ -88,19 +88,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 
           
 
-          <div>
           <div id="weat"></div>
           
           <?php get_template_part( 'element-templates/sidebar-events' ); ?>
           
-        </div>
 
          
         </div> <!-- end of right column -->
 
 
 
-          </div>
+        </div> <!-- .row -->
 
 
 

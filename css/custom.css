@@ -50,6 +50,11 @@ background-size: 100% 9px;
 
 
 /* Base colours */
+html,
+body {
+    color: var(--tri-white);
+    background: var(--tri-black);
+}
 a,
 a:hover,
 a:focus,
@@ -59,6 +64,16 @@ a:active,
     text-decoration: none;
 }
 
+/* Main content */
+/* :TODO: theme other page types */
+#page-wrapper,
+#search-wrapper,
+#archive-wrapper,
+#error-404-wrapper {
+    color: var(--tri-black);
+    background: white;
+}
+    
 /* Main content info panel (Sunday Rides) */
 .page-template-Rides h1,
 .entry-content .panel {
@@ -186,33 +201,6 @@ a:active,
 }
 
 
-/* Colour classes */
-
-.p-link {
-    color: var(--tri-green);
-}
-
-.p-link-dark {
-    color: var(--tri-dark);
-}
-
-.p-link-dark:hover {
-    color: var(--tri-black);
-}
-
-.p-link:hover {
-    color: var(--tri-blue);
-}
-
-.w-link {
-    color: var(--tri-white);
-    text-decoration: underline;
-}
-
-.w-link:hover {
-    color: var(--tri-green);
-}
-
 
 /* April 2019 font variables */
 /* https://fonts.google.com/specimen/Karla?selection.family=Karla:700|Montserrat:400,600 */
@@ -250,8 +238,6 @@ Footer
 html,
 body {
     font: var(--font-p);
-    color: var(--tri-black);
-    background: white;
 }
 b,
 strong,
@@ -310,7 +296,7 @@ th {
 }
 /* Home tile event item */
 /* :TODO: match HTML with sidebar event item */
-.tyle.events h3 {
+.events h3 {
     font: var(--font-h6);
 }
 
@@ -355,9 +341,9 @@ main h1 {
 .entry-content a:hover,
 .entry-content a:focus,
 .entry-content a:active,
-.tyle.events a:hover,
-.tyle.events a:focus,
-.tyle.events a:active,
+.events a:hover,
+.events a:focus,
+.events a:active,
 .sidebar a:hover,
 .sidebar a:focus,
 .sidebar a:active {
@@ -408,7 +394,10 @@ main .sidebar h4 {
 .notFull {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1200px;
+    max-width: 1220px;
+}
+#wrapper-footer .notFull {
+    max-width: 1200px; /* :TODO: refactor layout */
 }
 
 .full_dark {
@@ -557,6 +546,7 @@ main .sidebar h4 {
 
 .navbar-custom .navbar-nav .dropdown-menu .nav-link {
     color: var(--tri-white) !important; /* :TODO: theme.css too much !important */
+    font-weight: 600; /* theme.css */
 }
 .navbar-dark .navbar-nav .dropdown-menu .nav-link:hover,
 .navbar-dark .navbar-nav .dropdown-menu .nav-link:focus {
@@ -615,7 +605,7 @@ main .sidebar h4 {
 
 /* Breadcrumb nav */
 .breadcrumbs {
-    margin: 20px 0;
+    padding: 20px 0 16px 0; /* adjusted for line-height */
 }
 
 
@@ -789,11 +779,11 @@ carousel-indicators {
     }
     /* Homepage first row of 3 */
     .disclaimer + .grid .tyle:last-child {
-        grid-column: span 2; /* grow to fills 2 columns */
+        grid-column: span 2; /* grow to fill 2 columns */
     }
     /* Homepage events row */
     #front-tiles .tyle.events {
-        grid-column: span 2; /* grow to fills 2 columns */
+        grid-column: span 2; /* grow to fill 2 columns */
     }
 }
 
@@ -827,11 +817,7 @@ carousel-indicators {
 }
 
 
-#front-tiles {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px;
-}
+/* Tiles across devices */
 
 .tyle {
     position: relative; /* layout context for .tag */
@@ -844,14 +830,14 @@ carousel-indicators {
 /* :TODO: Homepage bottom row, text tile */
 
 /* Homepage bottom row, events tile */
-#front-tiles.tyle.events {
+.tyle.events {
     justify-content: start;
     padding: 13px 20px 0 20px; /* adjusted for line-height */
     background: var(--tri-black);
 }
 
 .tyle .caption,
-#front-tiles .tyle.events {
+.tyle.events {
     padding: 13px 20px 16px 20px; /* adjusted for line-height */
     background-color: var(--tri-black);
 }
@@ -914,36 +900,52 @@ carousel-indicators {
 
 /* Homepage bottom row, events tile */
 #front-tiles .tyle.events {
-    justify-content: normal;
+    /* No colour change on :hover */
+    background: var(--tri-black);
 }
 #front-tiles .tyle.events h2 {
     padding-bottom: 10px;
 }
-.events .d-flex {
-    padding-bottom: 10px;
+
+/* All event lists */
+.events > div {
+    padding-bottom: 20px;
 }
-.events .d-flex .month,
-.events .d-flex .day {
-    padding: 5px 10px; /* .tyle .tag */
+.events > div > div:first-child {
+    /* wrapper for date */
+    flex-shrink: 0; /* do not let a long description squash the date */
+    min-width: 11.75%; /* col-md-1 inside col-md-8 */
+    width: 23.5%; /* col-md-2 inside col-md-8 */
+    background: var(--tri-white);
+}
+.events .month,
+.events .day {
+    margin: 0; /* theme.css */
+    padding: 3px 10px 3px 10px; /* .tyle .tag */
     text-align: center;
 }
 .events .month {
+    font: var(--font-p-bold);
+    color: var(--tri-white);
     background: var(--tri-green);
 }
 .events .day {
-    margin-bottom: 10px; /* complete gutter after entry if title is short */
-    font: var(--font-p-bold);
+    font: var(--font-h5);
     color: var(--tri-black);
-    background: var(--tri-white);
 }
-.events .d-flex > div + div {
+
+/* Event details */
+.events > div > div + div {
     padding-left: 20px; /* gutter */
 }
-.events .d-flex > div + div h3,
-.events .d-flex > div + div h4,
-.events .d-flex > div + div p {
+.events > div > div + div h3,
+.events > div > div + div h4,
+.events > div > div + div p {
     margin: 0;
     padding-bottom: 10px;
+}
+.events > div > div + div p:last-child {
+    padding-bottom: 0;
 }
 
 
@@ -1115,7 +1117,7 @@ main table td:last-child {
 /* SIDEBAR */
 
 .sidebar {
-    margin-top: 40px; /* above and below breadcrumb */
+    margin-top: 36px; /* 20px above and 16px below breadcrumb */
     padding-top: 1.714em; /* breadcrumb line-height */
 }
 

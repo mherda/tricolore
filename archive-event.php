@@ -13,13 +13,13 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 
 					<div class="row"><!-- Top Row  -->
 						<div class="col-md-8">
+							<!-- Load the page body header -->
+							<?php get_template_part( 'element-templates/page-header' ); ?>
+							
+							<!-- Main content -->
 							<div class="entry-content">
-								<!-- Load the page body header -->
-								<?php
-									get_template_part( 'element-templates/page-header' );
-									// Load upcoming events
-									get_template_part( 'element-templates/main-upcoming-events' );
-								?>
+								<!-- Events -->
+								<?php get_template_part( 'element-templates/main-upcoming-events' ); ?>
 							</div>
 						</div>
 						

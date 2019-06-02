@@ -16,19 +16,24 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 		<div class="row">
 			<div class="col-md-12 content-area" id="primary">
 				<main class="site-main" id="main" role="main">
-
-					<!-- Top Row  -->
 					
-					<div class="row">
+					<div class="row"> <!-- Top Row  -->
 						<div class="col-md-8">
 							<!-- Load the page body header -->
 							<?php get_template_part( 'element-templates/page-header' ); ?>
-							<?php
-							global $post;
-							$content = apply_filters('the_content', $post->post_content);
-							?>
-							<p><?php echo $content; ?></p>
-							<?php get_template_part( 'element-templates/main-past-events' ); ?>
+							
+							<!-- Main content -->
+							<div class="entry-content">
+								<!-- Content block -->
+								<?php
+								global $post;
+								$content = apply_filters('the_content', $post->post_content);
+								?>
+								<?php echo $content; ?>
+								
+								<!-- Event archive -->
+								<?php get_template_part( 'element-templates/main-past-events' ); ?>
+							</div>
 						</div>
 						
 						<div class="col-md-4 sidebar"> <!-- beginning of Sidebar -->
@@ -37,13 +42,6 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 						</div>
 
 					</div> <!-- end of Top Row-->
-
-			
-
-				</div>
-
-
-
 
 
 				</main><!-- #main -->

@@ -13,9 +13,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 <div
   class="wrapper" id="page-wrapper">
-  <div class="<?php echo esc_attr( $container ); ?>" id="content">
-    <div class="">
-      <div class="content-area notFull" id="primary">
+  <div class="<?php echo esc_attr( $container ); ?> notFull" id="content">
+      <div class="content-area" id="primary">
         <main class="site-main" id="main" role="main">
           
 
@@ -69,8 +68,6 @@ $container = get_theme_mod( 'understrap_container_type' );
         </main><!-- #main -->
 
       </div><!-- #primary -->
-
-    </div><!-- .row end -->
 
   </div><!-- Container end -->
 

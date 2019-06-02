@@ -1,4 +1,4 @@
-<div class="events">
+<div>
     <h3>Club events</h3>
     <p>Plan your next adventure.</p>
     <p>

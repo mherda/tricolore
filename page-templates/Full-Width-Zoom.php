@@ -14,11 +14,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="page-wrapper">
 
-  <div class="<?php echo esc_attr( $container ); ?>" id="content">
+  <div class="<?php echo esc_attr( $container ); ?> notFull" id="content">
 
-    <div class="">
-
-      <div class="content-area notFull" id="primary">
+      <div class="content-area" id="primary">
 
         <main class="site-main" id="main" role="main">
         <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
@@ -51,7 +49,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                 $tile_selection->the_post();
                 $img = get_the_post_thumbnail_url($post_id, 'tyle');
                 $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
-
+                // :TODO: Text tile if there is no background-image
                 if ( $img ) { ?>
                   <a class="tyle"
                     href="<?php the_field('tile_link'); ?>"
@@ -88,8 +86,6 @@ $container = get_theme_mod( 'understrap_container_type' );
         </main><!-- #main -->
 
       </div><!-- #primary -->
-
-    </div><!-- .row end -->
 
   </div><!-- Container end -->
 

@@ -1,5 +1,5 @@
 <!-- :TODO: is this file used? -->
-<div class="">
+<div>
     <h3>Ride Leaders</h3>
     <p>Some brief description of something.</p>
     <button type="button" class="btn m-2">Leader rotas</button>

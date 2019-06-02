@@ -10,58 +10,55 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 
 ?>
 <div class="wrapper" id="page-wrapper">
-	<div class="<?php echo esc_attr( $container ); ?>" id="content">
-		<div class="">
-			<div class="content-area notFull" id="primary">
-				<main class="site-main" id="main" role="main">
-					
-					<div class="row"> <!-- Beginning of Content -->
-              			<!-- beginning of the main column -->
-						<div class="col-md-8"> <!-- beginning of main column -->
-							<?php
-								if ( have_posts() ) {
-									while ( have_posts() ) {
-										the_post();
-										?>
-							            <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-							                <?php
-							                if(function_exists('bcn_display'))
-							                {
-							                   bcn_display();
-							                }?>
-							            </div>
-							              
-										<div class="entry-content">
-											<h1><?php the_title(); ?></h1>
-											
-											<?php the_content(); ?>
-										</div>
+	<div class="<?php echo esc_attr( $container ); ?> notFull" id="content">
+		<div class="content-area" id="primary">
+			<main class="site-main" id="main" role="main">
+				
+				<div class="row"> <!-- Beginning of Content -->
+          			<!-- beginning of the main column -->
+					<div class="col-md-8"> <!-- beginning of main column -->
+						<?php
+							if ( have_posts() ) {
+								while ( have_posts() ) {
+									the_post();
+									?>
+						            <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+						                <?php
+						                if(function_exists('bcn_display'))
+						                {
+						                   bcn_display();
+						                }?>
+						            </div>
 						              
-						                <?php get_template_part( 'element-templates/bottom_tiles1' ); ?>
+									<div class="entry-content">
+										<h1><?php the_title(); ?></h1>
 										
-										<?php
-									} // end while
-								} // end if
-							?>
-						</div> <!-- end of main column -->
+										<?php the_content(); ?>
+									</div>
+					              
+					                <?php get_template_part( 'element-templates/bottom_tiles1' ); ?>
+									
+									<?php
+								} // end while
+							} // end if
+						?>
+					</div> <!-- end of main column -->
 
-			            <div class="sidebar col-md-4">
-			                
-							<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>
-			                
-							<?php get_template_part( 'element-templates/sidebar-events' ); ?>
-			                
-			                <?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
-			            </div> <!-- end of right column -->
+		            <div class="sidebar col-md-4">
+		                
+						<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>
+		                
+						<?php get_template_part( 'element-templates/sidebar-events' ); ?>
+		                
+		                <?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
+		            </div> <!-- end of right column -->
 
 
-			          </div> <!-- end of Top Row-->
+		          </div> <!-- end of Top Row-->
 
-				</main><!-- #main -->
+			</main><!-- #main -->
 
-			</div><!-- #primary -->
-
-		</div><!-- .row end -->
+		</div><!-- #primary -->
 
 	</div><!-- Container end -->
 
