@@ -44,9 +44,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 								} // end if
 								?>
 								
-								<?php get_template_part( 'element-templates/bottom_tiles1' ); ?>
-
 							</div> <!-- .entry-content -->
+							
+							<?php get_template_part( 'element-templates/bottom_tiles1' ); ?>
 							
 						</div> <!-- end of main column -->
 						

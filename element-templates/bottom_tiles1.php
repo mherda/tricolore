@@ -3,9 +3,11 @@
 if ( get_field('tile_placeholder_left')
     OR get_field('tile_placeholder_right') ) {
     $hasTiles == true;
-    echo '<!-- Bottom tiles after content -->';
-    echo '<div class="grid"> <!-- :TODO: Home tile code to start with -->';
 ?>
+
+<!-- Bottom tiles after content -->
+<div class="grid">
+    
     <!-- start of tile left column -->
     <?php
     $post_object = get_field('tile_placeholder_left');
@@ -17,6 +19,7 @@ if ( get_field('tile_placeholder_left')
         // $img = get_the_post_thumbnail_url($post_id, 'tyle'); // home tile
         $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
     ?>
+    <!-- :TODO: text tiles shouldn't have style attribute -->
     <a class="tyle"
         href="<?php the_field('tile_link'); ?>"
         style="<?php echo $tile_background; ?>"
@@ -53,13 +56,11 @@ if ( get_field('tile_placeholder_left')
         </div>
     </a>
     <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
-<?php } ?>
-<!-- end of tile right column -->
+    <?php } ?>
+    <!-- end of tile right column -->
+    
+</div> <!-- end of bottom tile row -->
 
 <?php
-
-    // End the HTML if there was at least one tile:
-    echo '</div> <!-- end of bottom tile row -->';
 } // endif
-
 ?>

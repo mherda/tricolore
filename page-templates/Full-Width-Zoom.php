@@ -19,17 +19,20 @@ $container = get_theme_mod( 'understrap_container_type' );
       <div class="content-area" id="primary">
 
         <main class="site-main" id="main" role="main">
-        <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-          <?php
-          if(function_exists('bcn_display'))
-          {
-                  bcn_display();
-          }?>
-        </div>
+			<!-- Load the page body header -->
+			<?php get_template_part( 'element-templates/page-header' ); ?>
+			
+			<!-- Main content -->
+			<div class="entry-content">
+                <?php while ( have_posts() ) : the_post(); ?>
+                    <?php the_content(); ?>
+                    
+                    <!-- :TODO: edit links in all templates -->
+                    <?php edit_post_link( __( 'Edit', 'understrap' ), '<span class="edit-link">', '</span>' ); ?>
+                <?php endwhile; // end of the loop. ?>
+			</div>
+			
         <div>
-            <?php while ( have_posts() ) : the_post(); ?>
-              <?php get_template_part( 'loop-templates/content', 'page' ); ?>
-            <?php endwhile; // end of the loop. ?>
             <?php
               $tile_cat = get_cat_name(get_field('tile_category_container'));
             ?>

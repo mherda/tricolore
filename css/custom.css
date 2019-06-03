@@ -286,8 +286,7 @@ th {
     font: var(--font-h6);
 }
 /* Home tile title */
-.tyle h2,
-.tyle h5+h5 {
+.tyle h2 {
     font: var(--font-h4);
 }
 /* Home tile description */
@@ -295,7 +294,6 @@ th {
     font: var(--font-p);
 }
 /* Home tile event item */
-/* :TODO: match HTML with sidebar event item */
 .events h3 {
     font: var(--font-h6);
 }
@@ -361,13 +359,12 @@ main h1 {
 
 
 /* Sidebar headings */
-/* :TODO: use a class for selecting the sidebar */
-main .sidebar h2,
-main .sidebar h3 {
+.sidebar h2,
+.sidebar h3 {
     font: var(--font-h4);
 }
 /* Sidebar event item */
-main .sidebar h4 {
+.sidebar h4 {
     font: var(--font-h6);
 }
 
@@ -570,6 +567,7 @@ main .sidebar h4 {
 
 @media (min-width: 768px) {
     .dropdown-menu {
+        margin-left: -0.855em; /* offset down arrow caret */
         left: 50%;
         right: auto;
         text-align: center;
@@ -580,7 +578,8 @@ main .sidebar h4 {
         content: '';
         position: absolute;
         top: -7px;
-        left: 45%;
+        left: 50%;
+        transform: translate(-50%, 0);
         border-right: 7px solid transparent;
         border-bottom: 7px solid var(--tri-green);
         border-left: 7px solid transparent;
@@ -809,9 +808,8 @@ carousel-indicators {
         grid-template-columns: repeat(2, 1fr);
     }
     
-    /* Generic Page uses 2 tiles after main content */
-    body.page-template-GenericPage .grid,
-    body.page-template-Rides .grid {
+    /* Most templates can have 2 tiles after main content */
+    .entry-content + .grid {
         grid-template-columns: repeat(2, 1fr);
         padding-top: 40px;
         border-top: 4px solid var(--tri-green);
@@ -828,8 +826,18 @@ carousel-indicators {
     justify-content: end; /* push .caption to bottom */
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center top;
 }
-/* :TODO: Homepage bottom row, text tile */
+
+/* Homepage bottom row, text tile */
+/* Text tiles don't have style attribute - might be used elsewhere */
+.tyle:not([style]) {
+    justify-content: normal;
+}
+.tyle:not([style]) .tag {
+    position: static;
+    padding: 8px 0 18px 0; /* (.tag: 15px + 3px) - (.tyle 10px) */
+}
 
 /* Homepage bottom row, events tile */
 .tyle.events {
@@ -873,6 +881,7 @@ carousel-indicators {
 .tyle:hover .caption,
 .tyle:focus .caption,
 .tyle:active .caption {
+    color: var(--tri-white);
     background-color: var(--tri-green);
 }
 
@@ -880,36 +889,44 @@ carousel-indicators {
 /* Home middle tiles with portrait image */
 
 #rect-tiles.grid {
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
     column-gap: 20px;
     margin: 20px auto;
-    max-width: 1200px;
 }
 
 .tyle-rectangle {
-    /* :TODO: remove most of this */
     flex-direction: row; /* horizontal internal layout */
-    max-height: 350px;
-    background-color: var(--tri-black);
-    background-size: auto 100%; /* cover the max-height */
-    overflow: hidden; /* landscape mobiles and narrow tablets */
+    background-size: 50% auto; /* 1/2 tile with 1/4 tile image */
+    background-position: left top;
 }
 
 .tyle-rectangle .caption {
+    width: calc(100% - 287px);
     width: calc(50% + 10px); /* half the panel and remaining half gutter */
-    width: calc(100% - 250px);
 }
 
+
 /* Homepage bottom row, events tile */
+
 #front-tiles .tyle.events {
+    overflow-y: auto; /* full tile at max size; scroll at smaller sizes */
     /* No colour change on :hover */
     background: var(--tri-black);
 }
+
 #front-tiles .tyle.events h2 {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 }
 
+#front-tiles .tyle.events > p {
+    top: 20px;
+    right: 20px;
+    position: absolute;
+}
+
+
 /* All event lists */
+
 .events > div {
     padding-bottom: 20px;
 }
@@ -961,9 +978,9 @@ I expand the container so the photos expand to fill these outer gutters.
 I offset the container so the outer gutters sit on the Bootstrap gutters.
 */
 .justified-gallery {
-    width: calc(100% + 40px); /* create space for unwanted outer gutters */
     position: relative; /* layout context for reliable negative margins */
-    margin: -20px 0 0 -20px; /* move up and left to cover those gutters */
+    margin: -20px 0 0 -20px; /* move the outer gallery outer gutters onto the actual footer gutters */
+    width: calc(100% + 40px); /* size the content as if it had no outer gallery gutters */
 }
 
 /* Font Awesome in links */
@@ -1185,7 +1202,8 @@ main table td:last-child {
     border-bottom: 2px solid transparent; /* placeholder for hover effect */
 }
 .site-info a > i {
-    display: inline-block;
+    display: block;
+    top: 0;
     left: -30px;
     width: 30px;
     position: absolute;

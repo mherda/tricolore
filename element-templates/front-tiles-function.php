@@ -143,7 +143,7 @@
         <?php
                 $today = date('Ymd');
                 $homepageEvents = new WP_Query(array(
-                    'posts_per_page' => 2,
+                    'posts_per_page' => 3,
                     'post_type' => 'event',
                     'meta_key' => 'event_date',
                     'orderby' => 'meta_value_num',
@@ -190,13 +190,16 @@
                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
             <?php } ?>
             
+            <!-- Event description -->
             <?php
-            // Description:
-            echo wp_trim_words(get_the_content(), 18);
+            $content = wp_trim_words(get_the_content(), 8);
+            if ($content) {
             ?>
+                <p><?php echo $content ?></p>
+            <?php } ?>
             
+            <!-- Sign-up button: :TODO: remove obsolete code -->
             <?php
-            // Sign-up button: :TODO: remove obsolete code
             if ( $event_uri ) {
                 echo '<p><a class="btn" href="'.$event_uri[0].'">Join on RiderHQ</a></p>';
             }
