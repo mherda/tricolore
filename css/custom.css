@@ -448,25 +448,24 @@ main h1 {
 
 #page-header {
     display: grid;
-    grid-template-areas: "logo" "nav";
+    grid-template-areas: "logo" "search" "nav";
 }
 
-#page-header>.logo {
+#page-header > .logo {
     padding: 10px;
     grid-area: logo;
     align-self: center;
     justify-self: center;
 }
-#page-header>.logo>img {
+#page-header > .logo > img {
     display: block;
     margin: 0 auto; /* central on mobile */
 }
 
-#page-header>.search-area {
-    display: none;
+#page-header > .search-area {
     grid-area: search;
     align-self: center;
-    justify-self: end;
+    /* justify-self: end; */
 }
 
 #page-header>nav {
@@ -479,18 +478,17 @@ main h1 {
         grid-template-areas: "logo search" "logo nav";
         grid-template-columns: 1fr 4fr;
     }
-    #page-header>.logo {
+    #page-header > .logo {
         padding: 20px 0;
         grid-area: logo;
         align-self: end;
     }
-    #page-header>.search-area {
-        display: block;
+    #page-header > .search-area {
         grid-area: search;
         align-self: center;
         justify-self: end;
     }
-    #page-header>nav {
+    #page-header > nav {
         grid-area: nav;
         justify-self: center;
     }
@@ -502,18 +500,18 @@ main h1 {
         grid-template-columns: 1fr 5fr;
         grid-template-rows: 3fr 2fr;
     }
-    #page-header>.logo {
+    #page-header > .logo {
         padding: 20px 0;
         grid-area: logo;
         align-self: end;
     }
-    #page-header>.search-area {
+    #page-header > .search-area {
         display: block;
         grid-area: search;
         align-self: center;
         justify-self: end;
     }
-    #page-header>nav {
+    #page-header > nav {
         grid-area: nav;
         justify-self: center;
     }
@@ -621,7 +619,7 @@ main h1 {
 }
 
 .carousel-item {
-    max-height: 650px;
+    max-height: 540px; /* half height of Full HD 1080p */
 }
 
 /* Carousel caption */

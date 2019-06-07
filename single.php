@@ -44,13 +44,14 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 						?>
 					</div> <!-- end of main column -->
 
-		            <div class="sidebar col-md-4">
+		            <div class="col-md-4 sidebar"> <!-- beginning of Sidebar -->
 		                
+						<?php get_template_part( 'element-templates/sidebar-upcoming-events' ); ?>
 						<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>
 		                
-						<?php get_template_part( 'element-templates/sidebar-events' ); ?>
 		                
 		                <?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
+						
 		            </div> <!-- end of right column -->
 
 

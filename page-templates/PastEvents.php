@@ -37,8 +37,9 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 						</div>
 						
 						<div class="col-md-4 sidebar"> <!-- beginning of Sidebar -->
-							<?php get_template_part( 'element-templates/sidebar-upcoming-events' ); ?>
 							<?php get_template_part( 'element-templates/sidebar-regular-events' ); ?>
+							<?php get_template_part( 'element-templates/sidebar-upcoming-events' ); ?>
+							<?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
 						</div>
 
 					</div> <!-- end of Top Row-->

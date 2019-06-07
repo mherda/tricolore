@@ -56,8 +56,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<?php get_template_part( 'element-templates/sidebar-upcoming-events' ); ?>
 							
 							<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>
-
+							
 							<?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
+							
 						</div> <!-- End of Side -->
 						
 					</div><!-- end of content-row -->

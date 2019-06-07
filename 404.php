@@ -27,17 +27,18 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 					
 	              <!-- beginning of the main column -->
 				  <section class="error-404 not-found">
-
+	                
+	                <!-- Breadcrumb, hero image then title -->
+	                <?php get_template_part( 'element-templates/page-header' ); ?>
+	                
 					<header class="page-header">
-
-						<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.',
+						<h1 class="page-title"><?php esc_html_e( 'We’re a bit lost&hellip;',
 						'understrap' ); ?></h1>
-
 					</header><!-- .page-header -->
 
-					<div class="page-content">
+					<div class="entry-content">
 
-						<p><?php esc_html_e( 'Uh Oh! It looks like that page got dropped from the peloton. Based on GPS data, this is the best way home:'); ?></p>
+						<p><?php esc_html_e( 'Sorry, we aren’t sure where that page went. You could try searching for it below.'); ?></p>
 
 						<?php get_search_form(); ?>
 
@@ -79,8 +80,14 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
         		</div> <!-- end of main column -->
 
 
-	            <div class="sidebar col-md-4">
-					<p>Sidebar<p>
+	            <div class="col-md-4 sidebar"> <!-- beginning of Sidebar -->
+					
+					<?php get_template_part( 'element-templates/sidebar-upcoming-events' ); ?>
+		
+					<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>
+
+					<?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
+					
 	            </div> <!-- end of right column -->
 			
 			

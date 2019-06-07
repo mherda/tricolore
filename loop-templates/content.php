@@ -19,8 +19,8 @@
 		<?php if ( 'post' == get_post_type() ) : ?>
 
 			<p class="entry-meta">
-				<?php understrap_entry_footer(); ?>
-				<?php understrap_posted_on(); ?>
+				<?php understrap_posted_on(); ?>. <!-- deliberate full stop -->
+				<?php understrap_entry_footer(); ?>. <!-- deliberate full stop -->
 			</p><!-- .entry-meta -->
 
 		<?php endif; ?>

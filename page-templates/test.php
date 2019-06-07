@@ -45,7 +45,7 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
             </div> <!-- end of main column -->
 
 
-            <div class="sidebar col-md-4"> <!-- beginning of Sidebar -->
+            <div class="col-md-4 sidebar"> <!-- beginning of Sidebar -->
                   <?php
                     $side = get_field('sidebar');
                     foreach( $side as $s ) {
@@ -54,13 +54,6 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
                   ?>
             
              <?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
-             
-
-
-              
-  
-  
-                
 
           
             </div> <!-- end of right column -->

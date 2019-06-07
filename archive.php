@@ -54,6 +54,9 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 
 								<?php endwhile; ?>
 								
+								<!-- The pagination component -->
+								<?php understrap_pagination(); ?>
+								
 							</div>
 								
 							<?php else : ?>
@@ -61,9 +64,6 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 								<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
 							<?php endif; ?>
-
-							<!-- The pagination component -->
-							<?php understrap_pagination(); ?>
 
 						</div> <!-- .col -->
 						

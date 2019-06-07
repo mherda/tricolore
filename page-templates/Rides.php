@@ -57,6 +57,8 @@ $container = get_theme_mod( 'understrap_container_type' );
               <?php get_template_part( 'element-templates/sidebar-routes' ); ?>
               
               <?php get_template_part( 'element-templates/sidebar-rideleaders' ); ?>
+              
+			  <?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
             </div>
 
           </div>

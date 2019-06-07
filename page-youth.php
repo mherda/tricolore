@@ -82,7 +82,7 @@ $container = get_theme_mod( 'understrap_container_type' );
             </div> <!-- end of left column -->
             
             
-            <div class="sidebar col-md-4"> <!-- beginning of Sidebar -->
+            <div class="col-md-4 sidebar"> <!-- beginning of Sidebar -->
                 
                 <?php get_template_part( 'element-templates/sidebar-events' ); ?>
 

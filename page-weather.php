@@ -84,23 +84,19 @@ $container = get_theme_mod( 'understrap_container_type' );
             } // end if ?>
           </div>
         </div> <!-- end of left column -->
+        
+        
         <div class="col-md-4 sidebar"> <!-- beginning of Sidebar -->
-
-          
 
           <div id="weat"></div>
           
           <?php get_template_part( 'element-templates/sidebar-events' ); ?>
-          
-
+		  <?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
          
         </div> <!-- end of right column -->
 
 
-
         </div> <!-- .row -->
-
-
 
 
         </main><!-- #main -->
