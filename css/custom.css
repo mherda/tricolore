@@ -850,6 +850,10 @@ carousel-indicators {
     background-color: var(--tri-black);
 }
 
+.tyle .caption {
+    margin-top: auto; /* push caption to bottom */
+}
+
 .tyle .tag {
     position: absolute;
     top: 15px;
@@ -901,6 +905,8 @@ carousel-indicators {
 .tyle-rectangle .caption {
     width: calc(100% - 287px);
     width: calc(50% + 10px); /* half the panel and remaining half gutter */
+    margin-top: 0;
+    margin-left: auto; /* push caption to right half */
 }
 
 
