@@ -96,10 +96,10 @@ if ( ! function_exists ( 'understrap_post_nav' ) ) {
 						<?php
 
 							if ( get_previous_post_link() ) {
-								previous_post_link( '<span class="nav-previous">%link</span>', _x( '<i class="fa fa-angle-left"></i>&nbsp;%title', 'Previous post link', 'understrap' ) );
+								previous_post_link( '<span class="nav-previous">%link</span>', _x( '⟨&nbsp;%title', 'Previous post link', 'understrap' ) );
 							}
 							if ( get_next_post_link() ) {
-								next_post_link( '<span class="nav-next">%link</span>',     _x( '%title&nbsp;<i class="fa fa-angle-right"></i>', 'Next post link', 'understrap' ) );
+								next_post_link( '<span class="nav-next">%link</span>',     _x( '%title&nbsp;⟩', 'Next post link', 'understrap' ) );
 							}
 						?>
 					</div><!-- .nav-links -->
