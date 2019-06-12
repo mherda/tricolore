@@ -87,8 +87,8 @@ if ( have_posts() ) {
     while ( have_posts() ) {
         the_post();
         $event_d = new DateTime(get_field('event_date'));
-        $event_month = $event_d->format('M');
-        $event_day = $event_d->format('d');
+        $event_month = $event_d->format('F');
+        $event_day = $event_d->format('l j');
         $event_year = $event_d->format('Y');
         $term_list = wp_get_post_terms($post->ID, 'event_category');
 ?>

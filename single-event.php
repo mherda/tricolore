@@ -29,7 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 										the_post();
 										
 										$event_d = new DateTime(get_field('event_date'));
-										$event_month = $event_d->format('M');
+										$event_month = $event_d->format('F');
 										$event_day = $event_d->format('l j');
 										$event_year = $event_d->format('Y');
 										$event_display = $event_day . " " . $event_month . " " . $event_year;

@@ -1210,10 +1210,12 @@ The grades are set in the HTML so the accordion could be editable.
     margin-right: 0;
 }
 
-.fa-strava {
-    display: none;
+.fa-strava:before {
+    /* :TODO: Font Awesome for Strava */
+    content: "";
 }
-
+.fa-strava:before {
+  content: "\f428"; }
 
 /* Flickr justified gallery */
 /*
