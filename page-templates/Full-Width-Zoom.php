@@ -32,11 +32,11 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <?php endwhile; // end of the loop. ?>
 			</div>
 			
-        <div>
-            <?php
-              $tile_cat = get_cat_name(get_field('tile_category_container'));
-            ?>
-          </div>
+            <div>
+                <?php
+                  $tile_cat = get_cat_name(get_field('tile_category_container'));
+                ?>
+            </div>
 
           <div id="front-tiles" class="grid">
             <?php
@@ -50,32 +50,28 @@ $container = get_theme_mod( 'understrap_container_type' );
               if ( $tile_selection->have_posts() ) {
                 while ( $tile_selection->have_posts() ) {
                 $tile_selection->the_post();
-                $img = get_the_post_thumbnail_url($post_id, 'tyle');
-                $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
-                // :TODO: Text tile if there is no background-image
-                if ( $img ) { ?>
-                  <a class="tyle"
-                    href="<?php the_field('tile_link'); ?>"
-                    style="<?php echo $tile_background; ?>"
-                    >
-                    <div class="caption">
-                        <p class="tag"><?php echo $tile_cat; ?></p>
-                        <h2><?php the_title(); ?></h2>
-                        <?php the_content(); ?>
-                    </div>
-                  </a>
-                <?php } else { ?>
-                  <a class="parent-tile tyle"
-                    href="<?php the_field('tile_link'); ?>"
-                    >
-                    <div class="caption">
-                        <p class="tag"><?php echo $tile_cat; ?></p>
-                        <h2><?php the_title(); ?></h2>
-                        <?php the_content(); ?>
-                    </div>
-                  </a>
-                <?php }
+                $img = get_the_post_thumbnail_url($post, 'tyle');
+                $tile_background = ( $img ? 'style="' . "background-image: url('{$img}')" . '"' . "\n" : "" ); // tri-black fallback
+
             ?>
+              <a class="tyle"
+                href="<?php the_field('tile_link'); ?>"
+                <?php echo $tile_background; ?>
+                >
+                <?php
+                if ($post) { ?>
+                <div class="caption">
+                    <p class="tag"><?php the_field('tile_category'); ?></p>
+                    <h2><?php the_title(); ?></h2>
+                    <p><?php echo $post->post_content; ?></p>
+                </div>
+                <?php
+                } else { ?>
+                    <!-- Error: Please specify a tile to be displayed. -->
+                <?php }
+                wp_reset_postdata();
+                ?>
+              </a>
 
             <?php } // end while
             wp_reset_postdata();

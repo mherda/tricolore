@@ -15,14 +15,12 @@ if ( get_field('tile_placeholder_left')
         // override $post
         $post = $post_object;
         setup_postdata( $post );
-        $img = get_the_post_thumbnail_url($post_id, 'frontTile');
-        // $img = get_the_post_thumbnail_url($post_id, 'tyle'); // home tile
-        $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
+        $img = get_the_post_thumbnail_url($post, 'tyle');
+        $tile_background = ( $img ? 'style="' . "background-image: url('{$img}')" . '"' . "\n" : "" ); // tri-black fallback
     ?>
-    <!-- :TODO: text tiles shouldn't have style attribute -->
     <a class="tyle"
         href="<?php the_field('tile_link'); ?>"
-        style="<?php echo $tile_background; ?>"
+        <?php echo $tile_background; ?>
         >
         <div class="caption">
             <p class="tag"><?php the_field('tile_category'); ?> </p>
@@ -41,13 +39,12 @@ if ( get_field('tile_placeholder_left')
         // override $post
         $post = $post_object;
         setup_postdata( $post );
-        $img = get_the_post_thumbnail_url($post_id, 'frontTile');
-        // $img = get_the_post_thumbnail_url($post_id, 'tyle'); // home tile
-        $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
+        $img = get_the_post_thumbnail_url($post, 'tyle');
+        $tile_background = ( $img ? 'style="' . "background-image: url('{$img}')" . '"' . "\n" : "" ); // tri-black fallback
     ?>
     <a class="tyle"
         href="<?php the_field('tile_link'); ?>"
-        style="<?php echo $tile_background; ?>"
+        <?php echo $tile_background; ?>
         >
         <div class="caption">
             <p class="tag"><?php the_field('tile_category'); ?></p>

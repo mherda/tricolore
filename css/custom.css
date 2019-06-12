@@ -145,6 +145,15 @@ a:active,
     background-color: var(--tri-green);
 }
 
+/* Buttons on green sidebar */
+.sidebar .btn:hover,
+.sidebar .btn:focus,
+.sidebar .btn:active {
+    color: var(--tri-white);
+    background-color: var(--tri-red); /* avoid green on green */
+}
+
+
 /* Clicked button: */
 .btn:not(:disabled):not(.disabled):active,
 .btn:not(:disabled):not(.disabled).active,
@@ -187,6 +196,7 @@ a:active,
     color: var(--tri-white);
     text-decoration: none;
 }
+
 
 
 /* Sidebar colours */
@@ -290,9 +300,7 @@ th {
     font: var(--font-h4);
 }
 /* Home tile description */
-.tyle p {
-    font: var(--font-p);
-}
+/* Inherits body text */
 /* Home tile event item */
 .events h3 {
     font: var(--font-h6);
@@ -827,31 +835,10 @@ carousel-indicators {
     background-position: center top;
 }
 
-/* Homepage bottom row, text tile */
-/* Text tiles don't have style attribute - might be used elsewhere */
-.tyle:not([style]) {
-    justify-content: normal;
-}
-.tyle:not([style]) .tag {
-    position: static;
-    padding: 8px 0 18px 0; /* (.tag: 15px + 3px) - (.tyle 10px) */
-}
-
-/* Homepage bottom row, events tile */
-.tyle.events {
-    justify-content: start;
-    padding: 13px 20px 0 20px; /* adjusted for line-height */
-    background: var(--tri-black);
-}
-
 .tyle .caption,
-.tyle.events {
-    padding: 13px 20px 16px 20px; /* adjusted for line-height */
-    background-color: var(--tri-black);
-}
-
-.tyle .caption {
-    margin-top: auto; /* push caption to bottom */
+.tyle .tag {
+    color: inherit;
+    background-color: inherit;
 }
 
 .tyle .tag {
@@ -859,30 +846,47 @@ carousel-indicators {
     top: 15px;
     left: 10px;
     padding: 3px 10px 3px 10px; /* adjusted for line-height */
-    background-color: var(--tri-black);
+}
+
+.tyle .caption {
+    margin-top: auto; /* push caption to bottom */
+    padding: 13px 20px 16px 20px; /* adjusted for line-height */
 }
 
 .tyle h2,
-.tyle h4,
 .tyle p {
     margin: 0;
 }
 
+/* Text tile (homepage bottom row) */
+/* Text tiles don't have style attribute - might be used elsewhere */
+.tyle:not([style]) {
+    justify-content: normal;
+    background: var(--tri-green);
+}
+.tyle:not([style]) .tag {
+    display: inline-block;
+    position: static; /* normal position */
+    margin: 0 0 20px -10px;
+    background: var(--tri-black);
+}
+.tyle:not([style]) .caption {
+    margin-top: 0;
+}
+
+/* Homepage bottom row, events tile */
+.tyle.events {
+    padding: 13px 20px 16px 20px; /* adjusted for line-height */
+    background-color: var(--tri-black);
+}
+
 /* Home grid hover colours */
-.tyle,
-.tyle .tag,
-.tyle .caption {
+.tyle {
     transition: background 0.2s ease-in;
 }
 .tyle:hover,
 .tyle:focus,
-.tyle:active,
-.tyle:hover .tag,
-.tyle:focus .tag,
-.tyle:active .tag,
-.tyle:hover .caption,
-.tyle:focus .caption,
-.tyle:active .caption {
+.tyle:active {
     color: var(--tri-white);
     background-color: var(--tri-green);
 }
@@ -910,6 +914,9 @@ carousel-indicators {
 }
 
 
+/* :TODO: Text tiles */
+
+
 /* Homepage bottom row, events tile */
 
 #front-tiles .tyle.events {
@@ -922,6 +929,7 @@ carousel-indicators {
     padding-bottom: 20px;
 }
 
+/* All Events button */
 #front-tiles .tyle.events > p {
     top: 20px;
     right: 20px;
@@ -929,7 +937,7 @@ carousel-indicators {
 }
 
 
-/* All event lists */
+/* Event lists in tiles and sidebar */
 
 .events > div {
     padding-bottom: 20px;
@@ -974,19 +982,6 @@ carousel-indicators {
 
 /* MISCELLANEOUS */
 
-/* Justified gallery */
-/*
-Sizes are positioned in real-time using JS and style attributes. :TODO:
-Setting it to have 20px gutters creates unwanted outer gutters.
-I expand the container so the photos expand to fill these outer gutters.
-I offset the container so the outer gutters sit on the Bootstrap gutters.
-*/
-.justified-gallery {
-    position: relative; /* layout context for reliable negative margins */
-    margin: -20px 0 0 -20px; /* move the outer gallery outer gutters onto the actual footer gutters */
-    width: calc(100% + 40px); /* size the content as if it had no outer gallery gutters */
-}
-
 /* Font Awesome in links */
 a .fa {
     margin-right: 0.25em;
@@ -1003,6 +998,77 @@ a .fa {
 }
 
 
+
+/* :TODO: remove obsolete code even if it was great */
+/* Regular routes modal */
+
+.modal-full {
+    min-width: 100%;
+    margin: 0;
+}
+
+.modal-full .modal-content {
+    min-height: 100vh;
+}
+/* End :TODO: remove obsolete code even if it was great */
+
+
+
+/* MAIN CONTENT */
+
+
+main,
+.entry-content {
+    padding-bottom: 20px;
+}
+
+/* Article content title */
+main h1 {
+    margin: 0 0 10px 0;
+    padding-top: 20px;
+    border-top: 4px solid var(--tri-green); /* below breadcrumb or image */
+}
+
+
+/* Main content table */
+
+main table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+main table th,
+main table td {
+    padding: 10px 0 10px 20px; /* 1 gutter between text */
+}
+
+main table th:last-child,
+main table td:last-child {
+    padding-right: 20px; /* final gutter on right side */
+}
+
+
+/* Main content info panel (Sunday Rides) */
+.page-template-Rides h1 {
+    margin-bottom: 0; /* connect background with .panel */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 0.5rem; /* :TODO: main content spacing */
+}
+.entry-content .panel {
+    margin-bottom: 18px; /* anticipate line-height of next sibling */
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+.entry-content .panel p:last-child,
+.entry-content .panel ul:last-child,
+.entry-content .panel ol:last-child {
+    margin-bottom: 0;
+}
+
+
 /* Accordion widget */
 #heading1,
 #heading2,
@@ -1016,7 +1082,6 @@ a .fa {
 #heading10 {
     cursor: pointer;
 }
-
 
 /* Accordion - regular rides */
 
@@ -1064,80 +1129,8 @@ The grades are set in the HTML so the accordion could be editable.
 }
 
 
-
-/* :TODO: remove obsolete code even if it was great */
-/* Regular routes modal */
-
-.modal-full {
-    min-width: 100%;
-    margin: 0;
-}
-
-.modal-full .modal-content {
-    min-height: 100vh;
-}
-/* End :TODO: remove obsolete code even if it was great */
-
-
-
-/* MAIN CONTENT */
-main,
-.entry-content {
-    padding-bottom: 20px;
-}
-
-/* Article content title */
-main h1 {
-    margin: 0 0 10px 0;
-    padding-top: 20px;
-    border-top: 4px solid var(--tri-green); /* below breadcrumb or image */
-}
-
-
-/* Main content table */
-
-main table {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-}
-
-/* 1 gutter between text and each side */
-main table th,
-main table td {
-    padding: 10px 0 10px 20px;
-}
-
-main table th:last-child,
-main table td:last-child {
-    padding-right: 20px;
-}
-
-
-/* Main content info panel (Sunday Rides) */
-.page-template-Rides h1 {
-    margin-bottom: 0; /* connect background with .panel */
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 0.5rem; /* :TODO: main content spacing */
-}
-.entry-content .panel {
-    margin-bottom: 18px; /* anticipate line-height of next sibling */
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-}
-.entry-content .panel p:last-child,
-.entry-content .panel ul:last-child,
-.entry-content .panel ol:last-child {
-    margin-bottom: 0;
-}
-
-
-
-
-
 /* SIDEBAR */
+
 
 .sidebar {
     margin-top: 36px; /* 20px above and 16px below breadcrumb */
@@ -1159,9 +1152,11 @@ main table td:last-child {
     margin: 0;
     padding-bottom: 12px; /* half measure of line-height */
 }
-.sidebar p:last-child{
+.sidebar p:last-child {
     padding-bottom: 18px; /* adjusted for line-height */
 }
+
+/* Sidebar weather tile */
 
 .sidebar #weather hr {
     display: none;
@@ -1171,11 +1166,12 @@ main table td:last-child {
     font: var(--font-p-highlight);
 }
 
-/* :TODO: Sidebar upcoming events */
+/* See also: event lists */
 
 
 
 /* FOOTER */
+
 
 #wrapper-footer {
     overflow: hidden; /* Social Flickr gallery makes 20px gutters in JS */
@@ -1219,11 +1215,18 @@ main table td:last-child {
 }
 
 
-/* Flickr widget */
+/* Flickr justified gallery */
 /*
-:TODO: need gutter between photos
-:TODO: current widget spams JS calculations, cannot control with CSS
+Sizes are positioned in real-time using JS and style attributes. :TODO:
+Setting it to have 20px gutters creates unwanted outer gutters.
+I expand the container so the photos expand to fill these outer gutters.
+I offset the container so the outer gutters sit on the Bootstrap gutters.
 */
+.justified-gallery {
+    position: relative; /* layout context for reliable negative margins */
+    margin: -20px 0 0 -20px; /* move the outer gallery outer gutters onto the actual footer gutters */
+    width: calc(100% + 40px); /* size the content as if it had no outer gallery gutters */
+}
 
 
 /* Footer organisations */
