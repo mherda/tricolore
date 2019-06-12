@@ -1034,12 +1034,11 @@ main h1 {
 
 main table {
     width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
 }
 
 main table th,
 main table td {
+    vertical-align: top;
     padding: 10px 0 10px 20px; /* 1 gutter between text */
 }
 
@@ -1047,6 +1046,16 @@ main table th:last-child,
 main table td:last-child {
     padding-right: 20px; /* final gutter on right side */
 }
+
+/* Stripey Tables */
+.wp-block-table.is-style-stripes {
+    border-bottom: 0;
+}
+main table tr:nth-child(odd),
+.wp-block-table.is-style-stripes tr:nth-child(odd) {
+    background-color: var(--tri-white);
+}
+
 
 
 /* Main content info panel (Sunday Rides) */
@@ -1210,19 +1219,14 @@ The grades are set in the HTML so the accordion could be editable.
     margin-right: 0;
 }
 
-.fa-strava:before {
-    /* :TODO: Font Awesome for Strava */
-    content: "";
-}
-.fa-strava:before {
-  content: "\f428"; }
 
 /* Flickr justified gallery */
+
 /*
-Sizes are positioned in real-time using JS and style attributes. :TODO:
-Setting it to have 20px gutters creates unwanted outer gutters.
-I expand the container so the photos expand to fill these outer gutters.
-I offset the container so the outer gutters sit on the Bootstrap gutters.
+Sizes are positioned in real-time using JS and style attributes.
+Settings add the 20px gutters but also create unwanted outer gutters.
+I expand the container so the photos are sized as if there are no outer gutters.
+I move the container so the outer gutters sit on the Bootstrap gutters.
 */
 .justified-gallery {
     position: relative; /* layout context for reliable negative margins */
