@@ -3,18 +3,26 @@
 ?>
 <nav>
     <div id="navmenu" class="events">
-        <ul class="text-center">
-            <li><a href="<?php echo get_post_type_archive_link( 'event' ); ?>">All</a></li><?php
-                $terms = get_terms(array(
-                    'taxonomy' => 'event_category'
-                ));
-                foreach($terms as $term) {
-                    if ( $term->name == $current_term->name ) {
-                        echo '<li class="ccc"><a href="'.get_term_link($term).'">'.$term->name.'</a></li>';
-                    } else {
-                    echo '<li><a href="'.get_term_link($term).'">'.$term->name.'</a></li>';
-                    }
+        <ul class="pagination">
+            <?php
+            // All events item:
+            if ( !$current_term->name ) {
+                echo '<li class="page-item active"><a class="page-link current" href="'.get_post_type_archive_link( 'event' ).'">'.All.'</a></li>';
+            } else {
+                echo '<li class="page-item"><a class="page-link" href="'.get_post_type_archive_link( 'event' ).'">'.All.'</a></li>';
+            }
+            
+            // Other events:
+            $terms = get_terms(array(
+                'taxonomy' => 'event_category'
+            ));
+            foreach($terms as $term) {
+                if ( $term->name == $current_term->name ) {
+                    echo '<li class="page-item active"><a class="page-link current" href="'.get_term_link($term).'">'.$term->name.'</a></li>';
+                } else {
+                    echo '<li class="page-item"><a class="page-link" href="'.get_term_link($term).'">'.$term->name.'</a></li>';
                 }
+            }
             ?>
         </ul>
     </div>

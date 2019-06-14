@@ -19,13 +19,13 @@ $pastEvents = new WP_Query(array(
 
 <nav id="nav_events">
     <div id="navmenu" class="events">
-        <ul class="text-center">
-            <li class="ccc"><a href="<?php echo get_post_type_archive_link( 'event' ); ?>">All</a></li><?php
+        <ul class="pagination">
+            <li class="page-item active"><a class="page-link current" href="<?php echo get_post_type_archive_link( 'event' ); ?>">All</a></li><?php
                 $terms = get_terms(array(
                     'taxonomy' => 'event_category'
                 ));
                 foreach($terms as $term) {
-                    echo '<li><a href="'.get_term_link($term).'">'.$term->name.'</a></li>';
+                    echo '<li class="page-item"><a class="page-link" href="'.get_term_link($term).'">'.$term->name.'</a></li>';
                 }
             ?>
         </ul>

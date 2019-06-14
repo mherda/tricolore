@@ -11,16 +11,6 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 
 ?>
 
-<div class="wrapper" id="search-wrapper">
-
-	<div class="<?php echo esc_attr( $container ); ?> notFull" id="content">
-
-		<div class="row">
-
-			
-
-			<main class="site-main" id="main">
-
 <div class="wrapper" id="page-wrapper">
 	<div class="<?php echo esc_attr( $container ); ?> notFull" id="content">
 		<div class="row">
@@ -64,10 +54,10 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 
 						<?php endwhile; ?>
 						
+						<!-- The pagination component -->
+						<?php understrap_pagination(); ?>
+						
 					</div>
-					
-					<!-- The pagination component -->
-					<?php understrap_pagination(); ?>
 					
 				<?php else : ?>
 
@@ -79,20 +69,16 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 						</div> <!-- .col -->
 						
 						<div class="col-md-4 sidebar"> <!-- beginning of Sidebar -->
-							<?php get_template_part( 'element-templates/sidebar-upcoming-events' ); ?>
 							<?php get_template_part( 'element-templates/sidebar-regular-events' ); ?>
+							<?php get_template_part( 'element-templates/sidebar-upcoming-events' ); ?>
 						</div> <!-- end of Sidebar -->
 						
 					</div> <!-- .row -->
 
 				</main><!-- #main -->
-
-			</div><!-- #primary -->
-
+			</div><!-- .col -->
 		</div><!-- .row -->
-
-	</div><!-- Container end -->
-
+	</div><!-- #content -->
 </div><!-- Wrapper end -->
 
 <?php get_footer('main'); ?>

@@ -360,11 +360,6 @@ main h1 {
     border-bottom: 0; /* don't underline photos */
 }
 
-/* Pagination after content in Events */
-.entry-content .pagination {
-    justify-content: center;
-}
-
 
 /* Sidebar headings */
 .sidebar h2,
@@ -709,56 +704,39 @@ carousel-indicators {
 }
 
 
-/* Event tag navigation menu */
+/*
+Minor navigation menus
+Event tag navigation menu
+Pagination menu
+*/
 
-#navmenu.events-categories ul,
-#navmenu.events ul {
+.pagination {
+    justify-content: center; /* theme.css .pagination */
     margin: 20px auto 20px auto;
     padding: 0;
 }
 
-#navmenu.events ul li a,
-.pagination li a,
-.page-item.active .page-link {
-    display: inline-block;
-    padding: 10px;
+.entry-content .page-link {
+    margin-left: 0; /* theme.css */
+    padding: 8px 20px 8px 20px; /* .tag */
+    font: var(--font-link);
     color: var(--tri-white);
     background: var(--tri-black);
-}
-.page-item.active .page-link {
     border: 0;
 }
-.page-link:hover,
-.page-link:focus,
-.page-link:active {
-    color: var(--tri-green);
-    background: var(--tri-black);
-    -webkit-box-shadow: none;
-    box-shadow: none;
+
+.entry-content .page-link:hover,
+.entry-content .page-link:focus,
+.entry-content .page-link:active {
+    color: var(--tri-white);
+    background: var(--tri-green);
+    border: 0;
 }
 
-#navmenu.events ul li a:hover,
-#navmenu.events ul li a:focus,
-#navmenu.events ul li a:active {
-    color: var(--tri-green);
-    text-decoration: none;
-}
-
-#navmenu.events ul li.ccc a,
 .page-item.active .page-link {
-    color: var(--tri-green);
-}
-
-#navmenu.events-categories ul li a {
-    padding: 2px 3px 2px 3px;
-}
-
-.nav-breadcrumbs ul li a:hover {
-    text-decoration: none;
-}
-
-.nav-horizontal .current-menu-item a {
-    color: var(--tri-green);
+    cursor: default;
+    color: var(--tri-black);
+    background: var(--tri-white);
 }
 
 
@@ -1051,7 +1029,6 @@ main table td:last-child {
 .wp-block-table.is-style-stripes {
     border-bottom: 0;
 }
-main table tr:nth-child(odd),
 .wp-block-table.is-style-stripes tr:nth-child(odd) {
     background-color: var(--tri-white);
 }
@@ -1120,11 +1097,13 @@ main table tr:nth-child(odd),
 #accordion [data-toggle="collapse"] .fa:after {
     content: '\f077';
     /* chevron-up */
+    content: '˄';
 }
 
 #accordion [data-toggle="collapse"].collapsed .fa:after {
     content: '\f078';
     /* chevron-down */
+    content: '˅';
 }
 
 /*
