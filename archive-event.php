@@ -20,6 +20,9 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 							<div class="entry-content">
 								<!-- Events -->
 								<?php get_template_part( 'element-templates/main-upcoming-events' ); ?>
+
+								<!-- The pagination component -->
+								<?php understrap_pagination(); ?>
 							</div>
 						</div>
 						
@@ -32,17 +35,7 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 					</div> <!-- end of Top Row-->
 
 				
-
-				</div>
-
-
-
-
-
 				</main><!-- #main -->
-
-				<!-- The pagination component -->
-			<?php understrap_pagination(); ?>
 
 			</div><!-- #primary -->
 

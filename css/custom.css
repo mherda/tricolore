@@ -693,17 +693,6 @@ carousel-indicators {
 }
 
 
-/* Event listing */
-
-.event-listing {
-    background-color: var(--tri-white);
-}
-
-.event-date {
-    background-color: var(--tri-blue);
-}
-
-
 /*
 Minor navigation menus
 Event tag navigation menu
@@ -720,23 +709,23 @@ Pagination menu
     margin-left: 0; /* theme.css */
     padding: 8px 20px 8px 20px; /* .tag */
     font: var(--font-link);
-    color: var(--tri-white);
-    background: var(--tri-black);
+    color: var(--tri-black);
+    background: var(--tri-white);
     border: 0;
 }
 
 .entry-content .page-link:hover,
 .entry-content .page-link:focus,
 .entry-content .page-link:active {
-    color: var(--tri-white);
-    background: var(--tri-green);
+    color: var(--tri-green);
     border: 0;
+    box-shadow: none;
 }
 
 .page-item.active .page-link {
     cursor: default;
-    color: var(--tri-black);
-    background: var(--tri-white);
+    color: var(--tri-white);
+    background: var(--tri-green);
 }
 
 
@@ -892,7 +881,7 @@ Pagination menu
 }
 
 
-/* :TODO: Text tiles */
+/* :TODO: Text tiles detail after launch */
 
 
 /* Homepage bottom row, events tile */
@@ -913,6 +902,7 @@ Pagination menu
     right: 20px;
     position: absolute;
 }
+
 
 
 /* Event lists in tiles and sidebar */
