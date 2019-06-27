@@ -33,8 +33,8 @@
               <?php echo $post->post_content; ?>
             </p>
             <p>
-                <a href="<?php echo the_field('slide_page_link'); ?>" class="btn btn-lg">Join our Club</a>
-                <a href="<?php echo site_url('#'); ?>" class="btn btn-lg btn-success">Try a ride</a>
+                <a href="<?php echo the_field('slide_page_link'); ?>" class="btn btn-lg">Free ride for Adult</a>
+                <a href="<?php echo $post->post_excerpt; ?>" class="btn btn-lg btn-success">Free ride for Youth</a>
             </p>
           </div>
       </div>
@@ -108,11 +108,11 @@
 
 
     <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
-      <span class="b-red carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
     <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">
-      <span class="b-green carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
   </div> <!-- end of carousel-inner -->

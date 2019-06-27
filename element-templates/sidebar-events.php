@@ -3,7 +3,7 @@
     $categories = get_the_category();
 
     if ( ! empty( $categories ) ) { ?>
-        <h2><a href="<?php echo site_url('/events/'); ?>"><?php echo esc_html( $categories[0]->name ); ?> Events</a></h2>
+        <h2><?php echo esc_html( $categories[0]->name ); ?> Events</h2>
     <?php
 
     $today = date('Ymd');
@@ -38,8 +38,8 @@
     <div class="d-flex">
         <div>
             <?php $eventDate = new DateTime(get_field('event_date')); ?>
-            <p class="month"><?php echo $eventDate->format('M'); ?></p>
-            <p class="day"><?php echo $eventDate->format('j'); ?></p>
+            <p class="month"><?php echo $eventDate->format('F'); ?></p>
+            <p class="day"><?php echo $eventDate->format('D j'); ?></p>
         </div>
         <div>
             
@@ -83,10 +83,10 @@
     
     <?php } else { ?>
         
-      <h3>Upcoming events</h3>
+        <h3>Upcoming events</h3>
     <?php } ?>
     <p>
-        <a class="btn" href="<?php echo site_url('/events/'); ?>">All events</a>
+        <a class="btn" href="<?php echo site_url('/events/'); ?>"><?php echo esc_html( $categories[0]->name ); ?> Events</a>
     </p>
 
 </div> <!-- end of module -->
