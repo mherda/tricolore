@@ -39,7 +39,9 @@
 				the_custom_logo();
 				if (!has_custom_logo()) {
 				?>
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" width="200" />
+				<a href="/">
+					<img src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" width="200" />
+				</a>
 				<?php } ?>
 			</div>
 			<div class="search-area">
