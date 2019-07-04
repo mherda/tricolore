@@ -2,7 +2,7 @@
 
 :root {
     --tri-black: #1f1e21;
-    --tri-green: #5ea03b; /* #1ea02d; */
+    --tri-green: #1ea02d; /* #5ea03b; */
     --tri-white: #ecf1f4;
     --tri-red: #c1001f;
     --tri-blue: #4a90e2; /* :TODO: Sunday Rides add swatch to design guide */
@@ -17,7 +17,15 @@ https://colorzilla.com/gradient-editor/
 W3C, IE10+, Fx16+, Chrome26+, Opera12+, Safari7+
 */
 /*
-background: linear-gradient(to bottom, var(--tri-green) 0%,var(--tri-green) 33%,white 33%,white 67%,var(--tri-red) 67%,var(--tri-red) 100%) no-repeat;
+background: linear-gradient(
+                to bottom,
+                var(--tri-green) 0%,
+                var(--tri-green) 33%,
+                white 33%,
+                white 67%,
+                var(--tri-red) 67%,
+                var(--tri-red) 100%
+            ) no-repeat;
 background-size: 100% 9px;
 */
 
@@ -112,7 +120,6 @@ a:active,
 
 /* Button colours */
 .btn,
-.btn-danger,
 .btn-success,
 .wp-block-file .wp-block-file__button {
     padding: 3px 10px 3px 10px; /* .tyle .tag */
@@ -168,11 +175,15 @@ a:active,
     font-size: 18px;
     line-height: 24px;
 }
+.btn-lg + .btn-lg {
+    margin-left: 20px; /* gutter */
+}
+
 
 
 /* Carousel colours */
 /* Carousel caption */
-.card {
+.carousel-caption {
     color: var(--tri-black);
     background-color: var(--tri-white);
     background-color: #ecf1f4c0; /* --tri-white with alpha channel */
@@ -275,12 +286,6 @@ th {
 /* Carousel description */
 .card-text {
     font: var(--font-p-highlight);
-}
-
-/* Carousel button */
-/* These use .btn-lg */
-.card .btn {
-    margin-right: 20px;
 }
 
 
@@ -627,6 +632,8 @@ main h1 {
     width: 58.337%; /* 8/12 columns */
     width: calc(58.334% - 7px ); /* accurately 8/12 columns */
     text-align: left;
+    border: 0;
+    border-radius: 0;
 }
 
 .card-body {
@@ -650,6 +657,7 @@ main h1 {
 }
 
 /* Carousel previous and next links */
+
 .carousel-control-prev,
 .carousel-control-next {
     width: 4.167%; /* half of a 12-column grid slot */
@@ -687,8 +695,10 @@ main h1 {
 }
 
 /* Carousel slide indicator pagination thing */
-carousel-indicators {
+
+.carousel-indicators {
 }
+
 
 
 /*
