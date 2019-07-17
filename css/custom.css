@@ -1004,6 +1004,18 @@ main h1 {
     border-top: 4px solid var(--tri-green); /* below breadcrumb or image */
 }
 
+/* Main content photos amongst text */
+
+
+/* Mobile photos are central and go full size, up to the content width */
+
+@media (max-width: 576px) {
+    .wp-block-image .alignright {
+        float: none; /* style.min.css */
+        margin: 0 auto 1rem auto; /* theme.css */
+    }
+}
+
 
 /* Main content table */
 

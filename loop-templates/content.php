@@ -27,7 +27,7 @@
 
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-summary">
 
 		<?php
 		the_excerpt();
@@ -40,10 +40,10 @@
 		) );
 		?>
 
-		<p class="entry-footer">
-			
-		</p><!-- .entry-footer -->
-
 	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		
+	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->

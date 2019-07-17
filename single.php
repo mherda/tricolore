@@ -29,6 +29,15 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 						                   bcn_display();
 						                }?>
 						            </div>
+					              
+					              <?php
+					    		  	$img = get_the_post_thumbnail($post->ID, 'pageHeader');
+					    		  	if ( $img ) {
+					                      echo get_the_post_thumbnail($post->ID, 'pageHeader');
+					                  } else {
+					              ?>
+					              <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/page_headers/chair.jpg" /> -->
+					              <?php } ?>
 						              
 									<div class="entry-content">
 										<h1><?php the_title(); ?></h1>
