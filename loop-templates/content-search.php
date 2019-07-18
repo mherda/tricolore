@@ -20,19 +20,6 @@
 		);
 		?>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-
-			<div class="entry-meta">
-
-				<p>
-					<?php understrap_posted_on(); ?>. <!-- deliberate full stop -->
-					<?php understrap_entry_footer(); ?>. <!-- deliberate full stop -->
-				</p>
-
-			</div><!-- .entry-meta -->
-
-		<?php endif; ?>
-
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
@@ -43,6 +30,14 @@
 
 	<footer class="entry-footer">
 
+		<?php if ( 'post' == get_post_type() ) : ?>
+			<div class="entry-meta">
+				<p>
+					<?php understrap_posted_on(); ?>. <!-- deliberate full stop -->
+					<?php understrap_entry_footer(); ?>. <!-- deliberate full stop -->
+				</p>
+			</div><!-- .entry-meta -->
+		<?php endif; ?>
 
 	</footer><!-- .entry-footer -->
 

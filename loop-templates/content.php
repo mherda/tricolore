@@ -16,15 +16,6 @@
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
 		'</a></h2>' ); ?>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
-
-			<p class="entry-meta">
-				<?php understrap_posted_on(); ?>. <!-- deliberate full stop -->
-				<?php understrap_entry_footer(); ?>. <!-- deliberate full stop -->
-			</p><!-- .entry-meta -->
-
-		<?php endif; ?>
-
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
@@ -43,7 +34,15 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		
+
+		<?php if ( 'post' == get_post_type() ) : ?>
+
+			<p class="entry-meta">
+				<?php understrap_posted_on(); ?>. <!-- deliberate full stop -->
+				<?php understrap_entry_footer(); ?>. <!-- deliberate full stop -->
+			</p><!-- .entry-meta -->
+
+		<?php endif; ?>
 	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->

@@ -1126,6 +1126,13 @@ The grades are set in the HTML so the accordion could be editable.
 }
 
 
+/* Main content meta links */
+.entry-footer span {
+    padding-right: 0;
+}
+
+
+
 /* SIDEBAR */
 
 
