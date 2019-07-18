@@ -1,4 +1,4 @@
-<div id="carouselControls" class="carousel slide carousel-fade" data-ride="carousel">
+<div id="carouselControls" class="carousel slide carousel-slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselControls" data-slide-to="0" class="active"></li>
     <li data-target="#carouselControls" data-slide-to="1"></li>
@@ -6,17 +6,17 @@
       $count = 1;
       $post_object_3 = get_field('slide_3');
       $post_object_4 = get_field('slide_4');
-      if($post_object_3) { 
+      if($post_object_3) {
         $count += 1;
         ?>
           <li data-target="#carouselControls" data-slide-to="<?php echo $count; ?>"></li>
       <?php }
-      if($post_object_4) { 
-          $count += 1; 
+      if($post_object_4) {
+          $count += 1;
         ?>
           <li data-target="#carouselControls" data-slide-to="<?php echo $count; ?>"></li>
-        <?php } 
-        $count = 1; 
+        <?php }
+        $count = 1;
         ?>
   </ol>
 
@@ -46,9 +46,10 @@
             <p class="card-text">
               <?php echo $post->post_content; ?>
             </p>
+            <!-- :TODO: Button text as a field in carousel slides -->
             <p>
-                <a href="<?php echo the_field('slide_page_link'); ?>" class="btn btn-lg">Free ride for Adult</a>
-                <a href="<?php echo $post->post_excerpt; ?>" class="btn btn-lg btn-success">Free ride for Youth</a>
+                <a href="<?php echo the_field('slide_page_link'); ?>" class="btn btn-lg">Join as an adult</a>
+                <a href="<?php echo $post->post_excerpt; ?>" class="btn btn-lg btn-success">Free ride for adults</a>
             </p>
           </div>
       </div>
@@ -81,7 +82,11 @@
             <p class="card-text">
               <?php echo $post->post_content; ?>
             </p>
-            <p><a class="btn btn-lg" href="<?php echo the_field('slide_page_link'); ?>">Join our Club</a></p>
+            <!-- :TODO: Button text as a field in carousel slides -->
+            <p>
+                <a class="btn btn-lg" href="<?php echo the_field('slide_page_link'); ?>">Join as a youth</a>
+                <a href="<?php echo $post->post_excerpt; ?>" class="btn btn-lg btn-success">Free ride for youths</a>
+            </p>
           </div>
       </div>
       <?php wp_reset_postdata(); // IMPORTANT - reset the $post™™£ object so the rest of the page works correctly ?>
@@ -90,7 +95,7 @@
 
 
 
-    <?php 
+    <?php
       if( $post_object_3 ) {
         ?>
     <div class="carousel-item">
@@ -108,15 +113,17 @@
             <p class="card-tag"><?php the_field('slide_tag'); ?></p>
             <h2 class="slide-text"><?php the_title(); ?></h2>
             <p class="card-text"><?php echo $post->post_content; ?></p>
-            <p><a class="btn btn-lg" href="<?php echo the_field('slide_page_link'); ?>">Join our Club</a></p>
+            <p><a class="btn btn-lg" href="<?php echo the_field('slide_page_link'); ?>">
+                <?php echo $post->post_excerpt; ?>
+            </a></p>
           </div>
       </div>
-      <?php wp_reset_postdata(); // IMPORTANT - reset the $post     
-      } ?>
     </div>
+    <?php wp_reset_postdata(); // IMPORTANT - reset the $post
+    } ?>
 
 
-    <?php 
+    <?php
       if( $post_object_4 ) {
         ?>
     <div class="carousel-item">
@@ -134,14 +141,14 @@
             <p class="card-tag"><?php the_field('slide_tag'); ?></p>
             <h2 class="slide-text"><?php the_title(); ?></h2>
             <p class="card-text"><?php echo $post->post_content; ?></p>
-            <p><a class="btn btn-lg" href="<?php echo the_field('slide_page_link'); ?>">Join our Club</a></p>
+            <p><a class="btn btn-lg" href="<?php echo the_field('slide_page_link'); ?>">
+                <?php echo $post->post_excerpt; ?>
+            </a></p>
           </div>
       </div>
-      <?php wp_reset_postdata(); // IMPORTANT - reset the $post     
-      } ?>
     </div>
-
-
+    <?php wp_reset_postdata(); // IMPORTANT - reset the $post
+    } ?>
 
 
     <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">
