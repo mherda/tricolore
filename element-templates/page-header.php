@@ -10,9 +10,9 @@
 <!-- Page hero image -->
 <!-- :TODO: Refactor all Penge page templates to call this element template. -->
 <?php
-	$img = get_the_post_thumbnail($post->ID, 'pageHeader');
+	$img = get_the_post_thumbnail($post->ID, 'Landing Page Hero');
 	if ( $img ) {
-      echo get_the_post_thumbnail($post->ID, 'pageHeader');
+      echo get_the_post_thumbnail($post->ID, 'Landing Page Hero');
   }
 ?>
 

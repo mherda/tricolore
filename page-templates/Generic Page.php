@@ -30,13 +30,11 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
               </div>
               
               <?php
-    		  	$img = get_the_post_thumbnail($post->ID, 'pageHeader');
+    		  	$img = get_the_post_thumbnail($post->ID, 'Article Hero');
     		  	if ( $img ) {
-                      echo get_the_post_thumbnail($post->ID, 'pageHeader');
+                      echo get_the_post_thumbnail($post->ID, 'Article Hero');
                   } else {
               ?>
-              <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/page_headers/chair.jpg" /> -->
-              <?php } ?>
               
               <header class="entry-header">
                 <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
