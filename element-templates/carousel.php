@@ -28,7 +28,7 @@
          // override $post
           $post = $post_object;
           setup_postdata( $post );
-          $img = wp_get_attachment_url( get_post_thumbnail_id($post), 'thumbnail' );
+          $img = wp_get_attachment_url( get_post_thumbnail_id($post), 'Homepage Carousel' );
         ?>
       <?php if($img) { ?>
       <img class="d-block w-100" src="<?php echo $img ?>" alt="first slide">
@@ -64,7 +64,7 @@
                      // override $post
                       $post = $post_object;
                       setup_postdata( $post );
-                      $img = wp_get_attachment_url( get_post_thumbnail_id($post), 'thumbnail' );
+                      $img = wp_get_attachment_url( get_post_thumbnail_id($post), 'Homepage Carousel' );
                     ?>
       <?php if($img) { ?>
       <img class="d-block w-100" src="<?php echo $img ?>" alt="first slide">
@@ -103,7 +103,7 @@
          // override $post
           $post = $post_object_3;
           setup_postdata( $post );
-          $img = wp_get_attachment_url( get_post_thumbnail_id($post), 'thumbnail' );
+          $img = wp_get_attachment_url( get_post_thumbnail_id($post), 'Homepage Carousel' );
         ?>
       <?php if($img) { ?>
       <img class="d-block w-100" src="<?php echo $img ?>" alt="first slide">
@@ -131,7 +131,7 @@
          // override $post
           $post = $post_object_4;
           setup_postdata( $post );
-          $img = wp_get_attachment_url( get_post_thumbnail_id($post), 'thumbnail' );
+          $img = wp_get_attachment_url( get_post_thumbnail_id($post), 'Homepage Carousel' );
         ?>
       <?php if($img) { ?>
       <img class="d-block w-100" src="<?php echo $img ?>" alt="first slide">
