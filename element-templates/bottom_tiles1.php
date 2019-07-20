@@ -15,7 +15,7 @@ if ( get_field('tile_placeholder_left')
         // override $post
         $post = $post_object;
         setup_postdata( $post );
-        $img = get_the_post_thumbnail_url($post, 'tyle');
+        $img = get_the_post_thumbnail_url($post, '1/2 Tile Desktop');
         $tile_background = ( $img ? 'style="' . "background-image: url('{$img}')" . '"' . "\n" : "" ); // tri-black fallback
     ?>
     <a class="tyle"
@@ -39,7 +39,7 @@ if ( get_field('tile_placeholder_left')
         // override $post
         $post = $post_object;
         setup_postdata( $post );
-        $img = get_the_post_thumbnail_url($post, 'tyle');
+        $img = get_the_post_thumbnail_url($post, '1/2 Tile Desktop');
         $tile_background = ( $img ? 'style="' . "background-image: url('{$img}')" . '"' . "\n" : "" ); // tri-black fallback
     ?>
     <a class="tyle"
