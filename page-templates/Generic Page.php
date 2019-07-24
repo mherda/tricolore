@@ -33,7 +33,7 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
     		  	$img = get_the_post_thumbnail($post->ID, 'Article Hero');
     		  	if ( $img ) {
                       echo get_the_post_thumbnail($post->ID, 'Article Hero');
-                  } else {
+                  } 
               ?>
               
               <header class="entry-header">
