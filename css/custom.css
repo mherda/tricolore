@@ -71,6 +71,9 @@ a:active,
     color: var(--tri-green);
     text-decoration: none;
 }
+a img {
+    border: 0;
+}
 
 /* Main content */
 /* :TODO: theme other page types */
