@@ -25,9 +25,6 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
               <!-- Breadcrumb, hero image then title -->
               <?php get_template_part( 'element-templates/page-header' ); ?>
               
-              <header class="entry-header">
-                <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-              </header><!-- .entry-header -->
               
               
               <div class="entry-content">
