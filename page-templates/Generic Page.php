@@ -21,20 +21,9 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
           <div class="row">
             <div class="col-md-8">
               <!-- beginning of the main column -->
-              <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-                  <?php
-                  if(function_exists('bcn_display'))
-                  {
-                      bcn_display();
-                  }?>
-              </div>
               
-              <?php
-    		  	$img = get_the_post_thumbnail($post->ID, 'Article Hero');
-    		  	if ( $img ) {
-                      echo get_the_post_thumbnail($post->ID, 'Article Hero');
-                  } 
-              ?>
+              <!-- Breadcrumb, hero image then title -->
+              <?php get_template_part( 'element-templates/page-header' ); ?>
               
               <header class="entry-header">
                 <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
