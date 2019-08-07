@@ -41,7 +41,7 @@ $container = get_theme_mod( 'understrap_container_type' );
           <div id="front-tiles" class="grid">
             <?php
               $tile_selection = new WP_Query(array(
-				'posts_per_page' => -1,
+				        'posts_per_page' => -1,
                 'post_type' => 'tile',
                 'category_name' => $tile_cat
 								)
@@ -61,7 +61,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <?php
                 if ($post) { ?>
                 <div class="caption">
-                    <p class="tag"><?php the_field('tile_category'); ?></p>
+                    <p class="tag"><?php echo $tile_cat; ?></p>
                     <h2><?php the_title(); ?></h2>
                     <p><?php echo $post->post_content; ?></p>
                 </div>

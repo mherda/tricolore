@@ -48,7 +48,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                   if ( $tile_selection->have_posts() ) {
                     while ( $tile_selection->have_posts() ) {
                     $tile_selection->the_post();
-                    $img = get_the_post_thumbnail_url($post_id, 'frontTile');
+                    $img = get_the_post_thumbnail_url($post_id, 'tyle');
                     $tile_background = ( $img ? "background-image: url({$img});" : "" ); // tri-green fallback
 
                     if ( $img ) { ?>
