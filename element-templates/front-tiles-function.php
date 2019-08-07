@@ -14,6 +14,7 @@
             $post_object = get_field($title);
             $post = $post_object;
             setup_postdata($post);
+            $tile_cat = get_the_terms( $post, 'category');
             $img = get_the_post_thumbnail_url($post, '1/2 Tile Desktop');
             $tile_background = ( $img ? 'style="' . "background-image: url('{$img}')" . '"' . "\n" : "" ); // tri-black fallback
       ?>
@@ -24,7 +25,7 @@
         <?php
         if ($post) { ?>
         <div class="caption">
-            <p class="tag"><?php the_field('tile_category'); ?></p>
+            <p class="tag"><?php echo $tile_cat[0]->name; ?></p>
             <h2><?php the_title(); ?></h2>
             <p><?php echo $post->post_content; ?></p>
         </div>
@@ -53,6 +54,7 @@
             $post_object = get_field($title);
             $post = $post_object;
             setup_postdata($post);
+            $tile_cat = get_the_terms( $post, 'category');
             $img = get_the_post_thumbnail_url($post, 'frontTilePort');
             $tile_background = ( $img ? 'style="' . "background-image: url('{$img}')" . '"' . "\n" : "" ); // tri-black fallback
       ?>
@@ -63,7 +65,7 @@
             <?php
             if ($post) { ?>
               <div class="caption">
-                <p class="tag"><?php the_field('tile_category'); ?></p>
+                <p class="tag"><?php echo $tile_cat[0]->name; ?></p>
                 <h2><?php the_title(); ?></h2>
                 <p><?php echo $post->post_content; ?></p>
               </div>
