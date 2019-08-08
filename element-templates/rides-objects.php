@@ -45,7 +45,7 @@
     <h4>Optional</h4>
     <div class="row text-center justify-content-center align-items-end">
         <div class="col-auto">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/gear/bring-ID.svg" />
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/gear/bring-id.svg" />
             <p>Some ID</p>
         </div>
         <div class="col-auto">
