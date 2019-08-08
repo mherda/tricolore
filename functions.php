@@ -223,6 +223,3 @@ function wpse_get_breadcrumbs() {
         } ?>
     </ul></div><?php
 }
-
-
-add_filter('jpeg_quality', function($arg){return 100;});
