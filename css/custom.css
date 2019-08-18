@@ -881,6 +881,7 @@ Pagination menu
 .tyle-rectangle {
     flex-direction: row; /* horizontal internal layout */
     background-size: 50% auto; /* 1/2 tile with 1/4 tile image */
+    background-size: calc(50% - 7.5px) auto; /* (595px / 2) - 7.5px = 290px */
     background-position: left top;
 }
 
