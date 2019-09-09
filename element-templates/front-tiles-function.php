@@ -169,7 +169,7 @@
             <?php
             $eventDate = new DateTime(get_field('event_date'));
             ?>
-            <p class="month"><?php echo $eventDate->format('F Y'); ?></p>
+            <p class="month"><?php echo $eventDate->format('M Y'); ?></p>
             <p class="day"><?php echo $eventDate->format('D j'); ?></p>
           </div>
           <div>

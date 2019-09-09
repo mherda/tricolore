@@ -712,7 +712,7 @@ Pagination menu
 
 .pagination {
     justify-content: center; /* theme.css .pagination */
-    margin: 20px auto 20px auto;
+    margin: 40px auto 40px auto;
     padding: 0;
 }
 
