@@ -96,6 +96,7 @@
             // override $post
             $post = $post_object;
             setup_postdata( $post );
+            $tile_cat = get_the_terms( $post, 'category');
             $img = get_the_post_thumbnail_url($post, '1/2 Tile Desktop');
             $tile_background = ( $img ? 'style="' . "background-image: url('{$img}')" . '"' . "\n" : "" ); // tri-black fallback
     ?>
@@ -121,6 +122,7 @@
           // override $post
           $post = $post_object;
           setup_postdata( $post );
+          $tile_cat = get_the_terms( $post, 'category');
           $img = get_the_post_thumbnail_url($post, '1/2 Tile Desktop');
           $tile_background = ( $img ? 'style="' . "background-image: url('{$img}')" . '"' . "\n" : "" ); // tri-black fallback
         ?>
