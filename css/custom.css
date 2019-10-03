@@ -925,7 +925,7 @@ Pagination menu
     /* wrapper for date */
     flex-shrink: 0; /* do not let a long description squash the date */
     min-width: 11.75%; /* col-md-1 inside col-md-8 */
-    width: 11.75%; /* 23.5% col-md-2 inside col-md-8 */
+    width: 15.75%; /* 23.5% col-md-2 inside col-md-8 */
     background: var(--tri-white);
 }
 .events .month,
