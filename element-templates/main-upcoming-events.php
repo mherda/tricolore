@@ -64,6 +64,7 @@
 
 ?>
 
+<!-- Event categories -->
 <nav id="nav_events">
     <div id="navmenu" class="events">
         <ul class="pagination">
@@ -87,8 +88,8 @@ if ( have_posts() ) {
     while ( have_posts() ) {
         the_post();
         $event_d = new DateTime(get_field('event_date'));
-        $event_month = $event_d->format('F');
-        $event_day = $event_d->format('l j');
+        $event_month = $event_d->format('M'); // 3 letter month
+        $event_day = $event_d->format('D j'); // 3 letter day and date without leading zero
         $event_year = $event_d->format('Y');
         $term_list = wp_get_post_terms($post->ID, 'event_category');
 ?>

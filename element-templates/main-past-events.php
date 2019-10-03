@@ -42,8 +42,8 @@ if ( $pastEvents->have_posts() ) {
 		$pastEvents->the_post();
 		
 		$event_d = new DateTime(get_field('event_date'));
-		$event_month = $event_d->format('F'); // full name of month
-		$event_day = $event_d->format('j'); // day of the month without leading zero
+		$event_month = $event_d->format('M'); // 3 letter month
+		$event_day = $event_d->format('D j'); // 3 letter day and date without leading zero
 		$event_year = $event_d->format('Y'); // 4-digit year
 		$term_list = wp_get_post_terms($post->ID, 'event_category');
 ?>
