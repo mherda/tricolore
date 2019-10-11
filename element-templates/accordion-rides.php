@@ -20,7 +20,7 @@
             </tr>
             <tr id="collapse1" class="b-green collapse show" data-parent="#accordion">
                 <td colspan="6">
-                  Suitable for those new to club / group riding. The routes will try to avoid the more challenging hills in the area. Stops to regroup and for punctures and refreshments. On this ride you can build your fitness and confidence.
+                  Suitable for those new to group riding or for those who want a fairly gentle ride. The routes avoid the more challenging hills in the area. Always stops for coffee and cake&hellip;or even bacon baps. On this ride you can build your fitness and confidence.
                 </td>
             </tr>
             
@@ -46,7 +46,7 @@
             </tr>
             <tr id="collapse3" class="b-blue collapse" data-parent="#accordion">
                 <td colspan="6">
-                    Suitable for most fit riders, challenge yourself on all the hills that the local Kent countryside has to offer.
+                    Suitable for most fit riders. Challenge yourself on the hills of Kent&rsquo;s lovely countryside.
                 </td>
             </tr>
 
@@ -59,7 +59,7 @@
             </tr>
             <tr id="collapse4" class="b-red collapse" data-parent="#accordion">
                 <td colspan="6">
-                    Suitable for most fit riders, challenge yourself on all the hills that the local Kent countryside has to offer.
+                    Faster climbing and leaders may add some challenging hills. Generally less stopping and tighter group riding.
                 </td>
             </tr>
 
@@ -72,7 +72,7 @@
             </tr>
             <tr id="collapse5" class="b-black collapse" data-parent="#accordion">
                 <td colspan="6">
-                    A much faster pace with fewer, shorter stops.<br />
+                    This is one for speedsters who need to be home at a reasonable time. The pace is fast with fewer, shorter stops.<br />
                     <b>Can get quite competitive.</b> New members should experience an easier Short group group first.
                 </td>
             </tr>
@@ -89,8 +89,8 @@
             </tr>
             <tr id="collapse6" class="b-blue collapse" data-parent="#accordion">
                 <td colspan="6">
-                    Longer distance at a more relaxed pace. Stops to regroup and for punctures and refreshments. Routes will avoid the most challenging hills.<br />
-                    <b>Note:</b> This ride will not always run so check for announcements on Facebook the week of the ride.
+                    Longer distance at a more relaxed pace. This is a ride for those who normally do the Steady, or Short 1 or 2 but who fancy a longer ride. It’s great if you have signed up for a big sportive and need some extra mileage.<br />
+                    <b>Note:</b> This ride may be cancelled when interest drops over Winter.
                 </td>
             </tr>
 
@@ -103,7 +103,7 @@
             </tr>
             <tr id="collapse7" class="b-blue collapse" data-parent="#accordion">
                 <td colspan="6">
-                    Can include some technical sections and steep hills.
+                    The pace is getting quicker and the ride more experienced ride leaders will throw in some extra challenges. Group riding is encouraged and the rides will include some technical sections and steep hills.
                 </td>
             </tr>
 
@@ -116,7 +116,7 @@
             </tr>
             <tr id="collapse8" class="b-red collapse" data-parent="#accordion">
                 <td colspan="6">
-                    Challenge yourself on all the hills that the local Kent countryside has to offer.
+                    Suitable for more experienced and quicker riders who are familiar with group riding. This will definitely include some challenging climbs and some fast sections.
                 </td>
             </tr>
 
@@ -129,7 +129,7 @@
             </tr>
             <tr id="collapse9" class="b-black collapse" data-parent="#accordion">
                 <td colspan="6">
-                    Members who race or are training for challenging sportives. Stops only for punctures and to regroup.<br />
+                    Suitable for members who race or are training for challenging sportives.<br />
                     <b>Can get quite competitive.</b> New members should experience an easier Long group first.
                 </td>
             </tr>
