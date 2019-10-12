@@ -7,11 +7,11 @@
     
     <h4>Wednesdays</h4>
     <p>7pm <a href="<?php echo site_url('/about-us/sponsors/se20-cycles/'); ?>">SE20 Cycles</a> Shop Rides</p>
-    <p>Medium paced rides that run from  when the evenings are light. Details for these rides are published on <a href="https://www.facebook.com/groups/206843416040902/">our Facebook page</a> when they are running.</p>
+    <p>Medium paced rides when the evenings are light. Details for these rides are published on <a href="https://www.facebook.com/groups/206843416040902/">our Facebook page</a> when they are running.</p>
     
     <h4>Thursdays</h4>
     <p>7:30pm <a href="<?php echo site_url('/about-us/sponsors/se20-cycles/'); ?>">SE20 Cycles</a> Shop Rides</p>
-    <p>Turn up on Thursday night for our fastest rides, all year round. Join the <a href="https://www.facebook.com/groups/684221545036691/">SE20 Cycles shop ride Facebook group</a> to check when this ride is on.</p>
+    <p>Turn up on Thursday night for our fastest rides, all year round. Join the <a href="https://www.facebook.com/groups/684221545036691/">SE20 Cycles Shop Rides group on Facebook</a> for last-minute arrangements.</p>
     
     <h4>Sundays</h4>
     <p>7:45am <a href="<?php echo site_url('/adults/sunday-morning-rides/'); ?>">Sunday Morning Club Rides</a></p>
