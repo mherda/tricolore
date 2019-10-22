@@ -16,7 +16,7 @@
                 <td>8:15am</td>
                 <td>10mph</td>
                 <td>24&ndash;27 miles</td>
-                <td>3 hours</td>
+                <td>4 hours</td>
             </tr>
             <tr id="collapse1" class="b-green collapse show" data-parent="#accordion">
                 <td colspan="6">
@@ -29,7 +29,7 @@
                 <td>8:10am</td>
                 <td>11mph</td>
                 <td>30&ndash;35 miles</td>
-                <td>3½ hours</td>
+                <td>4½ hours</td>
             </tr>
             <tr id="collapse2" class="b-blue collapse" data-parent="#accordion">
                 <td colspan="6">
@@ -42,7 +42,7 @@
                 <td>8am</td>
                 <td>12mph</td>
                 <td>30&ndash;35 miles</td>
-                <td>2½ to 3 hours</td>
+                <td>4 hours</td>
             </tr>
             <tr id="collapse3" class="b-blue collapse" data-parent="#accordion">
                 <td colspan="6">
@@ -55,7 +55,7 @@
                 <td>7:50am</td>
                 <td>13mph</td>
                 <td>30&ndash;35 miles</td>
-                <td>2½ to 3 hours</td>
+                <td>3 hours</td>
             </tr>
             <tr id="collapse4" class="b-red collapse" data-parent="#accordion">
                 <td colspan="6">
@@ -72,7 +72,7 @@
             </tr>
             <tr id="collapse5" class="b-black collapse" data-parent="#accordion">
                 <td colspan="6">
-                    This is one for speedsters who need to be home at a reasonable time. The pace is fast with fewer, shorter stops.<br />
+                    Speedsters who need to be home at a reasonable time. The pace is fast with fewer, shorter stops.<br />
                     <b>Can get quite competitive.</b> New members should experience an easier Short group group first.
                 </td>
             </tr>
@@ -85,7 +85,7 @@
                 <td>8:05am</td>
                 <td>11mph</td>
                 <td>45&ndash;55 miles</td>
-                <td>5 hours</td>
+                <td>5½ hours</td>
             </tr>
             <tr id="collapse6" class="b-blue collapse" data-parent="#accordion">
                 <td colspan="6">
