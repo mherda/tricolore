@@ -1,28 +1,34 @@
 // CUSTOM STUFF
 var key = "98b9c60e63066cc909ee48c92368ee4e";
-var city = "London"; // My test case was "London"
-var url = "https://api.openweathermap.org/data/2.5/forecast";
+var city = "London"; 
+var url = "https://api.openweathermap.org/data/2.5/forecast/daily";
+
+function indexForNextSunday() {
+    let now = new Date();
+    let currentDay = now.getDay();
+    return Math.abs(currentDay - 7);
+}
 
 jQuery.ajax({
-    url: url, //API Call
+    url: url,
     dataType: "json",
     type: "GET",
     data: {
         q: city,
         appid: key,
         units: "metric",
-        cnt: "1"
+        cnt: "7"
     },
-    success: function(data) {
-        console.log('Received data:', data) // For testing
+    success: function (data) {
+        let val = data.list[indexForNextSunday()];
+
         var wf = "";
-        wf += "<h2>" + data.city.name + " Weather</h2><hr />"; // City (displays once)
-        jQuery.each(data.list, function(index, val) {
-            wf += "<h3>" // Opening paragraph tag
-            wf += val.main.temp + "&degC" // Temperature
-            wf += "<span> | " + val.weather[0].description + "</span>"; // Description
-            wf += "</h3>" // Closing paragraph tag
-        });
+        wf += "<h2> Sunday&#39s Weather</h2><hr />"; 
+        wf += "<h3>" 
+        wf += val.temp.day + "&degC"
+        wf += "<span> " + val.weather[0].description + "</span>"; 
+        wf += "</h3>" 
+
         jQuery("#weather").html(wf);
     }
 });
