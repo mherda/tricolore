@@ -21,12 +21,14 @@ jQuery.ajax({
     },
     success: function (data) {
         let val = data.list[indexForNextSunday()];
-            var wf = "";
-            wf += "<h2> Sunday&#39s Weather</h2><hr />"; 
-            wf += "<h3>" 
-            wf += val.temp.day + "&degC"
-            wf += "<span> " + val.weather[0].description + "</span>"; 
-            wf += "</h3>" 
+
+        var wf = "";
+        wf += "<h2> Sunday&#39s Weather</h2><hr />"; 
+        wf += "<h3>" 
+        wf += val.temp.day + "&degC"
+        wf += "<span> " + val.weather[0].description + "</span>"; 
+        wf += "</h3>" 
+
         jQuery("#weather").html(wf);
     }
 });
