@@ -19,8 +19,6 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
-	<h2>dafadfdafaa</h2>
-
 		<?php
 		the_excerpt();
 		?>
