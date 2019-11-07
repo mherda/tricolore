@@ -21,8 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 								<!-- News -->
 								<?php get_template_part( 'element-templates/main-news' ); ?>
 
-								<!-- The pagination component -->
-								<?php understrap_pagination(); ?>
+								
 							</div>
 						</div>
 						
