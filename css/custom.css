@@ -542,10 +542,11 @@ main h1 {
 }
 
 
-/* Navbar active or hovered links */
+/* Navbar active item, current section and hovered links */
 
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item.current-page-ancestor .nav-link,
+.navbar-custom .nav-item.current-category-ancestor .nav-link,
 .navbar-custom .nav-item .nav-link:focus,
 .navbar-custom .nav-item .nav-link:hover,
 .navbar-custom .nav-item .nav-link:active {
@@ -697,7 +698,7 @@ main h1 {
     content: "⟩"; /* MY CHARACTER CODEPOINTS ARE OVER 9000! */
 }
 
-/* Carousel slide indicator pagination thing */
+/* Carousel slider indicator pagination thing */
 
 .carousel-indicators {
 }
@@ -892,9 +893,6 @@ Pagination menu
 }
 
 
-/* :TODO: Text tiles detail after launch */
-
-
 /* Homepage bottom row, events tile */
 
 #front-tiles .tyle.events {
@@ -914,6 +912,8 @@ Pagination menu
     position: absolute;
 }
 
+
+/* :TODO: Text tiles detail after launch */
 
 
 /* Event lists in tiles and sidebar */
@@ -1129,6 +1129,14 @@ The grades are set in the HTML so the accordion could be editable.
     background: var(--tri-dark);
 }
 
+/* Main content news listing thumbnail image on right */
+.has-post-thumbnail {
+    clear: right; /* below any previous thumbnail */
+}
+.has-post-thumbnail img {
+    float: right; /* :TODO: */
+    width: 37.5%; /* 3 columns out of 8; content is 8 out of 12 */
+}
 
 /* Main content meta links */
 .entry-footer span {

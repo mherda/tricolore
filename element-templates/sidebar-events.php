@@ -38,7 +38,7 @@
     <div class="d-flex">
         <div>
             <?php $eventDate = new DateTime(get_field('event_date')); ?>
-            <p class="month"><?php echo $eventDate->format('F'); ?></p>
+            <p class="month"><?php echo $eventDate->format('M Y'); ?></p>
             <p class="day"><?php echo $eventDate->format('D j'); ?></p>
         </div>
         <div>
@@ -78,7 +78,7 @@
     </div>
     <?php } wp_reset_postdata(); ?>
     <?php } else {
-      ?> <p>No upcoming events</p>
+      ?> <p>No upcoming events.</p>
     <?php } ?>
     
     <?php } else { ?>
@@ -86,7 +86,7 @@
         <h3>Upcoming events</h3>
     <?php } ?>
     <p>
-        <a class="btn" href="<?php echo site_url('/events/'); ?>"><?php echo esc_html( $categories[0]->name ); ?> Events</a>
+        <a class="btn" href="<?php echo site_url('/event/' . strtolower($categories[0]->name) . '/'); ?>"><?php echo esc_html( $categories[0]->name ); ?> Events</a>
     </p>
 
 </div> <!-- end of module -->
