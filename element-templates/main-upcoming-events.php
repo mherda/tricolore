@@ -22,7 +22,7 @@
   $data_events = $data['events'];
 
   if( ! empty( $data_events ) ) {
-    function add_event($title, $id, $uri, $event_date) {
+    function add_event($title, $id, $uri, $event_date, $event_status, $entries_close_date) {
       $new_post = array(
         'post_title' => $title,
         'post_content' => '',
@@ -33,6 +33,8 @@
           'hq_id' => $id,
           'event_uri' => $uri,
           'event_date' => $event_date,
+          'event_status' => $event_status,
+          'entries_close_date' => $entries_close_date,
         )
       );
       $pid = wp_insert_post($new_post);
@@ -55,7 +57,7 @@
       $existing_posts = get_posts( $existing_posts_arguments );
 
       if ( count($existing_posts) < 1 ) {
-        add_event($event['name'], $event['id'], $event['uri'], $event['start_date'] );
+        add_event($event['name'], $event['id'], $event['uri'], $event['start_date'], $event['status'], $event['entries_close_date'] );
       }
 
         
@@ -111,11 +113,28 @@ if ( have_posts() ) {
                 foreach( $term_list as $term ) {
                     if($term->name == 'RiderHQ') {
                         $event_uri = get_post_meta($post->ID, 'event_uri');
+                        $event_status = get_post_meta($post->ID, 'event_status');
+                        $entries_close_date = get_post_meta($post->ID, 'entries_close_date');
+                        if ( $entries_close_date ) {
+                          $close_date = new DateTime($entries_close_date[0]);
+                          echo '<p>Entries close date: '.$close_date->format('d-m-Y').'</p>';
+                          $now =  new DateTime();
+                          if ( $close_date > $now ) {
+                            if ( $event_uri ) {
+                              echo '<a class="btn" href="'.$event_uri[0].'">Join on RiderHQ</a>';
+                            }
+                          } else {
+                            echo "Event closed for entries";
+                          }
+                        }
+                        
+                          
+                        
                     }
+                   
                 }
-                if ( $event_uri ) {
-                    echo '<a class="btn" href="'.$event_uri[0].'">Join on RiderHQ</a>';
-                }
+                
+               
                 ?>
 		  	<!-- :TODO: remove obsolete code, even if it was good -->
 			<!--
