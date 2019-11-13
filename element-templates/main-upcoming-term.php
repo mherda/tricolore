@@ -59,11 +59,22 @@ if ( have_posts() ) {
                 foreach( $term_list as $term ) {
                     if($term->name == 'RiderHQ') {
                         $event_uri = get_post_meta($post->ID, 'event_uri');
-                    }
+                        $entries_close_date = get_post_meta($post->ID, 'entries_close_date');
+                        if ( $entries_close_date ) {
+                            $close_date = new DateTime($entries_close_date[0]);
+                            echo '<p>Entries close date: '.$close_date->format('d-m-Y').'</p>';
+                            $now =  new DateTime();
+                            if ( $close_date > $now ) {
+                              if ( $event_uri ) {
+                                echo '<a class="btn" href="'.$event_uri[0].'">Join on RiderHQ</a>';
+                              }
+                            } else {
+                              echo "Event closed for entries.";
+                            }
+                        }
                 }
-                if ( $event_uri ) {
-                    echo '<a class="btn" href="'.$event_uri[0].'">Join on RiderHQ</a>';
-                }
+            }
+            
                 ?>
 		  	<!-- :TODO: remove obsolete code, even if it was good -->
 			<!--
