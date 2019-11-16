@@ -1,9 +1,6 @@
 <?php
 
-$post_type = $post->type;
-
-if ( $post_type != "Other") {
-	echo "not other not other";
+if ( $post->hq_id ) {
 	$post_id = $post->hq_id;
 	$request_root = "https://api.riderhq.com/api/v1/3446/getevent?eventid=";
 	$single_request = wp_remote_get( $request_root . $post_id );
@@ -33,7 +30,9 @@ if ( $post_type != "Other") {
 	if ( ! add_post_meta( get_the_ID(), 'event_description', $e_desc, true ) ) { 
 		update_post_meta ( get_the_ID(), 'event_description', $e_desc );
 	}
-}
+} 
+
+
 // End of API request related code
 
 
@@ -90,11 +89,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 								if ( $event_meta_desc ) {
 									echo $event_meta_desc[0];
 								}
-
-								if ( $post_type == "Other" ) { ?>
-								<p>More information about Sunday morning rides can be found <a href="http://pengecycleclub.uk/adults/sunday-morning-rides/">here</a>.</p>
-									
-								<?php }
 
 								the_content(); ?>
 								<?php
