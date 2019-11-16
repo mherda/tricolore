@@ -1,11 +1,41 @@
 <?php
-/**
- * Template Name: Single Event
- *
- * Template for displaying a page without sidebar even if a sidebar widget is published.
- *
- * @package understrap
- */
+
+$post_type = $post->type;
+
+if ( $post_type != "Other") {
+	echo "not other not other";
+	$post_id = $post->hq_id;
+	$request_root = "https://api.riderhq.com/api/v1/3446/getevent?eventid=";
+	$single_request = wp_remote_get( $request_root . $post_id );
+
+	if( is_wp_error( $request ) ) {
+    echo "wrong request";
+		return false; // Bail early
+	}
+
+	function utf8ize($mixed) {
+		if (is_array($mixed)) {
+		foreach ($mixed as $key => $value) {
+		$mixed[$key] = utf8ize($value);
+		}
+		} else if (is_string ($mixed)) {
+		return utf8_encode($mixed);
+		}
+		return $mixed;
+		}
+	
+	$body = wp_remote_retrieve_body( $single_request );
+	$data = json_decode(utf8ize($body), true);
+	$event_details = $data['event'];
+
+	$e_desc = $event_details['organiser_description_html'];
+
+	if ( ! add_post_meta( get_the_ID(), 'event_description', $e_desc, true ) ) { 
+		update_post_meta ( get_the_ID(), 'event_description', $e_desc );
+	}
+}
+// End of API request related code
+
 
 get_header('front');
 $container = get_theme_mod( 'understrap_container_type' );
@@ -34,31 +64,53 @@ $container = get_theme_mod( 'understrap_container_type' );
 										$event_year = $event_d->format('Y');
 										$event_display = $event_day . " " . $event_month . " " . $event_year;
 								?>
-								<p><?php echo $event_display; ?></p>
+								<h3>Event Date: <?php echo $event_display; ?></h3>
 								
 								<!-- <img src="<?php the_post_thumbnail('eventFeatured'); ?>" /> -->
+								<?php 
+
+								$event_uri = get_post_meta($post->ID, 'event_uri');
+								$entries_close_date = get_post_meta($post->ID, 'entries_close_date');
+								$event_meta_desc = get_post_meta( get_the_ID(), 'event_description' );
+
 								
-								<?php the_content(); ?>
+								if ( $entries_close_date ) {
+									$close_date = new DateTime($entries_close_date[0]);
+									echo '<p>Entries close date: '.$close_date->format('d-m-Y').'</p>';
+									$now =  new DateTime();
+									if ( $close_date > $now ) {
+										if ( $event_uri ) {
+											echo '<p></p><a class="btn" href="'.$event_uri[0].'">Join on RiderHQ</a></p>';
+										}
+									} else {
+										echo "<p></p>Event closed for entries.</p>";
+									}
+								}
+
+								if ( $event_meta_desc ) {
+									echo $event_meta_desc[0];
+								}
+
+								if ( $post_type == "Other" ) { ?>
+								<p>More information about Sunday morning rides can be found <a href="http://pengecycleclub.uk/adults/sunday-morning-rides/">here</a>.</p>
+									
+								<?php }
+
+								the_content(); ?>
 								<?php
 									} // end while
 								} // end if
 								?>
-								
+
 							</div> <!-- .entry-content -->
-							
-							<?php get_template_part( 'element-templates/bottom_tiles1' ); ?>
-							
+														
 						</div> <!-- end of main column -->
 						
 						
 						<div class="col-md-4 sidebar"> <!-- beginning of Sidebar -->
 							
 							<?php get_template_part( 'element-templates/sidebar-upcoming-events' ); ?>
-							
-							<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>
-							
-							<?php get_template_part( 'sidebar-templates/sidebar', 'right' ); ?>
-							
+																				
 						</div> <!-- End of Side -->
 						
 					</div><!-- end of content-row -->

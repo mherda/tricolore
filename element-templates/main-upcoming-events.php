@@ -22,7 +22,7 @@
   $data_events = $data['events'];
 
   if( ! empty( $data_events ) ) {
-    function add_event($title, $id, $uri, $event_date, $event_status, $entries_close_date) {
+    function add_event($title, $id, $uri, $event_date, $event_status, $entries_close_date, $type) {
       $new_post = array(
         'post_title' => $title,
         'post_content' => '',
@@ -35,6 +35,7 @@
           'event_date' => $event_date,
           'event_status' => $event_status,
           'entries_close_date' => $entries_close_date,
+          'type' => $type,
         )
       );
       $pid = wp_insert_post($new_post);
@@ -57,7 +58,7 @@
       $existing_posts = get_posts( $existing_posts_arguments );
 
       if ( count($existing_posts) < 1 ) {
-        add_event($event['name'], $event['id'], $event['uri'], $event['start_date'], $event['status'], $event['entries_close_date'] );
+        add_event($event['name'], $event['id'], $event['uri'], $event['start_date'], $event['status'], $event['entries_close_date'], $event['type'] );
       }
 
         
@@ -115,6 +116,7 @@ if ( have_posts() ) {
                         $event_uri = get_post_meta($post->ID, 'event_uri');
                         $event_status = get_post_meta($post->ID, 'event_status');
                         $entries_close_date = get_post_meta($post->ID, 'entries_close_date');
+                        $type = get_post_meta($post->ID, 'type');
                         if ( $entries_close_date ) {
                           $close_date = new DateTime($entries_close_date[0]);
                           echo '<p>Entries close date: '.$close_date->format('d-m-Y').'</p>';
