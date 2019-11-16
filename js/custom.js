@@ -1,6 +1,6 @@
 // CUSTOM STUFF
 var key = "98b9c60e63066cc909ee48c92368ee4e";
-var city = "London"; 
+var city = "London";
 var url = "https://api.openweathermap.org/data/2.5/forecast/daily";
 let now = new Date();
 let currentDay = now.getDay();
@@ -23,7 +23,7 @@ jQuery.ajax({
         units: "metric",
         cnt: "7"
     },
-    success: function (data) {
+    success: function(data) {
         let val = data.list[indexForNextSunday(currentDay)];
         let forecastDate = new Date(1000 * val.dt);
         console.log(forecastDate);
@@ -31,15 +31,14 @@ jQuery.ajax({
 
         if (currentDay == 0) {
             wf += "<h2>Today&#39s Weather</h2><hr />";
-        }
-        else {
+        } else {
             wf += "<h2>Sunday&#39s Weather</h2><hr />";
         }
-         
-        wf += "<h3>" 
+
+        wf += "<p>"
         wf += Math.round(val.temp.day) + "&degC"
-        wf += "<span> " + val.weather[0].description + "</span>"; 
-        wf += "</h3>" 
+        wf += "<span> " + val.weather[0].description + "</span>";
+        wf += "</p>"
         jQuery("#weather").html(wf);
     }
 });
