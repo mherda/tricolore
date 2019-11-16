@@ -39,7 +39,7 @@
         )
       );
       $pid = wp_insert_post($new_post);
-      wp_set_object_terms($pid, 'riderhq', 'event_category');
+      wp_set_object_terms($pid, 'adults', 'event_category');
       $get_meta_time = get_post_meta($pid, 'event_date');
       $newformat = date('Ymd', strtotime($get_meta_time[0]));
       update_post_meta($pid, 'event_date', $newformat);
@@ -112,7 +112,7 @@ if ( have_posts() ) {
             <?php
                 $event_uri = '';
                 foreach( $term_list as $term ) {
-                    if($term->name == 'RiderHQ') {
+                    if($term->name == 'Adults') {
                         $event_uri = get_post_meta($post->ID, 'event_uri');
                         $event_status = get_post_meta($post->ID, 'event_status');
                         $entries_close_date = get_post_meta($post->ID, 'entries_close_date');

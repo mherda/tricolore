@@ -57,7 +57,7 @@ if ( have_posts() ) {
             <?php
                 $event_uri = '';
                 foreach( $term_list as $term ) {
-                    if($term->name == 'RiderHQ') {
+                    if($term->name == 'Adults') {
                         $event_uri = get_post_meta($post->ID, 'event_uri');
                         $entries_close_date = get_post_meta($post->ID, 'entries_close_date');
                         if ( $entries_close_date ) {
