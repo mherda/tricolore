@@ -24,7 +24,20 @@
 
 	<div class="entry-summary">
 
-		<?php the_excerpt(); ?>
+		<?php the_excerpt(); 
+		
+		$event_meta_desc = get_post_meta( get_the_ID(), 'event_description' );
+		if ( $event_meta_desc ) {
+			$str = strtok($event_meta_desc[0], "\n");
+
+			echo $str;
+		}
+		
+		
+		
+		?>
+
+
 
 	</div><!-- .entry-summary -->
 
