@@ -31,41 +31,51 @@
 <div class="hfeed site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar" class="full_dark" itemscope itemtype="http://schema.org/WebSite">
-
-		<div id="page-header">
-			<div class="logo">
-				<?php
-				the_custom_logo();
-				if (!has_custom_logo()) {
-				?>
-				<a href="/">
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" width="200" />
-				</a>
-				<?php } ?>
+	<!-- Flex Header with Content -->
+	<div id="wrapper-navbar" class="wrapper">
+		<div class="container-fluid notFull">
+			<div class="row">
+				<div class="col-md-2 col-sm-12">
+					<div class="logo">
+						<?php
+						the_custom_logo();
+						if (!has_custom_logo()) {
+						?>
+						<a href="/">
+							<img src="<?php echo get_template_directory_uri(); ?>/assets/logo.svg" width="259" height="105" />
+						</a>
+						<?php } ?>
+					</div>
+				</div>
+				<div class="col-md-4 offset-md-6 col-sm-12">
+					<?php get_search_form(); ?>
+				</div>
 			</div>
-			<div class="search-area">
-				<?php get_search_form(); ?>
+			<div class="row">
+				<div class="col-md-10 offset-md-2 col-sm-12">
+					<nav class="navbar navbar-expand-md navbar-dark navbar-custom">
+						<!--
+							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+						-->
+
+						<!-- The WordPress Menu goes here -->
+						<?php wp_nav_menu(
+							array(
+								'theme_location'  => 'primary',
+								'container_class' => '',
+								'container_id'    => 'navbarNavDropdown',
+								'menu_class'      => 'navbar-nav',
+								'fallback_cb'     => '',
+								'menu_id'         => 'main-menu',
+								'depth'           => 2,
+								'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+							)
+						); ?>
+					</nav>
+				</div>
 			</div>
-			<nav class="navbar navbar-expand-md navbar-dark navbar-custom">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-
-				<!-- The WordPress Menu goes here -->
-				<?php wp_nav_menu(
-					array(
-						'theme_location'  => 'primary',
-						'container_class' => 'collapse navbar-collapse',
-						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav',
-						'fallback_cb'     => '',
-						'menu_id'         => 'main-menu',
-						'depth'           => 3,
-						'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
-					)
-				); ?>
-			</nav><!-- .site-navigation -->
-
-		</div><!-- #page-header end -->
-	</div><!-- #wrapper-navbar end -->
+		</div>
+	</div>
+	<!-- ******************* End of The Navbar Area ******************* -->

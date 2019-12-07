@@ -455,78 +455,73 @@ main h1 {
 #wrapper-navbar {
     position: relative;
     z-index: 1; /* cast shadow onto later elements */
+    padding-top: 10px; /* .nav-link creates padding-bottom */
     box-shadow: 0 0 10px 0 black; /* will be cast onto --tri-black */
 }
 
-#page-header {
-    display: grid;
-    grid-template-areas: "logo" "search" "nav";
-}
-
-#page-header > .logo {
-    padding: 10px;
-    grid-area: logo;
-    align-self: center;
-    justify-self: center;
-}
-#page-header > .logo > img {
+/* Logo */
+.logo img {
     display: block;
-    margin: 0 auto; /* central on mobile */
+    margin-left: auto; /* central on mobile */
+    margin-right: auto; /* central on mobile */
 }
 
-#page-header > .search-area {
-    grid-area: search;
-    align-self: center;
-    /* justify-self: end; */
+/* Search box */
+#searchform {
+    padding: 24px 0 7px 0; /* 1x line-height */
 }
 
-#page-header>nav {
-    grid-area: nav;
-    justify-self: start;
+/* Nav menu */
+.navbar,
+.navbar-collapse {
+    justify-content: center; /* theme.css flex-start */
+}
+.navbar-nav {
+    /* theme.css assumes hamburger menu */
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.dropup, .dropright, .dropdown, .dropleft {
+    position: static; /* theme.css assumes hamburger */
+}
+.navbar-nav .dropdown-menu {
+    margin: 0 auto;
+    top: 100%;
+    position: absolute; /* theme.css assumes hamburger */
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    border: 0;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 0 10px 0 black; /* will be cast onto --tri-black */
+}
+.navbar-nav .dropdown-menu:before {
+    content: '';
+    position: absolute;
+    top: -7px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid var(--tri-green);
+    border-left: 7px solid transparent;
 }
 
 @media (min-width: 768px) {
-    #page-header {
-        grid-template-areas: "logo search" "logo nav";
-        grid-template-columns: 1fr 4fr;
+    .logo img {
+        margin-bottom: -28px; /* bring up the navbar alongside the logo */
     }
-    #page-header > .logo {
-        padding: 20px 0;
-        grid-area: logo;
-        align-self: end;
+    #searchform {
+        padding: 0;
     }
-    #page-header > .search-area {
-        grid-area: search;
-        align-self: center;
-        justify-self: end;
-    }
-    #page-header > nav {
-        grid-area: nav;
-        justify-self: center;
+    .dropup, .dropright, .dropdown, .dropleft {
+        position: relative; /* desktop floating dropdowns */
     }
 }
 
 @media (min-width: 1200px) {
-    #page-header {
-        grid-template-areas: "logo search" "logo nav";
-        grid-template-columns: 1fr 5fr;
-        grid-template-rows: 3fr 2fr;
-    }
-    #page-header > .logo {
-        padding: 20px 0;
-        grid-area: logo;
-        align-self: end;
-    }
-    #page-header > .search-area {
-        display: block;
-        grid-area: search;
-        align-self: center;
-        justify-self: end;
-    }
-    #page-header > nav {
-        grid-area: nav;
-        justify-self: center;
-    }
+
 }
 
 
@@ -536,14 +531,15 @@ main h1 {
     padding: 0;
 }
 
+
+/* Navbar links */
+
 .navbar-custom .navbar-nav .nav-link {
     padding: 10px;
     color: var(--tri-white);
 }
 
-
 /* Navbar active item, current section and hovered links */
-
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item.current-page-ancestor .nav-link,
 .navbar-custom .nav-item.current-category-ancestor .nav-link,
@@ -552,6 +548,8 @@ main h1 {
 .navbar-custom .nav-item .nav-link:active {
     color: var(--tri-green);
 }
+
+/* Navbar dropdown menu links */
 
 .navbar-custom .navbar-nav .dropdown-menu .nav-link {
     color: var(--tri-white) !important; /* :TODO: theme.css too much !important */
@@ -968,12 +966,6 @@ a .fa {
 
 .mw50 {
     min-width: 80px;
-}
-
-/* Search box in content */
-/* Used on the 404 page */
-#searchform {
-    width: 100%;
 }
 
 
