@@ -45,9 +45,11 @@ jQuery.ajax({
 
 
 
-
+/* Changed to CSS control */
+/*
 jQuery('ul.navbar-nav li.dropdown').hover(function() {
-    jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(500);
+    jQuery(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(200);
 }, function() {
-    jQuery(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(500);
+    jQuery(this).find('.dropdown-menu').stop(true, true).delay(100).fadeOut(200);
 });
+*/
