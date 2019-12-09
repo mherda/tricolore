@@ -110,7 +110,7 @@ class understrap_WP_Bootstrap_Navwalker extends Walker_Nav_Menu {
 
 			if ( $args->has_children && $depth === 0 ) {
 				if ( wp_is_mobile() ) {
-					$atts['href'] = ! empty( $item->url ) ? item->url : '';
+					$atts['href'] =  ! empty( $item->url ) ? $item->url : '';
 					$atts['data-toggle'] = 'dropdown';
 				} else {
 					$atts['href'] = ! empty( $item->url ) ? $item->url : '';
