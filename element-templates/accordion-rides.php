@@ -13,7 +13,7 @@
         <tbody>
             <tr id="heading1" class="b-green" data-toggle="collapse" data-target="#collapse1" aria-expanded="true">
                 <th><i class="fa"></i> Steady</th>
-                <td>8:15am</td>
+                <td>08:15</td>
                 <td>10-11mph</td>
                 <td>24&ndash;27 miles</td>
                 <td>4 hours</td>
@@ -26,7 +26,7 @@
             
             <tr id="heading2" class="b-blue collapsed" data-toggle="collapse" data-target="#collapse2">
                 <th><i class="fa"></i> Short 1</th>
-                <td>8:10am</td>
+                <td>08:10</td>
                 <td>11-12mph</td>
                 <td>30&ndash;35 miles</td>
                 <td>4½ hours</td>
@@ -39,7 +39,7 @@
 
             <tr id="heading3" class="b-blue collapsed" data-toggle="collapse" data-target="#collapse3">
                 <th><i class="fa"></i> Short 2</th>
-                <td>8am</td>
+                <td>08:00</td>
                 <td>12-13mph</td>
                 <td>30&ndash;35 miles</td>
                 <td>4 hours</td>
@@ -52,9 +52,9 @@
 
             <tr id="heading4" class="b-red collapsed" data-toggle="collapse" data-target="#collapse4">
                 <th><i class="fa"></i> Short 3</th>
-                <td>7:50am</td>
+                <td>07:55</td>
                 <td>13-14mph</td>
-                <td>30&ndash;35 miles</td>
+                <td>35 miles</td>
                 <td>3 hours</td>
             </tr>
             <tr id="collapse4" class="b-red collapse" data-parent="#accordion">
@@ -65,27 +65,26 @@
 
             <tr id="heading5" class="b-black collapsed" data-toggle="collapse" data-target="#collapse5">
                 <th><i class="fa"></i> Short 4</th>
-                <td>7:45am</td>
+                <td>07:50</td>
                 <td>15-16mph</td>
-                <td>30&ndash;35 miles</td>
+                <td>35 miles</td>
                 <td>2½ hours</td>
             </tr>
             <tr id="collapse5" class="b-black collapse" data-parent="#accordion">
                 <td colspan="6">
-                    Speedsters who need to be home at a reasonable time. The pace is fast with fewer, shorter stops.<br />
-                    <b>Can get quite competitive.</b> New members should experience an easier Short group group first.
+                Brisk, with few stops to re-group, this should be a ride Short 3 riders can step up to when they want a tougher workout. It is still a social ride where the group stays together.
                 </td>
             </tr>
             <tr id="heading6" class="b-black collapsed" data-toggle="collapse" data-target="#collapse6">
-                <th><i class="fa"></i> Short 5 (ad hoc)</th>
-                <td>7:45am</td>
+                <th><i class="fa"></i> Short 5</th>
+                <td>07:45</td>
                 <td>17mph+</td>
-                <td>30&ndash;35 miles</td>
+                <td>35 miles</td>
                 <td>2½ hours</td>
             </tr>
             <tr id="collapse6" class="b-black collapse" data-parent="#accordion">
                 <td colspan="6">
-                    Self-led, ad hoc
+                This is an ad-hoc ride that is self-led. It is for small groups of experienced, fast riders who are in a hurry. Feel at ease in the Short 4 or Long 4 before you take this one on.
                 </td>
             </tr>
             
@@ -94,7 +93,7 @@
             
             <tr id="heading7" class="b-blue collapsed" data-toggle="collapse" data-target="#collapse7">
                 <th><i class="fa"></i> Long 1 (ad hoc)</th>
-                <td>8:05am</td>
+                <td>08:05</td>
                 <td>11-12mph</td>
                 <td>45&ndash;55 miles</td>
                 <td>5½ hours</td>
@@ -108,7 +107,7 @@
 
             <tr id="heading8" class="b-blue collapsed" data-toggle="collapse" data-target="#collapse8">
                 <th><i class="fa"></i> Long 2</th>
-                <td>8am</td>
+                <td>08:00</td>
                 <td>13-14mph</td>
                 <td>45&ndash;55 miles</td>
                 <td>5 hours</td>
@@ -121,7 +120,7 @@
 
             <tr id="heading9" class="b-red collapsed" data-toggle="collapse" data-target="#collapse9">
                 <th><i class="fa"></i> Long 3</th>
-                <td>7:50am</td>
+                <td>07:50</td>
                 <td>15-16mph</td>
                 <td>45&ndash;55 miles</td>
                 <td>4½ hours</td>
@@ -134,7 +133,7 @@
 
             <tr id="heading10" class="b-black collapsed" data-toggle="collapse" data-target="#collapse10">
                 <th><i class="fa"></i> Long 4</th>
-                <td>7:45am</td>
+                <td>07:45</td>
                 <td>17mph+</td>
                 <td>60&ndash;75 miles</td>
                 <td>4½ to 5 hours</td>
@@ -148,7 +147,7 @@
 
             <tr id="heading11" class="b-black collapsed" data-toggle="collapse" data-target="#collapse11">
                 <th><i class="fa"></i> Long 5 (ad hoc)</th>
-                <td>7:45am</td>
+                <td>07:45</td>
                 <td>18mph+</td>
                 <td>60&ndash;75 miles</td>
                 <td>4½ to 5 hours</td>
