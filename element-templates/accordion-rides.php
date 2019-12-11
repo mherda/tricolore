@@ -140,8 +140,7 @@
             </tr>
             <tr id="collapse10" class="b-black collapse" data-parent="#accordion">
                 <td colspan="6">
-                    Suitable for members who race or are training for challenging sportives.<br />
-                    <b>Can get quite competitive.</b> New members should experience an easier Long group first.
+                    This is a social ride for fast riders. Make sure you find Long 3 relatively easy and perhaps ride with a Long 4 regular rider before giving this one a go.
                 </td>
             </tr>
 
@@ -154,8 +153,7 @@
             </tr>
             <tr id="collapse11" class="b-black collapse" data-parent="#accordion">
                 <td colspan="6">
-                    Suitable for members who race or are training for challenging sportives.<br />
-                    <b>Can get quite competitive.</b> New members should experience an easier Long group first.
+                    An ad-hoc ride that is self-led. It is for small groups of experienced, fast riders who are in a hurry. Feel at ease in the Short 5 or Long 4 before you take this one on.
                 </td>
             </tr>
             
