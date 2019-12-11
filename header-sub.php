@@ -30,20 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite">
-
-		<!--
-		<div class="d-flex justify-content-between mt-2 ml-1 mr-1 mb-1">
-      <div class="p-2">
-        <a href="https://www.facebook.com/groups/206843416040902/"><i class="fa fa-lg fa-facebook"></i></a>
-        <a href="https://www.youtube.com/channel/UCldNfBQKDUfxZzQcYkKVSmw"><i class="fa fa-lg fa-flickr"></i></a>                                                                                <a href="https://www.youtube.com/channel/UCldNfBQKDUfxZzQcYkKVSmw"><i class="fa fa-lg fa-youtube"></i></a>
-      </div>
-
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/whiteLogo.svg" width="200" />
-
-	                    <i class="fa fa-search"></i>
-
-    </div> -->
-
+		
 		<div class='row mt-3 mb-3'>
 			<div class="col-md-4 offset-md-4 text-center">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/whiteLogo.svg" width="200" />

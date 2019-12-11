@@ -1017,9 +1017,22 @@ main,
 
 /* Article content title */
 main h1 {
-    margin: 0 0 10px 0;
+    margin: 0 0 24px 0;
     padding-top: 20px;
     border-top: 4px solid var(--tri-green); /* below breadcrumb or image */
+}
+main h2 {
+    margin: 24px 0 12px 0;
+}
+
+/* Main content lists */
+ol, ul {
+    margin-left: 0;
+    padding-left: 2em;
+}
+li {
+    margin-left: 0;
+    padding-left: 0;
 }
 
 /* Main content photos amongst text */
@@ -1209,35 +1222,38 @@ The grades are set in the HTML so the accordion could be editable.
 
 /* Social */
 
-.site-info .row:first-child h3 {
-    margin: 0;
-    padding: 36px 0 16px 0; /* double gutter, adjusted for line-height */
+.site-info h3 {
+    margin: 40px 0 20px 0; /* double gutter, adjusted for line-height */
+    padding: 0;
+}
+.site-info ul + h3 {
+    margin-top: 30px;
 }
 
 .site-info ul,
 .site-info li {
     display: block;
-    margin: 0;
+    margin: 0 0 20px 0;
     padding: 0;
 }
 .site-info li {
-    padding-bottom: 20px;
 }
 
 /* Social links with icons */
+.site-info div + div h3,
+.site-info li {
+    margin-left: 40px;
+}
 .site-info h3 > a,
 .site-info li > a {
-    margin-left: 30px;
-    position: relative;
     border-bottom: 2px solid transparent; /* placeholder for hover effect */
 }
 .site-info a > i {
-    display: block;
     top: 0;
-    left: -30px;
-    width: 30px;
-    position: absolute;
+    margin-left: -40px;
     margin-right: 0;
+    width: 40px;
+    position: relative;
 }
 
 
