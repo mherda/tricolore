@@ -36,7 +36,7 @@ jQuery.ajax({
         }
 
         wf += "<p>"
-        wf += Math.round(val.temp.day) + "&degC"
+        wf += Math.round(val.temp.day) + "&deg;C"
         wf += "<span> " + val.weather[0].description + "</span>";
         wf += "</p>"
         jQuery("#weather").html(wf);

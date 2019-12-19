@@ -220,7 +220,9 @@ a img {
     background: var(--tri-green);
 }
 .sidebar .gallery,
-.sidebar .events {
+.sidebar .events,
+.sidebar .menu {
+    /* Text is already white when outside of main content */
     background: var(--tri-black);
 }
 
@@ -238,6 +240,7 @@ a img {
     --font-h4: 700 24px/28px var(--font-heading);
     --font-h5: 700 20px/28px var(--font-heading);
     --font-h6: 700 18px/24px var(--font-heading);
+    --font-accordion: 700 16px/24px var(--font-heading);
     --font-p: 400 14px/24px var(--font-body);
     --font-p-bold: 600 14px/24px var(--font-body);
     --font-p-highlight: 400 18px/24px var(--font-body); /* normal */
@@ -276,6 +279,7 @@ th {
 .nav-link {
     font: var(--font-p-highlight);
     font-weight: 600;
+    font-size: 18px;
 }
 
 /* Carousel tag */
@@ -504,7 +508,7 @@ main h1 {
 }
 .navbar,
 .navbar-collapse {
-    justify-content: center; /* theme.css flex-start */
+    justify-content: left; /* theme.css flex-start */
 }
 .navbar-nav {
     /* theme.css assumes hamburger menu */
@@ -592,7 +596,7 @@ main h1 {
         margin-left: 0; /* normal alignment on desktop */
     }
     .navbar-custom .navbar-nav .nav-link {
-        padding: 10px 10px 12px 10px;
+        padding: 10px 15px 12px 15px;
     }
     
     .dropup, .dropright, .dropdown, .dropleft {
@@ -601,7 +605,6 @@ main h1 {
     
     .dropdown-menu {
         margin-left: -0.855em; /* offset down arrow caret */
-        text-align: left;
     }
 }
 
@@ -759,6 +762,83 @@ Pagination menu
     color: var(--tri-white);
     background: var(--tri-green);
 }
+
+
+/* Sidebar box for News navigation */
+
+.sidebar .menu {
+    padding: 0; /* entirely block links with their own spacing */
+}
+
+.sidebar .menu ul,
+.sidebar .menu li {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* News nav links */
+.sidebar .menu a {
+    display: block;
+    width: 100%; /* border-box from theme.css */
+}
+.sidebar .menu > ul > li > a {
+    padding: 15px 20px;
+    font: var(--font-accordion);
+}
+.sidebar .menu > ul > li > a:only-child {
+    border-bottom: 1px solid var(--tri-white);
+}
+.sidebar .menu > ul > li:last-child > a {
+    border-bottom: 0;
+}
+.sidebar .menu > ul > li > ul > li > a {
+    padding: 0 20px 0 40px; /* 24px line-height */
+    font: var(--font-link);
+}
+/* First and last month spacing */
+.sidebar .menu > ul > li > ul > li:first-child > a {
+    padding-top: 12px; /* half line-height */
+}
+.sidebar .menu > ul > li > ul > li:last-child > a {
+    padding-bottom: 12px; /* half line-height */
+}
+/* News nav link colours */
+.sidebar .menu a:not([href]) {
+    color: var(--tri-black) !important; /* theme.css */
+    background: var(--tri-white);
+}
+.sidebar .menu a {
+    color: var(--tri-white);
+    background: var(--tri-green);
+}
+.sidebar .menu a:hover,
+.sidebar .menu a:focus,
+.sidebar .menu a:active {
+    color: var(--tri-white);
+    border-bottom: 0;
+}
+.sidebar .menu > ul > li > ul > li > a:link,
+.sidebar .menu > ul > li > ul > li > a:visited {
+    color: var(--tri-green);
+    background: var(--tri-white);
+}
+/* News nav link icons */
+.sidebar .menu .fa {
+    margin: 0;
+    width: 20px;
+}
+.sidebar .menu .fa:after {
+    content: '\f077';
+    /* chevron-up */
+    content: '˄';
+}
+.sidebar .menu .fa:after {
+    content: '\f078';
+    /* chevron-down */
+    content: '˅';
+}
+
 
 
 
@@ -1114,9 +1194,7 @@ main table td:last-child {
 #accordion th,
 #accordion td {
     width: 20%; /* 5 columns */
-    font-weight: 700;
-    font-size: 16px;
-    font-family: 'Karla', sans-serif;
+    fon: var(--font-accordion);
     border-top: 1px solid white;
 }
 #accordion td:first-child {
