@@ -1,4 +1,4 @@
-<!-- Sidebar box for News navigation -->
+<!-- Sidebar box for News navigation
 <div class="menu">
     <ul>
         <li>
@@ -24,3 +24,33 @@
         <li><a href="/"><i class="fa"></i>2014</a></li>
     </ul>
 </div>
+-->
+
+<?php
+global $wpdb;
+$limit = 0;
+$year_prev = null;
+$months = $wpdb->get_results("SELECT DISTINCT MONTH( post_date ) AS month ,  YEAR( post_date ) AS year, COUNT( id ) as post_count FROM $wpdb->posts WHERE post_status = 'publish' and post_date <= now( ) and post_type = 'news' GROUP BY month , year ORDER BY post_date DESC");
+?>
+<div class="menu">
+    <ul class="year">
+        <?php
+        foreach($months as $month) :
+        $year_current = $month->year;
+        if ($year_current != $year_prev){
+        if ($year_prev != null){
+            echo "</ul><!-- .month -->\n\t\t\t</li><!-- .li-year -->\n";
+        } ?>
+        <li class="li-year"><a href="<?php bloginfo('url') ?>/news/<?php echo $month->year; ?>/"><?php echo $month->year; ?></a>
+            <ul class="month">
+                <?php } ?>
+                <li>
+                    <a href="<?php bloginfo('url') ?>/news/<?php echo $month->year; ?>/<?php echo date("m", mktime(0, 0, 0, $month->month, 1, $month->year)) ?>"><span class="archive-month"><?php echo date_i18n("F", mktime(0, 0, 0, $month->month, 1, $month->year)) ?> (<?php echo $month->post_count; ?>)</span></a>
+                </li>
+                <?php $year_prev = $year_current; ?>
+                <?php endforeach; ?>
+            </ul><!-- .month -->
+        </li><!-- .li-year -->
+    </ul><!-- .year -->
+</div><!-- .menu -->
+

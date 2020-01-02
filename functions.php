@@ -224,8 +224,3 @@ function wpse_get_breadcrumbs() {
     </ul></div><?php
 }
 
-function pass_expire($time) {
-    return 0;
-}
-
-add_filter( 'post_passowrd_expires', 'pass_expire' );
