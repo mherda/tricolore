@@ -3,8 +3,10 @@
 :root {
     --tri-black: #1f1e21;
     --tri-green: #1ea02d; /* #5ea03b; */
+    --tri-green-darken: #00760e; /* button interaction */
     --tri-white: #ecf1f4;
     --tri-red: #c1001f;
+    --tri-red-darken: #8c041a; /* button interaction */
     --tri-blue: #4a90e2; /* :TODO: Sunday Rides add swatch to design guide */
     --tri-dark: #3c4645;
     --tri-grey: #7d7d7d; /* :TODO: not used? */
@@ -141,7 +143,7 @@ a img {
 .wp-block-file .wp-block-file__button:focus,
 .wp-block-file .wp-block-file__button:active {
     color: var(--tri-white);
-    background-color: var(--tri-green);
+    background-color: var(--tri-red-darken);
 }
 
 .btn-success {
@@ -152,7 +154,7 @@ a img {
 .btn-success:focus,
 .btn-success:active {
     color: var(--tri-white);
-    background-color: var(--tri-green);
+    background-color: var(--tri-green-darken);
 }
 
 /* Buttons on green sidebar */
@@ -160,7 +162,7 @@ a img {
 .sidebar .btn:focus,
 .sidebar .btn:active {
     color: var(--tri-white);
-    background-color: var(--tri-red); /* avoid green on green */
+    background-color: var(--tri-red-darken); /* avoid green on green */
 }
 
 
@@ -169,7 +171,7 @@ a img {
 .btn:not(:disabled):not(.disabled).active,
 .show > .btn.dropdown-toggle {
     color: var(--tri-white);
-    background-color: var(--tri-green);
+    background-color: var(--tri-green-darken);
 }
 
 /* Large buttons (Homepage Carousel) */

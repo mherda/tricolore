@@ -21,7 +21,7 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 				<div class="col-md-2">
 					<h3>Find us on</h3>
 					<ul>
-						<li><a href="https://www.facebook.com/groups/206843416040902/"><i class="fab fa-lg fa-facebook-square"></i>Facebook</a></li>
+						<li><a href="https://www.facebook.com/groups/206843416040902/"><i class="fab fa-lg fa-facebook-f"></i>Facebook</a></li>
 						<li><a href="https://twitter.com/pengecycleclub?lang=en"><i class="fab fa-lg fa-twitter"></i>Twitter</a></li>
 						<li><a href="https://www.youtube.com/channel/UCldNfBQKDUfxZzQcYkKVSmw"><i class="fab fa-lg fa-youtube"></i>YouTube</a></li>
 					</ul>
