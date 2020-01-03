@@ -19,7 +19,8 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">
-		<?php
+
+        <?php
 		the_excerpt();
 		?>
 		
@@ -34,13 +35,22 @@
 
 	<footer class="entry-footer">
 
-		<?php if ( 'post' == get_post_type() ) : ?>
+		<?php if ( 'news' == get_post_type() ) : ?>
 
 			<p class="entry-meta">
-				<?php understrap_posted_on(); ?>. <!-- deliberate full stop -->
+				<?php understrap_posted_on(); ?>
+                . <br />
+                <?php echo 'News category: '; ?>
+                <?php global $post;
+                $terms = wp_get_post_terms( $post->ID, 'news_tax');
+                foreach($terms as $term) {
+                    echo '<a href="'.get_term_link($term).'">'.$term->name.'</a>  ';
+                }
+                // echo 'in <a href="'.get_term_link($terms[0]).'">'.$terms[0]->name.'</a>'; ?>
 			</p><!-- .entry-meta -->
 
 		<?php endif; ?>
 	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
+
