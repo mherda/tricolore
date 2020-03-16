@@ -1199,7 +1199,18 @@ main blockquote > cite::after {
 /* Main content photos amongst text */
 /*
 /about-us/
+/2016/05/an-interview-with-winston-se20-cycles-by-david-ward/
 */
+
+.wp-block-image {
+    margin-bottom: 0;
+}
+
+img.alignleft,
+img.alignright {
+    max-width: 50%;
+}
+
 
 /* Mobile photos are central and go full size, up to the content width */
 
