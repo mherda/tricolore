@@ -116,13 +116,6 @@ add_action('pre_get_posts', 'penge_adjust_queries');
 add_action('pre_get_posts', 'taxonomy_event_category');
 
 
-function add_taxonomies_to_pages() {
-    register_taxonomy_for_object_type( 'post_tag', 'page' );
-    register_taxonomy_for_object_type( 'category', 'page' );
-    }
-   add_action( 'init', 'add_taxonomies_to_pages' );
-
-
 
    function wpse_get_category_parents( $id, $link = false, $separator = '/', $nicename = false, $visited = array(), $iscrumb=false ) {
     $chain = '';
