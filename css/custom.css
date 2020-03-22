@@ -811,7 +811,8 @@ Pagination menu
     border-bottom: 0;
 }
 .sidebar .menu > ul > li > ul > li > a {
-    padding: 0 20px 0 40px; /* 24px line-height */
+    /* padding: 0 20px 0 40px; */ /* double gutter */
+    padding: 0 20px 0 20px; /* single gutter until icon is added */
     font: var(--font-link);
 }
 /* First and last month spacing */
