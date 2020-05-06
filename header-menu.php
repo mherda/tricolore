@@ -60,10 +60,11 @@
 								'theme_location'  => 'template_menu',
 								'container_class' => '',
 								'container_id'    => '',
-								'menu_class'      => '',
+								'menu_class'      => 'navbar-marcin',
 								'fallback_cb'     => '',
 								'menu_id'         => '',
 								'depth'           => 2,
+								'item_spacing'    => 'discard',
 							)
 						); ?>
 					</nav>

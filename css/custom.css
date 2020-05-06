@@ -273,7 +273,7 @@ th {
 /* Header search button (icon) */
 
 /* Header nav */
-.nav-link {
+.navbar a[href] {
     font: var(--font-p-highlight);
     font-weight: 600;
 }
@@ -456,7 +456,7 @@ main h1 {
 #wrapper-navbar {
     position: relative;
     z-index: 1; /* cast shadow onto later elements */
-    padding-top: 12px; /* .nav-link creates padding-bottom */
+    padding-top: 12px; /* a[href] creates padding-bottom */
     box-shadow: 0 0 10px 0 black; /* will be cast onto --tri-black */
 }
 
@@ -497,6 +497,18 @@ main h1 {
 
 
 /* MAIN NAVIGATION */
+/*
+.navbar-marcin test changes:
+
+    .navbar-nav => .navbar-marcin
+    .nav-item => .menu-item
+    .dropdown => .navbar-marcin > li
+    .dropdown-menu => .sub-menu
+    .nav-link => a[href]
+
+Various styles from theme.css no longer match by selector.
+They are copied here as necessary and commented.
+*/
 
 .navbar {
     margin-left: -10px; /* align text with search box mobile */
@@ -506,7 +518,13 @@ main h1 {
 .navbar-collapse {
     justify-content: center; /* theme.css flex-start */
 }
-.navbar-nav {
+.navbar-nav,
+.navbar-marcin {
+    /* This section no longer given by theme.css */
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
     /* theme.css assumes hamburger menu */
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -517,51 +535,85 @@ main h1 {
 
 /* Navbar links */
 
-.navbar-custom .navbar-nav .nav-link {
+.navbar-custom .navbar-nav a[href],
+.navbar-custom .navbar-marcin a[href] {
+    display: block; /* no longer given by theme.css */
     padding: 10px; /* mobile */
     color: var(--tri-white);
 }
 
 /* Navbar active item, current section and hovered links */
-.navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item.current-page-ancestor .nav-link,
-.navbar-custom .nav-item.current-category-ancestor .nav-link,
-.navbar-custom .nav-item .nav-link:focus,
-.navbar-custom .nav-item .nav-link:hover,
-.navbar-custom .nav-item .nav-link:active {
+.navbar-custom .active a[href],
+.navbar-custom .current-page-ancestor a[href],
+.navbar-custom .current-category-ancestor a[href],
+.navbar-custom .nav-item a[href]:focus,
+.navbar-custom .nav-item a[href]:hover,
+.navbar-custom .nav-item a[href]:active,
+.navbar-nav > li:hover > a {
     color: var(--tri-green);
 }
 
+
 /* Navbar dropdown menu links */
 
-.navbar-custom .navbar-nav .dropdown-menu .nav-link {
+/* Dropdown arrow */
+.navbar-marcin .menu-item-has-children > a::after {
+    /* No longer given by theme.css .dropdown-toggle::after */
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+
+/* Style the parent link (via its parent list item) of a hovered dropdown */
+.navbar-dark .navbar-nav > li:hover > a[href],
+.navbar-custom .navbar-marcin > li:hover > a[href] {
+    color: var(--tri-green);
+}
+
+.navbar-custom .navbar-nav .dropdown-menu a[href],
+.navbar-custom .navbar-marcin .sub-menu a[href] {
+    padding: 6px 20px; /* quarter line-height adds together; gutter */ /* no longer given by theme.css */
     color: var(--tri-white) !important; /* :TODO: theme.css too much !important */
     font-weight: 600; /* theme.css */
 }
-.navbar-dark .navbar-nav .dropdown-menu .nav-link:hover,
-.navbar-dark .navbar-nav .dropdown-menu .nav-link:focus {
+.navbar-dark .navbar-nav .dropdown-menu a[href]:hover,
+.navbar-dark .navbar-marcin .sub-menu a[href]:hover,
+.navbar-dark .navbar-nav .dropdown-menu a[href]:focus,
+.navbar-dark .navbar-marcin .sub-menu a[href]:focus {
     color: var(--tri-black) !important; /* :TODO: theme.css too much !important */
     background: transparent;
 }
-.navbar-custom .navbar-nav .dropdown-menu .nav-link.active,
-.navbar-custom .navbar-nav .dropdown-menu .nav-link:active {
+.navbar-custom .navbar-nav .dropdown-menu a[href].active,
+.navbar-custom .navbar-marcin .sub-menu a[href].active,
+.navbar-custom .navbar-nav .dropdown-menu a[href]:active,
+.navbar-custom .navbar-marcin .sub-menu a[href]:active {
     color: var(--tri-black) !important; /* :TODO: theme.css too much !important */
 }
 
 /* Navbar dropdown menu */
 
-.dropup, .dropright, .dropdown, .dropleft {
+.dropup, .dropright, .dropdown, .dropleft,
+.navbar-marcin > li {
     position: static; /* theme.css assumes hamburger */
 }
 
-.navbar-nav .dropdown-menu {
+.navbar-nav .dropdown-menu,
+.navbar-marcin .sub-menu {
     position: absolute; /* theme.css hamburger on mobile */
 }
-.dropdown-menu {
+.dropdown-menu,
+.sub-menu {
     display: block !important; /* offscreen instead of display:none */
     margin: 0 auto;
     padding: 13px 0 16px 0; /* adjust for line-height */
-    top: -9999px;
+    top: -9999px; /* offscreen instead of display:none */
     left: 50%;
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
@@ -575,7 +627,8 @@ main h1 {
                 top 0s ease-out 0.3s; /* only move after faded out */
     opacity: 0;
 }
-.dropdown-menu:before {
+.dropdown-menu:before,
+.sub-menu:before {
     content: '';
     position: absolute;
     top: -7px;
@@ -591,17 +644,14 @@ main h1 {
     .navbar {
         margin-left: 0; /* normal alignment on desktop */
     }
-    .navbar-custom .navbar-nav .nav-link {
+    .navbar-custom .navbar-nav a[href],
+    .navbar-custom .navbar-marcin a[href] {
         padding: 10px 10px 12px 10px;
     }
     
-    .dropup, .dropright, .dropdown, .dropleft {
+    .dropup, .dropright, .dropdown, .dropleft,
+    .navbar-marcin > li {
         position: relative; /* desktop floating dropdowns */
-    }
-    
-    .dropdown-menu {
-        margin-left: -0.855em; /* offset down arrow caret */
-        text-align: left;
     }
 }
 
@@ -611,7 +661,9 @@ main h1 {
 
 .dropdown a:hover + .dropdown-menu,
 .dropdown a:focus + .dropdown-menu,
-.dropdown-menu:hover {
+.dropdown-menu:hover,
+.navbar-marcin > li:hover > .sub-menu,
+.sub-menu:hover {
     top: 100%; /* move onto screen */
     opacity: 1.0;
 }
