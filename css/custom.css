@@ -744,9 +744,18 @@ Pagination menu
 */
 
 .pagination {
-    justify-content: center; /* theme.css .pagination */
-    margin: 40px auto 40px auto;
+    justify-content: center; /* theme.css */
+    margin: 40px auto 40px auto; /* central */
     padding: 0;
+}
+
+.events .pagination {
+    flex-wrap: wrap; /* News and Events; theme.css */
+}
+.events .pagination,
+.events .page-item:first-child .page-link,
+.events .page-item:last-child .page-link {
+    border-radius: 0; /* square corners better when wrapped; theme.css */
 }
 
 .pagination .page-item {
@@ -801,7 +810,7 @@ Pagination menu
     width: 100%; /* border-box from theme.css */
 }
 .sidebar .menu > ul > li > a {
-    padding: 15px 20px;
+    padding: 15px 20px; /* 3/4 gutter; single gutter */
     font: var(--font-accordion);
 }
 .sidebar .menu > ul > li > a:only-child {
@@ -817,10 +826,10 @@ Pagination menu
 }
 /* First and last month spacing */
 .sidebar .menu > ul > li > ul > li:first-child > a {
-    padding-top: 12px; /* half line-height */
+    padding-top: 10px; /* half gutter */
 }
 .sidebar .menu > ul > li > ul > li:last-child > a {
-    padding-bottom: 12px; /* half line-height */
+    padding-bottom: 10px; /* half gutter */
 }
 /* News nav link colours */
 .sidebar .menu a:not([href]) {
