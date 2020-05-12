@@ -217,3 +217,7 @@ function wpse_get_breadcrumbs() {
     </ul></div><?php
 }
 
+register_nav_menus( array(
+    'primary' => __( 'Primary Navigation', 'tricolore' ),
+    'template_menu' => __('Template Navigation', 'tricolore')
+  ) );

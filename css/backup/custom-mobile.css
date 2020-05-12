@@ -3,10 +3,8 @@
 :root {
     --tri-black: #1f1e21;
     --tri-green: #1ea02d; /* #5ea03b; */
-    --tri-green-darken: #00760e; /* button interaction */
     --tri-white: #ecf1f4;
     --tri-red: #c1001f;
-    --tri-red-darken: #8c041a; /* button interaction */
     --tri-blue: #4a90e2; /* :TODO: Sunday Rides add swatch to design guide */
     --tri-dark: #3c4645;
     --tri-grey: #7d7d7d; /* :TODO: not used? */
@@ -143,7 +141,7 @@ a img {
 .wp-block-file .wp-block-file__button:focus,
 .wp-block-file .wp-block-file__button:active {
     color: var(--tri-white);
-    background-color: var(--tri-red-darken);
+    background-color: var(--tri-green);
 }
 
 .btn-success {
@@ -154,7 +152,7 @@ a img {
 .btn-success:focus,
 .btn-success:active {
     color: var(--tri-white);
-    background-color: var(--tri-green-darken);
+    background-color: var(--tri-green);
 }
 
 /* Buttons on green sidebar */
@@ -162,7 +160,7 @@ a img {
 .sidebar .btn:focus,
 .sidebar .btn:active {
     color: var(--tri-white);
-    background-color: var(--tri-red-darken); /* avoid green on green */
+    background-color: var(--tri-red); /* avoid green on green */
 }
 
 
@@ -171,7 +169,7 @@ a img {
 .btn:not(:disabled):not(.disabled).active,
 .show > .btn.dropdown-toggle {
     color: var(--tri-white);
-    background-color: var(--tri-green-darken);
+    background-color: var(--tri-green);
 }
 
 /* Large buttons (Homepage Carousel) */
@@ -222,9 +220,7 @@ a img {
     background: var(--tri-green);
 }
 .sidebar .gallery,
-.sidebar .events,
-.sidebar .menu {
-    /* Text is already white when outside of main content */
+.sidebar .events {
     background: var(--tri-black);
 }
 
@@ -234,17 +230,16 @@ a img {
 /* https://fonts.google.com/specimen/Karla?selection.family=Karla:700|Montserrat:400,600 */
 
 :root {
-    --font-heading: 'Karla', 'Palatino Linotype', 'Candara', sans-serif;
-    --font-body: 'Montserrat', 'Segoe UI', 'Verdana', sans-serif;
+    --font-heading: 'Karla', sans-serif;
+    --font-body: 'Montserrat', sans-serif;
     --font-h1: 700 40px/40px var(--font-heading); /* bold */
     --font-h2: 700 34px/34px var(--font-heading);
     --font-h3: 700 26px/36px var(--font-heading);
     --font-h4: 700 24px/28px var(--font-heading);
     --font-h5: 700 20px/28px var(--font-heading);
     --font-h6: 700 18px/24px var(--font-heading);
-    --font-accordion: 700 16px/24px var(--font-heading);
     --font-p: 400 14px/24px var(--font-body);
-    --font-p-bold: 600 14px/24px var(--font-body); /* semi-bold */
+    --font-p-bold: 600 14px/24px var(--font-body);
     --font-p-highlight: 400 18px/24px var(--font-body); /* normal */
     --font-link: 600 14px/24px var(--font-body); /* semi-bold */
 }
@@ -278,10 +273,9 @@ th {
 /* Header search button (icon) */
 
 /* Header nav */
-.nav-link {
+.navbar a[href] {
     font: var(--font-p-highlight);
     font-weight: 600;
-    font-size: 18px;
 }
 
 /* Carousel tag */
@@ -333,23 +327,22 @@ main h1 {
     font: var(--font-h2);
 }
 
-/* Article content headings and captions */
+/* Article content headings */
 .entry-content h2 {
     font: var(--font-h5);
 }
-
 .entry-content h3,
 .entry-content th,
-.entry-content caption,
-.entry-content figcaption {
-    font: var(--font-p-bold);
-}
 .entry-content h4 {
     font: var(--font-p);
+}
+.entry-content h3,
+.entry-content th {
+    font-weight: 600;
+}
+.entry-content h4 {
     font-style: italic;
 }
-
-/* Article content photo caption */
 
 /* Main content link and sidebar link */
 .entry-content a {
@@ -523,7 +516,7 @@ They are copied here as necessary and commented.
 }
 .navbar,
 .navbar-collapse {
-    justify-content: left; /* theme.css flex-start */
+    justify-content: center; /* theme.css flex-start */
 }
 .navbar-nav,
 .navbar-marcin {
@@ -559,6 +552,7 @@ They are copied here as necessary and commented.
 .navbar-nav > li:hover > a {
     color: var(--tri-green);
 }
+
 
 /* Navbar dropdown menu links */
 
@@ -659,10 +653,6 @@ They are copied here as necessary and commented.
     .navbar-marcin > li {
         position: relative; /* desktop floating dropdowns */
     }
-    
-    .dropdown-menu {
-        margin-left: -0.855em; /* offset down arrow caret */
-    }
 }
 
 
@@ -689,7 +679,21 @@ They are copied here as necessary and commented.
     list-style-image: none;
 }
 
-/* CAROUSEL */
+#navmenu.events-categories ul li,
+#navmenu.events ul li,
+.nav-breadcrumbs ul li {
+    display: inline;
+}
+
+
+/* Breadcrumb nav */
+.breadcrumbs {
+    padding: 20px 0 16px 0; /* adjusted for line-height */
+}
+
+
+
+/* Carousel */
 
 .carousel-item {
     max-height: 540px; /* half height of Full HD 1080p */
@@ -759,10 +763,10 @@ They are copied here as necessary and commented.
     color: var(--tri-green);
     opacity: 1;
 }
-.carousel-control-prev-icon::after {
+.carousel-control-prev-icon:after {
     content: "⟨"; /* MY CHARACTER CODEPOINTS ARE OVER 9000! */
 }
-.carousel-control-next-icon::after {
+.carousel-control-next-icon:after {
     content: "⟩"; /* MY CHARACTER CODEPOINTS ARE OVER 9000! */
 }
 
@@ -773,56 +777,16 @@ They are copied here as necessary and commented.
 
 
 
-
-/* MINOR NAVIGATION */
-
-/* Breadcrumb nav */
-.breadcrumbs {
-    padding: 20px 0 16px 0; /* adjusted for line-height */
-}
-
-
 /*
 Minor navigation menus
 Event tag navigation menu
-*/
-
-#navmenu.events-categories ul,
-#navmenu.events ul,
-.nav-breadcrumbs ul {
-    list-style-type: none;
-    list-style-image: none;
-}
-
-#navmenu.events-categories ul li,
-#navmenu.events ul li,
-.nav-breadcrumbs ul li {
-    display: inline;
-    padding-left: 0;
-}
-
-
-/*
 Pagination menu
 */
 
 .pagination {
-    justify-content: center; /* theme.css */
-    margin: 40px auto 40px auto; /* central */
+    justify-content: center; /* theme.css .pagination */
+    margin: 40px auto 40px auto;
     padding: 0;
-}
-
-.events .pagination {
-    flex-wrap: wrap; /* News and Events; theme.css */
-}
-.events .pagination,
-.events .page-item:first-child .page-link,
-.events .page-item:last-child .page-link {
-    border-radius: 0; /* square corners better when wrapped; theme.css */
-}
-
-.pagination .page-item {
-    padding-left: 0;
 }
 
 .entry-content .page-link {
@@ -847,89 +811,6 @@ Pagination menu
     color: var(--tri-white);
     background: var(--tri-green);
 }
-
-
-
-
-
-/* SIDEBAR */
-
-/* Box for News navigation */
-
-.sidebar .menu {
-    padding: 0; /* entirely block links with their own spacing */
-}
-
-.sidebar .menu ul,
-.sidebar .menu li {
-    display: block;
-    margin: 0;
-    padding: 0;
-}
-
-/* News nav links */
-.sidebar .menu a {
-    display: block;
-    width: 100%; /* border-box from theme.css */
-}
-.sidebar .menu > ul > li > a {
-    padding: 15px 20px; /* 3/4 gutter; single gutter */
-    font: var(--font-accordion);
-}
-.sidebar .menu > ul > li > a:only-child {
-    border-bottom: 1px solid var(--tri-white);
-}
-.sidebar .menu > ul > li:last-child > a {
-    border-bottom: 0;
-}
-.sidebar .menu > ul > li > ul > li > a {
-    /* padding: 0 20px 0 40px; */ /* double gutter */
-    padding: 0 20px 0 20px; /* single gutter until icon is added */
-    font: var(--font-link);
-}
-/* First and last month spacing */
-.sidebar .menu > ul > li > ul > li:first-child > a {
-    padding-top: 10px; /* half gutter */
-}
-.sidebar .menu > ul > li > ul > li:last-child > a {
-    padding-bottom: 10px; /* half gutter */
-}
-/* News nav link colours */
-.sidebar .menu a:not([href]) {
-    color: var(--tri-black) !important; /* theme.css */
-    background: var(--tri-white);
-}
-.sidebar .menu a {
-    color: var(--tri-white);
-    background: var(--tri-green);
-}
-.sidebar .menu a:hover,
-.sidebar .menu a:focus,
-.sidebar .menu a:active {
-    color: var(--tri-white);
-    border-bottom: 0;
-}
-.sidebar .menu > ul > li > ul > li > a:link,
-.sidebar .menu > ul > li > ul > li > a:visited {
-    color: var(--tri-green);
-    background: var(--tri-white);
-}
-/* News nav link icons */
-.sidebar .menu .fa {
-    margin: 0;
-    width: 20px;
-}
-.sidebar .menu .fa::after {
-    content: '\f077';
-    /* chevron-up */
-    content: '˄';
-}
-.sidebar .menu .fa::after {
-    content: '\f078';
-    /* chevron-down */
-    content: '˅';
-}
-
 
 
 
@@ -1110,7 +991,7 @@ Pagination menu
 /* Event lists in tiles and sidebar */
 
 .events > div {
-    margin-bottom: 20px; /* gutter between blocks */
+    padding-bottom: 20px;
 }
 .events > div > div:first-child {
     /* wrapper for date */
@@ -1188,101 +1069,12 @@ main,
 
 /* Article content title */
 main h1 {
-    margin: 0 0 24px 0; /* 24px line-height */
+    margin: 0 0 10px 0;
     padding-top: 20px;
     border-top: 4px solid var(--tri-green); /* below breadcrumb or image */
 }
-main h2 {
-    margin: 24px 0 8px 0; /* 24px line-height */
-}
-main h3 {
-    margin: 12px 0 8px 0; /* 24px line-height */
-}
-
-/* Article content block formatting */
-main p,
-main ol,
-main ul,
-main table,
-main blockquote {
-    margin: 0 0 24px 0; /* 24px line-height */
-}
-main figure {
-    margin: 0; /* content creates spacing */
-}
-
-/* Main content list item markers */
-main li::marker {
-    font: var(--font-p-bold);
-}
-
-/* Main content lists */
-main ul {
-    padding-left: 1em; /* 2.5em total */
-}
-main li {
-    margin-left: 0;
-    padding-left: 1.5em; /* 2.5em total */
-}
-
-/* Main content numbered lists */
-main ol {
-    padding-left: 2em; /* 2.5em total */
-}
-main li {
-    margin-left: 0;
-    padding-left: 0.5em; /* 2.5em total */
-}
-
-/* Main content quotes */
-
-main blockquote > * {
-    display: inline;
-    margin: 0;
-    padding: 1px 8px; /* just enough to be visible */
-    color: var(--tri-white);
-    font: var(--font-p-highlight);
-    line-height: 1.556; /* 28px for visible gap between backgrounds */
-    background: var(--tri-dark);
-    
-    /* https://css-tricks.com/multi-line-padded-text/ */
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-}
-main blockquote > * + *::before {
-    content: ''; /* newline character, not rendered as such */
-    display: block; /* next element will be on a new line */
-    height: 8px; /* 1/4 line-height */
-    background: transparent;
-}
-
-main blockquote > cite {
-    display: block;
-    padding-top: 0;
-    color: inherit;
-    font: var(--font-p-bold);
-    background: inherit;
-}
-main blockquote > cite::after {
-    display: none;
-    content: '';
-}
-
 
 /* Main content photos amongst text */
-/*
-/about-us/
-/2016/05/an-interview-with-winston-se20-cycles-by-david-ward/
-*/
-
-.wp-block-image {
-    margin-bottom: 0;
-}
-
-img.alignleft,
-img.alignright {
-    max-width: 50%;
-}
 
 
 /* Mobile photos are central and go full size, up to the content width */
@@ -1296,57 +1088,30 @@ img.alignright {
 
 
 /* Main content table */
+
 main table {
     width: 100%;
-    border-bottom: 4px solid var(--tri-dark);
-}
-.wp-block-table.is-style-stripes {
-    border: 0; /* figure */
 }
 
 main table th,
 main table td {
     vertical-align: top;
-    padding: 8px 10px 12px 10px; /* half gutter, offset for descenders */
-}
-
-main table th + th,
-main table td + td,
-main table th + td,
-main table td + th {
-    border-right: 2px solid var(--tri-dark);
-}
-
-main table th {
-    color: var(--tri-white);
-    background: var(--tri-dark);
-}
-
-main table th:first-child,
-main table td:first-child {
-    padding-left: 20px; /* first gutter on left side */
+    padding: 10px 0 10px 20px; /* 1 gutter between text */
 }
 
 main table th:last-child,
 main table td:last-child {
     padding-right: 20px; /* final gutter on right side */
-    border-right: 0;
-}
-
-.wp-block-table.is-style-stripes td {
-    border-color: var(--tri-dark); /* theme.css */
 }
 
 /* Stripey Tables */
+.wp-block-table.is-style-stripes {
+    border-bottom: 0;
+}
 .wp-block-table.is-style-stripes tr:nth-child(odd) {
     background-color: var(--tri-white);
 }
 
-
-/* Columns in content */
-.wp-block-columns {
-    margin-bottom: 0; /* content elements create spacing */
-}
 
 
 /* Main content info panel (Sunday Rides) */
@@ -1379,46 +1144,45 @@ main table td:last-child {
 #heading7,
 #heading8,
 #heading9,
-#heading10,
-#heading11,
-#heading12 {
+#heading10 {
     cursor: pointer;
 }
 
-/* Accordion: Sunday Morning Rides */
+/* Accordion - regular rides */
 
 #accordion th,
 #accordion td {
     width: 20%; /* 5 columns */
-    font: var(--font-accordion);
+    font-weight: 700;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
     border-top: 1px solid white;
-    border-right: 0;
-}
-#accordion th {
-    background: transparent; /* ski run colours */
 }
 #accordion td:first-child {
     width: 5%; /* remainder */
 }
 #accordion td[colspan] {
-    width: 100%;
+    padding-top: 0;
+    padding-bottom: 16px; /* account for line-height */
     font: var(--font-p);
     border-top: 0;
 }
 
-#accordion tbody + tbody > tr:first-child > th,
-#accordion tbody + tbody > tr:first-child > td {
+#accordion tbody + tbody tr:first-child th,
+#accordion tbody + tbody tr:first-child td {
     border-top: 20px solid white; /* gutter between table sections */
 }
 
-#accordion [data-toggle="collapse"] .fa::after {
-    content: '˄'; /* chevron-up */
-    content: '\25B2'; /* BLACK UP-POINTING TRIANGLE (U+25B2) */
+#accordion [data-toggle="collapse"] .fa:after {
+    content: '\f077';
+    /* chevron-up */
+    content: '˄';
 }
 
-#accordion [data-toggle="collapse"].collapsed .fa::after {
-    content: '˅'; /* chevron-down */
-    content: '\25bc'; /* BLACK DOWN-POINTING TRIANGLE (U+25Bc) */
+#accordion [data-toggle="collapse"].collapsed .fa:after {
+    content: '\f078';
+    /* chevron-down */
+    content: '˅';
 }
 
 /*
@@ -1497,55 +1261,36 @@ The grades are set in the HTML so the accordion could be editable.
 
 /* Social */
 
-.site-info h3 {
-    margin: 40px 0 20px 0; /* double gutter, adjusted for line-height */
-    padding: 0;
-}
-.site-info ul + h3 {
-    margin-top: 30px;
+.site-info .row:first-child h3 {
+    margin: 0;
+    padding: 36px 0 16px 0; /* double gutter, adjusted for line-height */
 }
 
 .site-info ul,
 .site-info li {
     display: block;
-    margin: 0 0 20px 0;
+    margin: 0;
     padding: 0;
 }
 .site-info li {
+    padding-bottom: 20px;
 }
 
 /* Social links with icons */
-.site-info div + div h3,
-.site-info li {
-    margin-left: 40px;
-}
 .site-info h3 > a,
 .site-info li > a {
+    margin-left: 30px;
+    position: relative;
     border-bottom: 2px solid transparent; /* placeholder for hover effect */
 }
 .site-info a > i {
+    display: block;
     top: 0;
-    margin-left: -40px;
+    left: -30px;
+    width: 30px;
+    position: absolute;
     margin-right: 0;
-    width: 40px;
-    position: relative;
 }
-
-/* Sidebar Flickr Gallery re-uses the above icon positioning */
-.gallery h3 > a {
-    margin-left: 45px; /* double gutter + quarter gutter kerning */
-    position: relative;
-    z-index: 1; /* clickable despite the upwardly offset gallery */
-    border-bottom: 2px solid transparent; /* placeholder for hover effect */
-}
-.gallery .fa-flickr {
-    top: 0;
-    margin-left: -40px;
-    margin-right: 0;
-    width: 40px;
-    position: relative;
-}
-
 
 
 /* Flickr justified gallery */
