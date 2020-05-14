@@ -278,7 +278,8 @@ th {
 /* Header search button (icon) */
 
 /* Header nav */
-.nav-link {
+.nav-link,
+.navbar-marcin a[href] {
     font: var(--font-p-highlight);
     font-weight: 600;
     font-size: 18px;
@@ -553,9 +554,9 @@ They are copied here as necessary and commented.
 .navbar-custom .active a[href],
 .navbar-custom .current-page-ancestor a[href],
 .navbar-custom .current-category-ancestor a[href],
-.navbar-custom .nav-item a[href]:focus,
-.navbar-custom .nav-item a[href]:hover,
-.navbar-custom .nav-item a[href]:active,
+.navbar-custom a[href]:focus,
+.navbar-custom a[href]:hover,
+.navbar-custom a[href]:active,
 .navbar-nav > li:hover > a {
     color: var(--tri-green);
 }
@@ -668,11 +669,21 @@ They are copied here as necessary and commented.
 
 /* Show/Hide Main Navigation Dropdown Menu */
 /* Moving parts in CSS instead of JS */
+/*
+Dropdown won't stay open when an item is focussed within it.
+:focus state doesn't 'bubble' the way :hover does.
+
+Therefore, probably best that we don't show the dropdown on :focus
+
+.navbar-marcin > li > a[href]:focus + .sub-menu,
+
+:focus within dropdowns would have to be managed with JS, ironically.
+*/
 
 .dropdown a:hover + .dropdown-menu,
+.navbar-marcin > li:hover > .sub-menu,
 .dropdown a:focus + .dropdown-menu,
 .dropdown-menu:hover,
-.navbar-marcin > li:hover > .sub-menu,
 .sub-menu:hover {
     top: 100%; /* move onto screen */
     opacity: 1.0;
