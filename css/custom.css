@@ -2,34 +2,21 @@
 
 :root {
     --tri-black: #1f1e21;
-    --tri-green: #1ea02d; /* #5ea03b; */
-    --tri-green-darken: #00760e; /* button interaction */
+    --tri-green: #1ea02d;
+    /* #5ea03b; */
+    --tri-green-darken: #00760e;
+    /* button interaction */
     --tri-white: #ecf1f4;
     --tri-red: #c1001f;
-    --tri-red-darken: #8c041a; /* button interaction */
-    --tri-blue: #4a90e2; /* :TODO: Sunday Rides add swatch to design guide */
+    --tri-red-darken: #8c041a;
+    /* button interaction */
+    --tri-blue: #4a90e2;
+    /* :TODO: Sunday Rides add swatch to design guide */
     --tri-dark: #3c4645;
-    --tri-grey: #7d7d7d; /* :TODO: not used? */
+    --tri-grey: #7d7d7d;
+    /* :TODO: not used? */
 }
 
-/*
-Tricolor stripe - not used in April 2019
-
-https://colorzilla.com/gradient-editor/
-W3C, IE10+, Fx16+, Chrome26+, Opera12+, Safari7+
-*/
-/*
-background: linear-gradient(
-                to bottom,
-                var(--tri-green) 0%,
-                var(--tri-green) 33%,
-                white 33%,
-                white 67%,
-                var(--tri-red) 67%,
-                var(--tri-red) 100%
-            ) no-repeat;
-background-size: 100% 9px;
-*/
 
 /* Colour classes */
 
@@ -53,18 +40,22 @@ background-size: 100% 9px;
     background-color: var(--tri-blue);
 }
 
+
 /* :TODO: remove unused code (double check this one) */
+
 .b-dark {
     background-color: var(--tri-dark);
 }
 
 
 /* Base colours */
+
 html,
 body {
     color: var(--tri-white);
     background: var(--tri-black);
 }
+
 a,
 a:hover,
 a:focus,
@@ -73,12 +64,17 @@ a:active,
     color: var(--tri-green);
     text-decoration: none;
 }
+
 a img {
     border: 0;
 }
 
+
 /* Main content */
+
+
 /* :TODO: theme other page types */
+
 #page-wrapper,
 #search-wrapper,
 #archive-wrapper,
@@ -86,12 +82,15 @@ a img {
     color: var(--tri-black);
     background: white;
 }
-    
+
+
 /* Main content info panel (Sunday Rides) */
+
 .page-template-Rides h1,
 .entry-content .panel {
     background: var(--tri-white);
 }
+
 
 /* Footer colours */
 
@@ -112,30 +111,36 @@ a img {
 .site-info a {
     color: var(--tri-white);
 }
-.site-info li > a:hover,
-.site-info li > a:focus,
-.site-info li > a:active,
-.site-info h3 > a:hover,
-.site-info h3 > a:focus,
-.site-info h3 > a:active {
+
+.site-info li>a:hover,
+.site-info li>a:focus,
+.site-info li>a:active,
+.site-info h3>a:hover,
+.site-info h3>a:focus,
+.site-info h3>a:active {
     color: var(--tri-white);
     border-bottom: 2px solid;
 }
 
 
 /* Button colours */
+
 .btn,
 .btn-success,
 .wp-block-file .wp-block-file__button {
-    padding: 3px 10px 3px 10px; /* .tyle .tag */
+    padding: 3px 10px 3px 10px;
+    /* .tyle .tag */
     font: var(--font-p-bold);
-    border: 0 !important; /* avoid link underline */
+    border: 0 !important;
+    /* avoid link underline */
 }
+
 .btn,
 .wp-block-file .wp-block-file__button {
     color: var(--tri-white);
     background-color: var(--tri-red);
 }
+
 .btn:hover,
 .btn:focus,
 .btn:active,
@@ -150,6 +155,7 @@ a img {
     color: var(--tri-white);
     background-color: var(--tri-green);
 }
+
 .btn-success:hover,
 .btn-success:focus,
 .btn-success:active {
@@ -157,44 +163,58 @@ a img {
     background-color: var(--tri-green-darken);
 }
 
+
 /* Buttons on green sidebar */
-.sidebar > div:not([class]) .btn:hover,
+
+.sidebar>div:not([class]) .btn:hover,
 .sidebar .btn:focus,
 .sidebar .btn:active {
     color: var(--tri-white);
-    background-color: var(--tri-red-darken); /* avoid green on green */
+    background-color: var(--tri-red-darken);
+    /* avoid green on green */
 }
 
 
 /* Clicked button: */
+
 .btn:not(:disabled):not(.disabled):active,
 .btn:not(:disabled):not(.disabled).active,
-.show > .btn.dropdown-toggle {
+.show>.btn.dropdown-toggle {
     color: var(--tri-white);
     background-color: var(--tri-green-darken);
 }
 
+
 /* Large buttons (Homepage Carousel) */
+
 .btn-lg {
-    padding: 8px 20px 8px 20px; /* half gutter adjusted for line-height */
+    padding: 8px 20px 8px 20px;
+    /* half gutter adjusted for line-height */
     font-size: 18px;
     line-height: 24px;
 }
-.btn-lg + .btn-lg {
-    margin-left: 20px; /* gutter */
-}
 
+.btn-lg+.btn-lg {
+    margin-left: 20px;
+    /* gutter */
+}
 
 
 /* Carousel colours */
+
+
 /* Carousel caption */
+
 .carousel-caption {
     color: var(--tri-black);
     background-color: var(--tri-white);
-    background-color: #ecf1f4c0; /* --tri-white with alpha channel */
+    background-color: #ecf1f4c0;
+    /* --tri-white with alpha channel */
 }
 
+
 /* Carousel tag */
+
 .card-tag {
     color: var(--tri-white);
     background-color: var(--tri-black);
@@ -214,13 +234,13 @@ a img {
 }
 
 
-
 /* Sidebar colours */
 
-.sidebar > div {
+.sidebar>div {
     color: var(--tri-white);
     background: var(--tri-green);
 }
+
 .sidebar .gallery,
 .sidebar .events,
 .sidebar .menu {
@@ -229,14 +249,16 @@ a img {
 }
 
 
-
 /* April 2019 font variables */
+
+
 /* https://fonts.google.com/specimen/Karla?selection.family=Karla:700|Montserrat:400,600 */
 
 :root {
     --font-heading: 'Karla', 'Palatino Linotype', 'Candara', sans-serif;
     --font-body: 'Montserrat', 'Segoe UI', 'Verdana', sans-serif;
-    --font-h1: 700 40px/40px var(--font-heading); /* bold */
+    --font-h1: 700 40px/40px var(--font-heading);
+    /* bold */
     --font-h2: 700 34px/34px var(--font-heading);
     --font-h3: 700 26px/36px var(--font-heading);
     --font-h4: 700 24px/28px var(--font-heading);
@@ -244,9 +266,12 @@ a img {
     --font-h6: 700 18px/24px var(--font-heading);
     --font-accordion: 700 16px/24px var(--font-heading);
     --font-p: 400 14px/24px var(--font-body);
-    --font-p-bold: 600 14px/24px var(--font-body); /* semi-bold */
-    --font-p-highlight: 400 18px/24px var(--font-body); /* normal */
-    --font-link: 600 14px/24px var(--font-body); /* semi-bold */
+    --font-p-bold: 600 14px/24px var(--font-body);
+    /* semi-bold */
+    --font-p-highlight: 400 18px/24px var(--font-body);
+    /* normal */
+    --font-link: 600 14px/24px var(--font-body);
+    /* semi-bold */
 }
 
 
@@ -263,21 +288,29 @@ Article
 Footer
 */
 
+
 /* Base font */
+
 html,
 body {
     font: var(--font-p);
 }
+
 b,
 strong,
 th {
     font: var(--font-p-bold);
 }
 
+
 /* Header search box */
+
+
 /* Header search button (icon) */
 
+
 /* Header nav */
+
 .nav-link,
 .navbar-marcin a[href] {
     font: var(--font-p-highlight);
@@ -285,56 +318,83 @@ th {
     font-size: 18px;
 }
 
+
 /* Carousel tag */
+
 .card-tag {
     font: var(--font-h6);
 }
+
+
 /* Carousel title */
+
 .slide-text {
     font: var(--font-h1);
 }
+
+
 /* Carousel description */
+
 .card-text {
     font: var(--font-p-highlight);
 }
 
 
 /* Home mission statement */
+
 .disclaimer {
     margin: 20px auto;
     max-width: 60em;
     font: var(--font-h3);
     text-align: center;
 }
+
+
 /* Home tile tag */
+
 .tyle .tag {
     font: var(--font-h6);
 }
+
+
 /* Home tile title */
+
 .tyle h2 {
     font: var(--font-h4);
-    hyphens: auto; /* Volunteering in Homepage 1/4 tile */
+    hyphens: auto;
+    /* Volunteering in Homepage 1/4 tile */
 }
+
+
 /* Home tile description */
+
+
 /* Inherits body text */
+
+
 /* Home tile event item */
+
 .events h3 {
     font: var(--font-h6);
 }
 
 
 /* Breadcrumb */
+
 .breadcrumbs {
     font: var(--font-link);
 }
 
 
 /* Article content title */
+
 main h1 {
     font: var(--font-h2);
 }
 
+
 /* Article content headings and captions */
+
 .entry-content h2 {
     font: var(--font-h5);
 }
@@ -345,20 +405,27 @@ main h1 {
 .entry-content figcaption {
     font: var(--font-p-bold);
 }
+
 .entry-content h4 {
     font: var(--font-p);
     font-style: italic;
 }
 
+
 /* Article content photo caption */
 
+
 /* Main content link and sidebar link */
+
 .entry-content a {
-    padding-top: 5px; /* adjusted for line-height */
+    padding-top: 5px;
+    /* adjusted for line-height */
     font: var(--font-link);
     font-size: inherit;
-    border-bottom: 1px solid #a7d161; /* #85bc4a; */
+    border-bottom: 1px solid #a7d161;
+    /* #85bc4a; */
 }
+
 .breadcrumbs a:hover,
 .breadcrumbs a:focus,
 .breadcrumbs a:active,
@@ -373,34 +440,44 @@ main h1 {
 .sidebar a:active {
     border-bottom: 2px solid;
 }
+
 .sidebar .justified-gallery a {
-    border-bottom: 0; /* don't underline photos */
+    border-bottom: 0;
+    /* don't underline photos */
 }
 
 
 /* Sidebar headings */
+
 .sidebar h2,
 .sidebar h3 {
     font: var(--font-h4);
 }
+
+
 /* Sidebar event item */
+
 .sidebar h4 {
     font: var(--font-h6);
 }
 
 
 /* Footer heading */
+
 #wrapper-footer h3 {
     font: var(--font-h4);
 }
+
+
 /* Footer link */
+
 .site-info a {
     font: var(--font-p-highlight);
     font-weight: 600;
 }
 
-/* End: Apply font */
 
+/* End: Apply font */
 
 
 /* WRAPPERS & COLUMN SYSTEM */
@@ -412,10 +489,13 @@ main h1 {
 .notFull {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1230px; /* main content 800px */
+    max-width: 1230px;
+    /* main content 800px */
 }
+
 #wrapper-footer .notFull {
-    max-width: 1210px; /* :TODO: refactor layout */
+    max-width: 1210px;
+    /* :TODO: refactor layout */
 }
 
 .full_dark {
@@ -428,10 +508,10 @@ main h1 {
     max-width: 1210px;
 }
 
+
 /* Special layout on big tablets and wider */
 
 @media (min-width: 768px) {
-    
     /* 20px gutters on big tablets and wider */
     .container-fluid {
         padding-left: 10px;
@@ -441,63 +521,93 @@ main h1 {
         margin-left: -10px;
         margin-right: -10px;
     }
-    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto {
+    .col-md-1,
+    .col-md-2,
+    .col-md-3,
+    .col-md-4,
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-8,
+    .col-md-9,
+    .col-md-10,
+    .col-md-11,
+    .col-md-12,
+    .col-md,
+    .col-md-auto {
         padding-left: 10px;
         padding-right: 10px;
     }
-    
     /* Landing pages with main content above tiles (such as Competitive) */
     body.page-template-Full-Width-Zoom .entry-content {
-        width: 65%; /* limit content to two thirds */
-        width: calc(67% - 10px); /* accurately stop short of gutter */
+        width: 65%;
+        /* limit content to two thirds */
+        width: calc(67% - 10px);
+        /* accurately stop short of gutter */
     }
-    
 }
+
 
 /* End WRAPPERS & COLUMN SYSTEM */
 
 
-
 /* HEADER */
 
+
 /* Header layout */
+
 #wrapper-navbar {
     position: relative;
-    z-index: 1; /* cast shadow onto later elements */
-    padding-top: 12px; /* a[href] creates padding-bottom */
-    box-shadow: 0 0 10px 0 black; /* will be cast onto --tri-black */
+    z-index: 1;
+    /* cast shadow onto later elements */
+    padding-top: 12px;
+    /* a[href] creates padding-bottom */
+    box-shadow: 0 0 10px 0 black;
+    /* will be cast onto --tri-black */
 }
 
+
 /* Header Logo */
+
 .logo {
-    position: static; /* size the logo by the entire header, not the column */
+    position: static;
+    /* size the logo by the entire header, not the column */
 }
 
 .logo img {
     display: block;
-    margin: 0 auto; /* central on mobile */
-    max-width: 50%; /* 6/12 columns */
+    margin: 0 auto;
+    /* central on mobile */
+    max-width: 50%;
+    /* 6/12 columns */
 }
 
+
 /* Header Search box */
+
 #searchform {
     padding: 16px 0 6px 0;
 }
+
 
 /* Header tablet and desktop layout */
 
 @media (min-width: 768px) {
     .logo img {
         display: block;
-        bottom: 16px; /* bottom of header */
+        bottom: 16px;
+        /* bottom of header */
         position: absolute;
-        margin: 0; /* left edge of desktop */
-        padding-right: 10px; /* 20px on tablet */
-        max-width: 25%; /* 4 of 12 columns */
+        margin: 0;
+        /* left edge of desktop */
+        padding-right: 10px;
+        /* 20px on tablet */
+        max-width: 25%;
+        /* 4 of 12 columns */
         max-height: 100%;
-        max-height: calc(100% - 12px - 16px); /* padding */
+        max-height: calc(100% - 12px - 16px);
+        /* padding */
     }
-    
     #searchform {
         padding: 12px 0 24px 0;
     }
@@ -505,6 +615,8 @@ main h1 {
 
 
 /* MAIN NAVIGATION */
+
+
 /*
 .navbar-marcin test changes:
 
@@ -519,13 +631,17 @@ They are copied here as necessary and commented.
 */
 
 .navbar {
-    margin-left: -10px; /* align text with search box mobile */
+    margin-left: -10px;
+    /* align text with search box mobile */
     padding: 0;
 }
+
 .navbar,
 .navbar-collapse {
-    justify-content: left; /* theme.css flex-start */
+    justify-content: left;
+    /* theme.css flex-start */
 }
+
 .navbar-nav,
 .navbar-marcin {
     /* This section no longer given by theme.css */
@@ -545,26 +661,33 @@ They are copied here as necessary and commented.
 
 .navbar-custom .navbar-nav a[href],
 .navbar-custom .navbar-marcin a[href] {
-    display: block; /* no longer given by theme.css */
-    padding: 10px; /* mobile */
+    display: block;
+    /* no longer given by theme.css */
+    padding: 10px;
+    /* mobile */
     color: var(--tri-white);
 }
 
+
 /* Navbar active item, current section and hovered links */
+
 .navbar-custom .active a[href],
 .navbar-custom .current-page-ancestor a[href],
 .navbar-custom .current-category-ancestor a[href],
 .navbar-custom a[href]:focus,
 .navbar-custom a[href]:hover,
 .navbar-custom a[href]:active,
-.navbar-nav > li:hover > a {
+.navbar-nav>li:hover>a {
     color: var(--tri-green);
 }
 
+
 /* Navbar dropdown menu links */
 
+
 /* Dropdown arrow */
-.navbar-marcin .menu-item-has-children > a::after {
+
+.navbar-marcin .menu-item-has-children>a::after {
     /* No longer given by theme.css .dropdown-toggle::after */
     display: inline-block;
     width: 0;
@@ -578,62 +701,85 @@ They are copied here as necessary and commented.
     border-left: 0.3em solid transparent;
 }
 
+
 /* Style the parent link (via its parent list item) of a hovered dropdown */
-.navbar-dark .navbar-nav > li:hover > a[href],
-.navbar-custom .navbar-marcin > li:hover > a[href] {
+
+.navbar-dark .navbar-nav>li:hover>a[href],
+.navbar-custom .navbar-marcin>li:hover>a[href] {
     color: var(--tri-green);
 }
 
 .navbar-custom .navbar-nav .dropdown-menu a[href],
 .navbar-custom .navbar-marcin .sub-menu a[href] {
-    padding: 6px 20px; /* quarter line-height adds together; gutter */ /* no longer given by theme.css */
-    color: var(--tri-white) !important; /* :TODO: theme.css too much !important */
-    font-weight: 600; /* theme.css */
+    padding: 6px 20px;
+    /* quarter line-height adds together; gutter */
+    /* no longer given by theme.css */
+    color: var(--tri-white) !important;
+    /* :TODO: theme.css too much !important */
+    font-weight: 600;
+    /* theme.css */
 }
+
 .navbar-dark .navbar-nav .dropdown-menu a[href]:hover,
 .navbar-dark .navbar-marcin .sub-menu a[href]:hover,
 .navbar-dark .navbar-nav .dropdown-menu a[href]:focus,
 .navbar-dark .navbar-marcin .sub-menu a[href]:focus {
-    color: var(--tri-black) !important; /* :TODO: theme.css too much !important */
+    color: var(--tri-black) !important;
+    /* :TODO: theme.css too much !important */
     background: transparent;
 }
+
 .navbar-custom .navbar-nav .dropdown-menu a[href].active,
 .navbar-custom .navbar-marcin .sub-menu a[href].active,
 .navbar-custom .navbar-nav .dropdown-menu a[href]:active,
 .navbar-custom .navbar-marcin .sub-menu a[href]:active {
-    color: var(--tri-black) !important; /* :TODO: theme.css too much !important */
+    color: var(--tri-black) !important;
+    /* :TODO: theme.css too much !important */
 }
+
 
 /* Navbar dropdown menu */
 
-.dropup, .dropright, .dropdown, .dropleft,
-.navbar-marcin > li {
-    position: static; /* theme.css assumes hamburger */
+.dropup,
+.dropright,
+.dropdown,
+.dropleft,
+.navbar-marcin>li {
+    position: static;
+    /* theme.css assumes hamburger */
 }
 
 .navbar-nav .dropdown-menu,
 .navbar-marcin .sub-menu {
-    position: absolute; /* theme.css hamburger on mobile */
+    position: absolute;
+    /* theme.css hamburger on mobile */
 }
+
 .dropdown-menu,
 .sub-menu {
-    display: block !important; /* offscreen instead of display:none */
+    display: block !important;
+    /* offscreen instead of display:none */
     margin: 0 auto;
-    padding: 13px 0 16px 0; /* adjust for line-height */
-    top: -9999px; /* offscreen instead of display:none */
+    padding: 13px 0 16px 0;
+    /* adjust for line-height */
+    top: -9999px;
+    /* offscreen instead of display:none */
     left: 50%;
     -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
     min-width: 200px;
-    text-align: center; /* mobile */
+    text-align: center;
+    /* mobile */
     background-color: var(--tri-green);
     border: 0;
     border-radius: 0 0 5px 5px;
-    box-shadow: 0 0 10px 0 black; /* will be cast onto --tri-black */
-    transition: opacity 0.2s ease-in 0.1s,
-                top 0s ease-out 0.3s; /* only move after faded out */
+    box-shadow: 0 0 10px 0 black;
+    /* will be cast onto --tri-black */
+    transition: opacity 0.2s ease-in 0.1s, top 0s ease-out 0.3s;
+    /* only move after faded out */
     opacity: 0;
 }
+
 .dropdown-menu:before,
 .sub-menu:before {
     content: '';
@@ -646,29 +792,39 @@ They are copied here as necessary and commented.
     border-left: 7px solid transparent;
 }
 
+
 /* Desktop Navbar dropdown menu */
+
 @media (min-width: 768px) {
     .navbar {
-        margin-left: 0; /* normal alignment on desktop */
+        margin-left: 0;
+        /* normal alignment on desktop */
     }
     .navbar-custom .navbar-nav a[href],
     .navbar-custom .navbar-marcin a[href] {
         padding: 10px 10px 12px 10px;
     }
-    
-    .dropup, .dropright, .dropdown, .dropleft,
-    .navbar-marcin > li {
-        position: relative; /* desktop floating dropdowns */
+    .dropup,
+    .dropright,
+    .dropdown,
+    .dropleft,
+    .navbar-marcin>li {
+        position: relative;
+        /* desktop floating dropdowns */
     }
-    
     .dropdown-menu {
-        margin-left: -0.855em; /* offset down arrow caret */
+        margin-left: -0.855em;
+        /* offset down arrow caret */
     }
 }
 
 
 /* Show/Hide Main Navigation Dropdown Menu */
+
+
 /* Moving parts in CSS instead of JS */
+
+
 /*
 Dropdown won't stay open when an item is focussed within it.
 :focus state doesn't 'bubble' the way :hover does.
@@ -680,15 +836,15 @@ Therefore, probably best that we don't show the dropdown on :focus
 :focus within dropdowns would have to be managed with JS, ironically.
 */
 
-.dropdown a:hover + .dropdown-menu,
-.navbar-marcin > li:hover > .sub-menu,
-.dropdown a:focus + .dropdown-menu,
+.dropdown a:hover+.dropdown-menu,
+.navbar-marcin>li:hover>.sub-menu,
+.dropdown a:focus+.dropdown-menu,
 .dropdown-menu:hover,
 .sub-menu:hover {
-    top: 100%; /* move onto screen */
+    top: 100%;
+    /* move onto screen */
     opacity: 1.0;
 }
-
 
 
 /* MINOR NAVIGATION */
@@ -700,20 +856,28 @@ Therefore, probably best that we don't show the dropdown on :focus
     list-style-image: none;
 }
 
+
 /* CAROUSEL */
 
 .carousel-item {
-    max-height: 540px; /* half height of Full HD 1080p */
+    max-height: 540px;
+    /* half height of Full HD 1080p */
 }
+
 
 /* Carousel caption */
 
 .carousel-caption {
-    padding: 30px 40px 30px 40px; /* double gutters */
-    left: 8.333%; /* 1/12 columns */
-    bottom: 40px; /* double gutter */
-    width: 58.337%; /* 8/12 columns */
-    width: calc(58.334% - 7px ); /* accurately 8/12 columns */
+    padding: 30px 40px 30px 40px;
+    /* double gutters */
+    left: 8.333%;
+    /* 1/12 columns */
+    bottom: 40px;
+    /* double gutter */
+    width: 58.337%;
+    /* 8/12 columns */
+    width: calc(58.334% - 7px);
+    /* accurately 8/12 columns */
     text-align: left;
     border: 0;
     border-radius: 0;
@@ -726,26 +890,32 @@ Therefore, probably best that we don't show the dropdown on :focus
 .card-tag {
     display: inline-block;
     margin: 0;
-    padding: 3px 10px 3px 10px; /* adjusted for line-height */
+    padding: 3px 10px 3px 10px;
+    /* adjusted for line-height */
     background-color: var(--tri-black);
 }
 
 .slide-text {
-    margin-top: 19px; /* adjust for line-height */
+    margin-top: 19px;
+    /* adjust for line-height */
     margin-bottom: 0;
 }
 
 .card-text {
-    margin: 16px 0 18px 0; /* adjust for line-height */
+    margin: 16px 0 18px 0;
+    /* adjust for line-height */
 }
+
 
 /* Carousel previous and next links */
 
 .carousel-control-prev,
 .carousel-control-next {
-    width: 4.167%; /* half of a 12-column grid slot */
+    width: 4.167%;
+    /* half of a 12-column grid slot */
     min-width: 4em;
-    opacity: 1 !important; /* theme.css */
+    opacity: 1 !important;
+    /* theme.css */
 }
 
 .carousel-control-prev span,
@@ -753,6 +923,7 @@ Therefore, probably best that we don't show the dropdown on :focus
     opacity: 0.8;
     transition: color 0.2s ease-in, opacity 0.2s ease-in;
 }
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     width: 100%;
@@ -763,6 +934,7 @@ Therefore, probably best that we don't show the dropdown on :focus
     color: var(--tri-white);
     background: var(--tri-black);
 }
+
 .carousel-control-prev:hover span,
 .carousel-control-prev:focus span,
 .carousel-control-next:hover span,
@@ -770,26 +942,31 @@ Therefore, probably best that we don't show the dropdown on :focus
     color: var(--tri-green);
     opacity: 1;
 }
+
 .carousel-control-prev-icon::after {
-    content: "⟨"; /* MY CHARACTER CODEPOINTS ARE OVER 9000! */
+    content: "⟨";
+    /* MY CHARACTER CODEPOINTS ARE OVER 9000! */
 }
+
 .carousel-control-next-icon::after {
-    content: "⟩"; /* MY CHARACTER CODEPOINTS ARE OVER 9000! */
+    content: "⟩";
+    /* MY CHARACTER CODEPOINTS ARE OVER 9000! */
 }
+
 
 /* Carousel slider indicator pagination thing */
 
-.carousel-indicators {
-}
-
-
+.carousel-indicators {}
 
 
 /* MINOR NAVIGATION */
 
+
 /* Breadcrumb nav */
+
 .breadcrumbs {
-    padding: 20px 0 16px 0; /* adjusted for line-height */
+    padding: 20px 0 16px 0;
+    /* adjusted for line-height */
 }
 
 
@@ -818,18 +995,23 @@ Pagination menu
 */
 
 .pagination {
-    justify-content: center; /* theme.css */
-    margin: 40px auto 40px auto; /* central */
+    justify-content: center;
+    /* theme.css */
+    margin: 40px auto 40px auto;
+    /* central */
     padding: 0;
 }
 
 .events .pagination {
-    flex-wrap: wrap; /* News and Events; theme.css */
+    flex-wrap: wrap;
+    /* News and Events; theme.css */
 }
+
 .events .pagination,
 .events .page-item:first-child .page-link,
 .events .page-item:last-child .page-link {
-    border-radius: 0; /* square corners better when wrapped; theme.css */
+    border-radius: 0;
+    /* square corners better when wrapped; theme.css */
 }
 
 .pagination .page-item {
@@ -837,8 +1019,10 @@ Pagination menu
 }
 
 .entry-content .page-link {
-    margin-left: 0; /* theme.css */
-    padding: 8px 20px 8px 20px; /* .tag */
+    margin-left: 0;
+    /* theme.css */
+    padding: 8px 20px 8px 20px;
+    /* .tag */
     font: var(--font-link);
     color: var(--tri-black);
     background: var(--tri-white);
@@ -860,15 +1044,14 @@ Pagination menu
 }
 
 
-
-
-
 /* SIDEBAR */
+
 
 /* Box for News navigation */
 
 .sidebar .menu {
-    padding: 0; /* entirely block links with their own spacing */
+    padding: 0;
+    /* entirely block links with their own spacing */
 }
 
 .sidebar .menu ul,
@@ -878,70 +1061,96 @@ Pagination menu
     padding: 0;
 }
 
+
 /* News nav links */
+
 .sidebar .menu a {
     display: block;
-    width: 100%; /* border-box from theme.css */
+    width: 100%;
+    /* border-box from theme.css */
 }
-.sidebar .menu > ul > li > a {
-    padding: 15px 20px; /* 3/4 gutter; single gutter */
+
+.sidebar .menu>ul>li>a {
+    padding: 15px 20px;
+    /* 3/4 gutter; single gutter */
     font: var(--font-accordion);
 }
-.sidebar .menu > ul > li > a:only-child {
+
+.sidebar .menu>ul>li>a:only-child {
     border-bottom: 1px solid var(--tri-white);
 }
-.sidebar .menu > ul > li:last-child > a {
+
+.sidebar .menu>ul>li:last-child>a {
     border-bottom: 0;
 }
-.sidebar .menu > ul > li > ul > li > a {
-    /* padding: 0 20px 0 40px; */ /* double gutter */
-    padding: 0 20px 0 20px; /* single gutter until icon is added */
+
+.sidebar .menu>ul>li>ul>li>a {
+    /* padding: 0 20px 0 40px; */
+    /* double gutter */
+    padding: 0 20px 0 20px;
+    /* single gutter until icon is added */
     font: var(--font-link);
 }
+
+
 /* First and last month spacing */
-.sidebar .menu > ul > li > ul > li:first-child > a {
-    padding-top: 10px; /* half gutter */
+
+.sidebar .menu>ul>li>ul>li:first-child>a {
+    padding-top: 10px;
+    /* half gutter */
 }
-.sidebar .menu > ul > li > ul > li:last-child > a {
-    padding-bottom: 10px; /* half gutter */
+
+.sidebar .menu>ul>li>ul>li:last-child>a {
+    padding-bottom: 10px;
+    /* half gutter */
 }
+
+
 /* News nav link colours */
+
 .sidebar .menu a:not([href]) {
-    color: var(--tri-black) !important; /* theme.css */
+    color: var(--tri-black) !important;
+    /* theme.css */
     background: var(--tri-white);
 }
+
 .sidebar .menu a {
     color: var(--tri-white);
     background: var(--tri-green);
 }
+
 .sidebar .menu a:hover,
 .sidebar .menu a:focus,
 .sidebar .menu a:active {
     color: var(--tri-white);
     border-bottom: 0;
 }
-.sidebar .menu > ul > li > ul > li > a:link,
-.sidebar .menu > ul > li > ul > li > a:visited {
+
+.sidebar .menu>ul>li>ul>li>a:link,
+.sidebar .menu>ul>li>ul>li>a:visited {
     color: var(--tri-green);
     background: var(--tri-white);
 }
+
+
 /* News nav link icons */
+
 .sidebar .menu .fa {
     margin: 0;
     width: 20px;
 }
+
 .sidebar .menu .fa::after {
     content: '\f077';
     /* chevron-up */
     content: '˄';
 }
+
 .sidebar .menu .fa::after {
     content: '\f078';
     /* chevron-down */
     content: '˅';
 }
-
-
 
 
 /*  NEW GRID */
@@ -959,6 +1168,7 @@ Pagination menu
     margin-bottom: 20px;
 }
 
+
 /* Landscape mobile tiles */
 
 @media (min-width: 576px) {
@@ -966,37 +1176,41 @@ Pagination menu
         grid-template-columns: repeat(2, 1fr);
     }
     /* Homepage first row of 3 */
-    .disclaimer + .grid .tyle:last-child {
-        grid-column: span 2; /* grow to fill 2 columns */
+    .disclaimer+.grid .tyle:last-child {
+        grid-column: span 2;
+        /* grow to fill 2 columns */
     }
     /* Homepage events row */
     #front-tiles .tyle.events {
-        grid-column: span 2; /* grow to fill 2 columns */
+        grid-column: span 2;
+        /* grow to fill 2 columns */
     }
 }
 
+
 /* Portrait tablet tiles and wider */
+
 @media (min-width: 768px) {
     .grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 equal columns */
     }
     /* Homepage first row of 3 */
-    .disclaimer + .grid .tyle:last-child {
-        grid-column: 3; /* single column, third position */
+    .disclaimer+.grid .tyle:last-child {
+        grid-column: 3;
+        /* single column, third position */
     }
-    
     /* Homepage events row */
-    .grid + .grid + .grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    .grid+.grid+.grid {
+        grid-template-columns: repeat(4, 1fr);
+        /* 4 equal columns */
     }
-    
     /* Youth uses 2 tiles in main content with sidebar */
     body.page-template-default .grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    
     /* Most templates can have 2 tiles after main content */
-    .entry-content + .grid {
+    .entry-content+.grid {
         grid-template-columns: repeat(2, 1fr);
         padding-top: 40px;
         border-top: 4px solid var(--tri-green);
@@ -1007,10 +1221,12 @@ Pagination menu
 /* Tiles across devices */
 
 .tyle {
-    position: relative; /* layout context for .tag */
+    position: relative;
+    /* layout context for .tag */
     display: flex;
     flex-direction: column;
-    justify-content: end; /* push .caption to bottom */
+    justify-content: end;
+    /* push .caption to bottom */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
@@ -1026,12 +1242,15 @@ Pagination menu
     position: absolute;
     top: 15px;
     left: 10px;
-    padding: 3px 10px 3px 10px; /* adjusted for line-height */
+    padding: 3px 10px 3px 10px;
+    /* adjusted for line-height */
 }
 
 .tyle .caption {
-    margin-top: auto; /* push caption to bottom */
-    padding: 13px 20px 16px 20px; /* adjusted for line-height */
+    margin-top: auto;
+    /* push caption to bottom */
+    padding: 13px 20px 16px 20px;
+    /* adjusted for line-height */
 }
 
 .tyle h2,
@@ -1039,32 +1258,45 @@ Pagination menu
     margin: 0;
 }
 
+
 /* Text tile (homepage bottom row) */
+
+
 /* Text tiles don't have style attribute - might be used elsewhere */
+
 .tyle:not([style]) {
     justify-content: normal;
     background: var(--tri-green);
 }
+
 .tyle:not([style]) .tag {
     display: inline-block;
-    position: static; /* normal position */
+    position: static;
+    /* normal position */
     margin: 0 0 20px -10px;
     background: var(--tri-black);
 }
+
 .tyle:not([style]) .caption {
     margin-top: 0;
 }
 
+
 /* Homepage bottom row, events tile */
+
 .tyle.events {
-    padding: 13px 20px 16px 20px; /* adjusted for line-height */
+    padding: 13px 20px 16px 20px;
+    /* adjusted for line-height */
     background-color: var(--tri-black);
 }
 
+
 /* Home grid hover colours */
+
 .tyle {
     transition: background 0.2s ease-in;
 }
+
 .tyle:hover,
 .tyle:focus,
 .tyle:active {
@@ -1082,23 +1314,29 @@ Pagination menu
 }
 
 .tyle-rectangle {
-    flex-direction: row; /* horizontal internal layout */
-    background-size: 50% auto; /* 1/2 tile with 1/4 tile image */
-    background-size: calc(50% - 7.5px) auto; /* (595px / 2) - 7.5px = 290px */
+    flex-direction: row;
+    /* horizontal internal layout */
+    background-size: 50% auto;
+    /* 1/2 tile with 1/4 tile image */
+    background-size: calc(50% - 7.5px) auto;
+    /* (595px / 2) - 7.5px = 290px */
     background-position: left top;
 }
 
 .tyle-rectangle .caption {
-    width: calc(50% + 10px); /* half the panel and remaining half gutter */
+    width: calc(50% + 10px);
+    /* half the panel and remaining half gutter */
     margin-top: 0;
-    margin-left: auto; /* push caption to right half */
+    margin-left: auto;
+    /* push caption to right half */
 }
 
 
 /* Homepage bottom row, events tile */
 
 #front-tiles .tyle.events {
-    overflow-y: auto; /* full tile at max size; scroll at smaller sizes */
+    overflow-y: auto;
+    /* full tile at max size; scroll at smaller sizes */
     /* No colour change on :hover */
     background: var(--tri-black);
 }
@@ -1107,8 +1345,10 @@ Pagination menu
     padding-bottom: 20px;
 }
 
+
 /* All Events button */
-#front-tiles .tyle.events > p {
+
+#front-tiles .tyle.events>p {
     top: 20px;
     right: 20px;
     position: absolute;
@@ -1120,50 +1360,67 @@ Pagination menu
 
 /* Event lists in tiles and sidebar */
 
-.events > div {
-    margin-bottom: 20px; /* gutter between blocks */
+.events>div {
+    margin-bottom: 20px;
+    /* gutter between blocks */
 }
-.events > div > div:first-child {
+
+.events>div>div:first-child {
     /* wrapper for date */
-    flex-shrink: 0; /* do not let a long description squash the date */
-    min-width: 11.75%; /* col-md-1 inside col-md-8 */
-    width: 15.75%; /* 23.5% col-md-2 inside col-md-8 */
+    flex-shrink: 0;
+    /* do not let a long description squash the date */
+    min-width: 11.75%;
+    /* col-md-1 inside col-md-8 */
+    width: 15.75%;
+    /* 23.5% col-md-2 inside col-md-8 */
     background: var(--tri-white);
 }
+
 .events .month,
 .events .day {
-    margin: 0; /* theme.css */
-    padding: 3px 10px 3px 10px; /* .tyle .tag */
+    margin: 0;
+    /* theme.css */
+    padding: 3px 10px 3px 10px;
+    /* .tyle .tag */
     text-align: center;
 }
+
 .events .month {
     font: var(--font-p-bold);
     color: var(--tri-white);
     background: var(--tri-green);
 }
+
 .events .day {
     font: var(--font-h5);
     color: var(--tri-black);
 }
 
+
 /* Event details */
-.events > div > div + div {
-    padding-left: 20px; /* gutter */
+
+.events>div>div+div {
+    padding-left: 20px;
+    /* gutter */
 }
-.events > div > div + div h3,
-.events > div > div + div h4,
-.events > div > div + div p {
+
+.events>div>div+div h3,
+.events>div>div+div h4,
+.events>div>div+div p {
     margin: 0;
     padding-bottom: 10px;
 }
-.events > div > div + div p:last-child {
+
+.events>div>div+div p:last-child {
     padding-bottom: 0;
 }
 
 
 /* MISCELLANEOUS */
 
+
 /* Font Awesome in links */
+
 a .fa {
     margin-right: 0.25em;
 }
@@ -1173,8 +1430,9 @@ a .fa {
 }
 
 
-
 /* :TODO: remove obsolete code even if it was great */
+
+
 /* Regular routes modal */
 
 .modal-full {
@@ -1185,102 +1443,136 @@ a .fa {
 .modal-full .modal-content {
     min-height: 100vh;
 }
+
+
 /* End :TODO: remove obsolete code even if it was great */
 
 
-
 /* MAIN CONTENT */
-
 
 main,
 .entry-content {
     padding-bottom: 20px;
 }
 
+
 /* Article content title */
+
 main h1 {
-    margin: 0 0 24px 0; /* 24px line-height */
+    margin: 0 0 24px 0;
+    /* 24px line-height */
     padding-top: 20px;
-    border-top: 4px solid var(--tri-green); /* below breadcrumb or image */
-}
-main h2 {
-    margin: 24px 0 8px 0; /* 24px line-height */
-}
-main h3 {
-    margin: 12px 0 8px 0; /* 24px line-height */
+    border-top: 4px solid var(--tri-green);
+    /* below breadcrumb or image */
 }
 
+main h2 {
+    margin: 24px 0 8px 0;
+    /* 24px line-height */
+}
+
+main h3 {
+    margin: 12px 0 8px 0;
+    /* 24px line-height */
+}
+
+
 /* Article content block formatting */
+
 main p,
 main ol,
 main ul,
 main table,
 main blockquote {
-    margin: 0 0 24px 0; /* 24px line-height */
-}
-main figure {
-    margin: 0; /* content creates spacing */
+    margin: 0 0 24px 0;
+    /* 24px line-height */
 }
 
+main figure {
+    margin: 0;
+    /* content creates spacing */
+}
+
+
 /* Main content list item markers */
+
 main li::marker {
     font: var(--font-p-bold);
 }
 
+
 /* Main content lists */
+
 main ul {
-    padding-left: 1em; /* 2.5em total */
-}
-main li {
-    margin-left: 0;
-    padding-left: 1.5em; /* 2.5em total */
+    padding-left: 1em;
+    /* 2.5em total */
 }
 
-/* Main content numbered lists */
-main ol {
-    padding-left: 2em; /* 2.5em total */
-}
 main li {
     margin-left: 0;
-    padding-left: 0.5em; /* 2.5em total */
+    padding-left: 1.5em;
+    /* 2.5em total */
 }
+
+
+/* Main content numbered lists */
+
+main ol {
+    padding-left: 2em;
+    /* 2.5em total */
+}
+
+main li {
+    margin-left: 0;
+    padding-left: 0.5em;
+    /* 2.5em total */
+}
+
 
 /* Main content quotes */
 
-main blockquote > * {
+main blockquote>* {
     display: inline;
     margin: 0;
-    padding: 1px 8px; /* just enough to be visible */
+    padding: 1px 8px;
+    /* just enough to be visible */
     color: var(--tri-white);
     font: var(--font-p-highlight);
-    line-height: 1.556; /* 28px for visible gap between backgrounds */
+    line-height: 1.556;
+    /* 28px for visible gap between backgrounds */
     background: var(--tri-dark);
-    
     /* https://css-tricks.com/multi-line-padded-text/ */
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
 }
-main blockquote > * + *::before {
-    content: ''; /* newline character, not rendered as such */
-    display: block; /* next element will be on a new line */
-    height: 8px; /* 1/4 line-height */
+
+main blockquote>*+*::before {
+    content: '';
+    /* newline character, not rendered as such */
+    display: block;
+    /* next element will be on a new line */
+    height: 8px;
+    /* 1/4 line-height */
     background: transparent;
 }
 
-main blockquote > cite {
+main blockquote>cite {
     display: block;
     padding-top: 0;
     color: inherit;
     font: var(--font-p-bold);
     background: inherit;
 }
-main blockquote > cite::after {
+
+main blockquote>cite::after {
     display: none;
     content: '';
 }
 
 
 /* Main content photos amongst text */
+
+
 /*
 /about-us/
 /2016/05/an-interview-with-winston-se20-cycles-by-david-ward/
@@ -1300,31 +1592,37 @@ img.alignright {
 
 @media (max-width: 576px) {
     .wp-block-image .alignright {
-        float: none; /* style.min.css */
-        margin: 0 auto 1rem auto; /* theme.css */
+        float: none;
+        /* style.min.css */
+        margin: 0 auto 1rem auto;
+        /* theme.css */
     }
 }
 
 
 /* Main content table */
+
 main table {
     width: 100%;
     border-bottom: 4px solid var(--tri-dark);
 }
+
 .wp-block-table.is-style-stripes {
-    border: 0; /* figure */
+    border: 0;
+    /* figure */
 }
 
 main table th,
 main table td {
     vertical-align: top;
-    padding: 8px 10px 12px 10px; /* half gutter, offset for descenders */
+    padding: 8px 10px 12px 10px;
+    /* half gutter, offset for descenders */
 }
 
-main table th + th,
-main table td + td,
-main table th + td,
-main table td + th {
+main table th+th,
+main table td+td,
+main table th+td,
+main table td+th {
     border-right: 2px solid var(--tri-dark);
 }
 
@@ -1335,44 +1633,57 @@ main table th {
 
 main table th:first-child,
 main table td:first-child {
-    padding-left: 20px; /* first gutter on left side */
+    padding-left: 20px;
+    /* first gutter on left side */
 }
 
 main table th:last-child,
 main table td:last-child {
-    padding-right: 20px; /* final gutter on right side */
+    padding-right: 20px;
+    /* final gutter on right side */
     border-right: 0;
 }
 
 .wp-block-table.is-style-stripes td {
-    border-color: var(--tri-dark); /* theme.css */
+    border-color: var(--tri-dark);
+    /* theme.css */
 }
 
+
 /* Stripey Tables */
+
 .wp-block-table.is-style-stripes tr:nth-child(odd) {
     background-color: var(--tri-white);
 }
 
 
 /* Columns in content */
+
 .wp-block-columns {
-    margin-bottom: 0; /* content elements create spacing */
+    margin-bottom: 0;
+    /* content elements create spacing */
 }
 
 
 /* Main content info panel (Sunday Rides) */
+
 .page-template-Rides h1 {
-    margin-bottom: 0; /* connect background with .panel */
+    margin-bottom: 0;
+    /* connect background with .panel */
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 0.5rem; /* :TODO: main content spacing */
+    padding-bottom: 0.5rem;
+    /* :TODO: main content spacing */
 }
+
 .entry-content .panel {
-    margin-bottom: 18px; /* anticipate line-height of next sibling */
+    margin-bottom: 18px;
+    /* anticipate line-height of next sibling */
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 20px;
 }
+
 .entry-content .panel p:last-child,
 .entry-content .panel ul:last-child,
 .entry-content .panel ol:last-child {
@@ -1381,6 +1692,7 @@ main table td:last-child {
 
 
 /* Accordion widget */
+
 #heading1,
 #heading2,
 #heading3,
@@ -1396,77 +1708,101 @@ main table td:last-child {
     cursor: pointer;
 }
 
+
 /* Accordion: Sunday Morning Rides */
 
 #accordion th,
 #accordion td {
-    width: 20%; /* 5 columns */
+    width: 20%;
+    /* 5 columns */
     font: var(--font-accordion);
     border-top: 1px solid white;
     border-right: 0;
 }
+
 #accordion th {
-    background: transparent; /* ski run colours */
+    background: transparent;
+    /* ski run colours */
 }
+
 #accordion td:first-child {
-    width: 5%; /* remainder */
+    width: 5%;
+    /* remainder */
 }
+
 #accordion td[colspan] {
     width: 100%;
     font: var(--font-p);
     border-top: 0;
 }
 
-#accordion tbody + tbody > tr:first-child > th,
-#accordion tbody + tbody > tr:first-child > td {
-    border-top: 20px solid white; /* gutter between table sections */
+#accordion tbody+tbody>tr:first-child>th,
+#accordion tbody+tbody>tr:first-child>td {
+    border-top: 20px solid white;
+    /* gutter between table sections */
 }
 
 #accordion [data-toggle="collapse"] .fa::after {
-    content: '˄'; /* chevron-up */
-    content: '\25B2'; /* BLACK UP-POINTING TRIANGLE (U+25B2) */
+    content: '˄';
+    /* chevron-up */
+    content: '\25B2';
+    /* BLACK UP-POINTING TRIANGLE (U+25B2) */
 }
 
 #accordion [data-toggle="collapse"].collapsed .fa::after {
-    content: '˅'; /* chevron-down */
-    content: '\25bc'; /* BLACK DOWN-POINTING TRIANGLE (U+25Bc) */
+    content: '˅';
+    /* chevron-down */
+    content: '\25bc';
+    /* BLACK DOWN-POINTING TRIANGLE (U+25Bc) */
 }
+
 
 /*
 Ride grades use ski run colours
 The grades are set in the HTML so the accordion could be editable.
 */
+
+
 /* Grey run (default) */
+
 #accordion tbody {
     color: var(--tri-white);
     background: var(--tri-dark);
 }
 
+
 /* Main content news listing thumbnail image on right */
+
 .has-post-thumbnail {
-    clear: right; /* below any previous thumbnail */
-}
-.has-post-thumbnail img {
-    float: right; /* :TODO: */
-    width: 37.5%; /* 3 columns out of 8; content is 8 out of 12 */
+    clear: right;
+    /* below any previous thumbnail */
 }
 
+.has-post-thumbnail img {
+    float: right;
+    /* :TODO: */
+    width: 37.5%;
+    /* 3 columns out of 8; content is 8 out of 12 */
+}
+
+
 /* Main content meta links */
+
 .entry-footer span {
     padding-right: 0;
 }
 
 
-
 /* SIDEBAR */
 
-
 .sidebar {
-    margin-top: 36px; /* 20px above and 16px below breadcrumb */
-    padding-top: 1.714em; /* breadcrumb line-height */
+    margin-top: 36px;
+    /* 20px above and 16px below breadcrumb */
+    padding-top: 1.714em;
+    /* breadcrumb line-height */
 }
 
-.sidebar > div {
+.sidebar>div {
     margin: 0 0 20px 0;
     padding: 0 20px;
 }
@@ -1474,45 +1810,55 @@ The grades are set in the HTML so the accordion could be editable.
 .sidebar h2,
 .sidebar h3 {
     margin: 0;
-    padding: 16px 0 10px 0; /* adjusted for line-height */
+    padding: 16px 0 10px 0;
+    /* adjusted for line-height */
 }
 
 .sidebar p {
     margin: 0;
-    padding-bottom: 12px; /* half measure of line-height */
+    padding-bottom: 12px;
+    /* half measure of line-height */
 }
+
 .sidebar p:last-child {
-    padding-bottom: 18px; /* adjusted for line-height */
+    padding-bottom: 18px;
+    /* adjusted for line-height */
 }
+
 
 /* Sidebar weather tile */
 
 .sidebar #weather hr {
     display: none;
 }
+
 .sidebar #weather h3 {
-    padding: 0 0 18px 0; /* adjust for line-height */
+    padding: 0 0 18px 0;
+    /* adjust for line-height */
     font: var(--font-p-highlight);
 }
+
 
 /* See also: event lists */
 
 
-
 /* FOOTER */
 
-
 #wrapper-footer {
-    overflow: hidden; /* Social Flickr gallery makes 20px gutters in JS */
+    overflow: hidden;
+    /* Social Flickr gallery makes 20px gutters in JS */
 }
+
 
 /* Social */
 
 .site-info h3 {
-    margin: 40px 0 20px 0; /* double gutter, adjusted for line-height */
+    margin: 40px 0 20px 0;
+    /* double gutter, adjusted for line-height */
     padding: 0;
 }
-.site-info ul + h3 {
+
+.site-info ul+h3 {
     margin-top: 30px;
 }
 
@@ -1522,19 +1868,22 @@ The grades are set in the HTML so the accordion could be editable.
     margin: 0 0 20px 0;
     padding: 0;
 }
-.site-info li {
-}
+
 
 /* Social links with icons */
-.site-info div + div h3,
+
+.site-info div+div h3,
 .site-info li {
     margin-left: 40px;
 }
-.site-info h3 > a,
-.site-info li > a {
-    border-bottom: 2px solid transparent; /* placeholder for hover effect */
+
+.site-info h3>a,
+.site-info li>a {
+    border-bottom: 2px solid transparent;
+    /* placeholder for hover effect */
 }
-.site-info a > i {
+
+.site-info a>i {
     top: 0;
     margin-left: -40px;
     margin-right: 0;
@@ -1542,13 +1891,19 @@ The grades are set in the HTML so the accordion could be editable.
     position: relative;
 }
 
+
 /* Sidebar Flickr Gallery re-uses the above icon positioning */
-.gallery h3 > a {
-    margin-left: 45px; /* double gutter + quarter gutter kerning */
+
+.gallery h3>a {
+    margin-left: 45px;
+    /* double gutter + quarter gutter kerning */
     position: relative;
-    z-index: 1; /* clickable despite the upwardly offset gallery */
-    border-bottom: 2px solid transparent; /* placeholder for hover effect */
+    z-index: 1;
+    /* clickable despite the upwardly offset gallery */
+    border-bottom: 2px solid transparent;
+    /* placeholder for hover effect */
 }
+
 .gallery .fa-flickr {
     top: 0;
     margin-left: -40px;
@@ -1558,8 +1913,8 @@ The grades are set in the HTML so the accordion could be editable.
 }
 
 
-
 /* Flickr justified gallery */
+
 
 /*
 Sizes are positioned in real-time using JS and style attributes.
@@ -1567,22 +1922,30 @@ Settings add the 20px gutters but also create unwanted outer gutters.
 I expand the container so the photos are sized as if there are no outer gutters.
 I move the container so the outer gutters sit on the Bootstrap gutters.
 */
+
 .justified-gallery {
-    position: relative; /* layout context for reliable negative margins */
-    margin: -20px 0 0 -20px; /* move the outer gallery outer gutters onto the actual footer gutters */
-    width: calc(100% + 40px); /* size the content as if it had no outer gallery gutters */
+    position: relative;
+    /* layout context for reliable negative margins */
+    margin: -20px 0 0 -20px;
+    /* move the outer gallery outer gutters onto the actual footer gutters */
+    width: calc(100% + 40px);
+    /* size the content as if it had no outer gallery gutters */
 }
 
 
 /* Footer organisations */
-.organisations > div {
-    padding-top: 20px; /* gutter */
+
+.organisations>div {
+    padding-top: 20px;
+    /* gutter */
 }
 
 .organisations ul {
     position: relative;
-    z-index: 1; /* clickable logos .copyright */
-    margin: 0 0 -50px 0; /* bring next row halfway up this one */
+    z-index: 1;
+    /* clickable logos .copyright */
+    margin: 0 0 -50px 0;
+    /* bring next row halfway up this one */
     padding: 20px;
     text-align: center;
 }
@@ -1590,8 +1953,10 @@ I move the container so the outer gutters sit on the Bootstrap gutters.
 .organisations li {
     display: inline;
     margin: 0;
-    padding: 0 20px 0 0; /* gutter */
+    padding: 0 20px 0 0;
+    /* gutter */
 }
+
 .organisations li:last-child {
     padding-right: 0;
 }
@@ -1600,63 +1965,35 @@ I move the container so the outer gutters sit on the Bootstrap gutters.
     max-height: 60px;
 }
 
+
 /* Footer copyright */
-.copyright > div {
+
+.copyright>div {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 90px; /* 40px (double gutter) + 50px (.organisations) */
+    padding-top: 90px;
+    /* 40px (double gutter) + 50px (.organisations) */
     padding-bottom: 40px;
     text-align: center;
 }
 
 .copyright h3 {
-    margin-bottom: 20px; /* gutter */
+    margin-bottom: 20px;
+    /* gutter */
 }
 
 .copyright p {
-    margin-top: 20px; /* gutter */
+    margin-top: 20px;
+    /* gutter */
 }
 
+
 /* Footer sponsor logos */
+
+
 /* :TODO: Split the logos and link to: /about/sponsors/ */
 
 .copyright p:last-child {
-    margin-bottom: 0; /* use padding of column */
-}
-
-
-
-/* DO NOT EDIT BELOW */
-
-
-/*
-* Use existing Bootstrap 4 classes and
-* variables to extend - override CF7 style
-*
-* Useful CF7 classes:
-* .wpcf7 the wrapper element
-* .wpcf7-form
-* .wpcf7-form-control
-* .wpcf7-text
-* .wpcf7-email
-* .wpcf7-textarea
-* .wpcf7-submit
-*/
-
-.wpcf7 {
-    max-width: 600px;
-    margin: 0 auto !important;
-}
-
-.wpcf7 .wpcf7-form label {
-    width: 100%;
-}
-
-.wpcf7 .wpcf7-not-valid-tip {
-    color: var(--tri-red);
-}
-
-.wpcf7 .wpcf7-validation-errors {
-    color: var(--tri-red);
-    border: 1px solid var(--tri-white);
+    margin-bottom: 0;
+    /* use padding of column */
 }
