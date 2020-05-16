@@ -185,7 +185,7 @@ a img {
     line-height: 24px;
 }
 
-.btn-lg+.btn-lg {
+.btn-lg + .btn-lg {
     margin-left: 20px; /* gutter */
 }
 
@@ -778,12 +778,12 @@ Dropdown won't stay open when an item is focussed within it.
 Therefore, probably best that we don't show the dropdown on :focus
 
 .navbar-marcin  > li  > a[href]:focus + .sub-menu,
-.dropdown a:focus+.dropdown-menu,
+.dropdown a:focus + .dropdown-menu,
 
 :focus within dropdowns would have to be managed with JS, ironically.
 */
 
-.dropdown a:hover+.dropdown-menu,
+.dropdown a:hover + .dropdown-menu,
 .navbar-marcin > li:hover > .sub-menu,
 .dropdown-menu:hover,
 .sub-menu:hover {
@@ -1091,7 +1091,7 @@ Pagination menu
         grid-template-columns: repeat(2, 1fr);
     }
     /* Homepage first row of 3 */
-    .disclaimer+.grid .tyle:last-child {
+    .disclaimer + .grid .tyle:last-child {
         grid-column: span 2; /* grow to fill 2 columns */
     }
     /* Homepage events row */
@@ -1108,11 +1108,11 @@ Pagination menu
         grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
     }
     /* Homepage first row of 3 */
-    .disclaimer+.grid .tyle:last-child {
+    .disclaimer + .grid .tyle:last-child {
         grid-column: 3; /* single column, third position */
     }
     /* Homepage events row */
-    .grid+.grid+.grid {
+    .grid + .grid + .grid {
         grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
     }
     /* Youth uses 2 tiles in main content with sidebar */
@@ -1120,7 +1120,7 @@ Pagination menu
         grid-template-columns: repeat(2, 1fr);
     }
     /* Most templates can have 2 tiles after main content */
-    .entry-content+.grid {
+    .entry-content + .grid {
         grid-template-columns: repeat(2, 1fr);
         padding-top: 40px;
         border-top: 4px solid var(--tri-green);
@@ -1291,18 +1291,18 @@ Pagination menu
 
 /* Event details */
 
-.events > div > div+div {
+.events > div > div + div {
     padding-left: 20px; /* gutter */
 }
 
-.events > div > div+div h3,
-.events > div > div+div h4,
-.events > div > div+div p {
+.events > div > div + div h3,
+.events > div > div + div h4,
+.events > div > div + div p {
     margin: 0;
     padding-bottom: 10px;
 }
 
-.events > div > div+div p:last-child {
+.events > div > div + div p:last-child {
     padding-bottom: 0;
 }
 
@@ -1425,7 +1425,7 @@ main blockquote > * {
     -webkit-box-decoration-break: clone;
 }
 
-main blockquote > *+*::before {
+main blockquote > * + *::before {
     content: ''; /* newline character, not rendered as such */
     display: block; /* next element will be on a new line */
     height: 8px; /* 1/4 line-height */
@@ -1491,10 +1491,10 @@ main table td {
     padding: 8px 10px 12px 10px; /* half gutter, offset for descenders */
 }
 
-main table th+th,
-main table td+td,
-main table th+td,
-main table td+th {
+main table th + th,
+main table td + td,
+main table th + td,
+main table td + th {
     border-right: 2px solid var(--tri-dark);
 }
 
@@ -1598,8 +1598,8 @@ main table td:last-child {
     border-top: 0;
 }
 
-#accordion tbody+tbody > tr:first-child > th,
-#accordion tbody+tbody > tr:first-child > td {
+#accordion tbody + tbody > tr:first-child > th,
+#accordion tbody + tbody > tr:first-child > td {
     border-top: 20px solid white; /* gutter between table sections */
 }
 
@@ -1704,7 +1704,7 @@ The grades are set in the HTML so the accordion could be editable.
     padding: 0;
 }
 
-.site-info ul+h3 {
+.site-info ul + h3 {
     margin-top: 30px;
 }
 
@@ -1718,7 +1718,7 @@ The grades are set in the HTML so the accordion could be editable.
 
 /* Social links with icons */
 
-.site-info div+div h3,
+.site-info div + div h3,
 .site-info li {
     margin-left: 40px;
 }
