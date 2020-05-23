@@ -37,14 +37,21 @@ $months = $wpdb->get_results("SELECT DISTINCT MONTH( post_date ) AS month ,  YEA
         <?php
         foreach($months as $month) :
         $year_current = $month->year;
+        $current = $year_current == date('Y') ? "active" : "";
         if ($year_current != $year_prev){
         if ($year_prev != null){
             echo "</ul><!-- .month -->\n\t\t\t</li><!-- .li-year -->\n";
         } ?>
-        <li class="li-year"><a href="<?php bloginfo('url') ?>/news/<?php echo $month->year; ?>/"><?php echo $month->year; ?></a>
+        <li class="li-year<?php if ($current) echo " " . $current; ?>"><a href="<?php bloginfo('url') ?>/news/<?php echo $month->year; ?>/"><?php echo $month->year; ?></a>
             <ul class="month">
-                <?php } ?>
-                <li>
+                <?php } 
+                    $y = $month->year;
+                    $m = date("m", mktime(0, 0, 0, $month->month, 1, $month->year));
+                    $ym = $y . "/" . $m; /* archive year and month */
+                    $cym = date('Y') . "/" . date('m'); /* Current Year and Month */
+                    $active_month = $ym == $cym ? "active" : "";
+                ?>
+                <li class="<? if ($active_month) echo $active_month; ?>">
                     <a href="<?php bloginfo('url') ?>/news/<?php echo $month->year; ?>/<?php echo date("m", mktime(0, 0, 0, $month->month, 1, $month->year)) ?>"><span class="archive-month"><?php echo date_i18n("F", mktime(0, 0, 0, $month->month, 1, $month->year)) ?> (<?php echo $month->post_count; ?>)</span></a>
                 </li>
                 <?php $year_prev = $year_current; ?>
