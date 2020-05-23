@@ -27,6 +27,7 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 						
 						<div class="col-md-4 sidebar"> <!-- beginning of Sidebar -->
 							<?php get_template_part( 'element-templates/sidebar-news' ); ?>
+							<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>						
 							<?php get_template_part( 'element-templates/sidebar-regular-events' ); ?>
 						</div> <!-- end of Sidebar -->
 

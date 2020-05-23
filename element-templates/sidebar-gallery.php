@@ -25,5 +25,7 @@ if ( $tag ) {
     </div>
     <?php } else { ?>
         <!-- No Flickr tag supplied. -->
+        <?php echo do_shortcode("[flickr_tags user_id='69040456@N07' tags='PengeCycleClub' max_num_photos='6']"); ?>
+
     <?php } // end elseif ?>
 <?php } // end if ?>
