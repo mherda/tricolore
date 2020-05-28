@@ -985,6 +985,19 @@ Pagination menu
     padding: 0;
 }
 
+/* Show months in the active year only */
+
+.sidebar .menu .li-year > ul {
+    height: 0;
+    overflow: hidden;
+}
+
+.sidebar .menu .li-year.active > ul {
+    height: auto;
+    overflow: auto;
+}
+
+
 
 /* News nav links */
 
