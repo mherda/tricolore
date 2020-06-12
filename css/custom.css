@@ -1753,7 +1753,7 @@ The grades are set in the HTML so the accordion could be editable.
 /* Sidebar Flickr Gallery re-uses the above icon positioning */
 
 .gallery h3 > a {
-    margin-left: 45px; /* double gutter + quarter gutter kerning */
+    margin-left: 40px; /* double gutter + quarter gutter kerning */
     position: relative;
     z-index: 1; /* clickable despite the upwardly offset gallery */
     border-bottom: 2px solid transparent; /* placeholder for hover effect */
@@ -1761,9 +1761,9 @@ The grades are set in the HTML so the accordion could be editable.
 
 .gallery .fa-flickr {
     top: 0;
-    margin-left: -40px;
+    margin-left: -35px;
     margin-right: 0;
-    width: 40px;
+    width: 35px;
     position: relative;
 }
 
