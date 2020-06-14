@@ -26,9 +26,6 @@
 
 								<?php endwhile; ?>
 								
-								<!-- The pagination component -->
-								<?php understrap_pagination(); ?>
-								
 							</div>
 								
 							<?php else : ?>

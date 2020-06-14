@@ -23,8 +23,11 @@
 			case "Generic Page.php":
 				echo get_the_post_thumbnail($post->ID, 'Article Hero');
 				break;
+			case "page.php":
+				echo get_the_post_thumbnail($post->ID, 'Article Hero');
+				break;
 		}
-	}   
+	}
 ?>
 
 <!-- Page title -->

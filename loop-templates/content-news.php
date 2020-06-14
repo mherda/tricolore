@@ -46,7 +46,7 @@
                 foreach($terms as $term) {
                     echo '<a href="'.get_term_link($term).'">'.$term->name.'</a>  ';
                 }
-                // echo 'in <a href="'.get_term_link($terms[0]).'">'.$terms[0]->name.'</a>'; ?>
+				?>
 			</p><!-- .entry-meta -->
 
 		<?php endif; ?>

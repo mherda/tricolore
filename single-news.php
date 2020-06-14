@@ -24,26 +24,11 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 								while ( have_posts() ) {
 									the_post();
 									?>
-						            <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
-						                <?php
-						                if(function_exists('bcn_display'))
-						                {
-						                   bcn_display();
-						                }?>
-						            </div>
-					              
-					              <?php
-					    		  	$img = get_the_post_thumbnail($post->ID, 'pageHeader');
-					    		  	if ( $img ) {
-					                      echo get_the_post_thumbnail($post->ID, 'pageHeader');
-					                  } else {
-					              ?>
-					              <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/page_headers/chair.jpg" /> -->
-					              <?php } ?>
+					                
+					                <!-- Breadcrumb, hero image then title -->
+					                <?php get_template_part( 'element-templates/page-header' ); ?>
 						              
 									<div class="entry-content">
-										<h1><?php the_title(); ?></h1>
-										
 										<?php the_content(); ?>
 									</div>
 					              
@@ -56,8 +41,8 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 					</div> <!-- end of main column -->
 
 		            <div class="col-md-4 sidebar"> <!-- beginning of Sidebar -->
-									<?php get_template_part( 'element-templates/sidebar-news' ); ?>
-									<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>						
+						<?php get_template_part( 'element-templates/sidebar-news' ); ?>
+						<?php get_template_part( 'element-templates/sidebar-gallery' ); ?>
 		            </div> <!-- end of right column -->
 
 

@@ -14,14 +14,15 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 					<div class="row"><!-- Top Row  -->
 						<div class="col-md-8">
 							<!-- Load the page body header -->
-							<?php get_template_part( 'element-templates/page-header-generic' ); ?>
+							<?php get_template_part( 'element-templates/page-header' ); ?>
 							
 							<!-- Main content -->
 							<div class="entry-content">
 								<!-- News -->
 								<?php get_template_part( 'element-templates/main-news' ); ?>
 
-								
+								<!-- The pagination component -->
+								<?php understrap_pagination(); ?>
 							</div>
 						</div>
 						
