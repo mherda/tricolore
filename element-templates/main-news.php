@@ -24,7 +24,7 @@
 								get_template_part( 'loop-templates/content-news', get_post_format() );
 								?>
 
-								<?php endwhile; ?>
+                                <?php endwhile; ?>
 								
 							</div>
 								
