@@ -14,21 +14,21 @@ $months = $wpdb->get_results("SELECT DISTINCT MONTH( post_date ) AS month ,  YEA
         <?php
         if ( is_year() ) {
             // This is a year archive
-            echo "This is a yearly archive";
+            echo "<!-- This is a yearly archive -->";
             $displayed_year = $parsed_url[4];
         } elseif ( is_month() ) {
             // This is a month archive
-            echo "This is a monthly archive";
-            $displayed_year = $parsed_url[4]; 
+            echo "<!-- This is a monthly archive -->";
+            $displayed_year = $parsed_url[4];
             $displayed_month = $parsed_url[5];
         } elseif ( is_singular() ) {
             // Is a single news post
+            echo "<!-- This is a single news -->";
             $displayed_year = get_the_date('Y');
-            echo "This is a single news";
         } else {
             // This will be a 'term' archive
+            echo "<!-- That must be a term archive -->";
             $displayed_year = $months[0]->year;
-            echo "That must be a term archive";
         }
         
         foreach($months as $month) :
