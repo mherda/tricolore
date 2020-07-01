@@ -52,23 +52,19 @@
 			<div class="row">
 				<div class="col-md-9 offset-md-3 col-sm-12">
 					<nav class="navbar navbar-expand-md navbar-dark navbar-custom">
-						<!--
-							<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-								<span class="navbar-toggler-icon"></span>
-							</button>
-						-->
+					
 
 						<!-- The WordPress Menu goes here -->
 						<?php wp_nav_menu(
 							array(
-								'theme_location'  => 'primary',
+								'theme_location'  => 'template_menu',
 								'container_class' => '',
-								'container_id'    => 'navbarNavDropdown',
-								'menu_class'      => 'navbar-nav',
+								'container_id'    => '',
+								'menu_class'      => 'navbar-marcin',
 								'fallback_cb'     => '',
-								'menu_id'         => 'main-menu',
+								'menu_id'         => '',
 								'depth'           => 2,
-								'walker'          => new Understrap_WP_Bootstrap_Navwalker(),
+								'item_spacing'    => 'discard',
 							)
 						); ?>
 					</nav>
