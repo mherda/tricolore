@@ -57,7 +57,7 @@
 						<!-- The WordPress Menu goes here -->
 						<?php wp_nav_menu(
 							array(
-								'theme_location'  => 'template_menu',
+								'theme_location'  => 'primary',
 								'container_class' => '',
 								'container_id'    => '',
 								'menu_class'      => 'navbar-marcin',
