@@ -27,7 +27,8 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 					</ul>
 					<h3>Contact us</h3>
 					<ul>
-						<li><a href="mailto:pengecc@gmail.com?subject=Message%20via%20Penge%20CC%20website"><i class="fab fa-lg fa-telegram"></i><span style="word-break:break-all">pengecc@</span>gmail.com</a></li>
+						<li><a href="mailto:pengecc@gmail.com?subject=Message%20via%20Penge%20CC%20website"><i class="fab fa-lg fa-telegram"></i><span style="word-break:break-all">pengecc@</span>
+						<?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'Safari') !== FALSE) echo "<br />" ?>gmail.com</a></li>
 						<li><a href="/about/press/"><i class="fab fa-lg fa-wpforms"></i>Press &amp; Publicity</a></li>
 					</ul>
 				</div>
