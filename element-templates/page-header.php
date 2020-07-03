@@ -33,7 +33,7 @@
 		$parsed_url = explode('/',$url);
 
 		if ( is_tax('news_tax') ) {
-			echo '<h1 class="entry-title">' . 'NewsTax' . '</h1>';
+			echo '<h1 class="entry-title">' . 'News' . '</h1>';
 		}
 		if ( is_post_type_archive('news')) {
 			$title = 'News';
