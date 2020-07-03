@@ -23,13 +23,27 @@
 			case "Generic Page.php":
 				echo get_the_post_thumbnail($post->ID, 'Article Hero');
 				break;
-			case "page.php":
-				echo get_the_post_thumbnail($post->ID, 'Article Hero');
-				break;
 		}
 	}
 ?>
 
 <header class="entry-header">
-	<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+	<?php
+		$url = home_url( $wp->request );
+		$parsed_url = explode('/',$url);
+
+		if ( is_tax('news_tax') ) {
+			echo '<h1 class="entry-title">' . 'NewsTax' . '</h1>';
+		}
+		if ( is_post_type_archive('news')) {
+			$title = 'News';
+			if ( is_year() ) {
+				$title = 'News from ' . $parsed_url[4];
+			} elseif ( is_month() ) {
+				$month_name = date("F", mktime(0, 0, 0, $parsed_url[5], 10)); 
+				$title = 'News from ' . $month_name . ' ' . $parsed_url[4];
+			}
+			echo '<h1 class="entry-title">' . $title . '</h1>';
+		}
+	?>
 </header><!-- .entry-header -->
