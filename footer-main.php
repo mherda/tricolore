@@ -27,7 +27,8 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 					</ul>
 					<h3>Contact us</h3>
 					<ul>
-						<li><a href="mailto:pengecc@gmail.com?subject=Message%20via%20Penge%20CC%20website"><i class="fab fa-lg fa-telegram"></i><span style="word-break:break-all">pengecc@</span>gmail.com</a></li>
+						<li><a href="mailto:pengecc@gmail.com?subject=Message%20via%20Penge%20CC%20website"><i class="fab fa-lg fa-telegram"></i><span style="word-break:break-all">pengecc@</span>
+						<?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'Safari') !== FALSE) echo "<br />" ?>gmail.com</a></li>
 						<li><a href="/about/press/"><i class="fab fa-lg fa-wpforms"></i>Press &amp; Publicity</a></li>
 					</ul>
 				</div>
@@ -59,8 +60,8 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 		<div class="row copyright">
 			<div class="col-md-auto">
 				<h3>A big thank you to all our sponsors!</h3>
-				<p><a href="/about/sponsors/"><img alt="SE20 Cycles, Designer Drapes, Elite Cycling, The Blue Belle Cafe, Murray Bros Butchers and redinet." title="Our local sponors" src="<?php echo get_template_directory_uri(); ?>/assets/sponsors/sponsor_logos.png" /></a></p>
-				<p>&copy; Penge Cycle Club 2019. All rights reserved.</p>
+				<p><a href="/about/sponsors/"><img alt="SE20 Cycles, Designer Drapes, Elite Cycling, The Blue Belle Cafe, Murray Bros Butchers and redinet." title="Our local sponsors" src="<?php echo get_template_directory_uri(); ?>/assets/sponsors/sponsor_logos.png" /></a></p>
+				<p>&copy; Penge Cycle Club 2020. All rights reserved.</p>
 			</div><!--col end -->
 		</div><!-- row end -->
 

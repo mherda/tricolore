@@ -66,7 +66,7 @@
             <tr id="heading5" class="b-red collapsed" data-toggle="collapse" data-target="#collapse5">
                 <th><i class="fa"></i> Short 4</th>
                 <td>7:50am</td>
-                <td>14-15mph</td>
+                <td>15-16mph</td>
                 <td>~35 miles</td>
                 <td>2½ hours</td>
             </tr>
@@ -121,7 +121,7 @@
             <tr id="heading9" class="b-red collapsed" data-toggle="collapse" data-target="#collapse9">
                 <th><i class="fa"></i> Long 3</th>
                 <td>7:50am</td>
-                <td>14-15mph</td>
+                <td>15-16mph</td>
                 <td>45&ndash;55 miles</td>
                 <td>4½ hours</td>
             </tr>
@@ -134,7 +134,7 @@
             <tr id="heading10" class="b-black collapsed" data-toggle="collapse" data-target="#collapse10">
                 <th><i class="fa"></i> Long 4</th>
                 <td>7:45am</td>
-                <td>16-17mph</td>
+                <td>17mph+</td>
                 <td>60&ndash;75 miles</td>
                 <td>4½ to 5 hours</td>
             </tr>
