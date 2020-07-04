@@ -1837,7 +1837,10 @@ I move the container so the outer gutters sit on the Bootstrap gutters.
 
 
 /* Footer sponsor logos */
-
+.img-responsive-down {
+    max-width: 100%;
+    height: auto;
+}
 
 /* :TODO: Split the logos and link to: /about/sponsors/ */
 
