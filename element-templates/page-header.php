@@ -34,23 +34,24 @@
 		
 		// News categories:
 		if ( is_tax('news_tax') ) {
-			// Start main heading:
-			echo '<h1 class="entry-title">';
 			switch ($news_tax) {
 				case "adults":
-					$title = 'News about Adults';
+					$title = 'Adults Club News';
+					break;
+				case "announcements":
+					$title = 'Announcements';
 					break;
 				case "stories":
 					$title = 'News Stories';
 					break;
-				case "Youth":
-					$title = 'Youth News';
+				case "youth":
+					$title = 'Youth Club News';
 					break;
 				default:
 					// Unmatched category:
 					$title = 'News';
 			}
-			echo '</h1>'; // end main heading
+			echo '<h1 class="entry-title">' . $title . '</h1>';
 		}
 		
 		// News archive:
