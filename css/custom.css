@@ -1511,7 +1511,7 @@ main table th + th,
 main table td + td,
 main table th + td,
 main table td + th {
-    border-right: 2px solid var(--tri-dark);
+    border-left: 2px solid var(--tri-dark);
 }
 
 main table th {
@@ -1527,7 +1527,6 @@ main table td:first-child {
 main table th:last-child,
 main table td:last-child {
     padding-right: 20px; /* final gutter on right side */
-    border-right: 0;
 }
 
 .wp-block-table.is-style-stripes td {
@@ -1597,7 +1596,7 @@ main table td:last-child {
     width: 20%; /* 5 columns */
     font: var(--font-accordion);
     border-top: 1px solid white;
-    border-right: 0;
+    border-left: 0;
 }
 
 #accordion th {

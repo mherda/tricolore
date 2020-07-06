@@ -31,10 +31,29 @@
 	<?php
 		$url = home_url( $wp->request );
 		$parsed_url = explode('/',$url);
-
+		
+		// News categories:
 		if ( is_tax('news_tax') ) {
-			echo '<h1 class="entry-title">' . 'NewsTax' . '</h1>';
+			// Start main heading:
+			echo '<h1 class="entry-title">';
+			switch ($news_tax) {
+				case "adults":
+					$title = 'News about Adults';
+					break;
+				case "stories":
+					$title = 'News Stories';
+					break;
+				case "Youth":
+					$title = 'Youth News';
+					break;
+				default:
+					// Unmatched category:
+					$title = 'News';
+			}
+			echo '</h1>'; // end main heading
 		}
+		
+		// News archive:
 		if ( is_post_type_archive('news')) {
 			$title = 'News';
 			if ( is_year() ) {
@@ -44,6 +63,15 @@
 				$title = 'News from ' . $month_name . ' ' . $parsed_url[4];
 			}
 			echo '<h1 class="entry-title">' . $title . '</h1>';
+		}
+		
+		// Everything else provides a normal title:
+		if (
+			(!is_tax('news_tax'))
+			&& (!is_post_type_archive('news'))
+			)
+			{
+	    	the_title( '<h1 class="entry-title">', '</h1>' );
 		}
 	?>
 </header><!-- .entry-header -->
