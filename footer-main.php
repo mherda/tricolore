@@ -19,17 +19,13 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 
 			<div class="row">
 				<div class="col-md-2">
-					<h3>Find us on</h3>
+					<h3>Get in touch</h3>
 					<ul>
+						<li><a href="/about/contact/"><i class="fab fa-lg fa-telegram"></i>Contact us</a></li>
+						<li><a href="/about/press/"><i class="fab fa-lg fa-wpforms"></i>Press and publicity</a></li>
 						<li><a href="https://www.facebook.com/groups/206843416040902/"><i class="fab fa-lg fa-facebook-f"></i>Facebook</a></li>
 						<li><a href="https://twitter.com/pengecycleclub?lang=en"><i class="fab fa-lg fa-twitter"></i>Twitter</a></li>
 						<li><a href="https://www.youtube.com/channel/UCldNfBQKDUfxZzQcYkKVSmw"><i class="fab fa-lg fa-youtube"></i>YouTube</a></li>
-					</ul>
-					<h3>Contact us</h3>
-					<ul>
-						<li><a href="mailto:pengecc@gmail.com?subject=Message%20via%20Penge%20CC%20website"><i class="fab fa-lg fa-telegram"></i><span style="word-break:break-all">pengecc@</span>
-						<?php if(strpos($_SERVER['HTTP_USER_AGENT'], 'Safari') !== FALSE) echo "<br />" ?>gmail.com</a></li>
-						<li><a href="/about/press/"><i class="fab fa-lg fa-wpforms"></i>Press &amp; Publicity</a></li>
 					</ul>
 				</div>
 				<div class="col-md-6">
