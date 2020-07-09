@@ -34,6 +34,9 @@
 		
 		// News categories:
 		if ( is_tax('news_tax') ) {
+			$tax = $wp_query->get_queried_object();
+			$title = 'News - ' . $tax->name;
+/*
 			switch ($news_tax) {
 				case "adults":
 					$title = 'Adults Club News';
@@ -51,6 +54,7 @@
 					// Unmatched category:
 					$title = 'News';
 			}
+			*/
 			echo '<h1 class="entry-title">' . $title . '</h1>';
 		}
 		
