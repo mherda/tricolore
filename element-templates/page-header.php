@@ -1,3 +1,5 @@
+<!-- :TODO: Refactor all Penge page templates to call this element template. -->
+
 <!-- Breadcrumb -->
 <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
 	<?php
@@ -8,11 +10,11 @@
 </div>
 
 <!-- Page hero image -->
-<!-- :TODO: Refactor all Penge page templates to call this element template. -->
 <?php
 	
 	$img = get_the_post_thumbnail($post->ID);
 	if ( $img ) {
+		echo '<!-- Template: ' . basename(get_page_template()) .  '-->';
 		switch(basename(get_page_template())) {
 			case "Full-Width-Zoom.php":
 				echo get_the_post_thumbnail($post->ID, 'Landing Page Hero');
@@ -23,6 +25,12 @@
 			case "Generic Page.php":
 				echo get_the_post_thumbnail($post->ID, 'Article Hero');
 				break;
+			case "page.php":
+				if ( is_singular() ) {
+					// News entry, not a News Archive page:
+					echo get_the_post_thumbnail($post->ID, 'Article Hero');
+					break;
+				}
 		}
 	}
 ?>
