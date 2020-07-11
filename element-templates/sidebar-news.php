@@ -25,6 +25,7 @@ $months = $wpdb->get_results("SELECT DISTINCT MONTH( post_date ) AS month ,  YEA
             // Is a single news post
             echo "<!-- This is a single news -->";
             $displayed_year = get_the_date('Y');
+            $displayed_month = get_the_date('m');
         } else {
             // This will be a 'term' archive
             echo "<!-- That must be a term archive -->";

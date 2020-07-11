@@ -1039,27 +1039,34 @@ Pagination menu
 
 /* News nav link colours */
 
+.sidebar .menu a {
+    border-bottom: 0; /* no underline */
+}
+
 .sidebar .menu a:not([href]) {
     color: var(--tri-black) !important; /* theme.css */
     background: var(--tri-white);
 }
 
-.sidebar .menu a {
+.sidebar .menu > ul > li > a {
     color: var(--tri-white);
     background: var(--tri-green);
 }
 
-.sidebar .menu a:hover,
-.sidebar .menu a:focus,
-.sidebar .menu a:active {
+.sidebar .menu > ul > li > a:hover,
+.sidebar .menu > ul > li > a:focus,
+.sidebar .menu > ul > li > a:active {
     color: var(--tri-white);
-    border-bottom: 0;
 }
 
-.sidebar .menu > ul > li > ul > li > a:link,
-.sidebar .menu > ul > li > ul > li > a:visited {
+.sidebar .menu > ul > li > ul > li > a {
     color: var(--tri-green);
     background: var(--tri-white);
+}
+
+/* Highlight current month in News Sidebar navigation */
+.sidebar .menu > ul > li > ul > .active_month > a {
+    color: var(--tri-black);
 }
 
 
