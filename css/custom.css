@@ -103,7 +103,7 @@ a img {
     background: var(--tri-black);
 }
 
-.site-info a {
+.site-info a, .copyright a {
     color: var(--tri-white);
 }
 

@@ -57,7 +57,7 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 			<div class="col-md-auto">
 				<h3>A big thank you to all our sponsors!</h3>
 				<p><a href="/about/sponsors/"><img alt="SE20 Cycles, Designer Drapes, Elite Cycling, The Blue Belle Cafe, Murray Bros Butchers and redinet." class="img-responsive-down" title="Our local sponsors" src="<?php echo get_template_directory_uri(); ?>/assets/sponsors/sponsors_str.png" /></a></p>
-				<p>&copy; Penge Cycle Club 2008&ndash;2020. All rights reserved.</p>
+				<p>&copy; Penge Cycle Club 2008&ndash;2020. All rights reserved | <a href="/join/privacy-policy/"> Privacy Policy</a></p>
 			</div><!--col end -->
 		</div><!-- row end -->
 
