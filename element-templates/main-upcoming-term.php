@@ -9,7 +9,7 @@
             if ( !$current_term->name ) {
                 echo '<li class="page-item active"><a class="page-link current" href="'.get_post_type_archive_link( 'event' ).'">'.All.'</a></li>';
             } else {
-                echo '<li class="page-item"><a class="page-link" href="'.get_post_type_archive_link( 'event' ).'">'.All.'</a></li>';
+                echo '<li class="page-item"><a class="page-link" href="'.get_post_type_archive_link( 'event' ).'">'.'All'.'</a></li>';
             }
             
             // Other events:
@@ -57,7 +57,6 @@ if ( have_posts() ) {
             <?php
                 $event_uri = '';
                 foreach( $term_list as $term ) {
-                    if($term->name == 'Adults') {
                         $event_uri = get_post_meta($post->ID, 'event_uri');
                         $event_status = get_post_meta($post->ID, 'event_status');
                         $entries_close_date = get_post_meta($post->ID, 'entries_close_date');
@@ -73,7 +72,7 @@ if ( have_posts() ) {
                               echo "Event closed for entries.";
                             }
                         }
-                }
+                
             }
             
                 ?>

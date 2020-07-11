@@ -1,4 +1,5 @@
 <?php
+
   $request = wp_remote_get( 'https://api.riderhq.com/api/v1/3446/getevents?pretty=true' );
   
   if( is_wp_error( $request ) ) {
@@ -17,12 +18,18 @@
     return $mixed;
     }
   
+  function getContent($req) {
+    $b = wp_remote_retrieve_body( $req );
+    $d = json_decode(utf8ize($b), true);
+    return $d; 
+  }
+
   $body = wp_remote_retrieve_body( $request );
   $data = json_decode(utf8ize($body), true);
   $data_events = $data['events'];
 
   if( ! empty( $data_events ) ) {
-    function add_event($title, $id, $uri, $event_date, $event_status, $entries_close_date, $type) {
+    function add_event($title, $id, $uri, $event_date, $event_status, $entries_close_date, $type, $category) {
       $new_post = array(
         'post_title' => $title,
         'post_content' => '',
@@ -36,20 +43,24 @@
           'event_status' => $event_status,
           'entries_close_date' => $entries_close_date,
           'type' => $type,
+          'category' => $category,
         )
       );
       $pid = wp_insert_post($new_post);
-      wp_set_object_terms($pid, 'adults', 'event_category');
+      $is_category_specified = ($category ? $category: 'Other' );
+      $hq_category = ( term_exists($is_category_specified, 'event_category') ? $is_category_specified: 'Other' );
+      wp_set_object_terms($pid, $hq_category, 'event_category');
       $get_meta_time = get_post_meta($pid, 'event_date');
       $newformat = date('Ymd', strtotime($get_meta_time[0]));
       update_post_meta($pid, 'event_date', $newformat);
       update_post_meta($pid, 'event_uri', $uri);
-    }
+    } // end of add_event function
         
 	  foreach( $data_events as $event ) {
       // Get the id and status of the event currently looped over
       $api_id = $event["id"];
       $api_status = $event["status"];
+
       
       // Specify the matching criteria for extracting the post from WP
       $existing_posts_arguments = array(
@@ -72,17 +83,28 @@
         }
       }
 
+      // If there are no matching events in wordpress => Create a new one
       if ( count($existing_posts) < 1 ) {
-        add_event($event['name'], $event['id'], $event['uri'], $event['start_date'], $event['status'], $event['entries_close_date'], $event['type'] );
-      }
+        //Pull the details of the individual event
+        $request_event = wp_remote_get( 'https://api.riderhq.com/api/v1/3446/getevent?eventid=' . $api_id );
+        if( is_wp_error( $request_event ) ) {
+          echo "wrong request";
+          return false; // Bail early
+        } 
+     
+        $data_event = getContent( $request_event );
+        $event_category_description = $data_event['event']['category_description'];
+
+        add_event($event['name'], $event['id'], $event['uri'], $event['start_date'], $event['status'], $event['entries_close_date'], $event['type'], $event_category_description );
+      } // end of the if the count if statement
 
         
     } // end of foreach event
-  }
+  } // end of looping over data_events
 
 ?>
 
-<!-- Event categories -->
+
 <nav id="nav_events">
     <div id="navmenu" class="events">
         <ul class="pagination">
@@ -112,7 +134,7 @@ if ( have_posts() ) {
         $term_list = wp_get_post_terms($post->ID, 'event_category');
         $hq_id = get_post_meta($post->ID, 'hq_id');
 ?>
-    <div id="<?php echo $hq_id[0]; ?>" class="d-flex">
+    <div class="d-flex">
 		<div>
 			<p class="month"><?php echo $event_month; ?> <?php echo $event_year; ?></p>
 			<p class="day"><?php echo $event_day; ?></p>
@@ -128,7 +150,6 @@ if ( have_posts() ) {
             <?php
                 $event_uri = '';
                 foreach( $term_list as $term ) {
-                    if($term->name == 'Adults') {
                         $event_uri = get_post_meta($post->ID, 'event_uri');
                         $event_status = get_post_meta($post->ID, 'event_status');
                         $entries_close_date = get_post_meta($post->ID, 'entries_close_date');
@@ -148,7 +169,7 @@ if ( have_posts() ) {
                         
                           
                         
-                    }
+                    
                    
                 }
                 
