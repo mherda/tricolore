@@ -47,15 +47,30 @@
     }
         
 	  foreach( $data_events as $event ) {
+      // Get the id and status of the event currently looped over
+      $api_id = $event["id"];
+      $api_status = $event["status"];
       
+      // Specify the matching criteria for extracting the post from WP
       $existing_posts_arguments = array(
         'hierarchical' => 1,
         'meta_key' => 'hq_id',
         'meta_value' => $event['id'],
         'post_type' => 'event',
       );
-
+      // extracting all posts matching the criteria. In theory, there should only be one post matching the criteria.
       $existing_posts = get_posts( $existing_posts_arguments );
+      // extract the post HQ ID and status as pulled at the post creation time
+      $post_hq_id = get_post_meta($existing_posts[0]->ID, 'hq_id');
+      $post_hq_status = get_post_meta($existing_posts[0]->ID, 'event_status');
+      
+      // Check if the status of the event on RHQ has not changed since its creation
+      // If so, update it in WP
+      if ( $api_id == $post_hq_id[0] ) {
+        if ( $api_status != $post_hq_status[0] ) {
+          update_post_meta($existing_posts[0]->ID, 'event_status', $api_status);
+        }
+      }
 
       if ( count($existing_posts) < 1 ) {
         add_event($event['name'], $event['id'], $event['uri'], $event['start_date'], $event['status'], $event['entries_close_date'], $event['type'] );
@@ -95,8 +110,9 @@ if ( have_posts() ) {
         $event_day = $event_d->format('D j'); // 3 letter day and date without leading zero
         $event_year = $event_d->format('Y');
         $term_list = wp_get_post_terms($post->ID, 'event_category');
+        $hq_id = get_post_meta($post->ID, 'hq_id');
 ?>
-    <div class="d-flex">
+    <div id="<?php echo $hq_id[0]; ?>" class="d-flex">
 		<div>
 			<p class="month"><?php echo $event_month; ?> <?php echo $event_year; ?></p>
 			<p class="day"><?php echo $event_day; ?></p>
@@ -119,9 +135,9 @@ if ( have_posts() ) {
                         $type = get_post_meta($post->ID, 'type');
                         if ( $entries_close_date ) {
                           $close_date = new DateTime($entries_close_date[0]);
-                          echo '<p>Entries close date: '.$close_date->format('d-m-Y').'</p>';
                           $now =  new DateTime();
-                          if ( $close_date > $now ) {
+                          if ( $event_status[0] === 'Accept entries online' && $close_date > $now ) {
+                            echo '<p>Entries close date: '.$close_date->format('d-m-Y').'</p>';
                             if ( $event_uri ) {
                               echo '<a class="btn" href="'.$event_uri[0].'">Join on RiderHQ</a>';
                             }
