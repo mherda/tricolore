@@ -70,14 +70,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 								$event_uri = get_post_meta($post->ID, 'event_uri');
 								$entries_close_date = get_post_meta($post->ID, 'entries_close_date');
+								$event_status = get_post_meta($post->ID, 'event_status');
 								$event_meta_desc = get_post_meta( get_the_ID(), 'event_description' );
 
 								
 								if ( $entries_close_date ) {
 									$close_date = new DateTime($entries_close_date[0]);
-									echo '<p>Entries close date: '.$close_date->format('d-m-Y').'</p>';
 									$now =  new DateTime();
-									if ( $close_date > $now ) {
+									if ( $event_status[0] === 'Accept entries online' && $close_date > $now ) {
+										echo '<p>Entries close date: '.$close_date->format('d-m-Y').'</p>';
 										if ( $event_uri ) {
 											echo '<p></p><a class="btn" href="'.$event_uri[0].'">Join on RiderHQ</a></p>';
 										}
