@@ -120,7 +120,7 @@
                 <td>45&ndash;55 miles</td>
                 <td>5&nbsp;hours</td>
             </tr>
-            <tr id="collapse8" class="b-blue collapse" data-parent="#accordion">
+            <tr id="collapse8" class="b-red collapse" data-parent="#accordion">
                 <td colspan="6">
                     The pace is getting quicker and the ride more experienced ride leaders will throw in some extra challenges. Group riding is encouraged and the rides will include some technical sections and steep hills.
                 </td>
