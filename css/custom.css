@@ -1601,6 +1601,7 @@ main table td:last-child {
 #accordion th,
 #accordion td {
     width: 20%; /* 5 columns */
+    width: 16.667%; /* 6 columns, alternate start locations */
     font: var(--font-accordion);
     border-top: 1px solid white;
     border-left: 0;
