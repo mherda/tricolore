@@ -13,7 +13,7 @@
         <tbody>
             <tr id="heading1" class="b-green" data-toggle="collapse" data-target="#collapse1" aria-expanded="true">
                 <th><i class="fa"></i> Steady</th>
-                <td>8:15am</td>
+                <td>9:15am</td>
                 <td>10-11mph</td>
                 <td>24&ndash;27 miles</td>
                 <td>4 hours</td>
@@ -26,7 +26,7 @@
             
             <tr id="heading2" class="b-blue collapsed" data-toggle="collapse" data-target="#collapse2">
                 <th><i class="fa"></i> Short 1</th>
-                <td>8:10am</td>
+                <td>9am</td>
                 <td>11-12mph</td>
                 <td>30&ndash;35 miles</td>
                 <td>4½ hours</td>
@@ -39,7 +39,7 @@
 
             <tr id="heading3" class="b-blue collapsed" data-toggle="collapse" data-target="#collapse3">
                 <th><i class="fa"></i> Short 2</th>
-                <td>8:00am</td>
+                <td>8:45am</td>
                 <td>12-13mph</td>
                 <td>30&ndash;35 miles</td>
                 <td>4 hours</td>
@@ -52,7 +52,7 @@
 
             <tr id="heading4" class="b-red collapsed" data-toggle="collapse" data-target="#collapse4">
                 <th><i class="fa"></i> Short 3</th>
-                <td>7:55am</td>
+                <td>8:30am</td>
                 <td>13-14mph</td>
                 <td>~35 miles</td>
                 <td>3 hours</td>
@@ -65,7 +65,7 @@
 
             <tr id="heading5" class="b-red collapsed" data-toggle="collapse" data-target="#collapse5">
                 <th><i class="fa"></i> Short 4</th>
-                <td>7:50am</td>
+                <td>8:15am</td>
                 <td>15-16mph</td>
                 <td>~35 miles</td>
                 <td>2½ hours</td>
@@ -77,7 +77,7 @@
             </tr>
             <tr id="heading6" class="b-black collapsed" data-toggle="collapse" data-target="#collapse6">
                 <th><i class="fa"></i> Short 5</th>
-                <td>7:45am</td>
+                <td>Varies</td>
                 <td>17mph+</td>
                 <td>~35 miles</td>
                 <td>2½ hours</td>
@@ -93,7 +93,7 @@
             
             <tr id="heading7" class="b-blue collapsed" data-toggle="collapse" data-target="#collapse7">
                 <th><i class="fa"></i> Long 1</th>
-                <td>8:05am</td>
+                <td>8am</td>
                 <td>11-12mph</td>
                 <td>45&ndash;55 miles</td>
                 <td>5½ hours</td>
@@ -107,7 +107,7 @@
 
             <tr id="heading8" class="b-red collapsed" data-toggle="collapse" data-target="#collapse8">
                 <th><i class="fa"></i> Long 2</th>
-                <td>8:00am</td>
+                <td>7:45am</td>
                 <td>13-14mph</td>
                 <td>45&ndash;55 miles</td>
                 <td>5 hours</td>
@@ -120,7 +120,7 @@
 
             <tr id="heading9" class="b-red collapsed" data-toggle="collapse" data-target="#collapse9">
                 <th><i class="fa"></i> Long 3</th>
-                <td>7:50am</td>
+                <td>7:30am</td>
                 <td>15-16mph</td>
                 <td>45&ndash;55 miles</td>
                 <td>4½ hours</td>
@@ -133,7 +133,7 @@
 
             <tr id="heading10" class="b-black collapsed" data-toggle="collapse" data-target="#collapse10">
                 <th><i class="fa"></i> Long 4</th>
-                <td>7:45am</td>
+                <td>7:15am</td>
                 <td>17mph+</td>
                 <td>60&ndash;75 miles</td>
                 <td>4½ to 5 hours</td>
@@ -146,7 +146,7 @@
 
             <tr id="heading11" class="b-black collapsed" data-toggle="collapse" data-target="#collapse11">
                 <th><i class="fa"></i> Long 5</th>
-                <td>7:45am</td>
+                <td>Varies</td>
                 <td>18mph+</td>
                 <td>60&ndash;75 miles</td>
                 <td>4½ to 5 hours</td>
