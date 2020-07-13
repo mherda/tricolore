@@ -12,25 +12,27 @@
 <!-- Page hero image -->
 <?php
 	
-	$img = get_the_post_thumbnail($post->ID);
-	if ( $img ) {
-		echo '<!-- Template: ' . basename(get_page_template()) .  '-->';
-		switch(basename(get_page_template())) {
-			case "Full-Width-Zoom.php":
-				echo get_the_post_thumbnail($post->ID, 'Landing Page Hero');
-				break;
-			case "Rides.php":
-				echo get_the_post_thumbnail($post->ID, 'Article Hero');
-				break;
-			case "Generic Page.php":
-				echo get_the_post_thumbnail($post->ID, 'Article Hero');
-				break;
-			case "page.php":
-				if ( is_singular() ) {
-					// News entry, not a News Archive page:
+	if ( is_singular() || is_page() ) {
+		$img = get_the_post_thumbnail($post->ID);
+		if ( $img ) {
+			echo '<!-- Template: ' . basename(get_page_template()) .  '-->';
+			switch(basename(get_page_template())) {
+				case "Full-Width-Zoom.php":
+					echo get_the_post_thumbnail($post->ID, 'Landing Page Hero');
+					break;
+				case "Rides.php":
 					echo get_the_post_thumbnail($post->ID, 'Article Hero');
 					break;
-				}
+				case "Generic Page.php":
+					echo get_the_post_thumbnail($post->ID, 'Article Hero');
+					break;
+				case "page.php":
+					if ( is_singular() ) {
+						// News entry, not a News Archive page:
+						echo get_the_post_thumbnail($post->ID, 'Article Hero');
+						break;
+					}
+			}
 		}
 	}
 ?>
