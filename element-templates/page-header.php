@@ -42,29 +42,14 @@
 		$url = home_url( $wp->request );
 		$parsed_url = explode('/',$url);
 		
-		// News categories:
-		if ( is_tax('news_tax') ) {
+		// News/Events taxonomies:
+		if ( is_tax('news_tax') || is_tax('event_category') ) {
 			$tax = $wp_query->get_queried_object();
-			$title = 'News - ' . $tax->name;
-/*
-			switch ($news_tax) {
-				case "adults":
-					$title = 'Adults Club News';
-					break;
-				case "announcements":
-					$title = 'Announcements';
-					break;
-				case "stories":
-					$title = 'News Stories';
-					break;
-				case "youth":
-					$title = 'Youth Club News';
-					break;
-				default:
-					// Unmatched category:
-					$title = 'News';
-			}
-			*/
+			// Get taxonomy name
+			$tax_name = get_taxonomy($tax->taxonomy);
+			$tax_label = $tax_name->label;
+			$arr = explode(' ',trim($tax_label));
+			$title = $arr[0] . ' - ' . $tax->name; 
 			echo '<h1 class="entry-title">' . $title . '</h1>';
 		}
 		
@@ -79,13 +64,14 @@
 			}
 			echo '<h1 class="entry-title">' . $title . '</h1>';
 		}
+
+		if ( is_post_type_archive('event')) {
+			$title = 'Events';
+			echo '<h1 class="entry-title">' . $title . '</h1>';
+		}
 		
 		// Everything else provides a normal title:
-		if (
-			(!is_tax('news_tax'))
-			&& (!is_post_type_archive('news'))
-			)
-			{
+		if ( is_singular() || is_page() ) {
 	    	the_title( '<h1 class="entry-title">', '</h1>' );
 		}
 	?>
