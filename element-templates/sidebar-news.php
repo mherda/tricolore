@@ -45,8 +45,11 @@ $months = $wpdb->get_results("SELECT DISTINCT MONTH( post_date ) AS month ,  YEA
                     $y = $month->year;
                     $m = date("m", mktime(0, 0, 0, $month->month, 1, $month->year));
                     $ym = $y . "/" . $m; /* archive year and month for URL */
-                    $cym = $displayed_year . "/" . $displayed_month; /* current _entry_ Year and Month */
-                    $active_month = $ym == $cym ? "active_month" : "";
+                    if ( is_singular() || is_month() ) {
+                        $cym = $displayed_year . "/" . $displayed_month; /* current _entry_ Year and Month */
+                        $active_month = $ym == $cym ? "active_month" : "";
+                    }
+                    
                 ?>
                 <li class="<?php if ($active_month) echo $active_month; ?>">
                     <a href="<?php bloginfo('url') ?>/news/<?php echo $month->year; ?>/<?php echo date("m", mktime(0, 0, 0, $month->month, 1, $month->year)) ?>">
