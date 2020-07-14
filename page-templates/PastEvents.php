@@ -33,6 +33,9 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 								
 								<!-- Event archive -->
 								<?php get_template_part( 'element-templates/main-past-events' ); ?>
+								
+								<!-- The pagination component -->
+								<?php understrap_pagination(); ?>
 							</div>
 						</div>
 						
@@ -46,6 +49,7 @@ $container = get_theme_mod( 'understrap_container_type' ); // echo esc_attr( $co
 
 
 				</main><!-- #main -->
+
 
 			</div><!-- #primary -->
 
