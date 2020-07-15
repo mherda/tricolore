@@ -1801,22 +1801,12 @@ I move the container so the outer gutters sit on the Bootstrap gutters.
     padding-top: 20px; /* gutter */
 }
 
-.organisations ul {
+.organisations {
     position: relative;
     z-index: 1; /* clickable logos .copyright */
     margin: 0 0 -50px 0; /* bring next row halfway up this one */
     padding: 20px;
     text-align: center;
-}
-
-.organisations li {
-    display: inline;
-    margin: 0;
-    padding: 0 20px 0 0; /* gutter */
-}
-
-.organisations li:last-child {
-    padding-right: 0;
 }
 
 .organisations img {
