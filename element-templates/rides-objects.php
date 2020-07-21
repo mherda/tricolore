@@ -22,7 +22,7 @@
         </div>
         <div class="col-auto">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/gear/bring-tube.svg" />
-            <p>Tubes & Tools</p>
+            <p>Tubes & Levers</p>
         </div>
         <div class="col-auto">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/gear/bring-pump.svg" />
