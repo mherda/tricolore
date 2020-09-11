@@ -38,7 +38,7 @@
         'post_type' => 'event',
         'meta_input' => array(
           'hq_id' => $id,
-          'event_uri' => $uri,
+          'event_uri' => str_replace("//api.","//www.", $uri),
           'event_date' => $event_date,
           'event_status' => $event_status,
           'entries_close_date' => $entries_close_date,
@@ -53,7 +53,7 @@
       $get_meta_time = get_post_meta($pid, 'event_date');
       $newformat = date('Ymd', strtotime($get_meta_time[0]));
       update_post_meta($pid, 'event_date', $newformat);
-      update_post_meta($pid, 'event_uri', $uri);
+      update_post_meta($pid, 'event_uri', str_replace("//api.","//www.", $uri));
     } // end of add_event function
         
 	  foreach( $data_events as $event ) {
