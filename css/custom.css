@@ -1439,10 +1439,9 @@ main blockquote > * {
     display: inline;
     margin: 0;
     padding: 1px 8px; /* just enough to be visible */
-    color: var(--tri-white);
     font: var(--font-p-highlight);
+    font-style: italic;
     line-height: 1.556; /* 28px for visible gap between backgrounds */
-    background: var(--tri-dark);
     /* https://css-tricks.com/multi-line-padded-text/ */
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
