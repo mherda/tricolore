@@ -85,7 +85,7 @@
             <!-- :TODO: Button text as a field in carousel slides -->
             <p>
                 <a class="btn btn-lg" href="<?php echo the_field('slide_page_link'); ?>">Join as a youth</a>
-                <a href="<?php echo $post->post_excerpt; ?>" class="btn btn-lg btn-success">Free session for youths</a>
+                <a href="<?php echo $post->post_excerpt; ?>" class="btn btn-lg btn-success">First session for youths</a>
             </p>
           </div>
       </div>

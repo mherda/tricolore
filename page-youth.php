@@ -36,7 +36,7 @@ $container = get_theme_mod( 'understrap_container_type' );
               $tile_cat = get_cat_name(get_field('tile_category_container'));
               ?>
 
-              <div class="grid">
+              <div class="grid youth-grid">
                 <?php
                   $tile_selection = new WP_Query(array(
     								'posts_per_page' => -1,

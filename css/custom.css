@@ -1139,7 +1139,7 @@ Pagination menu
         grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
     }
     /* Youth uses 2 tiles in main content with sidebar */
-    body.page-template-default .grid {
+    body.page-template-default .youth-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     /* Most templates can have 2 tiles after main content */

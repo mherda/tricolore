@@ -20,10 +20,10 @@
 				case "Full-Width-Zoom.php":
 					echo get_the_post_thumbnail($post->ID, 'Landing Page Hero');
 					break;
-				case "Rides.php":
+				case "page-61.php":
 					echo get_the_post_thumbnail($post->ID, 'Article Hero');
 					break;
-				case "Generic Page.php":
+				case "page-238.php":
 					echo get_the_post_thumbnail($post->ID, 'Article Hero');
 					break;
 				case "page.php":

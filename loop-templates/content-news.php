@@ -38,21 +38,14 @@
 		<?php if ( 'news' == get_post_type() ) : ?>
 
 			<p class="entry-meta">
-				<!-- Date (with last update) by author in categories. -->
 				<?php understrap_posted_on(); ?>
-                
-                <?php
-				// Categories
-				global $post;
+                . <br />
+                <?php echo 'News category: '; ?>
+                <?php global $post;
                 $terms = wp_get_post_terms( $post->ID, 'news_tax');
-				if ($terms) {
-					esc_html_e( ' in');
-	                foreach($terms as $term) {
-	                    echo ' <a href="' . get_term_link($term) . '">' . $term->name . '</a>';
-	                }
-					echo '.';
-				}
-				
+                foreach($terms as $term) {
+                    echo '<a href="'.get_term_link($term).'">'.$term->name.'</a>  ';
+                }
 				?>
 			</p><!-- .entry-meta -->
 

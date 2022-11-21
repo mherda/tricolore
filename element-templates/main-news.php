@@ -16,18 +16,28 @@
 <?php if ( have_posts() ) : ?>
 							
 							<div class="entry-content">
-								<?php
-                                /* Start the Loop */
-								while ( have_posts() ) : the_post();
+								<?php /* Start the Loop */ ?>
+								<?php while ( have_posts() ) : the_post(); ?>
 
-    								get_template_part( 'loop-templates/content-news', get_post_format() );
+                                <?php
 
-                                endwhile;
-                                ?>
+								get_template_part( 'loop-templates/content-news', get_post_format() );
+								?>
+
+                                <?php endwhile; ?>
+								
 							</div>
 								
-<?php else : ?>
+							<?php else : ?>
 
-							<?php get_template_part( 'loop-templates/content', 'none' ); ?>
+								<?php get_template_part( 'loop-templates/content', 'none' ); ?>
 
-<?php endif; ?>
+							<?php endif; ?>
+
+						
+
+
+
+
+
+
